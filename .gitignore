@@ -1,0 +1,17 @@
+# Environments / secrets
+.venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Large or regenerable artifacts (never commit data/)
+data/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Gradio
+.gradio/
+flagged/

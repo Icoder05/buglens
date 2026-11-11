@@ -1,0 +1,22 @@
+# System definitions (PRD Section 9). Rules: tune on dev only; report test once;
+# same instances for every system; seeds fixed.
+systems:
+  S1:  {pipeline: [bm25],                         answers: Baseline}
+  S2:  {pipeline: [dense],                        answers: RQ1}
+  S3:  {pipeline: [rrf: [S1, S2]],                answers: RQ1}
+  S4:  {pipeline: [dense_ft],                     answers: RQ2}
+  S5:  {pipeline: [rrf: [S1, S4]],                answers: RQ2}
+  S6:  {pipeline: [S5, ltr],                      answers: RQ3}
+  S6b: {pipeline: [S5, ltr], extra_features: [pkg_summary_sim], answers: RQ4}
+  S7:  {pipeline: [S5, llm_rerank],               answers: RQ3 (LLM baseline)}
+  S8:  {pipeline: [S6, llm_rerank], optional: true, answers: RQ3 (combination)}
+  A1:  {pipeline: [rrf: [S1, S4]], query_includes_hints: true, answers: Ablation}
+
+# Paired comparisons for paired bootstrap + McNemar (FR-E2)
+comparisons:
+  - [S2, S1]
+  - [S3, S2]
+  - [S5, S3]
+  - [S6, S5]
+  - [S6b, S6]
+  - [S6, S7]

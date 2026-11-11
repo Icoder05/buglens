@@ -1,0 +1,59 @@
+[project]
+name = "buglens"
+version = "0.1.0"
+description = "Bug localization on SWE-bench Lite + static-analysis codebase onboarding, built on one shared index."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "datasets==5.1.0",
+    "unidiff==1.0.1",
+    "bm25s==0.3.14",
+    "torch==2.14.1",
+    "sentence-transformers==6.1.0",
+    "transformers==5.20.2",
+    "accelerate==1.15.0",
+    "faiss-cpu==1.15.1",
+    "numpy==2.4.6",
+    "scipy==1.17.1",
+    "pandas==3.0.6",
+    "pyarrow==26.0.0",
+    "lightgbm==4.7.0",
+    "networkx==3.6.1",
+    "graphviz==0.21",
+    "google-genai==2.31.0",
+    "typer==0.27.3",
+    "pydantic==2.14.1",
+    "pyyaml==6.0.3",
+    "tqdm==4.70.1",
+    "rich==15.0.0",
+    "matplotlib==3.11.2",
+    "gradio==6.30.0",
+]
+
+[project.scripts]
+buglens = "buglens.cli:app"
+
+[dependency-groups]
+dev = ["pytest==9.1.1", "ruff==0.17.1"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+link-mode = "copy"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/buglens"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
