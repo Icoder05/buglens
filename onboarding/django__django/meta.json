@@ -1,6 +1,6 @@
 {
-  "git_commit": "0eb628a21b5067e09e6a099c7852aed74d37907c",
-  "created_utc": "2026-10-21T14:03:10+00:00",
+  "git_commit": "ba861082a669d3a1cf2b38a7d9caf9ebf85cdf35",
+  "created_utc": "2026-11-11T17:54:39+00:00",
   "config": {
     "seed": 42,
     "paths": {
@@ -61,7 +61,7 @@
       "lr": 2e-05,
       "warmup_ratio": 0.1,
       "batch_size": 64,
-      "mini_batch_size": 16,
+      "mini_batch_size": 4,
       "fp16": false,
       "minimal_loop_pairs": 200
     },

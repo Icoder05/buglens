@@ -33,7 +33,10 @@ def svg_html(svg: str) -> str:
         return "<p><em>No diagram.</em></p>"
     svg = re.sub(r"^<\?xml[^>]*>\s*", "", svg)
     svg = re.sub(r"<!DOCTYPE[^>]*>\s*", "", svg)
-    return f'<div style="overflow:auto;max-height:720px;background:white">{svg}</div>'
+    # Graphviz writes fixed width/height in pt; drop them so the viewBox scales to the page.
+    svg = re.sub(r'(<svg[^>]*?)\swidth="[^"]*"\s+height="[^"]*"',
+                 r'\1 style="width:100%;height:auto;max-height:900px"', svg, count=1)
+    return f'<div style="overflow:auto;background:white">{svg}</div>'
 
 
 def read_svg(path) -> str:
@@ -160,6 +163,9 @@ def build_app(cfg: Config | None = None) -> gr.Blocks:
     st = DemoState(cfg)
     systems = st.systems() or ["S1"]
     instance_ids = sorted(st.run(systems[0]).keys()) or sorted(st.instances)
+    # Open on a small repo so the first page load is fast (flask analysis is ~1 s).
+    default_iid = next((i for i in instance_ids if i.startswith("pallets__flask")),
+                       instance_ids[0] if instance_ids else None)
     repos = st.onboard_repos()
 
     def localize(iid: str, system: str):
@@ -238,12 +244,13 @@ def build_app(cfg: Config | None = None) -> gr.Blocks:
         with gr.Tab("Localize"):
             with gr.Row():
                 iid = gr.Dropdown(instance_ids, label="SWE-bench Lite instance",
-                                  value=instance_ids[0] if instance_ids else None)
+                                  value=default_iid)
                 system = gr.Radio(systems, value=systems[-1], label="System")
             info = gr.Markdown()
             with gr.Row():
                 table = gr.Dataframe(headers=["rank", "chunk", "score", "gold"],
-                                     label="Top-10 predicted functions", interactive=False)
+                                     label="Top-10 predicted functions", interactive=False,
+                                     column_widths=["8%", "64%", "16%", "12%"], wrap=True)
                 with gr.Column():
                     pick = gr.Dropdown([], label="Show source of")
                     code = gr.Code(language="python", label="Source")
@@ -256,7 +263,8 @@ def build_app(cfg: Config | None = None) -> gr.Blocks:
                 p_issue = gr.Textbox(lines=6, label="Issue text")
                 p_btn = gr.Button("Localize")
                 p_table = gr.Dataframe(headers=["rank", "chunk", "score", "gold"],
-                                       interactive=False)
+                                       interactive=False,
+                                       column_widths=["8%", "64%", "16%", "12%"], wrap=True)
                 p_code = gr.Code(language="python")
                 p_arch = gr.HTML()
             iid.change(localize, [iid, system], [table, pick, code, arch, info])
@@ -285,6 +293,7 @@ def build_app(cfg: Config | None = None) -> gr.Blocks:
             ask_btn.click(ask_box, [repo, question], [answer, neigh])
         app.load(localize, [iid, system], [table, pick, code, arch, info])
         app.load(onboard_repo, repo, [block, pkg, mod, ep, guide])
+    app.queue(default_concurrency_limit=4)  # tabs load in parallel instead of one by one
     return app
 
 

@@ -114,13 +114,25 @@ def _is_main_guard(node: ast.stmt) -> bool:
     return has_name and has_main
 
 
+def _failed() -> dict:
+    return {"ok": False, "imports": [], "classes": [], "functions": [], "calls": [],
+            "main_line": None, "typer_lines": [], "local_names": []}
+
+
 def extract_raw(path: str, source: str) -> dict:
-    """Facts that depend only on this file's text (cacheable per git blob)."""
+    """Facts that depend only on this file's text (cacheable per git blob).
+
+    FR-A3: never crash. Besides syntax errors, some generated files (e.g. huge
+    nested expressions in sympy) parse but overflow the recursion limit while
+    walking the tree; those also count as parse failures.
+    """
     try:
-        tree = ast.parse(source)
-    except (SyntaxError, ValueError, RecursionError):
-        return {"ok": False, "imports": [], "classes": [], "functions": [], "calls": [],
-                "main_line": None, "typer_lines": [], "local_names": []}
+        return _extract(ast.parse(source))
+    except (SyntaxError, ValueError, RecursionError, MemoryError):
+        return _failed()
+
+
+def _extract(tree: ast.Module) -> dict:
 
     imports = []
     for node in ast.walk(tree):

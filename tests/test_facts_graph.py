@@ -95,3 +95,11 @@ def test_parse_failure_never_crashes():
     facts = facts_from_sources({"bad.py": "print 'py2'\n", "ok.py": "x = 1\n"})
     assert facts["bad.py"].parse_ok is False
     assert facts["ok.py"].parse_ok is True
+
+
+def test_deeply_nested_expression_never_crashes():
+    # Parses fine, but the tree is deeper than the recursion limit (seen in sympy).
+    deep = "x = f(1" + " + 1" * 20000 + ")\n"
+    facts = facts_from_sources({"deep.py": deep, "ok.py": "y = 2\n"})
+    assert facts["ok.py"].parse_ok is True
+    assert facts["deep.py"].parse_ok in (True, False)  # either way: no exception

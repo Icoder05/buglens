@@ -16,6 +16,7 @@ systems:
 comparisons:
   - [S2, S1]
   - [S3, S2]
+  - [S4, S2]   # added: direct RQ2 test (fine-tuned vs off-the-shelf dense)
   - [S5, S3]
   - [S6, S5]
   - [S6b, S6]
