@@ -1,0 +1,48 @@
+classDiagram
+  %% Classes in django.core.management.base
+  class n_django_core_management_base_AppCommand["AppCommand"] {
+    +add_arguments()
+    +handle()
+    +handle_app_config()
+  }
+  class n_django_core_management_base_BaseCommand["BaseCommand"] {
+    +__init__()
+    +get_version()
+    +create_parser()
+    +add_arguments()
+    +print_help()
+    +run_from_argv()
+    +execute()
+    +_run_checks()
+    +… +3 more
+  }
+  class n_django_core_management_base_CommandError["CommandError"] {
+  }
+  class n_django_core_management_base_CommandParser["CommandParser"] {
+    +__init__()
+    +parse_args()
+    +error()
+  }
+  class n_django_core_management_base_DjangoHelpFormatter["DjangoHelpFormatter"] {
+    +_reordered_actions()
+    +add_usage()
+    +add_arguments()
+  }
+  class n_django_core_management_base_LabelCommand["LabelCommand"] {
+    +add_arguments()
+    +handle()
+    +handle_label()
+  }
+  class n_django_core_management_base_OutputWrapper["OutputWrapper"] {
+    +style_func()
+    +style_func()
+    +__init__()
+    +__getattr__()
+    +isatty()
+    +write()
+  }
+  class n_django_core_management_base_SystemCheckError["SystemCheckError"] {
+  }
+  n_django_core_management_base_BaseCommand <|-- n_django_core_management_base_AppCommand
+  n_django_core_management_base_BaseCommand <|-- n_django_core_management_base_LabelCommand
+  n_django_core_management_base_CommandError <|-- n_django_core_management_base_SystemCheckError

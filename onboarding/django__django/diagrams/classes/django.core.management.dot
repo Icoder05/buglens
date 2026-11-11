@@ -1,0 +1,17 @@
+digraph class {
+	fontname=Helvetica fontsize=10 label="Classes in django.core.management.base
+Arrow child→base = inherits. Grey = base class in another module." labelloc=b nodesep=0.35 rankdir=BT ranksep=0.6
+	node [color="#4c6a92" fillcolor="#e8eef7" fontname=Helvetica fontsize=11 shape=box style="rounded,filled"]
+	edge [arrowsize=0.7 color="#607d8b" fontname=Helvetica fontsize=9]
+	n0 [label="{AppCommand|add_arguments()\lhandle()\lhandle_app_config()\l}" shape=record style=filled tooltip="django.core.management.base.AppCommand"]
+	n1 [label="{BaseCommand|__init__()\lget_version()\lcreate_parser()\ladd_arguments()\lprint_help()\lrun_from_argv()\lexecute()\l_run_checks()\l… +3 more\l}" shape=record style=filled tooltip="django.core.management.base.BaseCommand"]
+	n2 [label="{CommandError|}" shape=record style=filled tooltip="django.core.management.base.CommandError"]
+	n3 [label="{CommandParser|__init__()\lparse_args()\lerror()\l}" shape=record style=filled tooltip="django.core.management.base.CommandParser"]
+	n4 [label="{DjangoHelpFormatter|_reordered_actions()\ladd_usage()\ladd_arguments()\l}" shape=record style=filled tooltip="django.core.management.base.DjangoHelpFormatter"]
+	n5 [label="{LabelCommand|add_arguments()\lhandle()\lhandle_label()\l}" shape=record style=filled tooltip="django.core.management.base.LabelCommand"]
+	n6 [label="{OutputWrapper|style_func()\lstyle_func()\l__init__()\l__getattr__()\lisatty()\lwrite()\l}" shape=record style=filled tooltip="django.core.management.base.OutputWrapper"]
+	n7 [label="{SystemCheckError|}" shape=record style=filled tooltip="django.core.management.base.SystemCheckError"]
+	n0 -> n1 [arrowhead=empty]
+	n5 -> n1 [arrowhead=empty]
+	n7 -> n2 [arrowhead=empty]
+}

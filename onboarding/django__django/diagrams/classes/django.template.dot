@@ -1,0 +1,23 @@
+digraph class {
+	fontname=Helvetica fontsize=10 label="Classes in django.template.base
+Arrow child→base = inherits. Grey = base class in another module." labelloc=b nodesep=0.35 rankdir=BT ranksep=0.6
+	node [color="#4c6a92" fillcolor="#e8eef7" fontname=Helvetica fontsize=11 shape=box style="rounded,filled"]
+	edge [arrowsize=0.7 color="#607d8b" fontname=Helvetica fontsize=9]
+	n0 [label="{DebugLexer|tokenize()\l}" shape=record style=filled tooltip="django.template.base.DebugLexer"]
+	n1 [label="{FilterExpression|__init__()\lresolve()\largs_check()\l__str__()\l}" shape=record style=filled tooltip="django.template.base.FilterExpression"]
+	n2 [label="{Lexer|__init__()\ltokenize()\lcreate_token()\l}" shape=record style=filled tooltip="django.template.base.Lexer"]
+	n3 [label="{Node|render()\lrender_annotated()\l__iter__()\lget_nodes_by_type()\l}" shape=record style=filled tooltip="django.template.base.Node"]
+	n4 [label="{NodeList|render()\lget_nodes_by_type()\l}" shape=record style=filled tooltip="django.template.base.NodeList"]
+	n5 [label="{Origin|__init__()\l__str__()\l__eq__()\lloader_name()\l}" shape=record style=filled tooltip="django.template.base.Origin"]
+	n6 [label="{Parser|__init__()\lparse()\lskip_past()\lextend_nodelist()\lerror()\linvalid_block_tag()\lunclosed_block_tag()\lnext_token()\l… +5 more\l}" shape=record style=filled tooltip="django.template.base.Parser"]
+	n7 [label="{Template|__init__()\l__iter__()\l_render()\lrender()\lcompile_nodelist()\lget_exception_info()\l}" shape=record style=filled tooltip="django.template.base.Template"]
+	n8 [label="{TextNode|__init__()\l__repr__()\lrender()\l}" shape=record style=filled tooltip="django.template.base.TextNode"]
+	n9 [label="{Token|__init__()\l__str__()\lsplit_contents()\l}" shape=record style=filled tooltip="django.template.base.Token"]
+	n10 [label="{TokenType|}" shape=record style=filled tooltip="django.template.base.TokenType"]
+	n11 [label="{Variable|__init__()\lresolve()\l__repr__()\l__str__()\l_resolve_lookup()\l}" shape=record style=filled tooltip="django.template.base.Variable"]
+	n12 [label="{VariableDoesNotExist|__init__()\l__str__()\l}" shape=record style=filled tooltip="django.template.base.VariableDoesNotExist"]
+	n13 [label="{VariableNode|__init__()\l__repr__()\lrender()\l}" shape=record style=filled tooltip="django.template.base.VariableNode"]
+	n0 -> n2 [arrowhead=empty]
+	n8 -> n3 [arrowhead=empty]
+	n13 -> n3 [arrowhead=empty]
+}

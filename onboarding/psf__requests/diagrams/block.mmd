@@ -1,0 +1,61 @@
+flowchart LR
+  %% Architecture: packages and their imports
+  n_other["other (3)"]
+  n_requests["requests (1)"]
+  n_requests__oauth["requests/_oauth (1)"]
+  n_requests_certs["requests/certs (1)"]
+  n_requests_compat["requests/compat (1)"]
+  n_requests_cookies["requests/cookies (1)"]
+  n_requests_defaults["requests/defaults (1)"]
+  n_requests_exceptions["requests/exceptions (1)"]
+  n_requests_hooks["requests/hooks (1)"]
+  n_requests_models["requests/models (1)"]
+  n_requests_packages["requests/packages (99)"]
+  n_requests_safe_mode["requests/safe_mode (1)"]
+  n_requests_sessions["requests/sessions (1)"]
+  n_requests_status_codes["requests/status_codes (1)"]
+  n_requests_structures["requests/structures (1)"]
+  n_requests_utils["requests/utils (1)"]
+  n_other -->|"1"| n_requests__oauth
+  n_other -->|"1"| n_requests_compat
+  n_other -->|"1"| n_requests_safe_mode
+  n_other -->|"1"| n_requests_sessions
+  n_other -->|"1"| n_requests_utils
+  n_requests -->|"1"| n_other
+  n_requests -->|"1"| n_requests_exceptions
+  n_requests -->|"1"| n_requests_models
+  n_requests -->|"1"| n_requests_sessions
+  n_requests -->|"1"| n_requests_status_codes
+  n_requests -->|"1"| n_requests_utils
+  n_requests_compat -->|"3"| n_requests_packages
+  n_requests_cookies -->|"1"| n_requests_compat
+  n_requests_defaults -->|"1"| n_requests_utils
+  n_requests_models -->|"1"| n_other
+  n_requests_models -->|"1"| n_requests_compat
+  n_requests_models -->|"1"| n_requests_cookies
+  n_requests_models -->|"1"| n_requests_defaults
+  n_requests_models -->|"1"| n_requests_exceptions
+  n_requests_models -->|"1"| n_requests_hooks
+  n_requests_models -->|"4"| n_requests_packages
+  n_requests_models -->|"1"| n_requests_status_codes
+  n_requests_models -->|"1"| n_requests_structures
+  n_requests_models -->|"1"| n_requests_utils
+  n_requests_safe_mode -->|"1"| n_requests_exceptions
+  n_requests_safe_mode -->|"1"| n_requests_models
+  n_requests_safe_mode -->|"1"| n_requests_packages
+  n_requests_sessions -->|"1"| n_requests_compat
+  n_requests_sessions -->|"1"| n_requests_cookies
+  n_requests_sessions -->|"1"| n_requests_defaults
+  n_requests_sessions -->|"1"| n_requests_hooks
+  n_requests_sessions -->|"1"| n_requests_models
+  n_requests_sessions -->|"1"| n_requests_packages
+  n_requests_sessions -->|"1"| n_requests_utils
+  n_requests_status_codes -->|"1"| n_requests_structures
+  n_requests_utils -->|"1"| n_requests
+  n_requests_utils -->|"1"| n_requests_certs
+  n_requests_utils -->|"1"| n_requests_compat
+  n_requests_utils -->|"1"| n_requests_cookies
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n_other grey
+  classDef entry stroke:#1b3a5c,stroke-width:3px
+  class n_requests_certs entry

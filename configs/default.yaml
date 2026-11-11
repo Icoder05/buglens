@@ -53,7 +53,7 @@ training:                         # FR-T1..T3
   lr: 2.0e-5
   warmup_ratio: 0.1
   batch_size: 64
-  mini_batch_size: 16
+  mini_batch_size: 4              # PRD: 16. GradCache => same gradients; 16 overflows 6 GB VRAM
   fp16: false                     # PRD says fp16; slower on GTX 16xx. Set true on Kaggle T4.
   minimal_loop_pairs: 200
 

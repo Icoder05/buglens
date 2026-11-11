@@ -1,0 +1,78 @@
+flowchart LR
+  %% Package django/conf: modules and imports
+  n_django_conf["conf"]
+  n_django_conf_global_settings["global_settings"]
+  n_django_conf_locale["locale"]
+  n_django_conf_locale_ar["ar"]
+  n_django_conf_locale_ar_formats["formats"]
+  n_django_conf_locale_az["az"]
+  n_django_conf_locale_az_formats["formats"]
+  n_django_conf_locale_bg["bg"]
+  n_django_conf_locale_bg_formats["formats"]
+  n_django_conf_locale_bn["bn"]
+  n_django_conf_locale_bn_formats["formats"]
+  n_django_conf_locale_bs["bs"]
+  n_django_conf_locale_bs_formats["formats"]
+  n_django_conf_locale_ca["ca"]
+  n_django_conf_locale_ca_formats["formats"]
+  n_django_conf_locale_cs["cs"]
+  n_django_conf_locale_cs_formats["formats"]
+  n_django_conf_locale_cy["cy"]
+  n_django_conf_locale_cy_formats["formats"]
+  n_django_conf_locale_da["da"]
+  n_django_conf_locale_da_formats["formats"]
+  n_django_conf_locale_de["de"]
+  n_django_conf_urls["urls"]
+  n_django_conf_urls_i18n["i18n"]
+  n_django_conf_urls_static["static"]
+  n_django_conf__other["other (121 modules)"]
+  n_ext__django["django"]
+  n_ext__django_apps["django/apps"]
+  n_ext__django_contrib["django/contrib"]
+  n_ext__django_core["django/core"]
+  n_ext__django_db["django/db"]
+  n_ext__django_dispatch["django/dispatch"]
+  n_ext__django_forms["django/forms"]
+  n_ext__django_http["django/http"]
+  n_ext__django_middleware["django/middleware"]
+  n_ext__django_template["django/template"]
+  n_ext__django_templatetags["django/templatetags"]
+  n_ext__django_urls["django/urls"]
+  n_ext__django_utils["django/utils"]
+  n_ext__django_views["django/views"]
+  n_ext__other["other"]
+  n_django_conf -->|"1"| n_django_conf_global_settings
+  n_django_conf -->|"1"| n_ext__django
+  n_django_conf -->|"1"| n_ext__django_core
+  n_django_conf -->|"2"| n_ext__django_utils
+  n_django_conf_urls -->|"1"| n_ext__django_urls
+  n_django_conf_urls -->|"1"| n_ext__django_views
+  n_django_conf_urls_i18n -->|"1"| n_django_conf
+  n_django_conf_urls_i18n -->|"1"| n_ext__django_urls
+  n_django_conf_urls_i18n -->|"1"| n_ext__django_views
+  n_django_conf_urls_static -->|"1"| n_django_conf
+  n_django_conf_urls_static -->|"1"| n_ext__django_core
+  n_django_conf_urls_static -->|"1"| n_ext__django_urls
+  n_django_conf_urls_static -->|"1"| n_ext__django_views
+  n_ext__django -->|"1"| n_django_conf
+  n_ext__django_apps -->|"1"| n_django_conf
+  n_ext__django_contrib -->|"57"| n_django_conf
+  n_ext__django_contrib -->|"1"| n_django_conf_urls_static
+  n_ext__django_core -->|"35"| n_django_conf
+  n_ext__django_core -->|"1"| n_django_conf_global_settings
+  n_ext__django_db -->|"23"| n_django_conf
+  n_ext__django_dispatch -->|"1"| n_django_conf
+  n_ext__django_forms -->|"3"| n_django_conf
+  n_ext__django_http -->|"3"| n_django_conf
+  n_ext__django_middleware -->|"6"| n_django_conf
+  n_ext__django_middleware -->|"1"| n_django_conf_urls_i18n
+  n_ext__django_template -->|"6"| n_django_conf
+  n_ext__django_templatetags -->|"2"| n_django_conf
+  n_ext__django_urls -->|"1"| n_django_conf
+  n_ext__django_urls -->|"1"| n_django_conf_urls
+  n_ext__django_utils -->|"10"| n_django_conf
+  n_ext__django_utils -->|"2"| n_django_conf_locale
+  n_ext__django_views -->|"4"| n_django_conf
+  n_ext__other -->|"1"| n_django_conf
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n_django_conf__other,n_ext__django,n_ext__django_apps,n_ext__django_contrib,n_ext__django_core,n_ext__django_db,n_ext__django_dispatch,n_ext__django_forms,n_ext__django_http,n_ext__django_middleware,n_ext__django_template,n_ext__django_templatetags,n_ext__django_urls,n_ext__django_utils,n_ext__django_views,n_ext__other grey

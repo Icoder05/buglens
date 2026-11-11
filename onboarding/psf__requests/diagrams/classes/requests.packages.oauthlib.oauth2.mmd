@@ -1,0 +1,37 @@
+classDiagram
+  %% Classes in requests.packages.oauthlib.oauth2.draft25
+  class n_requests_packages_oauthlib_oauth2_draft25_Client["Client"] {
+    +__init__()
+    +add_token()
+    +prepare_refresh_body()
+    +_add_bearer_token()
+    +_add_mac_token()
+    +_populate_attributes()
+    +prepare_request_uri()
+    +prepare_request_body()
+    +… +2 more
+  }
+  class n_requests_packages_oauthlib_oauth2_draft25_NativeApplicationC["NativeApplicationClient"] {
+    +prepare_request_body()
+    +parse_request_body_response()
+  }
+  class n_requests_packages_oauthlib_oauth2_draft25_PasswordCredential["PasswordCredentialsClient"] {
+    +prepare_request_body()
+    +parse_request_body_response()
+  }
+  class n_requests_packages_oauthlib_oauth2_draft25_Server["Server"] {
+  }
+  class n_requests_packages_oauthlib_oauth2_draft25_UserAgentClient["UserAgentClient"] {
+    +prepare_request_uri()
+    +parse_request_uri_response()
+  }
+  class n_requests_packages_oauthlib_oauth2_draft25_WebApplicationClie["WebApplicationClient"] {
+    +prepare_request_uri()
+    +prepare_request_body()
+    +parse_request_uri_response()
+    +parse_request_body_response()
+  }
+  n_requests_packages_oauthlib_oauth2_draft25_Client <|-- n_requests_packages_oauthlib_oauth2_draft25_NativeApplicationC
+  n_requests_packages_oauthlib_oauth2_draft25_Client <|-- n_requests_packages_oauthlib_oauth2_draft25_PasswordCredential
+  n_requests_packages_oauthlib_oauth2_draft25_Client <|-- n_requests_packages_oauthlib_oauth2_draft25_UserAgentClient
+  n_requests_packages_oauthlib_oauth2_draft25_Client <|-- n_requests_packages_oauthlib_oauth2_draft25_WebApplicationClie

@@ -1,0 +1,16 @@
+digraph class {
+	fontname=Helvetica fontsize=10 label="Classes in requests.packages.oauthlib.oauth2.draft25
+Arrow child→base = inherits. Grey = base class in another module." labelloc=b nodesep=0.35 rankdir=BT ranksep=0.6
+	node [color="#4c6a92" fillcolor="#e8eef7" fontname=Helvetica fontsize=11 shape=box style="rounded,filled"]
+	edge [arrowsize=0.7 color="#607d8b" fontname=Helvetica fontsize=9]
+	n0 [label="{Client|__init__()\ladd_token()\lprepare_refresh_body()\l_add_bearer_token()\l_add_mac_token()\l_populate_attributes()\lprepare_request_uri()\lprepare_request_body()\l… +2 more\l}" shape=record style=filled tooltip="requests.packages.oauthlib.oauth2.draft25.Client"]
+	n1 [label="{NativeApplicationClient|prepare_request_body()\lparse_request_body_response()\l}" shape=record style=filled tooltip="requests.packages.oauthlib.oauth2.draft25.NativeApplicationClient"]
+	n2 [label="{PasswordCredentialsClient|prepare_request_body()\lparse_request_body_response()\l}" shape=record style=filled tooltip="requests.packages.oauthlib.oauth2.draft25.PasswordCredentialsClient"]
+	n3 [label="{Server|}" shape=record style=filled tooltip="requests.packages.oauthlib.oauth2.draft25.Server"]
+	n4 [label="{UserAgentClient|prepare_request_uri()\lparse_request_uri_response()\l}" shape=record style=filled tooltip="requests.packages.oauthlib.oauth2.draft25.UserAgentClient"]
+	n5 [label="{WebApplicationClient|prepare_request_uri()\lprepare_request_body()\lparse_request_uri_response()\lparse_request_body_response()\l}" shape=record style=filled tooltip="requests.packages.oauthlib.oauth2.draft25.WebApplicationClient"]
+	n1 -> n0 [arrowhead=empty]
+	n2 -> n0 [arrowhead=empty]
+	n4 -> n0 [arrowhead=empty]
+	n5 -> n0 [arrowhead=empty]
+}

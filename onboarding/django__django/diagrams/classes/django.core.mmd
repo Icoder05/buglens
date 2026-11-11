@@ -1,0 +1,51 @@
+classDiagram
+  %% Classes in django.core.exceptions
+  class n_django_core_exceptions_AppRegistryNotReady["AppRegistryNotReady"] {
+  }
+  class n_django_core_exceptions_DisallowedHost["DisallowedHost"] {
+  }
+  class n_django_core_exceptions_DisallowedRedirect["DisallowedRedirect"] {
+  }
+  class n_django_core_exceptions_EmptyResultSet["EmptyResultSet"] {
+  }
+  class n_django_core_exceptions_FieldDoesNotExist["FieldDoesNotExist"] {
+  }
+  class n_django_core_exceptions_FieldError["FieldError"] {
+  }
+  class n_django_core_exceptions_ImproperlyConfigured["ImproperlyConfigured"] {
+  }
+  class n_django_core_exceptions_MiddlewareNotUsed["MiddlewareNotUsed"] {
+  }
+  class n_django_core_exceptions_MultipleObjectsReturned["MultipleObjectsReturned"] {
+  }
+  class n_django_core_exceptions_ObjectDoesNotExist["ObjectDoesNotExist"] {
+  }
+  class n_django_core_exceptions_PermissionDenied["PermissionDenied"] {
+  }
+  class n_django_core_exceptions_RequestDataTooBig["RequestDataTooBig"] {
+  }
+  class n_django_core_exceptions_SuspiciousFileOperation["SuspiciousFileOperation"] {
+  }
+  class n_django_core_exceptions_SuspiciousMultipartForm["SuspiciousMultipartForm"] {
+  }
+  class n_django_core_exceptions_SuspiciousOperation["SuspiciousOperation"] {
+  }
+  class n_django_core_exceptions_TooManyFieldsSent["TooManyFieldsSent"] {
+  }
+  class n_django_core_exceptions_ValidationError["ValidationError"] {
+    +__init__()
+    +message_dict()
+    +messages()
+    +update_error_dict()
+    +__iter__()
+    +__str__()
+    +__repr__()
+  }
+  class n_django_core_exceptions_ViewDoesNotExist["ViewDoesNotExist"] {
+  }
+  n_django_core_exceptions_SuspiciousOperation <|-- n_django_core_exceptions_DisallowedHost
+  n_django_core_exceptions_SuspiciousOperation <|-- n_django_core_exceptions_DisallowedRedirect
+  n_django_core_exceptions_SuspiciousOperation <|-- n_django_core_exceptions_RequestDataTooBig
+  n_django_core_exceptions_SuspiciousOperation <|-- n_django_core_exceptions_SuspiciousFileOperation
+  n_django_core_exceptions_SuspiciousOperation <|-- n_django_core_exceptions_SuspiciousMultipartForm
+  n_django_core_exceptions_SuspiciousOperation <|-- n_django_core_exceptions_TooManyFieldsSent

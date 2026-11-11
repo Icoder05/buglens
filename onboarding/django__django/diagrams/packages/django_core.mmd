@@ -1,0 +1,185 @@
+flowchart LR
+  %% Package django/core: modules and imports
+  n_django_core_cache["cache"]
+  n_django_core_cache_backends_base["base"]
+  n_django_core_checks["checks"]
+  n_django_core_checks_caches["caches"]
+  n_django_core_checks_model_checks["model_checks"]
+  n_django_core_checks_registry["registry"]
+  n_django_core_checks_urls["urls"]
+  n_django_core_exceptions["exceptions"]
+  n_django_core_files["files"]
+  n_django_core_files_base["base"]
+  n_django_core_files_locks["locks"]
+  n_django_core_files_utils["utils"]
+  n_django_core_mail["mail"]
+  n_django_core_mail_backends_base["base"]
+  n_django_core_mail_utils["utils"]
+  n_django_core_management["management"]
+  n_django_core_management_base["base"]
+  n_django_core_management_color["color"]
+  n_django_core_management_templates["templates"]
+  n_django_core_management_utils["utils"]
+  n_django_core_serializers_base["base"]
+  n_django_core_serializers_json["json"]
+  n_django_core_signals["signals"]
+  n_django_core_signing["signing"]
+  n_django_core_validators["validators"]
+  n_django_core__other["other (67 modules)"]
+  n_ext__django["django"]
+  n_ext__django_apps["django/apps"]
+  n_ext__django_conf["django/conf"]
+  n_ext__django_contrib["django/contrib"]
+  n_ext__django_db["django/db"]
+  n_ext__django_dispatch["django/dispatch"]
+  n_ext__django_forms["django/forms"]
+  n_ext__django_http["django/http"]
+  n_ext__django_middleware["django/middleware"]
+  n_ext__django_template["django/template"]
+  n_ext__django_templatetags["django/templatetags"]
+  n_ext__django_urls["django/urls"]
+  n_ext__django_utils["django/utils"]
+  n_ext__django_views["django/views"]
+  n_ext__other["other"]
+  n_django_core_cache -->|"1"| n_django_core_cache_backends_base
+  n_django_core_cache -->|"1"| n_django_core_signals
+  n_django_core_cache -->|"1"| n_ext__django_conf
+  n_django_core_cache -->|"1"| n_ext__django_utils
+  n_django_core_cache_backends_base -->|"1"| n_django_core_exceptions
+  n_django_core_cache_backends_base -->|"1"| n_ext__django_utils
+  n_django_core_checks -->|"1"| n_django_core_checks_caches
+  n_django_core_checks -->|"1"| n_django_core_checks_model_checks
+  n_django_core_checks -->|"1"| n_django_core_checks_registry
+  n_django_core_checks -->|"1"| n_django_core_checks_urls
+  n_django_core_checks -->|"7"| n_django_core__other
+  n_django_core_checks_caches -->|"1"| n_django_core_cache
+  n_django_core_checks_caches -->|"1"| n_django_core_checks
+  n_django_core_checks_caches -->|"1"| n_ext__django_conf
+  n_django_core_checks_model_checks -->|"1"| n_django_core_checks
+  n_django_core_checks_model_checks -->|"1"| n_ext__django_apps
+  n_django_core_checks_model_checks -->|"1"| n_ext__django_db
+  n_django_core_checks_registry -->|"1"| n_ext__django_utils
+  n_django_core_checks_urls -->|"1"| n_django_core_checks
+  n_django_core_checks_urls -->|"1"| n_ext__django_conf
+  n_django_core_checks_urls -->|"1"| n_ext__django_urls
+  n_django_core_files -->|"1"| n_django_core_files_base
+  n_django_core_files_base -->|"1"| n_django_core_files_utils
+  n_django_core_files_base -->|"1"| n_ext__django_utils
+  n_django_core_mail -->|"1"| n_django_core_mail_utils
+  n_django_core_mail -->|"1"| n_django_core__other
+  n_django_core_mail -->|"1"| n_ext__django_conf
+  n_django_core_mail -->|"1"| n_ext__django_utils
+  n_django_core_management -->|"1"| n_django_core_exceptions
+  n_django_core_management -->|"1"| n_django_core_management_base
+  n_django_core_management -->|"1"| n_django_core_management_color
+  n_django_core_management -->|"1"| n_ext__django
+  n_django_core_management -->|"1"| n_ext__django_apps
+  n_django_core_management -->|"1"| n_ext__django_conf
+  n_django_core_management -->|"1"| n_ext__django_utils
+  n_django_core_management_base -->|"1"| n_django_core_checks
+  n_django_core_management_base -->|"1"| n_django_core_exceptions
+  n_django_core_management_base -->|"1"| n_django_core_management_color
+  n_django_core_management_base -->|"1"| n_ext__django
+  n_django_core_management_base -->|"1"| n_ext__django_apps
+  n_django_core_management_base -->|"2"| n_ext__django_db
+  n_django_core_management_base -->|"1"| n_ext__django_utils
+  n_django_core_management_color -->|"1"| n_ext__django_utils
+  n_django_core_management_templates -->|"1"| n_django_core_management_base
+  n_django_core_management_templates -->|"1"| n_django_core_management_utils
+  n_django_core_management_templates -->|"1"| n_ext__django
+  n_django_core_management_templates -->|"1"| n_ext__django_conf
+  n_django_core_management_templates -->|"1"| n_ext__django_template
+  n_django_core_management_templates -->|"2"| n_ext__django_utils
+  n_django_core_management_utils -->|"1"| n_django_core_management_base
+  n_django_core_management_utils -->|"1"| n_ext__django_apps
+  n_django_core_management_utils -->|"2"| n_ext__django_utils
+  n_django_core_serializers_base -->|"1"| n_django_core_exceptions
+  n_django_core_serializers_base -->|"1"| n_ext__django_db
+  n_django_core_serializers_json -->|"1"| n_django_core_serializers_base
+  n_django_core_serializers_json -->|"1"| n_django_core__other
+  n_django_core_serializers_json -->|"3"| n_ext__django_utils
+  n_django_core_signals -->|"1"| n_ext__django_dispatch
+  n_django_core_signing -->|"1"| n_ext__django_conf
+  n_django_core_signing -->|"4"| n_ext__django_utils
+  n_django_core_validators -->|"1"| n_django_core_exceptions
+  n_django_core_validators -->|"4"| n_ext__django_utils
+  n_django_core__other -->|"1"| n_django_core_cache
+  n_django_core__other -->|"5"| n_django_core_cache_backends_base
+  n_django_core__other -->|"8"| n_django_core_checks
+  n_django_core__other -->|"1"| n_django_core_checks_registry
+  n_django_core__other -->|"8"| n_django_core_exceptions
+  n_django_core__other -->|"2"| n_django_core_files
+  n_django_core__other -->|"1"| n_django_core_files_base
+  n_django_core__other -->|"3"| n_django_core_files_locks
+  n_django_core__other -->|"1"| n_django_core_files_utils
+  n_django_core__other -->|"3"| n_django_core_mail
+  n_django_core__other -->|"4"| n_django_core_mail_backends_base
+  n_django_core__other -->|"2"| n_django_core_mail_utils
+  n_django_core__other -->|"2"| n_django_core_management
+  n_django_core__other -->|"21"| n_django_core_management_base
+  n_django_core__other -->|"2"| n_django_core_management_color
+  n_django_core__other -->|"2"| n_django_core_management_templates
+  n_django_core__other -->|"6"| n_django_core_management_utils
+  n_django_core__other -->|"4"| n_django_core_serializers_base
+  n_django_core__other -->|"4"| n_django_core_signals
+  n_django_core__other -->|"2"| n_ext__django
+  n_django_core__other -->|"13"| n_ext__django_apps
+  n_django_core__other -->|"29"| n_ext__django_conf
+  n_django_core__other -->|"51"| n_ext__django_db
+  n_django_core__other -->|"3"| n_ext__django_http
+  n_django_core__other -->|"3"| n_ext__django_urls
+  n_django_core__other -->|"37"| n_ext__django_utils
+  n_django_core__other -->|"1"| n_ext__django_views
+  n_ext__django_apps -->|"2"| n_django_core_exceptions
+  n_ext__django_conf -->|"2"| n_django_core_exceptions
+  n_ext__django_contrib -->|"3"| n_django_core_cache
+  n_ext__django_contrib -->|"13"| n_django_core_checks
+  n_ext__django_contrib -->|"60"| n_django_core_exceptions
+  n_ext__django_contrib -->|"1"| n_django_core_files_base
+  n_ext__django_contrib -->|"2"| n_django_core_mail
+  n_ext__django_contrib -->|"1"| n_django_core_management
+  n_ext__django_contrib -->|"7"| n_django_core_management_base
+  n_ext__django_contrib -->|"2"| n_django_core_management_color
+  n_ext__django_contrib -->|"1"| n_django_core_serializers_base
+  n_ext__django_contrib -->|"1"| n_django_core_serializers_json
+  n_ext__django_contrib -->|"1"| n_django_core_signals
+  n_ext__django_contrib -->|"2"| n_django_core_signing
+  n_ext__django_contrib -->|"3"| n_django_core_validators
+  n_ext__django_contrib -->|"12"| n_django_core__other
+  n_ext__django_db -->|"6"| n_django_core_checks
+  n_ext__django_db -->|"1"| n_django_core_checks_model_checks
+  n_ext__django_db -->|"26"| n_django_core_exceptions
+  n_ext__django_db -->|"1"| n_django_core_files_base
+  n_ext__django_db -->|"1"| n_django_core_management
+  n_ext__django_db -->|"1"| n_django_core_signals
+  n_ext__django_db -->|"1"| n_django_core_validators
+  n_ext__django_db -->|"4"| n_django_core__other
+  n_ext__django_forms -->|"6"| n_django_core_exceptions
+  n_ext__django_forms -->|"1"| n_django_core_validators
+  n_ext__django_http -->|"3"| n_django_core_exceptions
+  n_ext__django_http -->|"1"| n_django_core_serializers_json
+  n_ext__django_http -->|"1"| n_django_core_signals
+  n_ext__django_http -->|"2"| n_django_core_signing
+  n_ext__django_http -->|"2"| n_django_core__other
+  n_ext__django_middleware -->|"1"| n_django_core_cache
+  n_ext__django_middleware -->|"2"| n_django_core_exceptions
+  n_ext__django_middleware -->|"1"| n_django_core_mail
+  n_ext__django_template -->|"5"| n_django_core_exceptions
+  n_ext__django_templatetags -->|"1"| n_django_core_cache
+  n_ext__django_templatetags -->|"1"| n_django_core__other
+  n_ext__django_urls -->|"1"| n_django_core_checks
+  n_ext__django_urls -->|"1"| n_django_core_checks_urls
+  n_ext__django_urls -->|"3"| n_django_core_exceptions
+  n_ext__django_utils -->|"1"| n_django_core_cache
+  n_ext__django_utils -->|"4"| n_django_core_exceptions
+  n_ext__django_utils -->|"1"| n_django_core_mail
+  n_ext__django_utils -->|"1"| n_django_core_management_color
+  n_ext__django_utils -->|"1"| n_django_core_serializers_json
+  n_ext__django_utils -->|"2"| n_django_core_signals
+  n_ext__django_views -->|"5"| n_django_core_exceptions
+  n_ext__django_views -->|"1"| n_django_core__other
+  n_ext__other -->|"3"| n_django_core_management
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n_django_core__other,n_ext__django,n_ext__django_apps,n_ext__django_conf,n_ext__django_contrib,n_ext__django_db,n_ext__django_dispatch,n_ext__django_forms,n_ext__django_http,n_ext__django_middleware,n_ext__django_template,n_ext__django_templatetags,n_ext__django_urls,n_ext__django_utils,n_ext__django_views,n_ext__other grey
+  classDef entry stroke:#1b3a5c,stroke-width:3px
+  class n_django_core_management entry

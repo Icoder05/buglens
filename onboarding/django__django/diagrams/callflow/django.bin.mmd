@@ -1,0 +1,13 @@
+flowchart LR
+  %% Call flow from django.bin.django-admin.#60;module#62; (static approximation)
+  n___unresolved__(["unresolved (1)"])
+  n_django_bin_django_admin__module_["django.bin.django-admin (modu…"]
+  n_django_core_management_ManagementUtility["ManagementUtility"]
+  n_django_core_management_execute_from_command_line["execute_from_command_line"]
+  n_django_bin_django_admin__module_ --> n_django_core_management_execute_from_command_line
+  n_django_core_management_execute_from_command_line -.-> n___unresolved__
+  n_django_core_management_execute_from_command_line --> n_django_core_management_ManagementUtility
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n___unresolved__ grey
+  classDef entry stroke:#1b3a5c,stroke-width:3px
+  class n_django_bin_django_admin__module_ entry

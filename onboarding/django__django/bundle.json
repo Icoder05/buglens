@@ -1,0 +1,59 @@
+{
+ "repo": "django/django",
+ "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+ "block_svg": "diagrams/block.svg",
+ "block_mermaid": "diagrams/block.mmd",
+ "package_diagrams": {
+  "django/contrib": "diagrams/packages/django_contrib.svg",
+  "django/db": "diagrams/packages/django_db.svg",
+  "django/utils": "diagrams/packages/django_utils.svg",
+  "django/core": "diagrams/packages/django_core.svg",
+  "django/conf": "diagrams/packages/django_conf.svg",
+  "django/apps": "diagrams/packages/django_apps.svg",
+  "django/template": "diagrams/packages/django_template.svg",
+  "django/dispatch": "diagrams/packages/django_dispatch.svg",
+  "django/urls": "diagrams/packages/django_urls.svg",
+  "django/http": "diagrams/packages/django_http.svg"
+ },
+ "class_diagrams": {
+  "django.template.base": "diagrams/classes/django.template.base.svg",
+  "django.db.models.expressions": "diagrams/classes/django.db.models.expressions.svg",
+  "django.db.models.lookups": "diagrams/classes/django.db.models.lookups.svg",
+  "django.core.management.base": "diagrams/classes/django.core.management.base.svg",
+  "django.contrib.gis.db.models.lookups": "diagrams/classes/django.contrib.gis.db.models.lookups.svg",
+  "django.db.migrations.migration": "diagrams/classes/django.db.migrations.migration.svg",
+  "django.db.models.functions.mixins": "diagrams/classes/django.db.models.functions.mixins.svg",
+  "django.db.models.fields": "diagrams/classes/django.db.models.fields.svg",
+  "django.utils.deprecation": "diagrams/classes/django.utils.deprecation.svg",
+  "django.contrib.gis.db.models.functions": "diagrams/classes/django.contrib.gis.db.models.functions.svg",
+  "django.conf": "diagrams/classes/django.conf.svg",
+  "django.core.exceptions": "diagrams/classes/django.core.exceptions.svg",
+  "django.utils.functional": "diagrams/classes/django.utils.functional.svg",
+  "django.utils.translation": "diagrams/classes/django.utils.translation.svg",
+  "django.apps.config": "diagrams/classes/django.apps.config.svg"
+ },
+ "callflow_diagrams": {
+  "django.__main__ __main__": "diagrams/callflow/django.__main_____main.svg",
+  "django.bin.django-admin __main__": "diagrams/callflow/django.bin.django-admin___main.svg",
+  "django.contrib.admin.bin.compress __main__": "diagrams/callflow/django.contrib.admin.bin.compress___main.svg",
+  "django-admin -> django.core.management:execute_from_command_line": "diagrams/callflow/django-admin_-_django.core.management_execute_from_command_line.svg",
+  "scripts.manage_translations __main__": "diagrams/callflow/scripts.manage_translations___main.svg"
+ },
+ "guide_md": "guide.md",
+ "stats": {
+  "files": 817,
+  "parse_failures": 0,
+  "modules": 817,
+  "import_edges": 2553,
+  "classes": 1654,
+  "inheritance_edges": 1313,
+  "call_nodes": 9609,
+  "call_edges": 6319,
+  "unresolved_calls": 13565,
+  "entry_points": 5,
+  "diagram_faithfulness_pct": 100.0,
+  "sentences_kept": 0,
+  "sentences_dropped": 0,
+  "summaries_complete": false
+ }
+}

@@ -1,0 +1,222 @@
+flowchart LR
+  %% Package django/utils: modules and imports
+  n_django_utils_autoreload["autoreload"]
+  n_django_utils_crypto["crypto"]
+  n_django_utils_datastructures["datastructures"]
+  n_django_utils_deconstruct["deconstruct"]
+  n_django_utils_deprecation["deprecation"]
+  n_django_utils_encoding["encoding"]
+  n_django_utils_functional["functional"]
+  n_django_utils_hashable["hashable"]
+  n_django_utils_html["html"]
+  n_django_utils_http["http"]
+  n_django_utils_inspect["inspect"]
+  n_django_utils_itercompat["itercompat"]
+  n_django_utils_log["log"]
+  n_django_utils_module_loading["module_loading"]
+  n_django_utils_safestring["safestring"]
+  n_django_utils_termcolors["termcolors"]
+  n_django_utils_text["text"]
+  n_django_utils_timezone["timezone"]
+  n_django_utils_translation["translation"]
+  n_django_utils_translation_reloader["reloader"]
+  n_django_utils_translation_template["template"]
+  n_django_utils_translation_trans_null["trans_null"]
+  n_django_utils_translation_trans_real["trans_real"]
+  n_django_utils_tree["tree"]
+  n_django_utils_version["version"]
+  n_django_utils__other["other (20 modules)"]
+  n_ext__django["django"]
+  n_ext__django_apps["django/apps"]
+  n_ext__django_conf["django/conf"]
+  n_ext__django_contrib["django/contrib"]
+  n_ext__django_core["django/core"]
+  n_ext__django_db["django/db"]
+  n_ext__django_dispatch["django/dispatch"]
+  n_ext__django_forms["django/forms"]
+  n_ext__django_http["django/http"]
+  n_ext__django_middleware["django/middleware"]
+  n_ext__django_template["django/template"]
+  n_ext__django_templatetags["django/templatetags"]
+  n_ext__django_urls["django/urls"]
+  n_ext__django_views["django/views"]
+  n_ext__other["other"]
+  n_django_utils_autoreload -->|"1"| n_django_utils_functional
+  n_django_utils_autoreload -->|"1"| n_django_utils_version
+  n_django_utils_autoreload -->|"1"| n_ext__django_apps
+  n_django_utils_autoreload -->|"1"| n_ext__django_core
+  n_django_utils_autoreload -->|"1"| n_ext__django_dispatch
+  n_django_utils_autoreload -->|"1"| n_ext__django_urls
+  n_django_utils_autoreload -->|"1"| n_ext__other
+  n_django_utils_crypto -->|"1"| n_django_utils_encoding
+  n_django_utils_crypto -->|"1"| n_ext__django_conf
+  n_django_utils_deconstruct -->|"1"| n_django_utils_version
+  n_django_utils_encoding -->|"1"| n_django_utils_deprecation
+  n_django_utils_encoding -->|"1"| n_django_utils_functional
+  n_django_utils_hashable -->|"1"| n_django_utils_itercompat
+  n_django_utils_html -->|"1"| n_django_utils_functional
+  n_django_utils_html -->|"1"| n_django_utils_http
+  n_django_utils_html -->|"1"| n_django_utils_safestring
+  n_django_utils_html -->|"1"| n_django_utils_text
+  n_django_utils_html -->|"1"| n_ext__django_core
+  n_django_utils_http -->|"1"| n_django_utils_datastructures
+  n_django_utils_http -->|"1"| n_django_utils_deprecation
+  n_django_utils_http -->|"1"| n_django_utils_functional
+  n_django_utils_http -->|"1"| n_ext__django_core
+  n_django_utils_log -->|"1"| n_django_utils_module_loading
+  n_django_utils_log -->|"1"| n_ext__django_conf
+  n_django_utils_log -->|"2"| n_ext__django_core
+  n_django_utils_log -->|"1"| n_ext__django_views
+  n_django_utils_module_loading -->|"1"| n_ext__django_apps
+  n_django_utils_safestring -->|"1"| n_django_utils_functional
+  n_django_utils_text -->|"1"| n_django_utils_functional
+  n_django_utils_text -->|"1"| n_django_utils_translation
+  n_django_utils_timezone -->|"1"| n_django_utils_deprecation
+  n_django_utils_timezone -->|"1"| n_ext__django_conf
+  n_django_utils_translation -->|"1"| n_django_utils_autoreload
+  n_django_utils_translation -->|"1"| n_django_utils_deprecation
+  n_django_utils_translation -->|"1"| n_django_utils_functional
+  n_django_utils_translation -->|"1"| n_django_utils_translation_reloader
+  n_django_utils_translation -->|"1"| n_django_utils_translation_template
+  n_django_utils_translation -->|"1"| n_django_utils_translation_trans_null
+  n_django_utils_translation -->|"1"| n_django_utils_translation_trans_real
+  n_django_utils_translation -->|"2"| n_ext__django_conf
+  n_django_utils_translation_reloader -->|"1"| n_django_utils_translation_trans_real
+  n_django_utils_translation_reloader -->|"1"| n_ext__django_apps
+  n_django_utils_translation_reloader -->|"1"| n_ext__django_conf
+  n_django_utils_translation_template -->|"1"| n_django_utils_translation
+  n_django_utils_translation_template -->|"1"| n_ext__django_template
+  n_django_utils_translation_trans_null -->|"1"| n_ext__django_conf
+  n_django_utils_translation_trans_real -->|"1"| n_django_utils_safestring
+  n_django_utils_translation_trans_real -->|"1"| n_django_utils_translation
+  n_django_utils_translation_trans_real -->|"1"| n_ext__django_apps
+  n_django_utils_translation_trans_real -->|"2"| n_ext__django_conf
+  n_django_utils_translation_trans_real -->|"2"| n_ext__django_core
+  n_django_utils_translation_trans_real -->|"1"| n_ext__django_dispatch
+  n_django_utils_tree -->|"1"| n_django_utils_hashable
+  n_django_utils_version -->|"1"| n_ext__django
+  n_django_utils__other -->|"2"| n_django_utils_encoding
+  n_django_utils__other -->|"1"| n_django_utils_functional
+  n_django_utils__other -->|"1"| n_django_utils_html
+  n_django_utils__other -->|"1"| n_django_utils_http
+  n_django_utils__other -->|"1"| n_django_utils_log
+  n_django_utils__other -->|"1"| n_django_utils_safestring
+  n_django_utils__other -->|"5"| n_django_utils_timezone
+  n_django_utils__other -->|"6"| n_django_utils_translation
+  n_django_utils__other -->|"3"| n_ext__django_conf
+  n_django_utils__other -->|"3"| n_ext__django_core
+  n_django_utils__other -->|"1"| n_ext__django_http
+  n_ext__django -->|"1"| n_django_utils_log
+  n_ext__django -->|"1"| n_django_utils_version
+  n_ext__django_apps -->|"1"| n_django_utils_module_loading
+  n_ext__django_conf -->|"1"| n_django_utils_deprecation
+  n_ext__django_conf -->|"1"| n_django_utils_functional
+  n_ext__django_contrib -->|"6"| n_django_utils_crypto
+  n_ext__django_contrib -->|"3"| n_django_utils_deconstruct
+  n_ext__django_contrib -->|"11"| n_django_utils_deprecation
+  n_ext__django_contrib -->|"15"| n_django_utils_encoding
+  n_ext__django_contrib -->|"20"| n_django_utils_functional
+  n_ext__django_contrib -->|"8"| n_django_utils_html
+  n_ext__django_contrib -->|"9"| n_django_utils_http
+  n_ext__django_contrib -->|"2"| n_django_utils_inspect
+  n_ext__django_contrib -->|"8"| n_django_utils_module_loading
+  n_ext__django_contrib -->|"8"| n_django_utils_safestring
+  n_ext__django_contrib -->|"9"| n_django_utils_text
+  n_ext__django_contrib -->|"12"| n_django_utils_timezone
+  n_ext__django_contrib -->|"60"| n_django_utils_translation
+  n_ext__django_contrib -->|"3"| n_django_utils_version
+  n_ext__django_contrib -->|"11"| n_django_utils__other
+  n_ext__django_core -->|"2"| n_django_utils_autoreload
+  n_ext__django_core -->|"3"| n_django_utils_crypto
+  n_ext__django_core -->|"1"| n_django_utils_datastructures
+  n_ext__django_core -->|"2"| n_django_utils_deconstruct
+  n_ext__django_core -->|"1"| n_django_utils_deprecation
+  n_ext__django_core -->|"7"| n_django_utils_encoding
+  n_ext__django_core -->|"9"| n_django_utils_functional
+  n_ext__django_core -->|"1"| n_django_utils_inspect
+  n_ext__django_core -->|"1"| n_django_utils_itercompat
+  n_ext__django_core -->|"2"| n_django_utils_log
+  n_ext__django_core -->|"9"| n_django_utils_module_loading
+  n_ext__django_core -->|"1"| n_django_utils_termcolors
+  n_ext__django_core -->|"3"| n_django_utils_text
+  n_ext__django_core -->|"4"| n_django_utils_timezone
+  n_ext__django_core -->|"4"| n_django_utils_translation
+  n_ext__django_core -->|"1"| n_django_utils_translation_trans_real
+  n_ext__django_core -->|"2"| n_django_utils_version
+  n_ext__django_core -->|"7"| n_django_utils__other
+  n_ext__django_db -->|"1"| n_django_utils_crypto
+  n_ext__django_db -->|"4"| n_django_utils_datastructures
+  n_ext__django_db -->|"1"| n_django_utils_deconstruct
+  n_ext__django_db -->|"1"| n_django_utils_deprecation
+  n_ext__django_db -->|"3"| n_django_utils_encoding
+  n_ext__django_db -->|"25"| n_django_utils_functional
+  n_ext__django_db -->|"1"| n_django_utils_hashable
+  n_ext__django_db -->|"1"| n_django_utils_inspect
+  n_ext__django_db -->|"1"| n_django_utils_itercompat
+  n_ext__django_db -->|"3"| n_django_utils_module_loading
+  n_ext__django_db -->|"1"| n_django_utils_safestring
+  n_ext__django_db -->|"3"| n_django_utils_text
+  n_ext__django_db -->|"16"| n_django_utils_timezone
+  n_ext__django_db -->|"5"| n_django_utils_translation
+  n_ext__django_db -->|"3"| n_django_utils_tree
+  n_ext__django_db -->|"6"| n_django_utils_version
+  n_ext__django_db -->|"9"| n_django_utils__other
+  n_ext__django_dispatch -->|"1"| n_django_utils_inspect
+  n_ext__django_forms -->|"4"| n_django_utils_functional
+  n_ext__django_forms -->|"5"| n_django_utils_html
+  n_ext__django_forms -->|"1"| n_django_utils_module_loading
+  n_ext__django_forms -->|"4"| n_django_utils_safestring
+  n_ext__django_forms -->|"1"| n_django_utils_text
+  n_ext__django_forms -->|"1"| n_django_utils_timezone
+  n_ext__django_forms -->|"7"| n_django_utils_translation
+  n_ext__django_forms -->|"7"| n_django_utils__other
+  n_ext__django_http -->|"2"| n_django_utils_datastructures
+  n_ext__django_http -->|"3"| n_django_utils_encoding
+  n_ext__django_http -->|"1"| n_django_utils_functional
+  n_ext__django_http -->|"2"| n_django_utils_http
+  n_ext__django_http -->|"1"| n_django_utils_text
+  n_ext__django_http -->|"1"| n_django_utils_timezone
+  n_ext__django_middleware -->|"1"| n_django_utils_crypto
+  n_ext__django_middleware -->|"8"| n_django_utils_deprecation
+  n_ext__django_middleware -->|"3"| n_django_utils_http
+  n_ext__django_middleware -->|"1"| n_django_utils_log
+  n_ext__django_middleware -->|"1"| n_django_utils_text
+  n_ext__django_middleware -->|"1"| n_django_utils_translation
+  n_ext__django_middleware -->|"5"| n_django_utils__other
+  n_ext__django_template -->|"1"| n_django_utils_encoding
+  n_ext__django_template -->|"6"| n_django_utils_functional
+  n_ext__django_template -->|"6"| n_django_utils_html
+  n_ext__django_template -->|"1"| n_django_utils_itercompat
+  n_ext__django_template -->|"3"| n_django_utils_module_loading
+  n_ext__django_template -->|"5"| n_django_utils_safestring
+  n_ext__django_template -->|"2"| n_django_utils_text
+  n_ext__django_template -->|"3"| n_django_utils_timezone
+  n_ext__django_template -->|"3"| n_django_utils_translation
+  n_ext__django_template -->|"7"| n_django_utils__other
+  n_ext__django_templatetags -->|"1"| n_django_utils_encoding
+  n_ext__django_templatetags -->|"1"| n_django_utils_html
+  n_ext__django_templatetags -->|"1"| n_django_utils_safestring
+  n_ext__django_templatetags -->|"1"| n_django_utils_timezone
+  n_ext__django_templatetags -->|"1"| n_django_utils_translation
+  n_ext__django_templatetags -->|"1"| n_django_utils__other
+  n_ext__django_urls -->|"1"| n_django_utils_datastructures
+  n_ext__django_urls -->|"1"| n_django_utils_encoding
+  n_ext__django_urls -->|"2"| n_django_utils_functional
+  n_ext__django_urls -->|"1"| n_django_utils_http
+  n_ext__django_urls -->|"1"| n_django_utils_module_loading
+  n_ext__django_urls -->|"2"| n_django_utils_translation
+  n_ext__django_urls -->|"1"| n_django_utils__other
+  n_ext__django_views -->|"1"| n_django_utils_datastructures
+  n_ext__django_views -->|"1"| n_django_utils_encoding
+  n_ext__django_views -->|"1"| n_django_utils_functional
+  n_ext__django_views -->|"3"| n_django_utils_http
+  n_ext__django_views -->|"1"| n_django_utils_log
+  n_ext__django_views -->|"1"| n_django_utils_module_loading
+  n_ext__django_views -->|"2"| n_django_utils_timezone
+  n_ext__django_views -->|"6"| n_django_utils_translation
+  n_ext__django_views -->|"1"| n_django_utils_translation_trans_real
+  n_ext__django_views -->|"2"| n_django_utils_version
+  n_ext__django_views -->|"10"| n_django_utils__other
+  n_ext__other -->|"1"| n_django_utils_functional
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n_django_utils__other,n_ext__django,n_ext__django_apps,n_ext__django_conf,n_ext__django_contrib,n_ext__django_core,n_ext__django_db,n_ext__django_dispatch,n_ext__django_forms,n_ext__django_http,n_ext__django_middleware,n_ext__django_template,n_ext__django_templatetags,n_ext__django_urls,n_ext__django_views,n_ext__other grey

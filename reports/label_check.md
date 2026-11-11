@@ -7,7 +7,7 @@ For each instance, compare the patch with the derived labels: gold files = modif
 - base_commit: `d8c37f43724cd9fb0870f77877b7c4c7e38a19e0`
 - gold files: `src/flask/blueprints.py`
 - gold functions: `src/flask/blueprints.py::Blueprint.__init__`, `src/flask/blueprints.py::Blueprint.add_url_rule`
-- your check: 
+- your check: ✅ (checked by Claude) — both hunks are method-body edits; mapped to `Blueprint.__init__` and `Blueprint.add_url_rule`.
 
 ```diff
 diff --git a/src/flask/blueprints.py b/src/flask/blueprints.py
@@ -50,7 +50,7 @@ diff --git a/src/flask/blueprints.py b/src/flask/blueprints.py
 - base_commit: `091991be0da19de9108dbe5e3752917fea3d7fdc`
 - gold files: `requests/sessions.py`
 - gold functions: `requests/sessions.py::<module>`, `requests/sessions.py::Session.request`
-- your check: 
+- your check: ✅ (checked by Claude) — import-line edit → module chunk; body edit → `Session.request`.
 
 ```diff
 diff --git a/requests/sessions.py b/requests/sessions.py
@@ -81,7 +81,7 @@ diff --git a/requests/sessions.py b/requests/sessions.py
 - base_commit: `d26b2424437dabeeca94d7900b37d2df4410da0c`
 - gold files: `django/contrib/auth/validators.py`
 - gold functions: `django/contrib/auth/validators.py::ASCIIUsernameValidator`, `django/contrib/auth/validators.py::UnicodeUsernameValidator`
-- your check: 
+- your check: ✅ (checked by Claude) — class-attribute `regex` edits → innermost chunks are the two validator classes.
 
 ```diff
 diff --git a/django/contrib/auth/validators.py b/django/contrib/auth/validators.py

@@ -1,0 +1,153 @@
+flowchart LR
+  %% Package django/contrib: modules and imports
+  n_django_contrib_admin["admin"]
+  n_django_contrib_auth["auth"]
+  n_django_contrib_auth_models["models"]
+  n_django_contrib_gis_db_models_aggregates["aggregates"]
+  n_django_contrib_gis_db_models_fields["fields"]
+  n_django_contrib_gis_gdal["gdal"]
+  n_django_contrib_gis_gdal_base["base"]
+  n_django_contrib_gis_gdal_envelope["envelope"]
+  n_django_contrib_gis_gdal_error["error"]
+  n_django_contrib_gis_gdal_libgdal["libgdal"]
+  n_django_contrib_gis_gdal_prototypes_errcheck["errcheck"]
+  n_django_contrib_gis_gdal_prototypes_generation["generation"]
+  n_django_contrib_gis_geos["geos"]
+  n_django_contrib_gis_geos_base["base"]
+  n_django_contrib_gis_geos_error["error"]
+  n_django_contrib_gis_geos_geometry["geometry"]
+  n_django_contrib_gis_geos_libgeos["libgeos"]
+  n_django_contrib_gis_geos_prototypes["prototypes"]
+  n_django_contrib_gis_geos_prototypes_errcheck["errcheck"]
+  n_django_contrib_gis_geos_prototypes_geom["geom"]
+  n_django_contrib_gis_geos_prototypes_threadsafe["threadsafe"]
+  n_django_contrib_gis_ptr["ptr"]
+  n_django_contrib_messages_constants["constants"]
+  n_django_contrib_sites_models["models"]
+  n_django_contrib_staticfiles_finders["finders"]
+  n_django_contrib__other["other (302 modules)"]
+  n_ext__django_apps["django/apps"]
+  n_ext__django_conf["django/conf"]
+  n_ext__django_core["django/core"]
+  n_ext__django_db["django/db"]
+  n_ext__django_dispatch["django/dispatch"]
+  n_ext__django_forms["django/forms"]
+  n_ext__django_http["django/http"]
+  n_ext__django_middleware["django/middleware"]
+  n_ext__django_template["django/template"]
+  n_ext__django_templatetags["django/templatetags"]
+  n_ext__django_urls["django/urls"]
+  n_ext__django_utils["django/utils"]
+  n_ext__django_views["django/views"]
+  n_ext__other["other"]
+  n_django_contrib_admin -->|"5"| n_django_contrib__other
+  n_django_contrib_admin -->|"1"| n_ext__django_utils
+  n_django_contrib_auth -->|"1"| n_django_contrib_auth_models
+  n_django_contrib_auth -->|"1"| n_django_contrib__other
+  n_django_contrib_auth -->|"1"| n_ext__django_apps
+  n_django_contrib_auth -->|"1"| n_ext__django_conf
+  n_django_contrib_auth -->|"1"| n_ext__django_core
+  n_django_contrib_auth -->|"1"| n_ext__django_middleware
+  n_django_contrib_auth -->|"3"| n_ext__django_utils
+  n_django_contrib_auth_models -->|"1"| n_django_contrib_auth
+  n_django_contrib_auth_models -->|"3"| n_django_contrib__other
+  n_django_contrib_auth_models -->|"2"| n_ext__django_core
+  n_django_contrib_auth_models -->|"2"| n_ext__django_db
+  n_django_contrib_auth_models -->|"2"| n_ext__django_utils
+  n_django_contrib_gis_db_models_aggregates -->|"1"| n_django_contrib_gis_db_models_fields
+  n_django_contrib_gis_db_models_aggregates -->|"1"| n_ext__django_db
+  n_django_contrib_gis_db_models_aggregates -->|"1"| n_ext__django_utils
+  n_django_contrib_gis_db_models_fields -->|"1"| n_django_contrib_gis_gdal
+  n_django_contrib_gis_db_models_fields -->|"1"| n_django_contrib_gis_gdal_error
+  n_django_contrib_gis_db_models_fields -->|"1"| n_django_contrib_gis_geos
+  n_django_contrib_gis_db_models_fields -->|"3"| n_django_contrib__other
+  n_django_contrib_gis_db_models_fields -->|"1"| n_ext__django_core
+  n_django_contrib_gis_db_models_fields -->|"1"| n_ext__django_db
+  n_django_contrib_gis_db_models_fields -->|"1"| n_ext__django_utils
+  n_django_contrib_gis_gdal -->|"1"| n_django_contrib_gis_gdal_envelope
+  n_django_contrib_gis_gdal -->|"1"| n_django_contrib_gis_gdal_error
+  n_django_contrib_gis_gdal -->|"1"| n_django_contrib_gis_gdal_libgdal
+  n_django_contrib_gis_gdal -->|"6"| n_django_contrib__other
+  n_django_contrib_gis_gdal_base -->|"1"| n_django_contrib_gis_gdal_error
+  n_django_contrib_gis_gdal_base -->|"1"| n_django_contrib_gis_ptr
+  n_django_contrib_gis_gdal_envelope -->|"1"| n_django_contrib_gis_gdal_error
+  n_django_contrib_gis_gdal_libgdal -->|"1"| n_django_contrib_gis_gdal_error
+  n_django_contrib_gis_gdal_libgdal -->|"1"| n_ext__django_conf
+  n_django_contrib_gis_gdal_libgdal -->|"1"| n_ext__django_core
+  n_django_contrib_gis_gdal_prototypes_errcheck -->|"1"| n_django_contrib_gis_gdal_error
+  n_django_contrib_gis_gdal_prototypes_errcheck -->|"1"| n_django_contrib_gis_gdal_libgdal
+  n_django_contrib_gis_gdal_prototypes_generation -->|"1"| n_django_contrib_gis_gdal_prototypes_errcheck
+  n_django_contrib_gis_geos -->|"1"| n_django_contrib_gis_geos_error
+  n_django_contrib_gis_geos -->|"1"| n_django_contrib_gis_geos_geometry
+  n_django_contrib_gis_geos -->|"1"| n_django_contrib_gis_geos_libgeos
+  n_django_contrib_gis_geos -->|"6"| n_django_contrib__other
+  n_django_contrib_gis_geos_base -->|"1"| n_django_contrib_gis_geos_error
+  n_django_contrib_gis_geos_base -->|"1"| n_django_contrib_gis_ptr
+  n_django_contrib_gis_geos_geometry -->|"1"| n_django_contrib_gis_gdal
+  n_django_contrib_gis_geos_geometry -->|"1"| n_django_contrib_gis_geos_base
+  n_django_contrib_gis_geos_geometry -->|"1"| n_django_contrib_gis_geos_error
+  n_django_contrib_gis_geos_geometry -->|"1"| n_django_contrib_gis_geos_libgeos
+  n_django_contrib_gis_geos_geometry -->|"1"| n_django_contrib_gis_geos_prototypes
+  n_django_contrib_gis_geos_geometry -->|"9"| n_django_contrib__other
+  n_django_contrib_gis_geos_geometry -->|"2"| n_ext__django_utils
+  n_django_contrib_gis_geos_libgeos -->|"1"| n_django_contrib_gis_geos_prototypes_threadsafe
+  n_django_contrib_gis_geos_libgeos -->|"1"| n_ext__django_conf
+  n_django_contrib_gis_geos_libgeos -->|"1"| n_ext__django_core
+  n_django_contrib_gis_geos_libgeos -->|"2"| n_ext__django_utils
+  n_django_contrib_gis_geos_prototypes -->|"1"| n_django_contrib_gis_geos_prototypes_geom
+  n_django_contrib_gis_geos_prototypes -->|"4"| n_django_contrib__other
+  n_django_contrib_gis_geos_prototypes_errcheck -->|"1"| n_django_contrib_gis_geos_error
+  n_django_contrib_gis_geos_prototypes_errcheck -->|"1"| n_django_contrib_gis_geos_libgeos
+  n_django_contrib_gis_geos_prototypes_geom -->|"1"| n_django_contrib_gis_geos_libgeos
+  n_django_contrib_gis_geos_prototypes_geom -->|"1"| n_django_contrib_gis_geos_prototypes_errcheck
+  n_django_contrib_gis_geos_prototypes_threadsafe -->|"1"| n_django_contrib_gis_geos_base
+  n_django_contrib_gis_geos_prototypes_threadsafe -->|"1"| n_django_contrib_gis_geos_libgeos
+  n_django_contrib_sites_models -->|"1"| n_ext__django_conf
+  n_django_contrib_sites_models -->|"1"| n_ext__django_core
+  n_django_contrib_sites_models -->|"2"| n_ext__django_db
+  n_django_contrib_sites_models -->|"1"| n_ext__django_http
+  n_django_contrib_sites_models -->|"1"| n_ext__django_utils
+  n_django_contrib_staticfiles_finders -->|"1"| n_django_contrib__other
+  n_django_contrib_staticfiles_finders -->|"1"| n_ext__django_apps
+  n_django_contrib_staticfiles_finders -->|"1"| n_ext__django_conf
+  n_django_contrib_staticfiles_finders -->|"3"| n_ext__django_core
+  n_django_contrib_staticfiles_finders -->|"3"| n_ext__django_utils
+  n_django_contrib__other -->|"11"| n_django_contrib_admin
+  n_django_contrib__other -->|"15"| n_django_contrib_auth
+  n_django_contrib__other -->|"7"| n_django_contrib_auth_models
+  n_django_contrib__other -->|"5"| n_django_contrib_gis_db_models_aggregates
+  n_django_contrib__other -->|"8"| n_django_contrib_gis_db_models_fields
+  n_django_contrib__other -->|"16"| n_django_contrib_gis_gdal
+  n_django_contrib__other -->|"8"| n_django_contrib_gis_gdal_base
+  n_django_contrib__other -->|"4"| n_django_contrib_gis_gdal_envelope
+  n_django_contrib__other -->|"10"| n_django_contrib_gis_gdal_error
+  n_django_contrib__other -->|"4"| n_django_contrib_gis_gdal_libgdal
+  n_django_contrib__other -->|"1"| n_django_contrib_gis_gdal_prototypes_errcheck
+  n_django_contrib__other -->|"4"| n_django_contrib_gis_gdal_prototypes_generation
+  n_django_contrib__other -->|"10"| n_django_contrib_gis_geos
+  n_django_contrib__other -->|"3"| n_django_contrib_gis_geos_base
+  n_django_contrib__other -->|"4"| n_django_contrib_gis_geos_error
+  n_django_contrib__other -->|"11"| n_django_contrib_gis_geos_geometry
+  n_django_contrib__other -->|"9"| n_django_contrib_gis_geos_libgeos
+  n_django_contrib__other -->|"5"| n_django_contrib_gis_geos_prototypes
+  n_django_contrib__other -->|"6"| n_django_contrib_gis_geos_prototypes_errcheck
+  n_django_contrib__other -->|"3"| n_django_contrib_gis_geos_prototypes_geom
+  n_django_contrib__other -->|"5"| n_django_contrib_messages_constants
+  n_django_contrib__other -->|"6"| n_django_contrib_sites_models
+  n_django_contrib__other -->|"4"| n_django_contrib_staticfiles_finders
+  n_django_contrib__other -->|"33"| n_ext__django_apps
+  n_django_contrib__other -->|"53"| n_ext__django_conf
+  n_django_contrib__other -->|"99"| n_ext__django_core
+  n_django_contrib__other -->|"169"| n_ext__django_db
+  n_django_contrib__other -->|"2"| n_ext__django_dispatch
+  n_django_contrib__other -->|"28"| n_ext__django_forms
+  n_django_contrib__other -->|"20"| n_ext__django_http
+  n_django_contrib__other -->|"24"| n_ext__django_template
+  n_django_contrib__other -->|"1"| n_ext__django_templatetags
+  n_django_contrib__other -->|"20"| n_ext__django_urls
+  n_django_contrib__other -->|"169"| n_ext__django_utils
+  n_django_contrib__other -->|"16"| n_ext__django_views
+  n_django_contrib__other -->|"3"| n_ext__other
+  n_ext__django_templatetags -->|"1"| n_django_contrib__other
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n_django_contrib__other,n_ext__django_apps,n_ext__django_conf,n_ext__django_core,n_ext__django_db,n_ext__django_dispatch,n_ext__django_forms,n_ext__django_http,n_ext__django_middleware,n_ext__django_template,n_ext__django_templatetags,n_ext__django_urls,n_ext__django_utils,n_ext__django_views,n_ext__other grey

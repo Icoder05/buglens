@@ -1,0 +1,243 @@
+classDiagram
+  %% Classes in django.db.models.fields
+  class n_django_db_models_fields_AutoField["AutoField"] {
+    +__init__()
+    +check()
+    +_check_primary_key()
+    +deconstruct()
+    +get_internal_type()
+    +to_python()
+    +rel_db_type()
+    +validate()
+    +… +4 more
+  }
+  class n_django_db_models_fields_BigAutoField["BigAutoField"] {
+    +get_internal_type()
+    +rel_db_type()
+  }
+  class n_django_db_models_fields_BigIntegerField["BigIntegerField"] {
+    +get_internal_type()
+    +formfield()
+  }
+  class n_django_db_models_fields_BinaryField["BinaryField"] {
+    +__init__()
+    +deconstruct()
+    +get_internal_type()
+    +get_placeholder()
+    +get_default()
+    +get_db_prep_value()
+    +value_to_string()
+    +to_python()
+  }
+  class n_django_db_models_fields_BooleanField["BooleanField"] {
+    +get_internal_type()
+    +to_python()
+    +get_prep_value()
+    +formfield()
+  }
+  class n_django_db_models_fields_CharField["CharField"] {
+    +__init__()
+    +check()
+    +_check_max_length_attribute()
+    +cast_db_type()
+    +get_internal_type()
+    +to_python()
+    +get_prep_value()
+    +formfield()
+  }
+  class n_django_db_models_fields_CommaSeparatedIntegerField["CommaSeparatedIntegerField"] {
+  }
+  class n_django_db_models_fields_DateField["DateField"] {
+    +__init__()
+    +_check_fix_default_value()
+    +deconstruct()
+    +get_internal_type()
+    +to_python()
+    +pre_save()
+    +contribute_to_class()
+    +get_prep_value()
+    +… +3 more
+  }
+  class n_django_db_models_fields_DateTimeCheckMixin["DateTimeCheckMixin"] {
+    +check()
+    +_check_mutually_exclusive_opt…()
+    +_check_fix_default_value()
+  }
+  class n_django_db_models_fields_DateTimeField["DateTimeField"] {
+    +_check_fix_default_value()
+    +get_internal_type()
+    +to_python()
+    +pre_save()
+    +get_prep_value()
+    +get_db_prep_value()
+    +value_to_string()
+    +formfield()
+  }
+  class n_django_db_models_fields_DecimalField["DecimalField"] {
+    +__init__()
+    +check()
+    +_check_decimal_places()
+    +_check_max_digits()
+    +_check_decimal_places_and_max…()
+    +validators()
+    +context()
+    +deconstruct()
+    +… +5 more
+  }
+  class n_django_db_models_fields_DurationField["DurationField"] {
+    +get_internal_type()
+    +to_python()
+    +get_db_prep_value()
+    +get_db_converters()
+    +value_to_string()
+    +formfield()
+  }
+  class n_django_db_models_fields_EmailField["EmailField"] {
+    +__init__()
+    +deconstruct()
+    +formfield()
+  }
+  class n_django_db_models_fields_Empty["Empty"] {
+  }
+  class n_django_db_models_fields_Field["Field"] {
+    +_description()
+    +__init__()
+    +__str__()
+    +__repr__()
+    +check()
+    +_check_field_name()
+    +_check_choices()
+    +_check_db_index()
+    +… +50 more
+  }
+  class n_django_db_models_fields_FilePathField["FilePathField"] {
+    +__init__()
+    +check()
+    +_check_allowing_files_or_fold…()
+    +deconstruct()
+    +get_prep_value()
+    +formfield()
+    +get_internal_type()
+  }
+  class n_django_db_models_fields_FloatField["FloatField"] {
+    +get_prep_value()
+    +get_internal_type()
+    +to_python()
+    +formfield()
+  }
+  class n_django_db_models_fields_GenericIPAddressField["GenericIPAddressField"] {
+    +__init__()
+    +check()
+    +_check_blank_and_null_values()
+    +deconstruct()
+    +get_internal_type()
+    +to_python()
+    +get_db_prep_value()
+    +get_prep_value()
+    +… +1 more
+  }
+  class n_django_db_models_fields_IPAddressField["IPAddressField"] {
+    +__init__()
+    +deconstruct()
+    +get_prep_value()
+    +get_internal_type()
+  }
+  class n_django_db_models_fields_IntegerField["IntegerField"] {
+    +check()
+    +_check_max_length_warning()
+    +validators()
+    +get_prep_value()
+    +get_internal_type()
+    +to_python()
+    +formfield()
+  }
+  class n_django_db_models_fields_NOT_PROVIDED["NOT_PROVIDED"] {
+  }
+  class n_django_db_models_fields_NullBooleanField["NullBooleanField"] {
+    +__init__()
+    +deconstruct()
+    +get_internal_type()
+  }
+  class n_django_db_models_fields_PositiveIntegerField["PositiveIntegerField"] {
+    +get_internal_type()
+    +formfield()
+  }
+  class n_django_db_models_fields_PositiveIntegerRelDbTypeMixin["PositiveIntegerRelDbTypeMixin"] {
+    +rel_db_type()
+  }
+  class n_django_db_models_fields_PositiveSmallIntegerField["PositiveSmallIntegerField"] {
+    +get_internal_type()
+    +formfield()
+  }
+  class n_django_db_models_fields_SlugField["SlugField"] {
+    +__init__()
+    +deconstruct()
+    +get_internal_type()
+    +formfield()
+  }
+  class n_django_db_models_fields_SmallIntegerField["SmallIntegerField"] {
+    +get_internal_type()
+  }
+  class n_django_db_models_fields_TextField["TextField"] {
+    +get_internal_type()
+    +to_python()
+    +get_prep_value()
+    +formfield()
+  }
+  class n_django_db_models_fields_TimeField["TimeField"] {
+    +__init__()
+    +_check_fix_default_value()
+    +deconstruct()
+    +get_internal_type()
+    +to_python()
+    +pre_save()
+    +get_prep_value()
+    +get_db_prep_value()
+    +… +2 more
+  }
+  class n_django_db_models_fields_URLField["URLField"] {
+    +__init__()
+    +deconstruct()
+    +formfield()
+  }
+  class n_django_db_models_fields_UUIDField["UUIDField"] {
+    +__init__()
+    +deconstruct()
+    +get_internal_type()
+    +get_db_prep_value()
+    +to_python()
+    +formfield()
+  }
+  class n_django_db_models_query_utils_RegisterLookupMixin["RegisterLookupMixin"] {
+  }
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_AutoField
+  n_django_db_models_fields_AutoField <|-- n_django_db_models_fields_BigAutoField
+  n_django_db_models_fields_IntegerField <|-- n_django_db_models_fields_BigIntegerField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_BinaryField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_BooleanField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_CharField
+  n_django_db_models_fields_CharField <|-- n_django_db_models_fields_CommaSeparatedIntegerField
+  n_django_db_models_fields_DateTimeCheckMixin <|-- n_django_db_models_fields_DateField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_DateField
+  n_django_db_models_fields_DateField <|-- n_django_db_models_fields_DateTimeField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_DecimalField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_DurationField
+  n_django_db_models_fields_CharField <|-- n_django_db_models_fields_EmailField
+  n_django_db_models_query_utils_RegisterLookupMixin <|-- n_django_db_models_fields_Field
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_FilePathField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_FloatField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_GenericIPAddressField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_IPAddressField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_IntegerField
+  n_django_db_models_fields_BooleanField <|-- n_django_db_models_fields_NullBooleanField
+  n_django_db_models_fields_IntegerField <|-- n_django_db_models_fields_PositiveIntegerField
+  n_django_db_models_fields_PositiveIntegerRelDbTypeMixin <|-- n_django_db_models_fields_PositiveIntegerField
+  n_django_db_models_fields_IntegerField <|-- n_django_db_models_fields_PositiveSmallIntegerField
+  n_django_db_models_fields_PositiveIntegerRelDbTypeMixin <|-- n_django_db_models_fields_PositiveSmallIntegerField
+  n_django_db_models_fields_CharField <|-- n_django_db_models_fields_SlugField
+  n_django_db_models_fields_IntegerField <|-- n_django_db_models_fields_SmallIntegerField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_TextField
+  n_django_db_models_fields_DateTimeCheckMixin <|-- n_django_db_models_fields_TimeField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_TimeField
+  n_django_db_models_fields_CharField <|-- n_django_db_models_fields_URLField
+  n_django_db_models_fields_Field <|-- n_django_db_models_fields_UUIDField

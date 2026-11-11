@@ -1,0 +1,22 @@
+flowchart LR
+  %% Package requests/utils: modules and imports
+  n_ext__other["other"]
+  n_ext__requests["requests"]
+  n_ext__requests_certs["requests/certs"]
+  n_ext__requests_compat["requests/compat"]
+  n_ext__requests_cookies["requests/cookies"]
+  n_ext__requests_defaults["requests/defaults"]
+  n_ext__requests_models["requests/models"]
+  n_ext__requests_sessions["requests/sessions"]
+  n_requests_utils["utils"]
+  n_ext__other -->|"1"| n_requests_utils
+  n_ext__requests -->|"1"| n_requests_utils
+  n_ext__requests_defaults -->|"1"| n_requests_utils
+  n_ext__requests_models -->|"1"| n_requests_utils
+  n_ext__requests_sessions -->|"1"| n_requests_utils
+  n_requests_utils -->|"1"| n_ext__requests
+  n_requests_utils -->|"1"| n_ext__requests_certs
+  n_requests_utils -->|"1"| n_ext__requests_compat
+  n_requests_utils -->|"1"| n_ext__requests_cookies
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n_ext__other,n_ext__requests,n_ext__requests_certs,n_ext__requests_compat,n_ext__requests_cookies,n_ext__requests_defaults,n_ext__requests_models,n_ext__requests_sessions grey

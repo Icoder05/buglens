@@ -1,0 +1,82 @@
+classDiagram
+  %% Classes in django.template.base
+  class n_django_template_base_DebugLexer["DebugLexer"] {
+    +tokenize()
+  }
+  class n_django_template_base_FilterExpression["FilterExpression"] {
+    +__init__()
+    +resolve()
+    +args_check()
+    +__str__()
+  }
+  class n_django_template_base_Lexer["Lexer"] {
+    +__init__()
+    +tokenize()
+    +create_token()
+  }
+  class n_django_template_base_Node["Node"] {
+    +render()
+    +render_annotated()
+    +__iter__()
+    +get_nodes_by_type()
+  }
+  class n_django_template_base_NodeList["NodeList"] {
+    +render()
+    +get_nodes_by_type()
+  }
+  class n_django_template_base_Origin["Origin"] {
+    +__init__()
+    +__str__()
+    +__eq__()
+    +loader_name()
+  }
+  class n_django_template_base_Parser["Parser"] {
+    +__init__()
+    +parse()
+    +skip_past()
+    +extend_nodelist()
+    +error()
+    +invalid_block_tag()
+    +unclosed_block_tag()
+    +next_token()
+    +… +5 more
+  }
+  class n_django_template_base_Template["Template"] {
+    +__init__()
+    +__iter__()
+    +_render()
+    +render()
+    +compile_nodelist()
+    +get_exception_info()
+  }
+  class n_django_template_base_TextNode["TextNode"] {
+    +__init__()
+    +__repr__()
+    +render()
+  }
+  class n_django_template_base_Token["Token"] {
+    +__init__()
+    +__str__()
+    +split_contents()
+  }
+  class n_django_template_base_TokenType["TokenType"] {
+  }
+  class n_django_template_base_Variable["Variable"] {
+    +__init__()
+    +resolve()
+    +__repr__()
+    +__str__()
+    +_resolve_lookup()
+  }
+  class n_django_template_base_VariableDoesNotExist["VariableDoesNotExist"] {
+    +__init__()
+    +__str__()
+  }
+  class n_django_template_base_VariableNode["VariableNode"] {
+    +__init__()
+    +__repr__()
+    +render()
+  }
+  n_django_template_base_Lexer <|-- n_django_template_base_DebugLexer
+  n_django_template_base_Node <|-- n_django_template_base_TextNode
+  n_django_template_base_Node <|-- n_django_template_base_VariableNode

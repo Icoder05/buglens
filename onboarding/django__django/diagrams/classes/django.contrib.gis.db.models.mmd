@@ -1,0 +1,164 @@
+classDiagram
+  %% Classes in django.contrib.gis.db.models.functions
+  class n_django_contrib_gis_db_models_functions_Area["Area"] {
+    +output_field()
+    +as_sql()
+    +as_sqlite()
+  }
+  class n_django_contrib_gis_db_models_functions_AsGML["AsGML"] {
+    +__init__()
+    +as_oracle()
+  }
+  class n_django_contrib_gis_db_models_functions_AsGeoJSON["AsGeoJSON"] {
+    +__init__()
+  }
+  class n_django_contrib_gis_db_models_functions_AsKML["AsKML"] {
+    +as_sqlite()
+  }
+  class n_django_contrib_gis_db_models_functions_AsSVG["AsSVG"] {
+    +__init__()
+  }
+  class n_django_contrib_gis_db_models_functions_Azimuth["Azimuth"] {
+  }
+  class n_django_contrib_gis_db_models_functions_BoundingCircle["BoundingCircle"] {
+    +__init__()
+    +as_oracle()
+  }
+  class n_django_contrib_gis_db_models_functions_Centroid["Centroid"] {
+  }
+  class n_django_contrib_gis_db_models_functions_Difference["Difference"] {
+  }
+  class n_django_contrib_gis_db_models_functions_Distance["Distance"] {
+    +__init__()
+    +as_postgresql()
+    +as_sqlite()
+  }
+  class n_django_contrib_gis_db_models_functions_DistanceResultMixin["DistanceResultMixin"] {
+    +output_field()
+    +source_is_geography()
+  }
+  class n_django_contrib_gis_db_models_functions_Envelope["Envelope"] {
+  }
+  class n_django_contrib_gis_db_models_functions_ForcePolygonCW["ForcePolygonCW"] {
+  }
+  class n_django_contrib_gis_db_models_functions_GeoFunc["GeoFunc"] {
+  }
+  class n_django_contrib_gis_db_models_functions_GeoFuncMixin["GeoFuncMixin"] {
+    +__init__()
+    +name()
+    +geo_field()
+    +as_sql()
+    +resolve_expression()
+    +_handle_param()
+  }
+  class n_django_contrib_gis_db_models_functions_GeoHash["GeoHash"] {
+    +__init__()
+    +as_mysql()
+  }
+  class n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc["GeomOutputGeoFunc"] {
+    +output_field()
+  }
+  class n_django_contrib_gis_db_models_functions_Intersection["Intersection"] {
+  }
+  class n_django_contrib_gis_db_models_functions_IsValid["IsValid"] {
+    +as_oracle()
+  }
+  class n_django_contrib_gis_db_models_functions_Length["Length"] {
+    +__init__()
+    +as_sql()
+    +as_postgresql()
+    +as_sqlite()
+  }
+  class n_django_contrib_gis_db_models_functions_LineLocatePoint["LineLocatePoint"] {
+  }
+  class n_django_contrib_gis_db_models_functions_MakeValid["MakeValid"] {
+  }
+  class n_django_contrib_gis_db_models_functions_MemSize["MemSize"] {
+  }
+  class n_django_contrib_gis_db_models_functions_NumGeometries["NumGeometries"] {
+  }
+  class n_django_contrib_gis_db_models_functions_NumPoints["NumPoints"] {
+  }
+  class n_django_contrib_gis_db_models_functions_OracleToleranceMixin["OracleToleranceMixin"] {
+    +as_oracle()
+  }
+  class n_django_contrib_gis_db_models_functions_Perimeter["Perimeter"] {
+    +as_postgresql()
+    +as_sqlite()
+  }
+  class n_django_contrib_gis_db_models_functions_PointOnSurface["PointOnSurface"] {
+  }
+  class n_django_contrib_gis_db_models_functions_Reverse["Reverse"] {
+  }
+  class n_django_contrib_gis_db_models_functions_SQLiteDecimalToFloatM["SQLiteDecimalToFloatMixin"] {
+    +as_sqlite()
+  }
+  class n_django_contrib_gis_db_models_functions_Scale["Scale"] {
+    +__init__()
+  }
+  class n_django_contrib_gis_db_models_functions_SnapToGrid["SnapToGrid"] {
+    +__init__()
+  }
+  class n_django_contrib_gis_db_models_functions_SymDifference["SymDifference"] {
+  }
+  class n_django_contrib_gis_db_models_functions_Transform["Transform"] {
+    +__init__()
+  }
+  class n_django_contrib_gis_db_models_functions_Translate["Translate"] {
+    +as_sqlite()
+  }
+  class n_django_contrib_gis_db_models_functions_Union["Union"] {
+  }
+  class n_django_db_models_expressions_Func["Func"] {
+  }
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_Area
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_Area
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_AsGML
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_AsGeoJSON
+  n_django_contrib_gis_db_models_functions_AsGML <|-- n_django_contrib_gis_db_models_functions_AsKML
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_AsSVG
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_Azimuth
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_BoundingCircle
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_BoundingCircle
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_Centroid
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_Centroid
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_Difference
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_Difference
+  n_django_contrib_gis_db_models_functions_DistanceResultMixin <|-- n_django_contrib_gis_db_models_functions_Distance
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_Distance
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_Distance
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_Envelope
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_ForcePolygonCW
+  n_django_contrib_gis_db_models_functions_GeoFuncMixin <|-- n_django_contrib_gis_db_models_functions_GeoFunc
+  n_django_db_models_expressions_Func <|-- n_django_contrib_gis_db_models_functions_GeoFunc
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_GeoHash
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_Intersection
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_Intersection
+  n_django_contrib_gis_db_models_functions_GeoFuncMixin <|-- n_django_contrib_gis_db_models_functions_IsValid
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_IsValid
+  n_django_contrib_gis_db_models_functions_Transform <|-- n_django_contrib_gis_db_models_functions_IsValid
+  n_django_contrib_gis_db_models_functions_DistanceResultMixin <|-- n_django_contrib_gis_db_models_functions_Length
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_Length
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_Length
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_LineLocatePoint
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_MakeValid
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_MemSize
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_NumGeometries
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_NumPoints
+  n_django_contrib_gis_db_models_functions_DistanceResultMixin <|-- n_django_contrib_gis_db_models_functions_Perimeter
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_Perimeter
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_Perimeter
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_PointOnSurface
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_PointOnSurface
+  n_django_contrib_gis_db_models_functions_GeoFunc <|-- n_django_contrib_gis_db_models_functions_Reverse
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_Scale
+  n_django_contrib_gis_db_models_functions_SQLiteDecimalToFloatM <|-- n_django_contrib_gis_db_models_functions_Scale
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_SnapToGrid
+  n_django_contrib_gis_db_models_functions_SQLiteDecimalToFloatM <|-- n_django_contrib_gis_db_models_functions_SnapToGrid
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_SymDifference
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_SymDifference
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_Transform
+  n_django_contrib_gis_db_models_functions_Scale <|-- n_django_contrib_gis_db_models_functions_Translate
+  n_django_contrib_gis_db_models_functions_GeomOutputGeoFunc <|-- n_django_contrib_gis_db_models_functions_Union
+  n_django_contrib_gis_db_models_functions_OracleToleranceMixin <|-- n_django_contrib_gis_db_models_functions_Union

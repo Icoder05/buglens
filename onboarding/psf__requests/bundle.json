@@ -1,0 +1,55 @@
+{
+ "repo": "psf/requests",
+ "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+ "block_svg": "diagrams/block.svg",
+ "block_mermaid": "diagrams/block.mmd",
+ "package_diagrams": {
+  "requests/packages": "diagrams/packages/requests_packages.svg",
+  "requests/compat": "diagrams/packages/requests_compat.svg",
+  "requests/utils": "diagrams/packages/requests_utils.svg",
+  "requests/structures": "diagrams/packages/requests_structures.svg",
+  "requests/cookies": "diagrams/packages/requests_cookies.svg",
+  "requests/models": "diagrams/packages/requests_models.svg",
+  "requests/exceptions": "diagrams/packages/requests_exceptions.svg",
+  "requests/sessions": "diagrams/packages/requests_sessions.svg",
+  "requests": "diagrams/packages/requests.svg",
+  "requests/certs": "diagrams/packages/requests_certs.svg"
+ },
+ "class_diagrams": {
+  "requests.exceptions": "diagrams/classes/requests.exceptions.svg",
+  "requests.packages.chardet2.charsetprober": "diagrams/classes/requests.packages.chardet2.charsetprober.svg",
+  "requests.packages.chardet2.chardistribution": "diagrams/classes/requests.packages.chardet2.chardistribution.svg",
+  "requests.packages.chardet2.mbcharsetprober": "diagrams/classes/requests.packages.chardet2.mbcharsetprober.svg",
+  "requests.packages.urllib3.exceptions": "diagrams/classes/requests.packages.urllib3.exceptions.svg",
+  "requests.auth": "diagrams/classes/requests.auth.svg",
+  "requests.packages.oauthlib.oauth2.draft25": "diagrams/classes/requests.packages.oauthlib.oauth2.draft25.svg",
+  "requests.packages.urllib3.request": "diagrams/classes/requests.packages.urllib3.request.svg",
+  "requests.packages.chardet2.charsetgroupprober": "diagrams/classes/requests.packages.chardet2.charsetgroupprober.svg",
+  "requests.packages.urllib3.packages.six": "diagrams/classes/requests.packages.urllib3.packages.six.svg",
+  "requests.packages.urllib3.packages.ordered_dict": "diagrams/classes/requests.packages.urllib3.packages.ordered_dict.svg",
+  "requests.packages.chardet2.codingstatemachine": "diagrams/classes/requests.packages.chardet2.codingstatemachine.svg",
+  "requests.packages.chardet2.universaldetector": "diagrams/classes/requests.packages.chardet2.universaldetector.svg",
+  "requests.structures": "diagrams/classes/requests.structures.svg",
+  "requests.packages.urllib3.packages.ssl_match_hostname": "diagrams/classes/requests.packages.urllib3.packages.ssl_match_hostname.svg"
+ },
+ "callflow_diagrams": {
+  "requests.certs __main__": "diagrams/callflow/requests.certs___main.svg"
+ },
+ "guide_md": "guide.md",
+ "stats": {
+  "files": 116,
+  "parse_failures": 15,
+  "modules": 116,
+  "import_edges": 164,
+  "classes": 101,
+  "inheritance_edges": 57,
+  "call_nodes": 735,
+  "call_edges": 374,
+  "unresolved_calls": 934,
+  "entry_points": 1,
+  "diagram_faithfulness_pct": 100.0,
+  "sentences_kept": 0,
+  "sentences_dropped": 0,
+  "summaries_complete": false
+ }
+}

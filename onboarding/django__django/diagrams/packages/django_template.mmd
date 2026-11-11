@@ -1,0 +1,145 @@
+flowchart LR
+  %% Package django/template: modules and imports
+  n_django_template["template"]
+  n_django_template_backends["backends"]
+  n_django_template_backends_base["base"]
+  n_django_template_backends_django["django"]
+  n_django_template_backends_dummy["dummy"]
+  n_django_template_backends_jinja2["jinja2"]
+  n_django_template_backends_utils["utils"]
+  n_django_template_base["base"]
+  n_django_template_context["context"]
+  n_django_template_context_processors["context_processors"]
+  n_django_template_defaultfilters["defaultfilters"]
+  n_django_template_defaulttags["defaulttags"]
+  n_django_template_engine["engine"]
+  n_django_template_exceptions["exceptions"]
+  n_django_template_library["library"]
+  n_django_template_loader["loader"]
+  n_django_template_loader_tags["loader_tags"]
+  n_django_template_loaders["loaders"]
+  n_django_template_loaders_app_directories["app_directories"]
+  n_django_template_loaders_base["base"]
+  n_django_template_loaders_cached["cached"]
+  n_django_template_loaders_filesystem["filesystem"]
+  n_django_template_response["response"]
+  n_django_template_smartif["smartif"]
+  n_django_template_utils["utils"]
+  n_django_template__other["other (1 modules)"]
+  n_ext__django_apps["django/apps"]
+  n_ext__django_conf["django/conf"]
+  n_ext__django_contrib["django/contrib"]
+  n_ext__django_core["django/core"]
+  n_ext__django_db["django/db"]
+  n_ext__django_forms["django/forms"]
+  n_ext__django_http["django/http"]
+  n_ext__django_middleware["django/middleware"]
+  n_ext__django_templatetags["django/templatetags"]
+  n_ext__django_urls["django/urls"]
+  n_ext__django_utils["django/utils"]
+  n_ext__django_views["django/views"]
+  n_ext__other["other"]
+  n_django_template -->|"1"| n_django_template_base
+  n_django_template -->|"1"| n_django_template_context
+  n_django_template -->|"1"| n_django_template_engine
+  n_django_template -->|"1"| n_django_template_exceptions
+  n_django_template -->|"1"| n_django_template_library
+  n_django_template -->|"1"| n_django_template_utils
+  n_django_template_backends_base -->|"1"| n_django_template_utils
+  n_django_template_backends_base -->|"1"| n_ext__django_core
+  n_django_template_backends_base -->|"2"| n_ext__django_utils
+  n_django_template_backends_django -->|"1"| n_django_template
+  n_django_template_backends_django -->|"1"| n_django_template_backends_base
+  n_django_template_backends_django -->|"1"| n_django_template_context
+  n_django_template_backends_django -->|"1"| n_django_template_engine
+  n_django_template_backends_django -->|"1"| n_django_template_library
+  n_django_template_backends_django -->|"1"| n_ext__django_apps
+  n_django_template_backends_django -->|"1"| n_ext__django_conf
+  n_django_template_backends_dummy -->|"1"| n_django_template
+  n_django_template_backends_dummy -->|"1"| n_django_template_backends_base
+  n_django_template_backends_dummy -->|"1"| n_django_template_backends_utils
+  n_django_template_backends_dummy -->|"1"| n_ext__django_conf
+  n_django_template_backends_dummy -->|"1"| n_ext__django_core
+  n_django_template_backends_dummy -->|"1"| n_ext__django_utils
+  n_django_template_backends_jinja2 -->|"1"| n_django_template
+  n_django_template_backends_jinja2 -->|"1"| n_django_template_backends_base
+  n_django_template_backends_jinja2 -->|"1"| n_django_template_backends_utils
+  n_django_template_backends_jinja2 -->|"1"| n_ext__django_conf
+  n_django_template_backends_jinja2 -->|"2"| n_ext__django_utils
+  n_django_template_backends_utils -->|"1"| n_ext__django_middleware
+  n_django_template_backends_utils -->|"3"| n_ext__django_utils
+  n_django_template_base -->|"1"| n_django_template_context
+  n_django_template_base -->|"1"| n_django_template_engine
+  n_django_template_base -->|"1"| n_django_template_exceptions
+  n_django_template_base -->|"6"| n_ext__django_utils
+  n_django_template_context_processors -->|"1"| n_ext__django_conf
+  n_django_template_context_processors -->|"1"| n_ext__django_db
+  n_django_template_context_processors -->|"1"| n_ext__django_middleware
+  n_django_template_context_processors -->|"3"| n_ext__django_utils
+  n_django_template_defaultfilters -->|"1"| n_django_template_base
+  n_django_template_defaultfilters -->|"1"| n_django_template_library
+  n_django_template_defaultfilters -->|"8"| n_ext__django_utils
+  n_django_template_defaulttags -->|"1"| n_django_template_base
+  n_django_template_defaulttags -->|"1"| n_django_template_defaultfilters
+  n_django_template_defaulttags -->|"1"| n_django_template_library
+  n_django_template_defaulttags -->|"1"| n_django_template_smartif
+  n_django_template_defaulttags -->|"1"| n_ext__django_conf
+  n_django_template_defaulttags -->|"1"| n_ext__django_urls
+  n_django_template_defaulttags -->|"4"| n_ext__django_utils
+  n_django_template_engine -->|"1"| n_django_template
+  n_django_template_engine -->|"1"| n_django_template_backends_django
+  n_django_template_engine -->|"1"| n_django_template_base
+  n_django_template_engine -->|"1"| n_django_template_context
+  n_django_template_engine -->|"1"| n_django_template_exceptions
+  n_django_template_engine -->|"1"| n_django_template_library
+  n_django_template_engine -->|"1"| n_ext__django_core
+  n_django_template_engine -->|"2"| n_ext__django_utils
+  n_django_template_library -->|"1"| n_django_template_base
+  n_django_template_library -->|"1"| n_django_template_exceptions
+  n_django_template_library -->|"2"| n_ext__django_utils
+  n_django_template_loader -->|"1"| n_django_template
+  n_django_template_loader -->|"1"| n_django_template_exceptions
+  n_django_template_loader_tags -->|"1"| n_django_template_base
+  n_django_template_loader_tags -->|"1"| n_django_template_library
+  n_django_template_loader_tags -->|"1"| n_ext__django_utils
+  n_django_template_loaders_app_directories -->|"1"| n_django_template_loaders_filesystem
+  n_django_template_loaders_app_directories -->|"1"| n_django_template_utils
+  n_django_template_loaders_base -->|"1"| n_django_template
+  n_django_template_loaders_cached -->|"1"| n_django_template
+  n_django_template_loaders_cached -->|"1"| n_django_template_backends_django
+  n_django_template_loaders_cached -->|"1"| n_django_template_loaders_base
+  n_django_template_loaders_filesystem -->|"1"| n_django_template
+  n_django_template_loaders_filesystem -->|"1"| n_django_template_loaders_base
+  n_django_template_loaders_filesystem -->|"1"| n_ext__django_core
+  n_django_template_loaders_filesystem -->|"1"| n_ext__django_utils
+  n_django_template_response -->|"1"| n_django_template_loader
+  n_django_template_response -->|"1"| n_ext__django_http
+  n_django_template_utils -->|"1"| n_ext__django_apps
+  n_django_template_utils -->|"1"| n_ext__django_conf
+  n_django_template_utils -->|"1"| n_ext__django_core
+  n_django_template_utils -->|"2"| n_ext__django_utils
+  n_django_template__other -->|"1"| n_django_template
+  n_django_template__other -->|"1"| n_django_template_loaders_base
+  n_ext__django_contrib -->|"8"| n_django_template
+  n_ext__django_contrib -->|"1"| n_django_template_backends_django
+  n_ext__django_contrib -->|"1"| n_django_template_context
+  n_ext__django_contrib -->|"2"| n_django_template_defaultfilters
+  n_ext__django_contrib -->|"1"| n_django_template_engine
+  n_ext__django_contrib -->|"1"| n_django_template_library
+  n_ext__django_contrib -->|"5"| n_django_template_loader
+  n_ext__django_contrib -->|"5"| n_django_template_response
+  n_ext__django_core -->|"1"| n_django_template
+  n_ext__django_forms -->|"1"| n_django_template_backends_django
+  n_ext__django_forms -->|"1"| n_django_template_backends_jinja2
+  n_ext__django_forms -->|"1"| n_django_template_loader
+  n_ext__django_templatetags -->|"5"| n_django_template
+  n_ext__django_templatetags -->|"1"| n_django_template_base
+  n_ext__django_templatetags -->|"1"| n_django_template_defaulttags
+  n_ext__django_utils -->|"1"| n_django_template_base
+  n_ext__django_views -->|"5"| n_django_template
+  n_ext__django_views -->|"1"| n_django_template_defaultfilters
+  n_ext__django_views -->|"3"| n_django_template_loader
+  n_ext__django_views -->|"1"| n_django_template_response
+  n_ext__other -->|"1"| n_django_template_loader
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n_django_template__other,n_ext__django_apps,n_ext__django_conf,n_ext__django_contrib,n_ext__django_core,n_ext__django_db,n_ext__django_forms,n_ext__django_http,n_ext__django_middleware,n_ext__django_templatetags,n_ext__django_urls,n_ext__django_utils,n_ext__django_views,n_ext__other grey

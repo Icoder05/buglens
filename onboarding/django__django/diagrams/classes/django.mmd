@@ -1,0 +1,33 @@
+classDiagram
+  %% Classes in django.conf
+  class n_django_conf_LazySettings["LazySettings"] {
+    +_setup()
+    +__repr__()
+    +__getattr__()
+    +__setattr__()
+    +__delattr__()
+    +configure()
+    +configured()
+    +FILE_CHARSET()
+  }
+  class n_django_conf_Settings["Settings"] {
+    +__init__()
+    +is_overridden()
+    +__repr__()
+  }
+  class n_django_conf_SettingsReference["SettingsReference"] {
+    +__new__()
+    +__init__()
+  }
+  class n_django_conf_UserSettingsHolder["UserSettingsHolder"] {
+    +__init__()
+    +__getattr__()
+    +__setattr__()
+    +__delattr__()
+    +__dir__()
+    +is_overridden()
+    +__repr__()
+  }
+  class n_django_utils_functional_LazyObject["LazyObject"] {
+  }
+  n_django_utils_functional_LazyObject <|-- n_django_conf_LazySettings

@@ -1,0 +1,44 @@
+flowchart LR
+  %% Package django/http: modules and imports
+  n_django_http["http"]
+  n_django_http_cookie["cookie"]
+  n_django_http_multipartparser["multipartparser"]
+  n_django_http_request["request"]
+  n_django_http_response["response"]
+  n_ext__django_conf["django/conf"]
+  n_ext__django_contrib["django/contrib"]
+  n_ext__django_core["django/core"]
+  n_ext__django_middleware["django/middleware"]
+  n_ext__django_template["django/template"]
+  n_ext__django_urls["django/urls"]
+  n_ext__django_utils["django/utils"]
+  n_ext__django_views["django/views"]
+  n_ext__other["other"]
+  n_django_http -->|"1"| n_django_http_cookie
+  n_django_http -->|"1"| n_django_http_request
+  n_django_http -->|"1"| n_django_http_response
+  n_django_http_multipartparser -->|"1"| n_django_http
+  n_django_http_multipartparser -->|"1"| n_ext__django_conf
+  n_django_http_multipartparser -->|"2"| n_ext__django_core
+  n_django_http_multipartparser -->|"3"| n_ext__django_utils
+  n_django_http_request -->|"1"| n_django_http_multipartparser
+  n_django_http_request -->|"1"| n_ext__django_conf
+  n_django_http_request -->|"3"| n_ext__django_core
+  n_django_http_request -->|"4"| n_ext__django_utils
+  n_django_http_response -->|"1"| n_django_http_cookie
+  n_django_http_response -->|"1"| n_ext__django_conf
+  n_django_http_response -->|"4"| n_ext__django_core
+  n_django_http_response -->|"3"| n_ext__django_utils
+  n_ext__django_contrib -->|"19"| n_django_http
+  n_ext__django_contrib -->|"1"| n_django_http_request
+  n_ext__django_contrib -->|"1"| n_django_http_response
+  n_ext__django_core -->|"2"| n_django_http
+  n_ext__django_core -->|"1"| n_django_http_multipartparser
+  n_ext__django_middleware -->|"3"| n_django_http
+  n_ext__django_template -->|"1"| n_django_http
+  n_ext__django_urls -->|"1"| n_django_http
+  n_ext__django_utils -->|"1"| n_django_http
+  n_ext__django_views -->|"12"| n_django_http
+  n_ext__other -->|"1"| n_django_http
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n_ext__django_conf,n_ext__django_contrib,n_ext__django_core,n_ext__django_middleware,n_ext__django_template,n_ext__django_urls,n_ext__django_utils,n_ext__django_views,n_ext__other grey

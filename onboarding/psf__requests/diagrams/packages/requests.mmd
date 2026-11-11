@@ -1,0 +1,18 @@
+flowchart LR
+  %% Package requests: modules and imports
+  n_ext__other["other"]
+  n_ext__requests_exceptions["requests/exceptions"]
+  n_ext__requests_models["requests/models"]
+  n_ext__requests_sessions["requests/sessions"]
+  n_ext__requests_status_codes["requests/status_codes"]
+  n_ext__requests_utils["requests/utils"]
+  n_requests["requests"]
+  n_ext__requests_utils -->|"1"| n_requests
+  n_requests -->|"1"| n_ext__other
+  n_requests -->|"1"| n_ext__requests_exceptions
+  n_requests -->|"1"| n_ext__requests_models
+  n_requests -->|"1"| n_ext__requests_sessions
+  n_requests -->|"1"| n_ext__requests_status_codes
+  n_requests -->|"1"| n_ext__requests_utils
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n_ext__other,n_ext__requests_exceptions,n_ext__requests_models,n_ext__requests_sessions,n_ext__requests_status_codes,n_ext__requests_utils grey

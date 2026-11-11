@@ -1,0 +1,12 @@
+classDiagram
+  %% Classes in django.db.models.functions.mixins
+  class n_django_db_models_functions_mixins_FixDecimalInputMixin["FixDecimalInputMixin"] {
+    +as_postgresql()
+  }
+  class n_django_db_models_functions_mixins_FixDurationInputMixin["FixDurationInputMixin"] {
+    +as_mysql()
+    +as_oracle()
+  }
+  class n_django_db_models_functions_mixins_NumericOutputFieldMixin["NumericOutputFieldMixin"] {
+    +_resolve_output_field()
+  }
