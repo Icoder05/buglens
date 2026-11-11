@@ -1,0 +1,17 @@
+classDiagram
+  %% Classes in flask.testing
+  class n_flask_testing_EnvironBuilder["EnvironBuilder"] {
+    +__init__()
+    +json_dumps()
+  }
+  class n_flask_testing_FlaskCliRunner["FlaskCliRunner"] {
+    +__init__()
+    +invoke()
+  }
+  class n_flask_testing_FlaskClient["FlaskClient"] {
+    +__init__()
+    +session_transaction()
+    +open()
+    +__enter__()
+    +__exit__()
+  }

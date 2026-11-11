@@ -1,0 +1,24 @@
+digraph class {
+	fontname=Helvetica fontsize=10 label="Classes in flask.json.tag
+Arrow child→base = inherits. Grey = base class in another module." labelloc=b nodesep=0.35 rankdir=BT ranksep=0.6
+	node [color="#4c6a92" fillcolor="#e8eef7" fontname=Helvetica fontsize=11 shape=box style="rounded,filled"]
+	edge [arrowsize=0.7 color="#607d8b" fontname=Helvetica fontsize=9]
+	n0 [label="{JSONTag|__init__()\lcheck()\lto_json()\lto_python()\ltag()\l}" shape=record style=filled tooltip="flask.json.tag.JSONTag"]
+	n1 [label="{PassDict|check()\lto_json()\l}" shape=record style=filled tooltip="flask.json.tag.PassDict"]
+	n2 [label="{PassList|check()\lto_json()\l}" shape=record style=filled tooltip="flask.json.tag.PassList"]
+	n3 [label="{TagBytes|check()\lto_json()\lto_python()\l}" shape=record style=filled tooltip="flask.json.tag.TagBytes"]
+	n4 [label="{TagDateTime|check()\lto_json()\lto_python()\l}" shape=record style=filled tooltip="flask.json.tag.TagDateTime"]
+	n5 [label="{TagDict|check()\lto_json()\lto_python()\l}" shape=record style=filled tooltip="flask.json.tag.TagDict"]
+	n6 [label="{TagMarkup|check()\lto_json()\lto_python()\l}" shape=record style=filled tooltip="flask.json.tag.TagMarkup"]
+	n7 [label="{TagTuple|check()\lto_json()\lto_python()\l}" shape=record style=filled tooltip="flask.json.tag.TagTuple"]
+	n8 [label="{TagUUID|check()\lto_json()\lto_python()\l}" shape=record style=filled tooltip="flask.json.tag.TagUUID"]
+	n9 [label="{TaggedJSONSerializer|__init__()\lregister()\ltag()\luntag()\ldumps()\lloads()\l}" shape=record style=filled tooltip="flask.json.tag.TaggedJSONSerializer"]
+	n1 -> n0 [arrowhead=empty]
+	n2 -> n0 [arrowhead=empty]
+	n3 -> n0 [arrowhead=empty]
+	n4 -> n0 [arrowhead=empty]
+	n5 -> n0 [arrowhead=empty]
+	n6 -> n0 [arrowhead=empty]
+	n7 -> n0 [arrowhead=empty]
+	n8 -> n0 [arrowhead=empty]
+}

@@ -1,0 +1,35 @@
+# FR-Q4: hand-written "where is X?" questions with acceptable answer files.
+# Metric: file Acc@5 of the Ask retriever (S5 configuration) at the onboarding commit.
+# Copy to data/onboard_qa.yaml to override.
+pallets/flask:
+  - q: "where are blueprints registered on the application?"
+    files: [src/flask/app.py, src/flask/blueprints.py]
+  - q: "how is configuration loaded from a python file?"
+    files: [src/flask/config.py]
+  - q: "where is the request context pushed and popped?"
+    files: [src/flask/ctx.py]
+  - q: "where is the session cookie signed and saved?"
+    files: [src/flask/sessions.py]
+  - q: "where are jinja templates rendered?"
+    files: [src/flask/templating.py]
+  - q: "where is the flask run command line implemented?"
+    files: [src/flask/cli.py]
+  - q: "how are non-standard types like tuples and UUIDs tagged when serialising the session to JSON?"
+    files: [src/flask/json/tag.py]
+  - q: "where do class-based views dispatch to the method handler?"
+    files: [src/flask/views.py]
+psf/requests:
+  - q: "where is HTTP basic authentication implemented?"
+    files: [requests/auth.py]
+  - q: "where is a prepared request sent and redirects followed?"
+    files: [requests/models.py, requests/sessions.py]
+  - q: "where are cookies stored in a cookie jar?"
+    files: [requests/cookies.py]
+  - q: "where is the case-insensitive dictionary used for headers?"
+    files: [requests/structures.py]
+  - q: "where are the get and post convenience functions defined?"
+    files: [requests/api.py]
+  - q: "where are request hooks dispatched?"
+    files: [requests/hooks.py]
+  - q: "where are the library's exception classes defined?"
+    files: [requests/exceptions.py]

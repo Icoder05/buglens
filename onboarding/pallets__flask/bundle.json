@@ -1,0 +1,60 @@
+{
+ "repo": "pallets/flask",
+ "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+ "block_svg": "diagrams/block.svg",
+ "block_mermaid": "diagrams/block.mmd",
+ "package_diagrams": {
+  "flask/globals": "diagrams/packages/flask_globals.svg",
+  "flask/wrappers": "diagrams/packages/flask_wrappers.svg",
+  "flask/app": "diagrams/packages/flask_app.svg",
+  "flask/json": "diagrams/packages/flask_json.svg",
+  "flask/debughelpers": "diagrams/packages/flask_debughelpers.svg",
+  "flask": "diagrams/packages/flask.svg",
+  "flask/sessions": "diagrams/packages/flask_sessions.svg",
+  "flask/ctx": "diagrams/packages/flask_ctx.svg",
+  "flask/helpers": "diagrams/packages/flask_helpers.svg",
+  "flask/signals": "diagrams/packages/flask_signals.svg"
+ },
+ "class_diagrams": {
+  "flask.json.tag": "diagrams/classes/flask.json.tag.svg",
+  "flask.scaffold": "diagrams/classes/flask.scaffold.svg",
+  "flask.cli": "diagrams/classes/flask.cli.svg",
+  "flask.sessions": "diagrams/classes/flask.sessions.svg",
+  "flask.views": "diagrams/classes/flask.views.svg",
+  "flask.app": "diagrams/classes/flask.app.svg",
+  "flask.blueprints": "diagrams/classes/flask.blueprints.svg",
+  "flask.wrappers": "diagrams/classes/flask.wrappers.svg",
+  "flask.json": "diagrams/classes/flask.json.svg",
+  "flask.debughelpers": "diagrams/classes/flask.debughelpers.svg",
+  "flask.ctx": "diagrams/classes/flask.ctx.svg",
+  "flask.helpers": "diagrams/classes/flask.helpers.svg",
+  "flask.templating": "diagrams/classes/flask.templating.svg",
+  "flask.config": "diagrams/classes/flask.config.svg",
+  "flask.testing": "diagrams/classes/flask.testing.svg"
+ },
+ "callflow_diagrams": {
+  "init_db_command (@click.command)": "diagrams/callflow/init_db_command_click.command.svg",
+  "run_command (@click.command)": "diagrams/callflow/run_command_click.command.svg",
+  "shell_command (@click.command)": "diagrams/callflow/shell_command_click.command.svg",
+  "routes_command (@click.command)": "diagrams/callflow/routes_command_click.command.svg",
+  "flask -> flask.cli:main": "diagrams/callflow/flask_-_flask.cli_main.svg",
+  "flask.cli __main__": "diagrams/callflow/flask.cli___main.svg"
+ },
+ "guide_md": "guide.md",
+ "stats": {
+  "files": 29,
+  "parse_failures": 0,
+  "modules": 29,
+  "import_edges": 88,
+  "classes": 47,
+  "inheritance_edges": 15,
+  "call_nodes": 413,
+  "call_edges": 213,
+  "unresolved_calls": 723,
+  "entry_points": 6,
+  "diagram_faithfulness_pct": 100.0,
+  "sentences_kept": 0,
+  "sentences_dropped": 0,
+  "summaries_complete": false
+ }
+}

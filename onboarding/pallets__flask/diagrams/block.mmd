@@ -1,0 +1,95 @@
+flowchart LR
+  %% Architecture: packages and their imports
+  n_examples_tutorial["examples/tutorial (5)"]
+  n_flask["flask (1)"]
+  n_flask_app["flask/app (1)"]
+  n_flask_blueprints["flask/blueprints (1)"]
+  n_flask_cli["flask/cli (1)"]
+  n_flask_ctx["flask/ctx (1)"]
+  n_flask_debughelpers["flask/debughelpers (1)"]
+  n_flask_globals["flask/globals (1)"]
+  n_flask_helpers["flask/helpers (1)"]
+  n_flask_json["flask/json (2)"]
+  n_flask_scaffold["flask/scaffold (1)"]
+  n_flask_sessions["flask/sessions (1)"]
+  n_flask_signals["flask/signals (1)"]
+  n_flask_typing["flask/typing (1)"]
+  n_flask_wrappers["flask/wrappers (1)"]
+  n_other["other (9)"]
+  n_examples_tutorial -->|"4"| n_flask
+  n_examples_tutorial -->|"1"| n_flask_cli
+  n_flask -->|"1"| n_flask_app
+  n_flask -->|"1"| n_flask_blueprints
+  n_flask -->|"1"| n_flask_ctx
+  n_flask -->|"1"| n_flask_globals
+  n_flask -->|"1"| n_flask_helpers
+  n_flask -->|"1"| n_flask_json
+  n_flask -->|"1"| n_flask_signals
+  n_flask -->|"2"| n_other
+  n_flask_app -->|"1"| n_flask_blueprints
+  n_flask_app -->|"1"| n_flask_cli
+  n_flask_app -->|"1"| n_flask_ctx
+  n_flask_app -->|"1"| n_flask_debughelpers
+  n_flask_app -->|"1"| n_flask_globals
+  n_flask_app -->|"1"| n_flask_helpers
+  n_flask_app -->|"1"| n_flask_json
+  n_flask_app -->|"1"| n_flask_scaffold
+  n_flask_app -->|"1"| n_flask_sessions
+  n_flask_app -->|"1"| n_flask_signals
+  n_flask_app -->|"1"| n_flask_typing
+  n_flask_app -->|"1"| n_flask_wrappers
+  n_flask_app -->|"4"| n_other
+  n_flask_blueprints -->|"1"| n_flask_app
+  n_flask_blueprints -->|"1"| n_flask_scaffold
+  n_flask_blueprints -->|"1"| n_flask_typing
+  n_flask_cli -->|"1"| n_flask
+  n_flask_cli -->|"1"| n_flask_globals
+  n_flask_cli -->|"1"| n_flask_helpers
+  n_flask_ctx -->|"1"| n_flask_app
+  n_flask_ctx -->|"1"| n_flask_globals
+  n_flask_ctx -->|"1"| n_flask_sessions
+  n_flask_ctx -->|"1"| n_flask_signals
+  n_flask_ctx -->|"1"| n_flask_typing
+  n_flask_ctx -->|"1"| n_flask_wrappers
+  n_flask_debughelpers -->|"1"| n_flask_app
+  n_flask_debughelpers -->|"1"| n_flask_blueprints
+  n_flask_debughelpers -->|"1"| n_flask_globals
+  n_flask_globals -->|"1"| n_flask_app
+  n_flask_globals -->|"1"| n_flask_ctx
+  n_flask_globals -->|"1"| n_flask_sessions
+  n_flask_globals -->|"1"| n_flask_wrappers
+  n_flask_helpers -->|"1"| n_flask_globals
+  n_flask_helpers -->|"1"| n_flask_signals
+  n_flask_helpers -->|"1"| n_flask_wrappers
+  n_flask_json -->|"1"| n_flask_app
+  n_flask_json -->|"1"| n_flask_globals
+  n_flask_json -->|"1"| n_flask_wrappers
+  n_flask_scaffold -->|"1"| n_flask_cli
+  n_flask_scaffold -->|"1"| n_flask_globals
+  n_flask_scaffold -->|"1"| n_flask_helpers
+  n_flask_scaffold -->|"1"| n_flask_typing
+  n_flask_scaffold -->|"1"| n_flask_wrappers
+  n_flask_scaffold -->|"1"| n_other
+  n_flask_sessions -->|"1"| n_flask_app
+  n_flask_sessions -->|"1"| n_flask_helpers
+  n_flask_sessions -->|"1"| n_flask_json
+  n_flask_sessions -->|"1"| n_flask_wrappers
+  n_flask_typing -->|"1"| n_flask_wrappers
+  n_flask_wrappers -->|"1"| n_flask_debughelpers
+  n_flask_wrappers -->|"1"| n_flask_globals
+  n_flask_wrappers -->|"1"| n_flask_json
+  n_other -->|"3"| n_flask
+  n_other -->|"3"| n_flask_app
+  n_other -->|"2"| n_flask_cli
+  n_other -->|"1"| n_flask_debughelpers
+  n_other -->|"3"| n_flask_globals
+  n_other -->|"1"| n_flask_json
+  n_other -->|"1"| n_flask_scaffold
+  n_other -->|"1"| n_flask_sessions
+  n_other -->|"1"| n_flask_signals
+  n_other -->|"1"| n_flask_typing
+  n_other -->|"1"| n_flask_wrappers
+  classDef grey fill:#eeeeee,stroke:#9e9e9e,color:#616161
+  class n_other grey
+  classDef entry stroke:#1b3a5c,stroke-width:3px
+  class n_examples_tutorial,n_flask_cli entry

@@ -28,6 +28,7 @@ dependencies = [
     "rich==15.0.0",
     "matplotlib==3.11.2",
     "gradio==6.30.0",
+    "einops==0.8.1",
 ]
 
 [project.scripts]
@@ -43,6 +44,15 @@ build-backend = "hatchling.build"
 [tool.uv]
 link-mode = "copy"
 
+# CUDA build of torch on Windows (local GTX 1660 SUPER); Linux uses PyPI torch.
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu126", marker = "sys_platform == 'win32'" }]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/buglens"]
 
@@ -54,6 +64,7 @@ addopts = "-q"
 line-length = 100
 target-version = "py311"
 src = ["src", "tests"]
+extend-exclude = ["tests/fixtures"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]

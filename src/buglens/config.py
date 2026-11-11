@@ -77,7 +77,8 @@ def git_commit_hash() -> str:
         return "unknown"
 
 
-def write_meta(out_dir: str | Path, cfg: Config, **extra: Any) -> Path:
+def write_meta(out_dir: str | Path, cfg: Config, filename: str = "meta.json",
+               **extra: Any) -> Path:
     """Write meta.json (config snapshot + git hash + timestamp) next to a run's outputs."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -87,6 +88,6 @@ def write_meta(out_dir: str | Path, cfg: Config, **extra: Any) -> Path:
         "config": dict(cfg),
         **extra,
     }
-    path = out_dir / "meta.json"
+    path = out_dir / filename
     path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
     return path

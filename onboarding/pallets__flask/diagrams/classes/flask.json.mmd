@@ -1,0 +1,63 @@
+classDiagram
+  %% Classes in flask.json.tag
+  class n_flask_json_tag_JSONTag["JSONTag"] {
+    +__init__()
+    +check()
+    +to_json()
+    +to_python()
+    +tag()
+  }
+  class n_flask_json_tag_PassDict["PassDict"] {
+    +check()
+    +to_json()
+  }
+  class n_flask_json_tag_PassList["PassList"] {
+    +check()
+    +to_json()
+  }
+  class n_flask_json_tag_TagBytes["TagBytes"] {
+    +check()
+    +to_json()
+    +to_python()
+  }
+  class n_flask_json_tag_TagDateTime["TagDateTime"] {
+    +check()
+    +to_json()
+    +to_python()
+  }
+  class n_flask_json_tag_TagDict["TagDict"] {
+    +check()
+    +to_json()
+    +to_python()
+  }
+  class n_flask_json_tag_TagMarkup["TagMarkup"] {
+    +check()
+    +to_json()
+    +to_python()
+  }
+  class n_flask_json_tag_TagTuple["TagTuple"] {
+    +check()
+    +to_json()
+    +to_python()
+  }
+  class n_flask_json_tag_TagUUID["TagUUID"] {
+    +check()
+    +to_json()
+    +to_python()
+  }
+  class n_flask_json_tag_TaggedJSONSerializer["TaggedJSONSerializer"] {
+    +__init__()
+    +register()
+    +tag()
+    +untag()
+    +dumps()
+    +loads()
+  }
+  n_flask_json_tag_JSONTag <|-- n_flask_json_tag_PassDict
+  n_flask_json_tag_JSONTag <|-- n_flask_json_tag_PassList
+  n_flask_json_tag_JSONTag <|-- n_flask_json_tag_TagBytes
+  n_flask_json_tag_JSONTag <|-- n_flask_json_tag_TagDateTime
+  n_flask_json_tag_JSONTag <|-- n_flask_json_tag_TagDict
+  n_flask_json_tag_JSONTag <|-- n_flask_json_tag_TagMarkup
+  n_flask_json_tag_JSONTag <|-- n_flask_json_tag_TagTuple
+  n_flask_json_tag_JSONTag <|-- n_flask_json_tag_TagUUID

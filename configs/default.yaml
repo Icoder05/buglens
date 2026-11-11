@@ -42,17 +42,19 @@ retrieval:
   query_prefix: "Represent this query for searching relevant code: "
   max_seq_length: 512
   batch_size: 32
+  fp16: false                     # fp16 is ~4x slower on GTX 16xx (no tensor cores); true on Kaggle T4
 
 training:                         # FR-T1..T3
   max_repo_clone_mb: 300
   max_pairs: 3000
+  max_pairs_per_repo: 300         # diversity cap (not in PRD; see CHANGELOG)
   val_fraction: 0.1
   epochs: 1
   lr: 2.0e-5
   warmup_ratio: 0.1
   batch_size: 64
   mini_batch_size: 16
-  fp16: true
+  fp16: false                     # PRD says fp16; slower on GTX 16xx. Set true on Kaggle T4.
   minimal_loop_pairs: 200
 
 rerank:                           # FR-K3
