@@ -226,6 +226,10 @@ def error_dump(cfg: Config, system: str, n: int = 20, split: str = "test") -> st
         md += ["", "Category: ", ""]
     out = cfg.path("reports") / "error_analysis.md"
     out.parent.mkdir(parents=True, exist_ok=True)
+    if out.exists() and any(line.startswith("Category: ") and line.strip() != "Category:"
+                            for line in out.read_text(encoding="utf-8").splitlines()):
+        out = out.with_name("error_analysis.new.md")  # never overwrite filled-in categories
+        console.print(f"[yellow]categories already filled; writing {out.name}[/yellow]")
     out.write_text("\n".join(md), encoding="utf-8")
     summary("errors", system=system, failures=len(fails), shown=min(n, len(fails)),
             out=str(out))

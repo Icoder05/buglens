@@ -17,7 +17,7 @@
 4. `django/db/models/manager.py::BaseManager.db`
 5. `django/db/migrations/operations/base.py::Operation.allow_migrate_model`
 
-Category: 
+Category: cross-component fix — issue is about `migrate`; fix is in the auth app's post-migrate permission handler _(categorised by Claude)_
 
 ## django__django-11797
 
@@ -34,7 +34,7 @@ Category:
 4. `django/db/models/query.py::QuerySet.aggregate`
 5. `django/db/models/query.py::QuerySet.annotate`
 
-Category: 
+Category: root cause in lower-level module — GROUP BY symptom in queries; fix in `lookups.py` _(categorised by Claude)_
 
 ## django__django-17087
 
@@ -51,11 +51,25 @@ Category:
 4. `django/db/migrations/operations/fields.py::AddField.database_forwards`
 5. `django/db/migrations/operations/fields.py::RemoveField.reduce`
 
-Category: 
+Category: right package, wrong module — migrations: predicted operations, fix in serializer _(categorised by Claude)_
 
 ## sympy__sympy-20590
 
-**Issue (excerpt):** Symbol instances have __dict__ since 1.7? In version 1.6.2 Symbol instances had no `__dict__` attribute ```python >>> sympy.Symbol('s').__dict__ --------------------------------------------------------------------------- AttributeError                            Traceback (most recent call last) <ipython-input-3-e2060d5eec73> in <module> ----> 1 sympy.Symbol('s').__dict__  AttributeError: 'Symbol' object has no attribute '__dict__' >>> sympy.Symbol('s').__slots__ ('name',) ```  This changes in 1.7 where `sympy.Symbol('s').__dict__` now exists (and returns an empty dict) I may mis
+**Issue (excerpt):** Symbol instances have __dict__ since 1.7? In version 1.6.2 Symbol instances had no `__dict__` attribute
+ ```python
+ >>> sympy.Symbol('s').__dict__
+ ---------------------------------------------------------------------------
+ AttributeError                            Traceback (most recent call last)
+ <ipython-input-3-e2060d5eec73> in <module>
+ ----> 1 sympy.Symbol('s').__dict__
+ 
+ AttributeError: 'Symbol' object has no attribute '__dict__'
+ >>> sympy.Symbol('s').__slots__
+ ('name',)
+ ```
+ 
+ This changes in 1.7 where `sympy.Symbol('s').__dict__` now exists (and returns an empty dict)
+ I may mis
 
 **Gold files:** `sympy/core/_print_helpers.py`  
 **Gold functions:** `sympy/core/_print_helpers.py::Printable`
@@ -68,11 +82,27 @@ Category:
 4. `sympy/core/containers.py::Dict`
 5. `sympy/core/function.py::UndefinedFunction.__new__`
 
-Category: 
+Category: root cause in lower-level module — `__dict__` appears via a mixin in `_print_helpers.py` lacking `__slots__` _(categorised by Claude)_
 
 ## sympy__sympy-12236
 
-**Issue (excerpt):** Wrong result with apart ``` Python 3.6.0 |Continuum Analytics, Inc.| (default, Dec 23 2016, 12:22:00)  Type "copyright", "credits" or "license" for more information.  IPython 5.1.0 -- An enhanced Interactive Python. ?         -> Introduction and overview of IPython's features. %quickref -> Quick reference. help      -> Python's own help system. object?   -> Details about 'object', use 'object??' for extra details.  In [1]: from sympy import symbols  In [2]: a = symbols('a', real=True)  In [3]: t = symbols('t', real=True, negative=False)  In [4]: bug = a * (-t + (-t + 1) * (2 * 
+**Issue (excerpt):** Wrong result with apart ```
+ Python 3.6.0 |Continuum Analytics, Inc.| (default, Dec 23 2016, 12:22:00) 
+ Type "copyright", "credits" or "license" for more information.
+ 
+ IPython 5.1.0 -- An enhanced Interactive Python.
+ ?         -> Introduction and overview of IPython's features.
+ %quickref -> Quick reference.
+ help      -> Python's own help system.
+ object?   -> Details about 'object', use 'object??' for extra details.
+ 
+ In [1]: from sympy import symbols
+ 
+ In [2]: a = symbols('a', real=True)
+ 
+ In [3]: t = symbols('t', real=True, negative=False)
+ 
+ In [4]: bug = a * (-t + (-t + 1) * (2 * 
 
 **Gold files:** `sympy/polys/domains/polynomialring.py`  
 **Gold functions:** `sympy/polys/domains/polynomialring.py::PolynomialRing.from_FractionField`
@@ -85,11 +115,39 @@ Category:
 4. `sympy/interactive/printing.py::_is_ipython`
 5. `sympy/core/expr.py::Expr.apart`
 
-Category: 
+Category: noisy issue text — IPython banner dominates the query; fix in polys domains _(categorised by Claude)_
 
 ## sphinx-doc__sphinx-8627
 
-**Issue (excerpt):** autodoc isn't able to resolve struct.Struct type annotations **Describe the bug** If `struct.Struct` is declared in any type annotations, I get `class reference target not found: Struct`  **To Reproduce** Simple `index.rst` ``` Hello World ===========  code docs =========  .. automodule:: helloworld.helloworld ```  Simple `helloworld.py` ``` import struct import pathlib  def consume_struct(_: struct.Struct) -> None:     pass  def make_struct() -> struct.Struct:     mystruct = struct.Struct('HH')     return mystruct  def make_path() -> pathlib.Path:     return pathli
+**Issue (excerpt):** autodoc isn't able to resolve struct.Struct type annotations **Describe the bug**
+ If `struct.Struct` is declared in any type annotations, I get `class reference target not found: Struct`
+ 
+ **To Reproduce**
+ Simple `index.rst`
+ ```
+ Hello World
+ ===========
+ 
+ code docs
+ =========
+ 
+ .. automodule:: helloworld.helloworld
+ ```
+ 
+ Simple `helloworld.py`
+ ```
+ import struct
+ import pathlib
+ 
+ def consume_struct(_: struct.Struct) -> None:
+     pass
+ 
+ def make_struct() -> struct.Struct:
+     mystruct = struct.Struct('HH')
+     return mystruct
+ 
+ def make_path() -> pathlib.Path:
+     return pathli
 
 **Gold files:** `sphinx/util/typing.py`  
 **Gold functions:** `sphinx/util/typing.py::<module>`, `sphinx/util/typing.py::restify`, `sphinx/util/typing.py::stringify`
@@ -102,11 +160,43 @@ Category:
 4. `sphinx/ext/autodoc/__init__.py::AttributeDocumenter.update_annotations`
 5. `sphinx/ext/autodoc/__init__.py::MethodDocumenter.annotate_to_first_argument`
 
-Category: 
+Category: cross-component fix — autodoc symptom; fix in `util/typing.py` _(categorised by Claude)_
 
 ## sympy__sympy-14024
 
-**Issue (excerpt):** Inconsistency when simplifying (-a)**x * a**(-x), a a positive integer Compare:  ``` >>> a = Symbol('a', integer=True, positive=True) >>> e = (-a)**x * a**(-x) >>> f = simplify(e) >>> print(e) a**(-x)*(-a)**x >>> print(f) (-1)**x >>> t = -S(10)/3 >>> n1 = e.subs(x,t) >>> n2 = f.subs(x,t) >>> print(N(n1)) -0.5 + 0.866025403784439*I >>> print(N(n2)) -0.5 + 0.866025403784439*I ```  vs  ``` >>> a = S(2) >>> e = (-a)**x * a**(-x) >>> f = simplify(e) >>> print(e) (-2)**x*2**(-x) >>> print(f) (-1)**x >>> t = -S(10)/3 >>> n1 = e.subs(x,t) >>> n2 = f.subs(x,t) >>> print(
+**Issue (excerpt):** Inconsistency when simplifying (-a)**x * a**(-x), a a positive integer Compare:
+ 
+ ```
+ >>> a = Symbol('a', integer=True, positive=True)
+ >>> e = (-a)**x * a**(-x)
+ >>> f = simplify(e)
+ >>> print(e)
+ a**(-x)*(-a)**x
+ >>> print(f)
+ (-1)**x
+ >>> t = -S(10)/3
+ >>> n1 = e.subs(x,t)
+ >>> n2 = f.subs(x,t)
+ >>> print(N(n1))
+ -0.5 + 0.866025403784439*I
+ >>> print(N(n2))
+ -0.5 + 0.866025403784439*I
+ ```
+ 
+ vs
+ 
+ ```
+ >>> a = S(2)
+ >>> e = (-a)**x * a**(-x)
+ >>> f = simplify(e)
+ >>> print(e)
+ (-2)**x*2**(-x)
+ >>> print(f)
+ (-1)**x
+ >>> t = -S(10)/3
+ >>> n1 = e.subs(x,t)
+ >>> n2 = f.subs(x,t)
+ >>> print(
 
 **Gold files:** `sympy/core/numbers.py`  
 **Gold functions:** `sympy/core/numbers.py::Rational._eval_power`, `sympy/core/numbers.py::Integer._eval_power`
@@ -119,11 +209,43 @@ Category:
 4. `sympy/simplify/simplify.py::sum_add`
 5. `sympy/simplify/fu.py::TR10i`
 
-Category: 
+Category: root cause in lower-level module — simplify symptom; fix in `core/numbers.py` _(categorised by Claude)_
 
 ## matplotlib__matplotlib-25311
 
-**Issue (excerpt):** [Bug]: Unable to pickle figure with draggable legend ### Bug summary  I am unable to pickle figure with draggable legend. Same error comes for draggable annotations.      ### Code for reproduction  ```python import matplotlib.pyplot as plt import pickle  fig = plt.figure() ax = fig.add_subplot(111)  time=[0,1,2,3,4] speed=[40,43,45,47,48]  ax.plot(time,speed,label="speed")  leg=ax.legend() leg.set_draggable(True) #pickling works after removing this line   pickle.dumps(fig) plt.show() ```   ### Actual outcome  `TypeError: cannot pickle 'FigureCanvasQTAgg' object`
+**Issue (excerpt):** [Bug]: Unable to pickle figure with draggable legend ### Bug summary
+ 
+ I am unable to pickle figure with draggable legend. Same error comes for draggable annotations.
+ 
+ 
+ 
+ 
+ 
+ ### Code for reproduction
+ 
+ ```python
+ import matplotlib.pyplot as plt
+ import pickle
+ 
+ fig = plt.figure()
+ ax = fig.add_subplot(111)
+ 
+ time=[0,1,2,3,4]
+ speed=[40,43,45,47,48]
+ 
+ ax.plot(time,speed,label="speed")
+ 
+ leg=ax.legend()
+ leg.set_draggable(True) #pickling works after removing this line 
+ 
+ pickle.dumps(fig)
+ plt.show()
+ ```
+ 
+ 
+ ### Actual outcome
+ 
+ `TypeError: cannot pickle 'FigureCanvasQTAgg' object`
 
 **Gold files:** `lib/matplotlib/offsetbox.py`  
 **Gold functions:** `lib/matplotlib/offsetbox.py::DraggableBase.__init__`, `lib/matplotlib/offsetbox.py::DraggableBase`
@@ -136,7 +258,7 @@ Category:
 4. `lib/matplotlib/backends/backend_qtagg.py::_BackendQTAgg`
 5. `lib/matplotlib/figure.py::Figure.__getstate__`
 
-Category: 
+Category: noisy issue text — traceback/backend terms pull towards Qt backend; fix in `offsetbox.py` _(categorised by Claude)_
 
 ## django__django-12470
 
@@ -153,11 +275,27 @@ Category:
 4. `django/db/models/fields/related.py::ForeignObject.get_instance_value_for_fields`
 5. `django/db/models/base.py::Model._check_field_name_clashes`
 
-Category: 
+Category: cross-component fix — model Meta ordering symptom; fix in SQL compiler _(categorised by Claude)_
 
 ## sympy__sympy-17022
 
-**Issue (excerpt):** Lambdify misinterprets some matrix expressions Using lambdify on an expression containing an identity matrix gives us an unexpected result:  ```python >>> import numpy as np >>> n = symbols('n', integer=True) >>> A = MatrixSymbol("A", n, n) >>> a = np.array([[1, 2], [3, 4]]) >>> f = lambdify(A, A + Identity(n)) >>> f(a) array([[1.+1.j, 2.+1.j],        [3.+1.j, 4.+1.j]]) ```  Instead, the output should be  `array([[2, 2], [3, 5]])`, since we're adding an identity matrix to the array. Inspecting the globals and source code of `f` shows us why we get the result:  ```python >>> imp
+**Issue (excerpt):** Lambdify misinterprets some matrix expressions Using lambdify on an expression containing an identity matrix gives us an unexpected result:
+ 
+ ```python
+ >>> import numpy as np
+ >>> n = symbols('n', integer=True)
+ >>> A = MatrixSymbol("A", n, n)
+ >>> a = np.array([[1, 2], [3, 4]])
+ >>> f = lambdify(A, A + Identity(n))
+ >>> f(a)
+ array([[1.+1.j, 2.+1.j],
+        [3.+1.j, 4.+1.j]])
+ ```
+ 
+ Instead, the output should be  `array([[2, 2], [3, 5]])`, since we're adding an identity matrix to the array. Inspecting the globals and source code of `f` shows us why we get the result:
+ 
+ ```python
+ >>> imp
 
 **Gold files:** `sympy/printing/pycode.py`  
 **Gold functions:** `sympy/printing/pycode.py::NumPyPrinter`
@@ -170,11 +308,30 @@ Category:
 4. `sympy/plotting/experimental_lambdify.py::Lambdifier.str2tree`
 5. `sympy/utilities/lambdify.py::_EvaluatorPrinter._preprocess`
 
-Category: 
+Category: cross-component fix — lambdify symptom; fix in the code printer `pycode.py` _(categorised by Claude)_
 
 ## pytest-dev__pytest-7168
 
-**Issue (excerpt):** INTERNALERROR when exception in __repr__ Minimal code to reproduce the issue:  ```python class SomeClass:     def __getattribute__(self, attr):         raise     def __repr__(self):         raise def test():     SomeClass().attr ``` Session traceback: ``` ============================= test session starts ============================== platform darwin -- Python 3.8.1, pytest-5.4.1, py-1.8.1, pluggy-0.13.1 -- /usr/local/opt/python@3.8/bin/python3.8 cachedir: .pytest_cache rootdir: ****** plugins: asyncio-0.10.0, mock-3.0.0, cov-2.8.1 collecting ... collected 1 item  test_pytes
+**Issue (excerpt):** INTERNALERROR when exception in __repr__ Minimal code to reproduce the issue: 
+ ```python
+ class SomeClass:
+     def __getattribute__(self, attr):
+         raise
+     def __repr__(self):
+         raise
+ def test():
+     SomeClass().attr
+ ```
+ Session traceback:
+ ```
+ ============================= test session starts ==============================
+ platform darwin -- Python 3.8.1, pytest-5.4.1, py-1.8.1, pluggy-0.13.1 -- /usr/local/opt/python@3.8/bin/python3.8
+ cachedir: .pytest_cache
+ rootdir: ******
+ plugins: asyncio-0.10.0, mock-3.0.0, cov-2.8.1
+ collecting ... collected 1 item
+ 
+ test_pytes
 
 **Gold files:** `src/_pytest/_io/saferepr.py`  
 **Gold functions:** `src/_pytest/_io/saferepr.py::_format_repr_exception`
@@ -187,11 +344,27 @@ Category:
 4. `src/_pytest/main.py::Session._collect`
 5. `src/_pytest/main.py::wrap_session`
 
-Category: 
+Category: root cause in lower-level module — INTERNALERROR in reporting; fix in `saferepr.py` _(categorised by Claude)_
 
 ## sympy__sympy-13895
 
-**Issue (excerpt):** (-x/4 - S(1)/12)**x - 1 simplifies to an inequivalent expression     >>> from sympy import *     >>> x = Symbol('x')     >>> e = (-x/4 - S(1)/12)**x - 1     >>> e     (-x/4 - 1/12)**x - 1     >>> f = simplify(e)     >>> f     12**(-x)*(-12**x + (-3*x - 1)**x)     >>> a = S(9)/5     >>> simplify(e.subs(x,a))     -1 - 32*15**(1/5)*2**(2/5)/225     >>> simplify(f.subs(x,a))     -1 - 32*(-1)**(4/5)*60**(1/5)/225     >>> N(e.subs(x,a))     -1.32255049319339     >>> N(f.subs(x,a))     -0.739051169462523 - 0.189590423018741*I
+**Issue (excerpt):** (-x/4 - S(1)/12)**x - 1 simplifies to an inequivalent expression     >>> from sympy import *
+     >>> x = Symbol('x')
+     >>> e = (-x/4 - S(1)/12)**x - 1
+     >>> e
+     (-x/4 - 1/12)**x - 1
+     >>> f = simplify(e)
+     >>> f
+     12**(-x)*(-12**x + (-3*x - 1)**x)
+     >>> a = S(9)/5
+     >>> simplify(e.subs(x,a))
+     -1 - 32*15**(1/5)*2**(2/5)/225
+     >>> simplify(f.subs(x,a))
+     -1 - 32*(-1)**(4/5)*60**(1/5)/225
+     >>> N(e.subs(x,a))
+     -1.32255049319339
+     >>> N(f.subs(x,a))
+     -0.739051169462523 - 0.189590423018741*I
 
 **Gold files:** `sympy/core/numbers.py`  
 **Gold functions:** `sympy/core/numbers.py::Integer._eval_power`
@@ -204,11 +377,21 @@ Category:
 4. `sympy/simplify/simplify.py::nthroot`
 5. `sympy/simplify/fu.py::TR12i`
 
-Category: 
+Category: root cause in lower-level module — simplify symptom; fix in `core/numbers.py` _(categorised by Claude)_
 
 ## scikit-learn__scikit-learn-25500
 
-**Issue (excerpt):** CalibratedClassifierCV doesn't work with `set_config(transform_output="pandas")` ### Describe the bug  CalibratedClassifierCV with isotonic regression doesn't work when we previously set `set_config(transform_output="pandas")`. The IsotonicRegression seems to return a dataframe, which is a problem for `_CalibratedClassifier`  in `predict_proba` where it tries to put the dataframe in a numpy array row `proba[:, class_idx] = calibrator.predict(this_pred)`.  ### Steps/Code to Reproduce  ```python import numpy as np from sklearn import set_config from sklearn.calibration import Calibrate
+**Issue (excerpt):** CalibratedClassifierCV doesn't work with `set_config(transform_output="pandas")` ### Describe the bug
+ 
+ CalibratedClassifierCV with isotonic regression doesn't work when we previously set `set_config(transform_output="pandas")`.
+ The IsotonicRegression seems to return a dataframe, which is a problem for `_CalibratedClassifier`  in `predict_proba` where it tries to put the dataframe in a numpy array row `proba[:, class_idx] = calibrator.predict(this_pred)`.
+ 
+ ### Steps/Code to Reproduce
+ 
+ ```python
+ import numpy as np
+ from sklearn import set_config
+ from sklearn.calibration import Calibrate
 
 **Gold files:** `sklearn/isotonic.py`  
 **Gold functions:** `sklearn/isotonic.py::IsotonicRegression.transform`, `sklearn/isotonic.py::IsotonicRegression`, `sklearn/isotonic.py::IsotonicRegression.predict`
@@ -221,11 +404,39 @@ Category:
 4. `sklearn/calibration.py::CalibratedClassifierCV.__init__`
 5. `sklearn/calibration.py::_CalibratedClassifier`
 
-Category: 
+Category: cross-component fix — CalibratedClassifierCV symptom; fix in `isotonic.py` _(categorised by Claude)_
 
 ## pylint-dev__pylint-7080
 
-**Issue (excerpt):** `--recursive=y` ignores `ignore-paths` ### Bug description  When running recursively, it seems `ignore-paths` in my settings in pyproject.toml is completely ignored  ### Configuration  ```ini [tool.pylint.MASTER] ignore-paths = [   # Auto generated   "^src/gen/.*$", ] ```   ### Command used  ```shell pylint --recursive=y src/ ```   ### Pylint output  ```shell ************* Module region_selection src\region_selection.py:170:0: R0914: Too many local variables (17/15) (too-many-locals) ************* Module about src\gen\about.py:2:0: R2044: Line with empty comment (em
+**Issue (excerpt):** `--recursive=y` ignores `ignore-paths` ### Bug description
+ 
+ When running recursively, it seems `ignore-paths` in my settings in pyproject.toml is completely ignored
+ 
+ ### Configuration
+ 
+ ```ini
+ [tool.pylint.MASTER]
+ ignore-paths = [
+   # Auto generated
+   "^src/gen/.*$",
+ ]
+ ```
+ 
+ 
+ ### Command used
+ 
+ ```shell
+ pylint --recursive=y src/
+ ```
+ 
+ 
+ ### Pylint output
+ 
+ ```shell
+ ************* Module region_selection
+ src\region_selection.py:170:0: R0914: Too many local variables (17/15) (too-many-locals)
+ ************* Module about
+ src\gen\about.py:2:0: R2044: Line with empty comment (em
 
 **Gold files:** `pylint/lint/expand_modules.py`  
 **Gold functions:** `pylint/lint/expand_modules.py::_is_ignored_file`
@@ -238,11 +449,41 @@ Category:
 4. `pylint/testutils/_primer/primer_run_command.py::RunCommand._lint_package`
 5. `pylint/lint/run.py::Run.__init__`
 
-Category: 
+Category: lexical confusion — `Run.run` in pyreverse matched; fix in `expand_modules.py` _(categorised by Claude)_
 
 ## matplotlib__matplotlib-25332
 
-**Issue (excerpt):** [Bug]: Unable to pickle figure with aligned labels ### Bug summary   Unable to pickle figure after calling `align_labels()`  ### Code for reproduction  ```python import matplotlib.pyplot as plt import pickle  fig = plt.figure() ax1 = fig.add_subplot(211) ax2 = fig.add_subplot(212) time=[0,1,2,3,4] speed=[40000,4300,4500,4700,4800] acc=[10,11,12,13,14] ax1.plot(time,speed) ax1.set_ylabel('speed') ax2.plot(time,acc) ax2.set_ylabel('acc')  fig.align_labels() ##pickling works after removing this line   pickle.dumps(fig) plt.show() ```   ### Actual outcome ``` align.py
+**Issue (excerpt):** [Bug]: Unable to pickle figure with aligned labels ### Bug summary
+ 
+  Unable to pickle figure after calling `align_labels()`
+ 
+ ### Code for reproduction
+ 
+ ```python
+ import matplotlib.pyplot as plt
+ import pickle
+ 
+ fig = plt.figure()
+ ax1 = fig.add_subplot(211)
+ ax2 = fig.add_subplot(212)
+ time=[0,1,2,3,4]
+ speed=[40000,4300,4500,4700,4800]
+ acc=[10,11,12,13,14]
+ ax1.plot(time,speed)
+ ax1.set_ylabel('speed')
+ ax2.plot(time,acc)
+ ax2.set_ylabel('acc')
+ 
+ fig.align_labels() ##pickling works after removing this line 
+ 
+ pickle.dumps(fig)
+ plt.show()
+ ```
+ 
+ 
+ ### Actual outcome
+ ```
+ align.py
 
 **Gold files:** `lib/matplotlib/cbook.py`  
 **Gold functions:** `lib/matplotlib/cbook.py::Grouper`
@@ -255,11 +496,13 @@ Category:
 4. `lib/matplotlib/axis.py::Axis.__init__`
 5. `lib/matplotlib/figure.py::FigureBase.autofmt_xdate`
 
-Category: 
+Category: root cause in lower-level module — pickling symptom; fix in `cbook.Grouper` _(categorised by Claude)_
 
 ## sympy__sympy-18087
 
-**Issue (excerpt):** Simplify of simple trig expression fails trigsimp in various versions, including 1.5, incorrectly simplifies cos(x)+sqrt(sin(x)**2) as though it were cos(x)+sin(x) for general complex x. (Oddly it gets this right if x is real.)  Embarrassingly I found this by accident while writing sympy-based teaching material...
+**Issue (excerpt):** Simplify of simple trig expression fails trigsimp in various versions, including 1.5, incorrectly simplifies cos(x)+sqrt(sin(x)**2) as though it were cos(x)+sin(x) for general complex x. (Oddly it gets this right if x is real.)
+ 
+ Embarrassingly I found this by accident while writing sympy-based teaching material...
 
 **Gold files:** `sympy/core/exprtools.py`  
 **Gold functions:** `sympy/core/exprtools.py::Factors.__init__`, `sympy/core/exprtools.py::Factors.as_expr`
@@ -272,11 +515,29 @@ Category:
 4. `sympy/simplify/trigsimp.py::trigsimp_old`
 5. `sympy/simplify/trigsimp.py::_futrig`
 
-Category: 
+Category: root cause in lower-level module — trigsimp symptom; fix in `exprtools.py` _(categorised by Claude)_
 
 ## sympy__sympy-20322
 
-**Issue (excerpt):** Inconsistent behavior for sympify/simplify with ceiling In sympy v1.5.1: ```python In [16]: sympy.sympify('4*ceiling(x/4 - 3/4)', evaluate=False).simplify() Out[16]: 4*ceiling(x/4 - 3/4)  In [17]: sympy.sympify('4*ceiling(x/4 - 3/4)', evaluate=True).simplify() Out[17]: 4*ceiling(x/4 - 3/4) ```  In sympy v.1.6.2: ```python In [16]: sympy.sympify('4*ceiling(x/4 - 3/4)', evaluate=False).simplify() Out[16]: 4*ceiling(x/4) - 3  In [17]: sympy.sympify('4*ceiling(x/4 - 3/4)', evaluate=True).simplify() Out [17]: 4*ceiling(x/4 - 3/4) ```  Is there a way to ensure that the behavior is 
+**Issue (excerpt):** Inconsistent behavior for sympify/simplify with ceiling In sympy v1.5.1:
+ ```python
+ In [16]: sympy.sympify('4*ceiling(x/4 - 3/4)', evaluate=False).simplify()
+ Out[16]: 4*ceiling(x/4 - 3/4)
+ 
+ In [17]: sympy.sympify('4*ceiling(x/4 - 3/4)', evaluate=True).simplify()
+ Out[17]: 4*ceiling(x/4 - 3/4)
+ ```
+ 
+ In sympy v.1.6.2:
+ ```python
+ In [16]: sympy.sympify('4*ceiling(x/4 - 3/4)', evaluate=False).simplify()
+ Out[16]: 4*ceiling(x/4) - 3
+ 
+ In [17]: sympy.sympify('4*ceiling(x/4 - 3/4)', evaluate=True).simplify()
+ Out [17]: 4*ceiling(x/4 - 3/4)
+ ```
+ 
+ Is there a way to ensure that the behavior is 
 
 **Gold files:** `sympy/core/mul.py`  
 **Gold functions:** `sympy/core/mul.py::<module>`, `sympy/core/mul.py::Mul`, `sympy/core/mul.py::Mul._eval_is_integer`
@@ -289,11 +550,23 @@ Category:
 4. `sympy/concrete/expr_with_limits.py::_process_limits`
 5. `sympy/logic/boolalg.py::And._eval_simplify`
 
-Category: 
+Category: root cause in lower-level module — ceiling simplify; fix in `core/mul.py` _(categorised by Claude)_
 
 ## sympy__sympy-12419
 
-**Issue (excerpt):** Sum of the elements of an identity matrix is zero I think this is a bug.  I created a matrix by M.T * M under an assumption that M is orthogonal.  SymPy successfully recognized that the result is an identity matrix.  I tested its identity-ness by element-wise, queries, and sum of the diagonal elements and received expected results.  However, when I attempt to evaluate the total sum of the elements the result was 0 while 'n' is expected.  ``` from sympy import * from sympy import Q as Query  n = Symbol('n', integer=True, positive=True) i, j = symbols('i j', integer=True) M = MatrixS
+**Issue (excerpt):** Sum of the elements of an identity matrix is zero I think this is a bug.
+ 
+ I created a matrix by M.T * M under an assumption that M is orthogonal.  SymPy successfully recognized that the result is an identity matrix.  I tested its identity-ness by element-wise, queries, and sum of the diagonal elements and received expected results.
+ 
+ However, when I attempt to evaluate the total sum of the elements the result was 0 while 'n' is expected.
+ 
+ ```
+ from sympy import *
+ from sympy import Q as Query
+ 
+ n = Symbol('n', integer=True, positive=True)
+ i, j = symbols('i j', integer=True)
+ M = MatrixS
 
 **Gold files:** `sympy/matrices/expressions/matexpr.py`  
 **Gold functions:** `sympy/matrices/expressions/matexpr.py::<module>`, `sympy/matrices/expressions/matexpr.py::MatrixElement._eval_derivative`, `sympy/matrices/expressions/matexpr.py::Identity._entry`
@@ -306,11 +579,19 @@ Category:
 4. `sympy/matrices/expressions/matpow.py::MatPow.doit`
 5. `sympy/matrices/dense.py::eye`
 
-Category: 
+Category: right package, wrong module — matrix expressions: predicted trace, fix in `matexpr.py` _(categorised by Claude)_
 
 ## matplotlib__matplotlib-25433
 
-**Issue (excerpt):** [Bug]: using clf and pyplot.draw in range slider on_changed callback blocks input to widgets ### Bug summary  When using clear figure, adding new widgets and then redrawing the current figure in the on_changed callback of a range slider the inputs to all the widgets in the figure are blocked. When doing the same in the button callback on_clicked, everything works fine.  ### Code for reproduction  ```python import matplotlib.pyplot as pyplot import matplotlib.widgets as widgets  def onchanged(values):     print("on changed")     print(values)     pyplot.clf()     addElements()     pyplo
+**Issue (excerpt):** [Bug]: using clf and pyplot.draw in range slider on_changed callback blocks input to widgets ### Bug summary  When using clear figure, adding new widgets and then redrawing the current figure in the on_changed callback of a range slider the inputs to all the widgets in the figure are blocked. When doing the same in the button callback on_clicked, everything works fine.  ### Code for reproduction  ```python import matplotlib.pyplot as pyplot
+ import matplotlib.widgets as widgets
+ 
+ def onchanged(values):
+     print("on changed")
+     print(values)
+     pyplot.clf()
+     addElements()
+     pyplo
 
 **Gold files:** `lib/matplotlib/figure.py`  
 **Gold functions:** `lib/matplotlib/figure.py::FigureBase.delaxes`
@@ -323,11 +604,29 @@ Category:
 4. `lib/matplotlib/widgets.py::RangeSlider._update`
 5. `lib/matplotlib/widgets.py::RangeSlider.__init__`
 
-Category: 
+Category: cross-component fix — RangeSlider callback symptom; fix in `figure.clf` _(categorised by Claude)_
 
 ## pytest-dev__pytest-7220
 
-**Issue (excerpt):** Wrong path to test file when directory changed in fixture Files are shown as relative to new directory when working directory is changed in a fixture. This makes it impossible to jump to the error as the editor is unaware of the directory change. The displayed directory should stay relative to the original directory.  test_path_error.py: ```python import os import errno import shutil  import pytest   @pytest.fixture def private_dir():  # or (monkeypatch)     out_dir = 'ddd'      try:         shutil.rmtree(out_dir)     except OSError as ex:         if ex.errno != errno.ENOENT:
+**Issue (excerpt):** Wrong path to test file when directory changed in fixture Files are shown as relative to new directory when working directory is changed in a fixture. This makes it impossible to jump to the error as the editor is unaware of the directory change. The displayed directory should stay relative to the original directory.
+ 
+ test_path_error.py:
+ ```python
+ import os
+ import errno
+ import shutil
+ 
+ import pytest
+ 
+ 
+ @pytest.fixture
+ def private_dir():  # or (monkeypatch)
+     out_dir = 'ddd'
+ 
+     try:
+         shutil.rmtree(out_dir)
+     except OSError as ex:
+         if ex.errno != errno.ENOENT:
 
 **Gold files:** `src/_pytest/nodes.py`  
 **Gold functions:** `src/_pytest/nodes.py::<module>`, `src/_pytest/nodes.py::Node._repr_failure_py`
@@ -340,4 +639,18 @@ Category:
 4. `src/_pytest/_code/code.py::Code.path`
 5. `testing/python/fixtures.py::TestParameterizedSubRequest.test_non_relative_path`
 
-Category: 
+Category: cross-component fix — path display symptom; fix in `nodes.py` _(categorised by Claude)_
+
+## Category summary
+
+| Category | Count |
+| --- | --- |
+| Root cause in a shared lower-level module the issue never names | 8 |
+| Fix in a different component than the one the issue describes | 7 |
+| Right package, wrong module | 2 |
+| Noisy issue text (REPL banners, tracebacks) | 2 |
+| Lexical confusion (same name elsewhere) | 1 |
+
+Takeaway: 15/20 failures are *symptom ≠ fix site*. Retrieval matches what the issue describes;
+the fix lives one or more import hops away. Following the import/call graph from the top
+candidates (e.g. adding callee/importee neighbours to the candidate set) is the most promising fix.

@@ -77,13 +77,65 @@ McNemar tests for the planned comparisons. Hardware: one consumer GPU (GTX 1660 
 6-core CPU. LLM: Gemini Flash free tier. Total cost: $0.
 
 ## 5. Results
-_Filled from `reports/results.md`._
+
+| System | File Acc@1 | File Acc@5 [95% CI] | Func Acc@10 [95% CI] | Func MRR |
+| --- | --- | --- | --- | --- |
+| S1 BM25 | 0.470 | 0.710 [0.660, 0.760] | 0.527 [0.470, 0.580] | 0.311 |
+| S2 Dense | 0.513 | 0.793 [0.743, 0.840] | 0.560 [0.507, 0.620] | 0.327 |
+| S3 RRF(S1,S2) | 0.527 | 0.790 [0.740, 0.837] | 0.590 [0.537, 0.647] | 0.368 |
+| S4 Dense-FT | 0.587 | 0.840 [0.797, 0.880] | 0.610 [0.550, 0.663] | 0.381 |
+| S5 RRF(S1,S4) | 0.593 | 0.853 [0.813, 0.893] | 0.623 [0.567, 0.677] | 0.405 |
+| **S6 LambdaRank** | **0.597** | **0.867 [0.827, 0.903]** | **0.670 [0.613, 0.723]** | **0.413** |
+| A1 (S5 + hints) | 0.643 | 0.890 [0.853, 0.927] | 0.697 [0.643, 0.750] | 0.468 |
+
+**RQ1 (hybrid).** Dense retrieval alone already beats BM25 on files (+8.3 pts Acc@5, McNemar
+p = 0.001). Fusing BM25 into the off-the-shelf encoder (S3 vs S2) leaves file accuracy unchanged
+(−0.3) and helps functions slightly (+3.0 pts Acc@10, p = 0.19, not significant). Hybrid is clearly
+better than BM25, but not significantly better than strong dense retrieval.
+
+**RQ2 (fine-tuning).** Training on 2,571 triples from 16 repositories disjoint from the test set
+improves the encoder on unseen repositories: S4 vs S2 +4.7 pts file Acc@5 (paired bootstrap
+p = 0.032, McNemar p = 0.038) and +5.0 pts function Acc@10 (p = 0.06); in the hybrid, S5 vs S3
++6.3 pts file Acc@5 (p = 0.002). On the repo-disjoint validation pairs, Acc@10 rose 0.538 → 0.599.
+
+**RQ3 (learning to rank).** LambdaRank adds +4.7 pts function Acc@10 over its input S5 (p = 0.008,
+McNemar 22 vs 8 instances) and +1.3 pts file Acc@5 (n.s.), at ~0.4 s and zero tokens per issue.
+Feature importance is dominated by fused-rank evidence, then chunk length, the fine-tuned rank and
+import-graph PageRank; explicit issue mentions contribute little once retrieval scores are present.
+The LLM-reranker comparison (S7, S8) requires a Gemini key and is pending.
+
+**RQ4 (onboarding summaries as a feature).** Pending package summaries (Gemini key).
+
+**Ablation A1.** Appending the hints (maintainer comments) raises S5 file Acc@5 from 0.853 to 0.890:
+hints carry real localization signal, which is why they are excluded from the main systems.
 
 ## 6. Onboarding evaluation
-_Filled from `reports/onboarding_eval.md`._
+- **Diagram faithfulness:** 90 diagrams (flask 32, requests 27, django 31); 2,428 nodes and edges,
+  100% re-derived from the static-analysis graphs; all 62 Mermaid files render with the official
+  Mermaid CLI.
+- **Ask-the-codebase retrieval:** 15 hand-written "where is X?" questions over flask and requests;
+  an acceptable file is in the top 5 for 14 (Acc@5 = 0.933).
+- **Citation validity and human ratings:** pending the Gemini summaries.
+- **Cost:** static onboarding of django (817 modules, 2,553 import edges, 6,319 resolved call edges)
+  takes under 30 s on a laptop, well under the 15-minute target.
 
 ## 7. Error analysis
-_Filled from `reports/error_analysis.md`._
+Twenty S6 failures (gold file not in top 5, random sample, seed 42) were categorised by reading
+each issue against its gold patch (categorisation by Claude; to be confirmed by the author):
+
+| Category | Count |
+| --- | --- |
+| Root cause in a shared lower-level module the issue never names | 8 |
+| Fix in a different component than the one the issue describes | 7 |
+| Right package, wrong module | 2 |
+| Noisy issue text (REPL banners, tracebacks) | 2 |
+| Lexical confusion (same name elsewhere) | 1 |
+
+Fifteen of twenty are "symptom ≠ fix site": the issue describes `simplify`, `lambdify` or
+`CalibratedClassifierCV`, but the fix lives in `core/numbers.py`, the code printer or
+`isotonic.py`, one or more import hops away. Retrieval systems match the *description*, so the
+natural next step is graph-aware candidate expansion along import and call edges, which the shared
+index already provides.
 
 ## 8. Limitations and threats to validity
 - SWE-bench Lite is biased towards single-file fixes; multi-file localization is under-tested.
