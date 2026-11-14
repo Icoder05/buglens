@@ -15,7 +15,8 @@
 | S4 | Dense (fine-tuned) | 0.587 | 0.840 | 0.610 | 0.381 | 0 |
 | S5 | RRF(S1, S4) | 0.593 | 0.853 | 0.623 | 0.405 | 0 |
 | **S6** | **S5 → LambdaRank** | **0.597** | **0.867** | **0.670** | **0.413** | **0** |
-| S7 / S8 / S6b | Gemini reranker / summaries feature | _pending: needs `GEMINI_API_KEY`_ | | | | |
+| S6b | S6 + onboarding-summary feature | 0.590 | 0.873 | 0.690 | 0.426 | 0 |
+| S7 / S8 | Gemini 3.5 Flash-Lite reranks top 10 | _in progress (free daily quota)_ | | | | |
 
 95% bootstrap CIs, paired tests and all metrics: [reports/results.md](reports/results.md).
 
@@ -47,8 +48,9 @@ the box; red double outline = the package of the real fix):
   +4.7 pts file Acc@5 (p = 0.03); S5 vs S3 +6.3 pts (p = 0.002).*
 - **RQ3** Does a LambdaRank reranker close the gap to an LLM reranker? — *S6 adds +4.7 pts function
   Acc@10 over S5 (p = 0.008) at 0 tokens; the LLM comparison (S7) is pending a Gemini key.*
-- **RQ4** Do onboarding package summaries help localization as a feature (S6b vs S6)? — *pending
-  a Gemini key.*
+- **RQ4** Do onboarding package summaries help localization as a feature (S6b vs S6)? — *A small,
+  consistent but not significant gain: +2.0 pts function Acc@10 (p = 0.14), +0.7 pts file Acc@5,
+  with summaries for all 12 test repos.*
 
 ### Method (in 10 bullets)
 1. Repos are read straight from git objects at each `base_commit` (no checkouts); content-hash caches.
@@ -119,9 +121,11 @@ same fine-tuning on a free T4/P100.
 | psf/requests | 27 | 100% | |
 | django/django | 31 | 100% | |
 
-All 62 Mermaid files render with the official Mermaid CLI. Citation validity and the 30-summary
-human rating appear in [reports/onboarding_eval.md](reports/onboarding_eval.md) once summaries are
-generated (needs the Gemini key). Generated guides: [flask](onboarding/pallets__flask/guide.md),
+All 62 Mermaid files render with the official Mermaid CLI. **Citation validity:** 107 of 108 LLM
+summary sentences for the three demo repos survived the strict validator (every kept citation
+points inside a symbol the model was shown). **Summary ratings** (29 package summaries, one rater):
+86% correct, 14% partly, 0% wrong — see [reports/onboarding_eval.md](reports/onboarding_eval.md).
+Generated guides: [flask](onboarding/pallets__flask/guide.md),
 [requests](onboarding/psf__requests/guide.md), [django](onboarding/django__django/guide.md).
 
 ## Limitations

@@ -104,7 +104,12 @@ Feature importance is dominated by fused-rank evidence, then chunk length, the f
 import-graph PageRank; explicit issue mentions contribute little once retrieval scores are present.
 The LLM-reranker comparison (S7, S8) requires a Gemini key and is pending.
 
-**RQ4 (onboarding summaries as a feature).** Pending package summaries (Gemini key).
+**RQ4 (onboarding summaries as a feature).** Package summaries were generated with Gemini 3.5
+Flash-Lite for all 12 test repositories at each repo's earliest test commit (no future code).
+Adding their cosine similarity to the issue as one reranker feature (S6b) gives +2.0 pts function
+Acc@10 (0.690 vs 0.670; paired bootstrap p = 0.14, McNemar 10 vs 4) and +0.7 pts file Acc@5
+(p = 0.53): a consistent direction but not a significant effect at n = 300. Human-oriented summaries
+carry some localization signal, but most of it is already captured by retrieval scores.
 
 **Ablation A1.** Appending the hints (maintainer comments) raises S5 file Acc@5 from 0.853 to 0.890:
 hints carry real localization signal, which is why they are excluded from the main systems.
@@ -115,7 +120,12 @@ hints carry real localization signal, which is why they are excluded from the ma
   Mermaid CLI.
 - **Ask-the-codebase retrieval:** 15 hand-written "where is X?" questions over flask and requests;
   an acceptable file is in the top 5 for 14 (Acc@5 = 0.933).
-- **Citation validity and human ratings:** pending the Gemini summaries.
+- **Citation validity:** of 108 summary sentences for flask, requests and django, 107 were kept
+  by the strict validator (98.4–100% of citations valid per repo); one django sentence was
+  dropped for citing outside the symbols it was shown.
+- **Human rating** of 29 package summaries (single rater, Claude, pending the author's check):
+  86% correct, 14% partly correct (accurate but shallow, e.g. `django/core` described only by its
+  exceptions), 0% wrong.
 - **Cost:** static onboarding of django (817 modules, 2,553 import edges, 6,319 resolved call edges)
   takes under 30 s on a laptop, well under the 15-minute target.
 
