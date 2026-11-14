@@ -1,0 +1,526 @@
+{
+ "repo": "psf/requests",
+ "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/packages",
+   "sentences": [
+    {
+     "text": "The requests.packages package includes modules such as requests.packages.chardet, requests.packages.chardet2, and urllib3 packages like six.py.",
+     "citations": [
+      {
+       "path": "requests/packages/urllib3/packages/six.py",
+       "line": 63
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 993,
+   "tokens_out": 100
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/utils",
+   "sentences": [
+    {
+     "text": "The requests/utils module provides helper functions for tasks such as parsing list and dictionary headers, expanding headers, and handling netrc authentication.",
+     "citations": [
+      {
+       "path": "requests/utils.py",
+       "line": 166
+      },
+      {
+       "path": "requests/utils.py",
+       "line": 197
+      },
+      {
+       "path": "requests/utils.py",
+       "line": 255
+      },
+      {
+       "path": "requests/utils.py",
+       "line": 74
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes utilities to retrieve unicode content from responses, stream decompress compressed data, unquote header values, and return the default user agent.",
+     "citations": [
+      {
+       "path": "requests/utils.py",
+       "line": 391
+      },
+      {
+       "path": "requests/utils.py",
+       "line": 424
+      },
+      {
+       "path": "requests/utils.py",
+       "line": 231
+      },
+      {
+       "path": "requests/utils.py",
+       "line": 522
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 557,
+   "tokens_out": 325
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/structures",
+   "sentences": [
+    {
+     "text": "The requests/structures package contains the CaseInsensitiveDict class, which provides a case-insensitive dictionary implementation.",
+     "citations": [
+      {
+       "path": "requests/structures.py",
+       "line": 12
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines the LookupDict class, acting as a dictionary lookup object.",
+     "citations": [
+      {
+       "path": "requests/structures.py",
+       "line": 51
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 195,
+   "tokens_out": 143
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/cookies",
+   "sentences": [
+    {
+     "text": "The requests/cookies package provides a compatibility class called RequestsCookieJar that acts as a cookielib.CookieJar while exposing a dictionary interface.",
+     "citations": [
+      {
+       "path": "requests/cookies.py",
+       "line": 134
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes utility functions to create, extract, remove, and convert cookies, as well as handle cookie headers and dictionary conversions.",
+     "citations": [
+      {
+       "path": "requests/cookies.py",
+       "line": 92
+      },
+      {
+       "path": "requests/cookies.py",
+       "line": 302
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 586,
+   "tokens_out": 188
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/models",
+   "sentences": [
+    {
+     "text": "The requests/models module defines the Request object, which carries out all request functionality.",
+     "citations": [
+      {
+       "path": "requests/models.py",
+       "line": 43
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines the core Response object.",
+     "citations": [
+      {
+       "path": "requests/models.py",
+       "line": 665
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 245,
+   "tokens_out": 132
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/exceptions",
+   "sentences": [
+    {
+     "text": "The requests/exceptions module defines RequestException as the base for handling ambiguous exceptions and HTTP errors.",
+     "citations": [
+      {
+       "path": "requests/exceptions.py",
+       "line": 12
+      },
+      {
+       "path": "requests/exceptions.py",
+       "line": 17
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides exceptions for connection issues, timeouts, required URLs, excessive redirects, and schema or URL validity problems.",
+     "citations": [
+      {
+       "path": "requests/exceptions.py",
+       "line": 22
+      },
+      {
+       "path": "requests/exceptions.py",
+       "line": 30
+      },
+      {
+       "path": "requests/exceptions.py",
+       "line": 34
+      },
+      {
+       "path": "requests/exceptions.py",
+       "line": 38
+      },
+      {
+       "path": "requests/exceptions.py",
+       "line": 42
+      },
+      {
+       "path": "requests/exceptions.py",
+       "line": 50
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 446,
+   "tokens_out": 304
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/sessions",
+   "sentences": [
+    {
+     "text": "The requests/sessions package provides the Session class, which represents a Requests session.",
+     "citations": [
+      {
+       "path": "requests/sessions.py",
+       "line": 56
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes a merge_kwargs function for merging keyword argument dictionaries.",
+     "citations": [
+      {
+       "path": "requests/sessions.py",
+       "line": 22
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, a session function is available to return a Session object for context-management.",
+     "citations": [
+      {
+       "path": "requests/sessions.py",
+       "line": 325
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 258,
+   "tokens_out": 201
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/certs",
+   "sentences": [
+    {
+     "text": "The requests.certs module contains a where function.",
+     "citations": [
+      {
+       "path": "requests/certs.py",
+       "line": 18
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "The where function returns the file path of the CA bundle.",
+     "citations": [
+      {
+       "path": "requests/certs.py",
+       "line": 18
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 154,
+   "tokens_out": 128
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/safe_mode",
+   "sentences": [
+    {
+     "text": "The requests/safe_mode package provides a new implementation of safe_mode to catch all exceptions at the API level.",
+     "citations": [
+      {
+       "path": "requests/safe_mode.py",
+       "line": 20
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 198,
+   "tokens_out": 85
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/hooks",
+   "sentences": [
+    {
+     "text": "The requests.hooks package is responsible for dispatching a hook dictionary on a given piece of data.",
+     "citations": [
+      {
+       "path": "requests/hooks.py",
+       "line": 32
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 181,
+   "tokens_out": 48
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/api",
+   "sentences": [
+    {
+     "text": "The request function constructs and sends a Request object.",
+     "citations": [
+      {
+       "path": "requests/api.py",
+       "line": 18
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "The api module also provides methods to send GET, OPTIONS, HEAD, POST, PUT, PATCH, and DELETE requests, which return Response objects.",
+     "citations": [
+      {
+       "path": "requests/api.py",
+       "line": 57
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 448,
+   "tokens_out": 145
+  },
+  {
+   "repo": "psf/requests",
+   "commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+   "package": "requests/auth",
+   "sentences": [
+    {
+     "text": "The requests/auth package provides the AuthBase base class from which all auth implementations derive.",
+     "citations": [
+      {
+       "path": "requests/auth.py",
+       "line": 45
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes classes to attach HTTP Basic, Digest, Kerberos, Proxy, and OAuth 1 authentication methods to Request objects.",
+     "citations": [
+      {
+       "path": "requests/auth.py",
+       "line": 52
+      },
+      {
+       "path": "requests/auth.py",
+       "line": 128
+      },
+      {
+       "path": "requests/auth.py",
+       "line": 139
+      },
+      {
+       "path": "requests/auth.py",
+       "line": 146
+      },
+      {
+       "path": "requests/auth.py",
+       "line": 276
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 435,
+   "tokens_out": 257
+  }
+ ],
+ "overview": [
+  {
+   "text": "The repository includes core components like the Request and Response objects defined in the models module.",
+   "citations": [
+    {
+     "path": "requests/models.py",
+     "line": 43
+    },
+    {
+     "path": "requests/models.py",
+     "line": 665
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The api module provides methods to send various HTTP requests such as GET, POST, and DELETE, which return Response objects.",
+   "citations": [
+    {
+     "path": "requests/api.py",
+     "line": 57
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Developers can utilize the Session class for context-management and handling requests sessions.",
+   "citations": [
+    {
+     "path": "requests/sessions.py",
+     "line": 56
+    },
+    {
+     "path": "requests/sessions.py",
+     "line": 325
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The package also provides utilities for managing cookies through RequestsCookieJar, handling custom structures, and executing authentication methods.",
+   "citations": [
+    {
+     "path": "requests/structures.py",
+     "line": 12
+    },
+    {
+     "path": "requests/cookies.py",
+     "line": 134
+    },
+    {
+     "path": "requests/auth.py",
+     "line": 45
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Additionally, it includes modules for handling connection exceptions, timeouts, header utilities, and safe-mode exception catching.",
+   "citations": [
+    {
+     "path": "requests/utils.py",
+     "line": 166
+    },
+    {
+     "path": "requests/utils.py",
+     "line": 197
+    },
+    {
+     "path": "requests/utils.py",
+     "line": 255
+    },
+    {
+     "path": "requests/utils.py",
+     "line": 74
+    },
+    {
+     "path": "requests/exceptions.py",
+     "line": 22
+    },
+    {
+     "path": "requests/exceptions.py",
+     "line": 30
+    },
+    {
+     "path": "requests/exceptions.py",
+     "line": 34
+    },
+    {
+     "path": "requests/exceptions.py",
+     "line": 38
+    },
+    {
+     "path": "requests/exceptions.py",
+     "line": 42
+    },
+    {
+     "path": "requests/exceptions.py",
+     "line": 50
+    },
+    {
+     "path": "requests/safe_mode.py",
+     "line": 20
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 12,
+  "sentences": 22,
+  "kept": 22,
+  "dropped": 0,
+  "citations": 39,
+  "valid_citations": 39,
+  "overview": {
+   "sentences": 5,
+   "kept": 5,
+   "dropped": 0
+  }
+ }
+}

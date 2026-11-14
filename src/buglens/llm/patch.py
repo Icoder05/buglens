@@ -95,7 +95,8 @@ def generate_patches(cfg: Config, system: str = "S8", limit: int = 30, split: st
             "", "## Issue", inst.problem_statement[: cfg.llm.max_issue_chars], "",
             "## Code (most likely locations first)", *blocks])
         try:
-            data, usage = client.generate_json(prompt, SCHEMA, inst.instance_id)
+            data, usage = client.generate_json(prompt, SCHEMA, inst.instance_id,
+                                               "\n".join(files.values()))
         except (QuotaExhausted, RequestCapReached) as e:
             console.print(f"[red]stopping early: {e}[/red]")
             break

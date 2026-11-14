@@ -1,0 +1,976 @@
+{
+ "repo": "pylint-dev/pylint",
+ "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/reporters",
+   "sentences": [
+    {
+     "text": "The pylint/reporters package includes modules for managing reporters and writing layouts.",
+     "citations": [
+      {
+       "path": "pylint/reporters/ureports/text_writer.py",
+       "line": 34
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides components such as base container nodes, text portions, sections, and tables.",
+     "citations": [
+      {
+       "path": "pylint/reporters/ureports/nodes.py",
+       "line": 41
+      },
+      {
+       "path": "pylint/reporters/ureports/nodes.py",
+       "line": 82
+      },
+      {
+       "path": "pylint/reporters/ureports/nodes.py",
+       "line": 106
+      },
+      {
+       "path": "pylint/reporters/ureports/nodes.py",
+       "line": 165
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 637,
+   "tokens_out": 261
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/checkers",
+   "sentences": [
+    {
+     "text": "The pylint/checkers package is responsible for initializing the linter with the checkers contained within the package.",
+     "citations": [
+      {
+       "path": "pylint/checkers/__init__.py",
+       "line": 141
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 1096,
+   "tokens_out": 87
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/utils",
+   "sentences": [
+    {
+     "text": "The pylint/utils package provides utility functions such as loading all modules and packages in a given directory to register plugins, retrieving global options defined by checkers, and wrapping the isort API.",
+     "citations": [
+      {
+       "path": "pylint/utils/utils.py",
+       "line": 169
+      },
+      {
+       "path": "pylint/utils/utils.py",
+       "line": 252
+      },
+      {
+       "path": "pylint/utils/utils.py",
+       "line": 383
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 718,
+   "tokens_out": 164
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/lint",
+   "sentences": [
+    {
+     "text": "The pylint.lint package uses external checkers to lint Python modules.",
+     "citations": [
+      {
+       "path": "pylint/lint/pylinter.py",
+       "line": 191
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It can check files in parallel using a given linter and amount of workers.",
+     "citations": [
+      {
+       "path": "pylint/lint/parallel.py",
+       "line": 130
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it prepares the sys.path for running linter checks.",
+     "citations": [
+      {
+       "path": "pylint/lint/utils.py",
+       "line": 120
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 692,
+   "tokens_out": 214
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/pyreverse",
+   "sentences": [
+    {
+     "text": "The pylint.pyreverse.utils module provides utilities such as AST walking, filtering nodes, and checking graphviz availability.",
+     "citations": [
+      {
+       "path": "pylint/pyreverse/utils.py",
+       "line": 144
+      },
+      {
+       "path": "pylint/pyreverse/utils.py",
+       "line": 125
+      },
+      {
+       "path": "pylint/pyreverse/utils.py",
+       "line": 287
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it includes functions to read configuration options, get node annotations, and determine visibility names.",
+     "citations": [
+      {
+       "path": "pylint/pyreverse/utils.py",
+       "line": 35
+      },
+      {
+       "path": "pylint/pyreverse/utils.py",
+       "line": 236
+      },
+      {
+       "path": "pylint/pyreverse/utils.py",
+       "line": 63
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 674,
+   "tokens_out": 288
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/testutils",
+   "sentences": [
+    {
+     "text": "The pylint/testutils package provides utilities for testing, such as checking functional test file structures, retrieving functional test files, and storing plain text messages with a generic test reporter.",
+     "citations": [
+      {
+       "path": "pylint/testutils/functional/find_functional_tests.py",
+       "line": 48
+      },
+      {
+       "path": "pylint/testutils/functional/find_functional_tests.py",
+       "line": 31
+      },
+      {
+       "path": "pylint/testutils/reporter_for_tests.py",
+       "line": 16
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes features to update expected output files instead of checking them, create a test linter, and handle output lines with specialized test exceptions and classes.",
+     "citations": [
+      {
+       "path": "pylint/testutils/functional/lint_module_output_update.py",
+       "line": 16
+      },
+      {
+       "path": "pylint/testutils/global_test_linter.py",
+       "line": 10
+      },
+      {
+       "path": "pylint/testutils/output_line.py",
+       "line": 67
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 737,
+   "tokens_out": 338
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/config",
+   "sentences": [
+    {
+     "text": "The pylint/config package provides option management and validation functionalities.",
+     "citations": [
+      {
+       "path": "pylint/config/option.py",
+       "line": 130
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes validators for various option types such as regular expressions, choices, and Python versions.",
+     "citations": [
+      {
+       "path": "pylint/config/option.py",
+       "line": 19
+      },
+      {
+       "path": "pylint/config/option.py",
+       "line": 47
+      },
+      {
+       "path": "pylint/config/option.py",
+       "line": 87
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 583,
+   "tokens_out": 206
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/extensions",
+   "sentences": [
+    {
+     "text": "The pylint.extensions package is responsible for initializing the linter with checkers in the extensions directory.",
+     "citations": [
+      {
+       "path": "pylint/extensions/__init__.py",
+       "line": 12
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 768,
+   "tokens_out": 83
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/message",
+   "sentences": [
+    {
+     "text": "The pylint/message package contains classes that represent messages to be issued by reporters, store message definitions, and manage message identifiers.",
+     "citations": [
+      {
+       "path": "pylint/message/message.py",
+       "line": 34
+      },
+      {
+       "path": "pylint/message/message_definition_store.py",
+       "line": 16
+      },
+      {
+       "path": "pylint/message/message_id_store.py",
+       "line": 8
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes support for defining individual messages and maintaining information about every possible message definition.",
+     "citations": [
+      {
+       "path": "pylint/message/message_definition.py",
+       "line": 17
+      },
+      {
+       "path": "pylint/message/message_definition_store.py",
+       "line": 16
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 389,
+   "tokens_out": 259
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/interfaces",
+   "sentences": [
+    {
+     "text": "The pylint/interfaces package provides base classes and interfaces for checkers and reporters.",
+     "citations": [
+      {
+       "path": "pylint/interfaces.py",
+       "line": 78
+      },
+      {
+       "path": "pylint/interfaces.py",
+       "line": 114
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes specific interfaces for raw file parsers, token checkers, and ASTroid checkers that build upon the base checker interface.",
+     "citations": [
+      {
+       "path": "pylint/interfaces.py",
+       "line": 88
+      },
+      {
+       "path": "pylint/interfaces.py",
+       "line": 98
+      },
+      {
+       "path": "pylint/interfaces.py",
+       "line": 108
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it defines helper functions to determine whether an object implements a given interface.",
+     "citations": [
+      {
+       "path": "pylint/interfaces.py",
+       "line": 67
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 452,
+   "tokens_out": 302
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/typing",
+   "sentences": [
+    {
+     "text": "The pylint/typing package defines types used across pylint, such as FileItem which represents data about a file handled by pylint and ModuleDescriptionDict which represents data about a checked module.",
+     "citations": [
+      {
+       "path": "pylint/typing.py",
+       "line": 14
+      },
+      {
+       "path": "pylint/typing.py",
+       "line": 28
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides structures like ErrorDescriptionDict for errors collected during checking of a module, MessageLocationTuple for message locations, and ManagedMessage for managed linter messages.",
+     "citations": [
+      {
+       "path": "pylint/typing.py",
+       "line": 38
+      },
+      {
+       "path": "pylint/typing.py",
+       "line": 46
+      },
+      {
+       "path": "pylint/typing.py",
+       "line": 59
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 341,
+   "tokens_out": 266
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/constants",
+   "sentences": [
+    {
+     "text": "The pylint/constants package defines the DeletedMessage class.",
+     "citations": [
+      {
+       "path": "pylint/constants.py",
+       "line": 77
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines the WarningScope class.",
+     "citations": [
+      {
+       "path": "pylint/constants.py",
+       "line": 52
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 231,
+   "tokens_out": 130
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/__pkginfo__",
+   "sentences": [
+    {
+     "text": "The pylint/__pkginfo__ package defines the function get_numversion_from_version which is kept for compatibility reasons.",
+     "citations": [
+      {
+       "path": "pylint/__pkginfo__.py",
+       "line": 8
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 197,
+   "tokens_out": 87
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/exceptions",
+   "sentences": [
+    {
+     "text": "The pylint/exceptions package defines custom exceptions used throughout the pylint-dev/pylint repository.",
+     "citations": [
+      {
+       "path": "pylint/exceptions.py",
+       "line": 18
+      },
+      {
+       "path": "pylint/exceptions.py",
+       "line": 22
+      },
+      {
+       "path": "pylint/exceptions.py",
+       "line": 26
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes error classes such as InvalidMessageError, UnknownMessageError, EmptyReportError, and InvalidReporterError for handling invalid configurations or message operations.",
+     "citations": [
+      {
+       "path": "pylint/exceptions.py",
+       "line": 18
+      },
+      {
+       "path": "pylint/exceptions.py",
+       "line": 22
+      },
+      {
+       "path": "pylint/exceptions.py",
+       "line": 26
+      },
+      {
+       "path": "pylint/exceptions.py",
+       "line": 30
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additional exceptions like InvalidArgsError and NoLineSuppliedError are provided to handle issues with passed arguments and line number specifications.",
+     "citations": [
+      {
+       "path": "pylint/exceptions.py",
+       "line": 34
+      },
+      {
+       "path": "pylint/exceptions.py",
+       "line": 38
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 385,
+   "tokens_out": 404
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "doc/exts",
+   "sentences": [
+    {
+     "text": "The doc/exts package includes modules responsible for outputting full documentation in ReST format for extension modules, getting all messages registered to a linter, and writing message pages.",
+     "citations": [
+      {
+       "path": "doc/exts/pylint_extensions.py",
+       "line": 18
+      },
+      {
+       "path": "doc/exts/pylint_messages.py",
+       "line": 50
+      },
+      {
+       "path": "doc/exts/pylint_messages.py",
+       "line": 89
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also creates pages for the list of all messages, generates redirect pages for old messages, and connects the extension to the Sphinx process.",
+     "citations": [
+      {
+       "path": "doc/exts/pylint_messages.py",
+       "line": 115
+      },
+      {
+       "path": "doc/exts/pylint_messages.py",
+       "line": 175
+      },
+      {
+       "path": "doc/exts/pylint_messages.py",
+       "line": 220
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 634,
+   "tokens_out": 318
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint",
+   "sentences": [
+    {
+     "text": "The pylint package provides functions to run pylint, epylint, pyreverse, and symilar.",
+     "citations": [
+      {
+       "path": "pylint/__init__.py",
+       "line": 21
+      },
+      {
+       "path": "pylint/__init__.py",
+       "line": 34
+      },
+      {
+       "path": "pylint/__init__.py",
+       "line": 44
+      },
+      {
+       "path": "pylint/__init__.py",
+       "line": 54
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functionality to modify the sys path for execution as a Python module.",
+     "citations": [
+      {
+       "path": "pylint/__init__.py",
+       "line": 64
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 351,
+   "tokens_out": 232
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/epylint",
+   "sentences": [
+    {
+     "text": "The pylint.epylint module provides functions to run pylint from python, such as linting a given file.",
+     "citations": [
+      {
+       "path": "pylint/epylint.py",
+       "line": 79
+      },
+      {
+       "path": "pylint/epylint.py",
+       "line": 140
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functionality to execute the linter using command options and handle standard input or output streams.",
+     "citations": [
+      {
+       "path": "pylint/epylint.py",
+       "line": 140
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 304,
+   "tokens_out": 191
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "pylint/graph",
+   "sentences": [
+    {
+     "text": "The pylint/graph package provides utilities for working with graphs, including functions to normalize node IDs, retrieve cycles, and extract target information from filenames.",
+     "citations": [
+      {
+       "path": "pylint/graph.py",
+       "line": 32
+      },
+      {
+       "path": "pylint/graph.py",
+       "line": 169
+      },
+      {
+       "path": "pylint/graph.py",
+       "line": 174
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes a DotBackend class that acts as a dot file backend.",
+     "citations": [
+      {
+       "path": "pylint/graph.py",
+       "line": 40
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 354,
+   "tokens_out": 141
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "examples/custom",
+   "sentences": [
+    {
+     "text": "The examples/custom package provides the MyAstroidChecker class to add class member attributes to the class local's dictionary.",
+     "citations": [
+      {
+       "path": "examples/custom.py",
+       "line": 14
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes the register function, which is a required method that auto registers the checker during initialization.",
+     "citations": [
+      {
+       "path": "examples/custom.py",
+       "line": 69
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 225,
+   "tokens_out": 151
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "examples/custom_raw",
+   "sentences": [
+    {
+     "text": "The package `examples/custom_raw` contains the `MyRawChecker` class, which checks for line continuations with backslashes instead of using triple quotes.",
+     "citations": [
+      {
+       "path": "examples/custom_raw.py",
+       "line": 12
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides a `register` method that automatically registers the checker during the linter's initialization.",
+     "citations": [
+      {
+       "path": "examples/custom_raw.py",
+       "line": 43
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 233,
+   "tokens_out": 111
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "examples/deprecation_checker",
+   "sentences": [
+    {
+     "text": "The package examples/deprecation_checker defines a DeprecationChecker class that inherits from DeprecatedMixin and BaseChecker to implement a deprecation checker.",
+     "citations": [
+      {
+       "path": "examples/deprecation_checker.py",
+       "line": 49
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides a register function for the linter.",
+     "citations": [
+      {
+       "path": "examples/deprecation_checker.py",
+       "line": 95
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 220,
+   "tokens_out": 97
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "script/bump_changelog",
+   "sentences": [
+    {
+     "text": "The script/bump_changelog package manages version determination and changelog updates.",
+     "citations": [
+      {
+       "path": "script/bump_changelog.py",
+       "line": 22
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It determines upcoming versions, transforms content, and performs necessary checks.",
+     "citations": [
+      {
+       "path": "script/bump_changelog.py",
+       "line": 126
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 444,
+   "tokens_out": 142
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "script/fix_documentation",
+   "sentences": [
+    {
+     "text": "The script fix_documentation package provides utilities for fixing inline code blocks to use double quotes in RST style.",
+     "citations": [
+      {
+       "path": "script/fix_documentation.py",
+       "line": 15
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also inserts up to two empty lines before the What's New entry in the changelog.",
+     "citations": [
+      {
+       "path": "script/fix_documentation.py",
+       "line": 25
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 304,
+   "tokens_out": 151
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "commit": "182cc539b8154c0710fcea7e522267e42eba8899",
+   "package": "script/get_unused_message_id_category",
+   "sentences": [
+    {
+     "text": "The script/get_unused_message_id_category.py module defines a function to get the next code category from a list of message identifiers.",
+     "citations": [
+      {
+       "path": "script/get_unused_message_id_category.py",
+       "line": 20
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides a function responsible for registering all checkers and plugins for the linter.",
+     "citations": [
+      {
+       "path": "script/get_unused_message_id_category.py",
+       "line": 13
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 270,
+   "tokens_out": 170
+  }
+ ],
+ "overview": [
+  {
+   "text": "The pylint package provides functions to run pylint, epylint, pyreverse, and symilar.",
+   "citations": [
+    {
+     "path": "pylint/__init__.py",
+     "line": 21
+    },
+    {
+     "path": "pylint/__init__.py",
+     "line": 34
+    },
+    {
+     "path": "pylint/__init__.py",
+     "line": 44
+    },
+    {
+     "path": "pylint/__init__.py",
+     "line": 54
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The pylint.lint package uses external checkers to lint Python modules and can check files in parallel.",
+   "citations": [
+    {
+     "path": "pylint/lint/pylinter.py",
+     "line": 191
+    },
+    {
+     "path": "pylint/lint/parallel.py",
+     "line": 130
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The pylint/config package provides option management, validation functionalities, and validators for regular expressions and choices.",
+   "citations": [
+    {
+     "path": "pylint/config/option.py",
+     "line": 130
+    },
+    {
+     "path": "pylint/config/option.py",
+     "line": 19
+    },
+    {
+     "path": "pylint/config/option.py",
+     "line": 47
+    },
+    {
+     "path": "pylint/config/option.py",
+     "line": 87
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The pylint/reporters package includes modules for managing reporters, writing layouts, and providing text portions and tables.",
+   "citations": [
+    {
+     "path": "pylint/reporters/ureports/text_writer.py",
+     "line": 34
+    },
+    {
+     "path": "pylint/reporters/ureports/nodes.py",
+     "line": 41
+    },
+    {
+     "path": "pylint/reporters/ureports/nodes.py",
+     "line": 82
+    },
+    {
+     "path": "pylint/reporters/ureports/nodes.py",
+     "line": 106
+    },
+    {
+     "path": "pylint/reporters/ureports/nodes.py",
+     "line": 165
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Additionally, the pylint/exceptions package defines custom exceptions used throughout the repository to handle invalid configurations or message operations.",
+   "citations": [
+    {
+     "path": "pylint/exceptions.py",
+     "line": 18
+    },
+    {
+     "path": "pylint/exceptions.py",
+     "line": 22
+    },
+    {
+     "path": "pylint/exceptions.py",
+     "line": 26
+    },
+    {
+     "path": "pylint/exceptions.py",
+     "line": 30
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 24,
+  "sentences": 47,
+  "kept": 47,
+  "dropped": 0,
+  "citations": 87,
+  "valid_citations": 87,
+  "overview": {
+   "sentences": 5,
+   "kept": 5,
+   "dropped": 0
+  }
+ }
+}

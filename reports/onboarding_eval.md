@@ -16,13 +16,17 @@ Share of diagram nodes and edges re-derived from the static-analysis graphs.
 
 Sentences kept/dropped by the strict citation validator.
 
-_No summaries yet (needs GEMINI_API_KEY)._
+| repo | packages | sentences | kept | dropped | kept_pct | valid_citation_pct | complete |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| pallets/flask | 18 | 42 | 42 | 0 | 100.0 | 100.0 | True |
+| psf/requests | 12 | 27 | 27 | 0 | 100.0 | 100.0 | True |
+| django/django | 17 | 39 | 38 | 1 | 97.4 | 98.4 | True |
 
 ## FR-O3 Human rating of package summaries
 
-Sheet: `reports/summary_ratings.csv` (fill `rating` with correct / partly / wrong, then rerun `buglens onboard-eval`). Rated by one person.
+Sheet: `reports/summary_ratings.csv` (fill `rating` with correct / partly / wrong, then rerun `buglens onboard-eval`). Single rater; the `note` column says who rated (Claude, pending the author's confirmation).
 
-_Not rated yet (0 rows in the sheet)._
+Rated 29/29: correct 86.2%, partly 13.8%, wrong 0.0%.
 
 ## FR-O4 Ask-the-codebase retrieval (QA file Acc@5)
 

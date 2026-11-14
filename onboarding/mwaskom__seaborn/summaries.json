@@ -1,0 +1,1101 @@
+{
+ "repo": "mwaskom/seaborn",
+ "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/_core",
+   "sentences": [
+    {
+     "text": "The package provides rules to determine whether a vector contains numeric, categorical, or datetime data and returns unique data values using seaborn's ordering rules.",
+     "citations": [
+      {
+       "path": "seaborn/_core/rules.py",
+       "line": 38
+      },
+      {
+       "path": "seaborn/_core/rules.py",
+       "line": 125
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes scale implementations such as a categorical scale without relative importance or magnitude, a numeric scale supporting norms and functional transforms, and a scale for date or time data.",
+     "citations": [
+      {
+       "path": "seaborn/_core/scales.py",
+       "line": 156
+      },
+      {
+       "path": "seaborn/_core/scales.py",
+       "line": 334
+      },
+      {
+       "path": "seaborn/_core/scales.py",
+       "line": 461
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 563,
+   "tokens_out": 265
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/external",
+   "sentences": [
+    {
+     "text": "The seaborn/external package contains several modules including version, appdirs, docscrape, husl, kde, and external.",
+     "citations": [
+      {
+       "path": "seaborn/external/version.py",
+       "line": 214
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 620,
+   "tokens_out": 88
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/utils",
+   "sentences": [
+    {
+     "text": "The seaborn/utils package provides utility functions such as removing plot spines, recreating legends, manipulating color saturation, and loading example datasets from an online repository.",
+     "citations": [
+      {
+       "path": "seaborn/utils.py",
+       "line": 292
+      },
+      {
+       "path": "seaborn/utils.py",
+       "line": 394
+      },
+      {
+       "path": "seaborn/utils.py",
+       "line": 166
+      },
+      {
+       "path": "seaborn/utils.py",
+       "line": 532
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 622,
+   "tokens_out": 175
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/axisgrid",
+   "sentences": [
+    {
+     "text": "The package seaborn/axisgrid provides the FacetGrid class for plotting conditional relationships on a multi-plot grid, and the PairGrid class for plotting pairwise relationships in a dataset.",
+     "citations": [
+      {
+       "path": "seaborn/axisgrid.py",
+       "line": 309
+      },
+      {
+       "path": "seaborn/axisgrid.py",
+       "line": 1124
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also contains the JointGrid class, which is used for drawing bivariate plots with marginal univariate plots.",
+     "citations": [
+      {
+       "path": "seaborn/axisgrid.py",
+       "line": 1638
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 566,
+   "tokens_out": 136
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/palettes",
+   "sentences": [
+    {
+     "text": "The seaborn/palettes package provides functions to return lists of colors or continuous colormaps defining a palette.",
+     "citations": [
+      {
+       "path": "seaborn/palettes.py",
+       "line": 93
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes tools to make sequential palettes from the cubehelix system, blend from dark or light to a specific color, and create diverging palettes between two HUSL colors.",
+     "citations": [
+      {
+       "path": "seaborn/palettes.py",
+       "line": 793
+      },
+      {
+       "path": "seaborn/palettes.py",
+       "line": 470
+      },
+      {
+       "path": "seaborn/palettes.py",
+       "line": 551
+      },
+      {
+       "path": "seaborn/palettes.py",
+       "line": 632
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, the package allows changing how matplotlib color shorthands are interpreted.",
+     "citations": [
+      {
+       "path": "seaborn/palettes.py",
+       "line": 980
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 776,
+   "tokens_out": 318
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/_marks",
+   "sentences": [
+    {
+     "text": "The seaborn/_marks package defines various mark types, including point marks, interval marks, and marks connecting data points.",
+     "citations": [
+      {
+       "path": "seaborn/_marks/scatter.py",
+       "line": 26
+      },
+      {
+       "path": "seaborn/_marks/bars.py",
+       "line": 24
+      },
+      {
+       "path": "seaborn/_marks/lines.py",
+       "line": 20
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides a base Mark class along with mechanisms to resolve properties and colors for these marks.",
+     "citations": [
+      {
+       "path": "seaborn/_marks/base.py",
+       "line": 90
+      },
+      {
+       "path": "seaborn/_marks/base.py",
+       "line": 227
+      },
+      {
+       "path": "seaborn/_marks/base.py",
+       "line": 237
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 503,
+   "tokens_out": 271
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/_stats",
+   "sentences": [
+    {
+     "text": "The seaborn/_stats package provides a base class for objects that define statistical transformations on plot data.",
+     "citations": [
+      {
+       "path": "seaborn/_stats/base.py",
+       "line": 13
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes classes for binning observations, aggregating data along the value axis, fitting polynomials, and estimating or calculating rolling statistics.",
+     "citations": [
+      {
+       "path": "seaborn/_stats/histograms.py",
+       "line": 16
+      },
+      {
+       "path": "seaborn/_stats/regression.py",
+       "line": 10
+      },
+      {
+       "path": "seaborn/_stats/aggregation.py",
+       "line": 14
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 373,
+   "tokens_out": 215
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/rcmod",
+   "sentences": [
+    {
+     "text": "The seaborn/rcmod package provides functions like axes_style and plotting_context to get parameters controlling plot style and element scaling.",
+     "citations": [
+      {
+       "path": "seaborn/rcmod.py",
+       "line": 149
+      },
+      {
+       "path": "seaborn/rcmod.py",
+       "line": 338
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes set_theme, set_style, set_context, and set_palette to configure visual aspects and color cycles for matplotlib and seaborn plots.",
+     "citations": [
+      {
+       "path": "seaborn/rcmod.py",
+       "line": 83
+      },
+      {
+       "path": "seaborn/rcmod.py",
+       "line": 306
+      },
+      {
+       "path": "seaborn/rcmod.py",
+       "line": 439
+      },
+      {
+       "path": "seaborn/rcmod.py",
+       "line": 505
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it offers utilities such as reset_orig to restore RC parameters to their original settings.",
+     "citations": [
+      {
+       "path": "seaborn/rcmod.py",
+       "line": 141
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 597,
+   "tokens_out": 354
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/relational",
+   "sentences": [
+    {
+     "text": "The seaborn/relational package provides functions like relplot, lineplot, and scatterplot to visualize statistical relationships between variables.",
+     "citations": [
+      {
+       "path": "seaborn/relational.py",
+       "line": 846
+      },
+      {
+       "path": "seaborn/relational.py",
+       "line": 604
+      },
+      {
+       "path": "seaborn/relational.py",
+       "line": 730
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It implements plotting classes such as _RelationalPlotter, _LinePlotter, and _ScatterPlotter to handle relational data representations.",
+     "citations": [
+      {
+       "path": "seaborn/relational.py",
+       "line": 185
+      },
+      {
+       "path": "seaborn/relational.py",
+       "line": 347
+      },
+      {
+       "path": "seaborn/relational.py",
+       "line": 513
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 525,
+   "tokens_out": 191
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/distributions",
+   "sentences": [
+    {
+     "text": "The seaborn/distributions package provides functions for visualizing distribution data, such as histplot, kdeplot, ecdfplot, rugplot, and displot.",
+     "citations": [
+      {
+       "path": "seaborn/distributions.py",
+       "line": 1360
+      },
+      {
+       "path": "seaborn/distributions.py",
+       "line": 1583
+      },
+      {
+       "path": "seaborn/distributions.py",
+       "line": 1863
+      },
+      {
+       "path": "seaborn/distributions.py",
+       "line": 1975
+      },
+      {
+       "path": "seaborn/distributions.py",
+       "line": 2097
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes the _DistributionPlotter class and the deprecated distplot function.",
+     "citations": [
+      {
+       "path": "seaborn/distributions.py",
+       "line": 99
+      },
+      {
+       "path": "seaborn/distributions.py",
+       "line": 2391
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 798,
+   "tokens_out": 301
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/regression",
+   "sentences": [
+    {
+     "text": "The seaborn/regression package provides functionality for plotting numeric independent variables with regression models.",
+     "citations": [
+      {
+       "path": "seaborn/regression.py",
+       "line": 70
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes tools for plotting residuals of a linear regression and plotting relational data in tidy format.",
+     "citations": [
+      {
+       "path": "seaborn/regression.py",
+       "line": 1028
+      },
+      {
+       "path": "seaborn/regression.py",
+       "line": 25
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 508,
+   "tokens_out": 171
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/miscplot",
+   "sentences": [
+    {
+     "text": "The seaborn/miscplot package includes the function palplot, which plots the values in a color palette as a horizontal array.",
+     "citations": [
+      {
+       "path": "seaborn/miscplot.py",
+       "line": 9
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides the dogplot function.",
+     "citations": [
+      {
+       "path": "seaborn/miscplot.py",
+       "line": 33
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 213,
+   "tokens_out": 142
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/_oldcore",
+   "sentences": [
+    {
+     "text": "The seaborn/_oldcore module provides foundational classes such as VectorPlotter and various SemanticMapping subclasses to manage plot functions and map data values to plot attributes like sizes, colors, and styles.",
+     "citations": [
+      {
+       "path": "seaborn/_oldcore.py",
+       "line": 590
+      },
+      {
+       "path": "seaborn/_oldcore.py",
+       "line": 29
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it includes utility functions for determining variable types, inferring plot orientation, and generating unique styles for lines and markers.",
+     "citations": [
+      {
+       "path": "seaborn/_oldcore.py",
+       "line": 1450
+      },
+      {
+       "path": "seaborn/_oldcore.py",
+       "line": 1533
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 560,
+   "tokens_out": 234
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/_docstrings",
+   "sentences": [
+    {
+     "text": "The seaborn/_docstrings package contains the DocstringComponents class.",
+     "citations": [
+      {
+       "path": "seaborn/_docstrings.py",
+       "line": 6
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "This package is imported by modules such as seaborn/axisgrid, seaborn/distributions, and seaborn/relational.",
+     "citations": [
+      {
+       "path": "seaborn/_docstrings.py",
+       "line": 6
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 172,
+   "tokens_out": 144
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "doc/tools",
+   "sentences": [
+    {
+     "text": "The package `doc/tools` contains modules for generating logos, processing notebooks for documentation, and extracting examples.",
+     "citations": [
+      {
+       "path": "doc/tools/generate_logos.py",
+       "line": 61
+      },
+      {
+       "path": "doc/tools/nb_to_doc.py",
+       "line": 65
+      },
+      {
+       "path": "doc/tools/extract_examples.py",
+       "line": 18
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes utilities like finding positions using poisson-disc sampling and stripping notebook outputs and execution counts.",
+     "citations": [
+      {
+       "path": "doc/tools/generate_logos.py",
+       "line": 15
+      },
+      {
+       "path": "doc/tools/nb_to_doc.py",
+       "line": 65
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 514,
+   "tokens_out": 249
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/categorical",
+   "sentences": [
+    {
+     "text": "The seaborn/categorical package contains classes and functions for generating various categorical plots such as bar plots, box plots, violin plots, and point plots.",
+     "citations": [
+      {
+       "path": "seaborn/categorical.py",
+       "line": 1574
+      },
+      {
+       "path": "seaborn/categorical.py",
+       "line": 779
+      },
+      {
+       "path": "seaborn/categorical.py",
+       "line": 894
+      },
+      {
+       "path": "seaborn/categorical.py",
+       "line": 1643
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes higher-level interfaces like catplot and specialized plotters to handle categorical data visualization.",
+     "citations": [
+      {
+       "path": "seaborn/categorical.py",
+       "line": 3588
+      },
+      {
+       "path": "seaborn/categorical.py",
+       "line": 419
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 538,
+   "tokens_out": 273
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/matrix",
+   "sentences": [
+    {
+     "text": "The seaborn/matrix package provides functions to plot rectangular data as a color-encoded matrix and to draw tree diagrams of relationships within a matrix.",
+     "citations": [
+      {
+       "path": "seaborn/matrix.py",
+       "line": 354
+      },
+      {
+       "path": "seaborn/matrix.py",
+       "line": 738
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes capabilities to plot a matrix dataset as a hierarchically-clustered heatmap.",
+     "citations": [
+      {
+       "path": "seaborn/matrix.py",
+       "line": 1242
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 665,
+   "tokens_out": 186
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/widgets",
+   "sentences": [
+    {
+     "text": "The seaborn/widgets package provides interactive widgets to choose and create various color palettes such as ColorBrewer, dark, light, diverging, and cubehelix palettes.",
+     "citations": [
+      {
+       "path": "seaborn/widgets.py",
+       "line": 61
+      },
+      {
+       "path": "seaborn/widgets.py",
+       "line": 157
+      },
+      {
+       "path": "seaborn/widgets.py",
+       "line": 242
+      },
+      {
+       "path": "seaborn/widgets.py",
+       "line": 327
+      },
+      {
+       "path": "seaborn/widgets.py",
+       "line": 386
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes helper functions to initialize mutable colormaps, update LUT values in-place, and display continuous matplotlib colormaps.",
+     "citations": [
+      {
+       "path": "seaborn/widgets.py",
+       "line": 36
+      },
+      {
+       "path": "seaborn/widgets.py",
+       "line": 45
+      },
+      {
+       "path": "seaborn/widgets.py",
+       "line": 51
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 474,
+   "tokens_out": 332
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/algorithms",
+   "sentences": [
+    {
+     "text": "The seaborn/algorithms package provides bootstrapping functionality to resample one or more arrays with replacement and store aggregate values.",
+     "citations": [
+      {
+       "path": "seaborn/algorithms.py",
+       "line": 7
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes methods to resample units instead of datapoints and to return a random number generator from a seed.",
+     "citations": [
+      {
+       "path": "seaborn/algorithms.py",
+       "line": 102
+      },
+      {
+       "path": "seaborn/algorithms.py",
+       "line": 121
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 275,
+   "tokens_out": 180
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/_statistics",
+   "sentences": [
+    {
+     "text": "The seaborn/_statistics package provides statistical estimators including Histogram, KDE, ECDF, and EstimateAggregator.",
+     "citations": [
+      {
+       "path": "seaborn/_statistics.py",
+       "line": 197
+      },
+      {
+       "path": "seaborn/_statistics.py",
+       "line": 41
+      },
+      {
+       "path": "seaborn/_statistics.py",
+       "line": 399
+      },
+      {
+       "path": "seaborn/_statistics.py",
+       "line": 452
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes utility functions such as _percentile_interval and _validate_errorbar_arg for statistical computations.",
+     "citations": [
+      {
+       "path": "seaborn/_statistics.py",
+       "line": 513
+      },
+      {
+       "path": "seaborn/_statistics.py",
+       "line": 520
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 333,
+   "tokens_out": 266
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/_compat",
+   "sentences": [
+    {
+     "text": "The seaborn/_compat package provides compatibility functions such as norm_from_scale to produce a Normalize object and scale_factory for independent scales.",
+     "citations": [
+      {
+       "path": "seaborn/_compat.py",
+       "line": 22
+      },
+      {
+       "path": "seaborn/_compat.py",
+       "line": 70
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also handles setting matplotlib scales and allows MarkerStyle to accept a MarkerStyle object as a parameter.",
+     "citations": [
+      {
+       "path": "seaborn/_compat.py",
+       "line": 108
+      },
+      {
+       "path": "seaborn/_compat.py",
+       "line": 6
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 297,
+   "tokens_out": 210
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "doc/nextgen",
+   "sentences": [
+    {
+     "text": "The doc/nextgen package provides utilities for processing notebook data, including stripping outputs, execution counts, and prompt numbers.",
+     "citations": [
+      {
+       "path": "doc/nextgen/nb_to_doc.py",
+       "line": 65
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functions to remove nested dictionary keys and defines a custom MetadataError exception.",
+     "citations": [
+      {
+       "path": "doc/nextgen/nb_to_doc.py",
+       "line": 45
+      },
+      {
+       "path": "doc/nextgen/nb_to_doc.py",
+       "line": 41
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 280,
+   "tokens_out": 195
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "seaborn/_decorators",
+   "sentences": [
+    {
+     "text": "The seaborn/_decorators package is responsible for modifying class initialization and mapping parameters.",
+     "citations": [
+      {
+       "path": "seaborn/_decorators.py",
+       "line": 4
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Specifically, it provides the share_init_params_with_map function to make cls.map a classmethod that shares the same signature as cls.__init__.",
+     "citations": [
+      {
+       "path": "seaborn/_decorators.py",
+       "line": 4
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 184,
+   "tokens_out": 155
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "doc/conf",
+   "sentences": [
+    {
+     "text": "The doc/conf package contains the module doc.conf, which defines the setup function.",
+     "citations": [
+      {
+       "path": "doc/conf.py",
+       "line": 288
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 158,
+   "tokens_out": 78
+  },
+  {
+   "repo": "mwaskom/seaborn",
+   "commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+   "package": "doc/sphinxext",
+   "sentences": [
+    {
+     "text": "The doc/sphinxext package provides tools for generating an example page from a file through the ExampleGenerator class.",
+     "citations": [
+      {
+       "path": "doc/sphinxext/gallery_generator.py",
+       "line": 170
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes a main function for the application and handles setup.",
+     "citations": [
+      {
+       "path": "doc/sphinxext/gallery_generator.py",
+       "line": 338
+      },
+      {
+       "path": "doc/sphinxext/gallery_generator.py",
+       "line": 398
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 358,
+   "tokens_out": 184
+  }
+ ],
+ "overview": [
+  {
+   "text": "Seaborn provides specialized packages like seaborn/relational and seaborn/distributions for visualizing statistical relationships and distribution data.",
+   "citations": [
+    {
+     "path": "seaborn/relational.py",
+     "line": 846
+    },
+    {
+     "path": "seaborn/relational.py",
+     "line": 604
+    },
+    {
+     "path": "seaborn/relational.py",
+     "line": 730
+    },
+    {
+     "path": "seaborn/distributions.py",
+     "line": 1360
+    },
+    {
+     "path": "seaborn/distributions.py",
+     "line": 1583
+    },
+    {
+     "path": "seaborn/distributions.py",
+     "line": 1863
+    },
+    {
+     "path": "seaborn/distributions.py",
+     "line": 1975
+    },
+    {
+     "path": "seaborn/distributions.py",
+     "line": 2097
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "It includes robust options for categorical data visualization, regression models, and matrix datasets such as hierarchically-clustered heatmaps.",
+   "citations": [
+    {
+     "path": "seaborn/regression.py",
+     "line": 70
+    },
+    {
+     "path": "seaborn/categorical.py",
+     "line": 1574
+    },
+    {
+     "path": "seaborn/categorical.py",
+     "line": 779
+    },
+    {
+     "path": "seaborn/categorical.py",
+     "line": 894
+    },
+    {
+     "path": "seaborn/categorical.py",
+     "line": 1643
+    },
+    {
+     "path": "seaborn/matrix.py",
+     "line": 1242
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Multi-plot grids like FacetGrid, PairGrid, and JointGrid help display conditional relationships and bivariate plots.",
+   "citations": [
+    {
+     "path": "seaborn/axisgrid.py",
+     "line": 309
+    },
+    {
+     "path": "seaborn/axisgrid.py",
+     "line": 1124
+    },
+    {
+     "path": "seaborn/axisgrid.py",
+     "line": 1638
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Developers can configure visual aspects and color cycles using packages like seaborn/rcmod and seaborn/palettes.",
+   "citations": [
+    {
+     "path": "seaborn/palettes.py",
+     "line": 93
+    },
+    {
+     "path": "seaborn/rcmod.py",
+     "line": 83
+    },
+    {
+     "path": "seaborn/rcmod.py",
+     "line": 306
+    },
+    {
+     "path": "seaborn/rcmod.py",
+     "line": 439
+    },
+    {
+     "path": "seaborn/rcmod.py",
+     "line": 505
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Additionally, the library offers utility functions for manipulating color saturation, loading example datasets, and handling core data vectors.",
+   "citations": [
+    {
+     "path": "seaborn/_core/rules.py",
+     "line": 38
+    },
+    {
+     "path": "seaborn/_core/rules.py",
+     "line": 125
+    },
+    {
+     "path": "seaborn/utils.py",
+     "line": 292
+    },
+    {
+     "path": "seaborn/utils.py",
+     "line": 394
+    },
+    {
+     "path": "seaborn/utils.py",
+     "line": 166
+    },
+    {
+     "path": "seaborn/utils.py",
+     "line": 532
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 25,
+  "sentences": 49,
+  "kept": 49,
+  "dropped": 0,
+  "citations": 104,
+  "valid_citations": 104,
+  "overview": {
+   "sentences": 5,
+   "kept": 5,
+   "dropped": 0
+  }
+ }
+}

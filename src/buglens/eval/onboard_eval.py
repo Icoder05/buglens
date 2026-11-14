@@ -140,7 +140,8 @@ def onboard_eval(cfg: Config) -> str:
     md += [md_table(cites) if cites else "_No summaries yet (needs GEMINI_API_KEY)._", ""]
     md += ["## FR-O3 Human rating of package summaries", "",
            "Sheet: `reports/summary_ratings.csv` (fill `rating` with correct / partly / wrong, "
-           "then rerun `buglens onboard-eval`). Rated by one person.", ""]
+           "then rerun `buglens onboard-eval`). Single rater; the `note` column says who "
+           "rated (Claude, pending the author's confirmation).", ""]
     if ratings.get("rated"):
         md.append(f"Rated {ratings['rated']}/{ratings['rows']}: correct {ratings['correct']}%, "
                   f"partly {ratings['partly']}%, wrong {ratings['wrong']}%.")

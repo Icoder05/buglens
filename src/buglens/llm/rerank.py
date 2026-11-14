@@ -96,9 +96,12 @@ def llm_rerank(cfg: Config, system: str, split: str, limit: int | None = None
                 tin = tout = 0
                 ranking = None
                 try:
+                    shown = [by_id[c.chunk_id] for c in head]
+                    base_code = "\n".join(ch.text for ch in shown)
                     for retry in (False, True):
-                        prompt = build_prompt(inst, [by_id[c.chunk_id] for c in head], cfg, retry)
-                        data, usage = client.generate_json(prompt, SCHEMA, inst.instance_id)
+                        prompt = build_prompt(inst, shown, cfg, retry)
+                        data, usage = client.generate_json(prompt, SCHEMA, inst.instance_id,
+                                                           base_code)
                         tin += usage.tokens_in
                         tout += usage.tokens_out
                         ranking = parse_ranking(data, [c.chunk_id for c in head])

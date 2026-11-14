@@ -26,6 +26,12 @@ def test_guard_blocks_gold_patch_and_added_lines():
     with pytest.raises(LeakageError):
         g.check("code: return compute_the_secret_fix(value, other)", "inst-1")
     g.check("code: return compute_the_secret_fix(value, other)", "inst-2")  # other instance
+    # The same line already present in base-commit code shown in the prompt is not leakage...
+    g.check("code: return compute_the_secret_fix(value, other)", "inst-1",
+            base_code="def h():\n    return compute_the_secret_fix(value, other)\n")
+    # ...but the full gold patch is always blocked, whatever the base code.
+    with pytest.raises(LeakageError):
+        g.check(_guard().full_texts[0], "inst-1", base_code=_guard().full_texts[0])
 
 
 def test_cache_and_request_cap(cfg):

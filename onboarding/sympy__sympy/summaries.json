@@ -1,0 +1,1310 @@
+{
+ "repo": "sympy/sympy",
+ "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/core",
+   "sentences": [
+    {
+     "text": "The sympy/core package provides tools for compatibility, such as returning a key that can be used for sorting.",
+     "citations": [
+      {
+       "path": "sympy/core/compatibility.py",
+       "line": 340
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functions to check if an object is a SymPy iterable or a sequence, and to convert arguments to builtin integers.",
+     "citations": [
+      {
+       "path": "sympy/core/compatibility.py",
+       "line": 198
+      },
+      {
+       "path": "sympy/core/compatibility.py",
+       "line": 256
+      },
+      {
+       "path": "sympy/core/compatibility.py",
+       "line": 307
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 908,
+   "tokens_out": 146
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/utilities",
+   "sentences": [
+    {
+     "text": "The sympy/utilities package provides various tools and functions including partition generators, sorting algorithms, and container utilities.",
+     "citations": [
+      {
+       "path": "sympy/utilities/iterables.py",
+       "line": 1311
+      },
+      {
+       "path": "sympy/utilities/iterables.py",
+       "line": 778
+      },
+      {
+       "path": "sympy/utilities/iterables.py",
+       "line": 22
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 761,
+   "tokens_out": 144
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/polys",
+   "sentences": [
+    {
+     "text": "The package sympy/polys defines base classes for polynomial related exceptions.",
+     "citations": [
+      {
+       "path": "sympy/polys/polyerrors.py",
+       "line": 7
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 878,
+   "tokens_out": 45
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy",
+   "sentences": [
+    {
+     "text": "The sympy package is responsible for core symbolic mathematics functionality.",
+     "citations": [
+      {
+       "path": "sympy/__init__.py",
+       "line": 44
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 209,
+   "tokens_out": 39
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/printing",
+   "sentences": [
+    {
+     "text": "The sympy/printing package includes tools to convert expressions into various representations such as standard strings, LaTeX, and 2D ASCII-art figures.",
+     "citations": [
+      {
+       "path": "sympy/printing/str.py",
+       "line": 745
+      },
+      {
+       "path": "sympy/printing/latex.py",
+       "line": 1939
+      },
+      {
+       "path": "sympy/printing/pretty/pretty.py",
+       "line": 34
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 739,
+   "tokens_out": 151
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/physics",
+   "sentences": [
+    {
+     "text": "The sympy/physics package provides capabilities for handling units and physical constants through classes like Unit, Constant, and UnitSystem.",
+     "citations": [
+      {
+       "path": "sympy/physics/unitsystems/units.py",
+       "line": 14
+      },
+      {
+       "path": "sympy/physics/unitsystems/units.py",
+       "line": 260
+      },
+      {
+       "path": "sympy/physics/unitsystems/units.py",
+       "line": 274
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also supports quantum mechanics operations with classes such as Operator, Dagger, and OuterProduct.",
+     "citations": [
+      {
+       "path": "sympy/physics/quantum/operator.py",
+       "line": 34
+      },
+      {
+       "path": "sympy/physics/quantum/dagger.py",
+       "line": 13
+      },
+      {
+       "path": "sympy/physics/quantum/operator.py",
+       "line": 328
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 887,
+   "tokens_out": 193
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/functions",
+   "sentences": [
+    {
+     "text": "The sympy/functions package provides various mathematical functions such as absolute value, sign, real and imaginary parts, and complex conjugates.",
+     "citations": [
+      {
+       "path": "sympy/functions/elementary/complexes.py",
+       "line": 371
+      },
+      {
+       "path": "sympy/functions/elementary/complexes.py",
+       "line": 216
+      },
+      {
+       "path": "sympy/functions/elementary/complexes.py",
+       "line": 113
+      },
+      {
+       "path": "sympy/functions/elementary/complexes.py",
+       "line": 22
+      },
+      {
+       "path": "sympy/functions/elementary/complexes.py",
+       "line": 627
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functions to handle arguments of complex numbers, polar numbers, and polarify expressions.",
+     "citations": [
+      {
+       "path": "sympy/functions/elementary/complexes.py",
+       "line": 576
+      },
+      {
+       "path": "sympy/functions/elementary/complexes.py",
+       "line": 823
+      },
+      {
+       "path": "sympy/functions/elementary/complexes.py",
+       "line": 919
+      },
+      {
+       "path": "sympy/functions/elementary/complexes.py",
+       "line": 1035
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 885,
+   "tokens_out": 269
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/matrices",
+   "sentences": [
+    {
+     "text": "The sympy matrices package provides base matrix functionality through classes like MatrixBase and DeferredVector.",
+     "citations": [
+      {
+       "path": "sympy/matrices/matrices.py",
+       "line": 76
+      },
+      {
+       "path": "sympy/matrices/matrices.py",
+       "line": 46
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes support for matrix expressions and symbolic representations via classes such as MatrixExpr and MatrixSymbol.",
+     "citations": [
+      {
+       "path": "sympy/matrices/expressions/matexpr.py",
+       "line": 30
+      },
+      {
+       "path": "sympy/matrices/expressions/matexpr.py",
+       "line": 352
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 750,
+   "tokens_out": 140
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/external",
+   "sentences": [
+    {
+     "text": "The sympy.external package contains modules such as sympy.external.importtools.",
+     "citations": [
+      {
+       "path": "sympy/external/importtools.py",
+       "line": 32
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides functionality to import and return a module if it is installed.",
+     "citations": [
+      {
+       "path": "sympy/external/importtools.py",
+       "line": 32
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 286,
+   "tokens_out": 88
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/simplify",
+   "sentences": [
+    {
+     "text": "The sympy/simplify package provides functions to simplify various mathematical expressions, including bessel-type functions and expressions with logarithms.",
+     "citations": [
+      {
+       "path": "sympy/simplify/simplify.py",
+       "line": 384
+      },
+      {
+       "path": "sympy/simplify/simplify.py",
+       "line": 784
+      },
+      {
+       "path": "sympy/simplify/simplify.py",
+       "line": 943
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes tools to separate variables, compute nth-roots of sums of surds, and find simple representations for numbers.",
+     "citations": [
+      {
+       "path": "sympy/simplify/simplify.py",
+       "line": 41
+      },
+      {
+       "path": "sympy/simplify/simplify.py",
+       "line": 1031
+      },
+      {
+       "path": "sympy/simplify/simplify.py",
+       "line": 1091
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 711,
+   "tokens_out": 278
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/plotting",
+   "sentences": [
+    {
+     "text": "The sympy/plotting package provides functionalities for plotting functions of a single variable, 2D parametric plots, 3D surface plots, 3D parametric line plots, and 3D parametric surface plots.",
+     "citations": [
+      {
+       "path": "sympy/plotting/plot.py",
+       "line": 1141
+      },
+      {
+       "path": "sympy/plotting/plot.py",
+       "line": 1299
+      },
+      {
+       "path": "sympy/plotting/plot.py",
+       "line": 1430
+      },
+      {
+       "path": "sympy/plotting/plot.py",
+       "line": 1526
+      },
+      {
+       "path": "sympy/plotting/plot.py",
+       "line": 1638
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes the central Plot class and the MatplotlibBackend for rendering visual representations.",
+     "citations": [
+      {
+       "path": "sympy/plotting/plot.py",
+       "line": 70
+      },
+      {
+       "path": "sympy/plotting/plot.py",
+       "line": 871
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 854,
+   "tokens_out": 220
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/assumptions",
+   "sentences": [
+    {
+     "text": "The sympy.assumptions package provides methods for inferring properties about objects.",
+     "citations": [
+      {
+       "path": "sympy/assumptions/ask.py",
+       "line": 1214
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes supported keys for ask and allows registering handlers in the ask system.",
+     "citations": [
+      {
+       "path": "sympy/assumptions/ask.py",
+       "line": 31
+      },
+      {
+       "path": "sympy/assumptions/ask.py",
+       "line": 1323
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 711,
+   "tokens_out": 112
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/logic",
+   "sentences": [
+    {
+     "text": "The sympy/logic package provides boolean objects and various logical functions such as And, Or, Not, Xor, Implies, and Equivalent for logical operations.",
+     "citations": [
+      {
+       "path": "sympy/logic/boolalg.py",
+       "line": 19
+      },
+      {
+       "path": "sympy/logic/boolalg.py",
+       "line": 308
+      },
+      {
+       "path": "sympy/logic/boolalg.py",
+       "line": 381
+      },
+      {
+       "path": "sympy/logic/boolalg.py",
+       "line": 452
+      },
+      {
+       "path": "sympy/logic/boolalg.py",
+       "line": 579
+      },
+      {
+       "path": "sympy/logic/boolalg.py",
+       "line": 743
+      },
+      {
+       "path": "sympy/logic/boolalg.py",
+       "line": 822
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes utilities like truth_table to generate configurations of input variables and bool_map to return simplified versions of expressions along with variable mappings.",
+     "citations": [
+      {
+       "path": "sympy/logic/boolalg.py",
+       "line": 1388
+      },
+      {
+       "path": "sympy/logic/boolalg.py",
+       "line": 1783
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 595,
+   "tokens_out": 386
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/series",
+   "sentences": [
+    {
+     "text": "The sympy/series package represents the limiting behavior of functions and computes limits.",
+     "citations": [
+      {
+       "path": "sympy/series/order.py",
+       "line": 12
+      },
+      {
+       "path": "sympy/series/limits.py",
+       "line": 12
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also finds limits of terms having sequences at infinity and calculates the difference operator.",
+     "citations": [
+      {
+       "path": "sympy/series/limitseq.py",
+       "line": 109
+      },
+      {
+       "path": "sympy/series/limitseq.py",
+       "line": 12
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 665,
+   "tokens_out": 200
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/sets",
+   "sentences": [
+    {
+     "text": "The sympy/sets package provides the base class Set along with various specific types of sets such as Intervals, FiniteSets, Unions, and Intersections.",
+     "citations": [
+      {
+       "path": "sympy/sets/sets.py",
+       "line": 27
+      },
+      {
+       "path": "sympy/sets/sets.py",
+       "line": 669
+      },
+      {
+       "path": "sympy/sets/sets.py",
+       "line": 1125
+      },
+      {
+       "path": "sympy/sets/sets.py",
+       "line": 1347
+      },
+      {
+       "path": "sympy/sets/sets.py",
+       "line": 1755
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also supports advanced set operations and representations including Cartesian products, complements, imagesets, the empty set, and the universal set.",
+     "citations": [
+      {
+       "path": "sympy/sets/sets.py",
+       "line": 517
+      },
+      {
+       "path": "sympy/sets/sets.py",
+       "line": 1576
+      },
+      {
+       "path": "sympy/sets/sets.py",
+       "line": 1633
+      },
+      {
+       "path": "sympy/sets/sets.py",
+       "line": 1700
+      },
+      {
+       "path": "sympy/sets/sets.py",
+       "line": 2016
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 587,
+   "tokens_out": 406
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/parsing",
+   "sentences": [
+    {
+     "text": "The sympy/parsing package is responsible for converting strings into SymPy expressions.",
+     "citations": [
+      {
+       "path": "sympy/parsing/sympy_parser.py",
+       "line": 812
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides transformations and functions to handle operations like implicit multiplication and function exponentiation.",
+     "citations": [
+      {
+       "path": "sympy/parsing/sympy_parser.py",
+       "line": 195
+      },
+      {
+       "path": "sympy/parsing/sympy_parser.py",
+       "line": 310
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 630,
+   "tokens_out": 178
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/solvers",
+   "sentences": [
+    {
+     "text": "The sympy/solvers package provides methods to solve various types of equations and inequalities, including solveset for returning a set as output and linsolve for solving linear equation systems.",
+     "citations": [
+      {
+       "path": "sympy/solvers/solveset.py",
+       "line": 647
+      },
+      {
+       "path": "sympy/solvers/solveset.py",
+       "line": 923
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes utilities like linear_eq_to_matrix to convert systems of equations into matrix form.",
+     "citations": [
+      {
+       "path": "sympy/solvers/solveset.py",
+       "line": 819
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 796,
+   "tokens_out": 129
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/integrals",
+   "sentences": [
+    {
+     "text": "The sympy/integrals package provides functionality to represent unevaluated integrals and compute integrations such as line integrations and indefinite integrations of Singularity functions.",
+     "citations": [
+      {
+       "path": "sympy/integrals/integrals.py",
+       "line": 28
+      },
+      {
+       "path": "sympy/integrals/integrals.py",
+       "line": 1299
+      },
+      {
+       "path": "sympy/integrals/singularityfunctions.py",
+       "line": 8
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes base classes and backend functions for computing integral transforms like Laplace and Mellin transforms.",
+     "citations": [
+      {
+       "path": "sympy/integrals/transforms.py",
+       "line": 40
+      },
+      {
+       "path": "sympy/integrals/transforms.py",
+       "line": 957
+      },
+      {
+       "path": "sympy/integrals/transforms.py",
+       "line": 212
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 782,
+   "tokens_out": 283
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/ntheory",
+   "sentences": [
+    {
+     "text": "The sympy/ntheory package includes functions to factor integers and compute properties such as core and multiplicity.",
+     "citations": [
+      {
+       "path": "sympy/ntheory/factor_.py",
+       "line": 805
+      },
+      {
+       "path": "sympy/ntheory/factor_.py",
+       "line": 193
+      },
+      {
+       "path": "sympy/ntheory/factor_.py",
+       "line": 1685
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides methods like Pollard's rho and p-1 algorithms to extract nontrivial factors.",
+     "citations": [
+      {
+       "path": "sympy/ntheory/factor_.py",
+       "line": 368
+      },
+      {
+       "path": "sympy/ntheory/factor_.py",
+       "line": 483
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, the package implements divisor functions including the unitary divisor function.",
+     "citations": [
+      {
+       "path": "sympy/ntheory/factor_.py",
+       "line": 1619
+      },
+      {
+       "path": "sympy/ntheory/factor_.py",
+       "line": 1782
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 878,
+   "tokens_out": 347
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/tensor",
+   "sentences": [
+    {
+     "text": "The sympy/tensor package provides classes such as Indexed and Idx to represent mathematical objects with indices and integer expressions.",
+     "citations": [
+      {
+       "path": "sympy/tensor/indexed.py",
+       "line": 119
+      },
+      {
+       "path": "sympy/tensor/indexed.py",
+       "line": 426
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes NDimArray for handling multidimensional arrays and functions to determine outer and dummy indices of expressions.",
+     "citations": [
+      {
+       "path": "sympy/tensor/array/ndim_array.py",
+       "line": 6
+      },
+      {
+       "path": "sympy/tensor/index_methods.py",
+       "line": 177
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 618,
+   "tokens_out": 219
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/geometry",
+   "sentences": [
+    {
+     "text": "The sympy.geometry package handles geometric entities and provides utility functions such as computing the intersection of entities and finding the centroid.",
+     "citations": [
+      {
+       "path": "sympy/geometry/util.py",
+       "line": 143
+      },
+      {
+       "path": "sympy/geometry/util.py",
+       "line": 634
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides methods to determine relationships between geometric objects, including checking if entities are coplanar or similar.",
+     "citations": [
+      {
+       "path": "sympy/geometry/util.py",
+       "line": 501
+      },
+      {
+       "path": "sympy/geometry/util.py",
+       "line": 572
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 659,
+   "tokens_out": 216
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/combinatorics",
+   "sentences": [
+    {
+     "text": "The sympy/combinatorics package includes functionality for permutations, which are also known as arrangements or orderings, as well as disjoint cycles.",
+     "citations": [
+      {
+       "path": "sympy/combinatorics/permutations.py",
+       "line": 464
+      },
+      {
+       "path": "sympy/combinatorics/permutations.py",
+       "line": 233
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines permutation groups through the PermutationGroup class.",
+     "citations": [
+      {
+       "path": "sympy/combinatorics/perm_groups.py",
+       "line": 25
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 737,
+   "tokens_out": 186
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/liealgebras",
+   "sentences": [
+    {
+     "text": "The sympy/liealgebras package provides functionality for Lie algebras and related structures such as Cartan types and Weyl groups.",
+     "citations": [
+      {
+       "path": "sympy/liealgebras/cartan_type.py",
+       "line": 6
+      },
+      {
+       "path": "sympy/liealgebras/weyl_group.py",
+       "line": 10
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes specific concrete classes for different Cartan types, including TypeA, TypeB, TypeC, TypeD, TypeE, TypeF, and TypeG.",
+     "citations": [
+      {
+       "path": "sympy/liealgebras/cartan_type.py",
+       "line": 54
+      },
+      {
+       "path": "sympy/liealgebras/type_a.py",
+       "line": 8
+      },
+      {
+       "path": "sympy/liealgebras/type_b.py",
+       "line": 7
+      },
+      {
+       "path": "sympy/liealgebras/type_c.py",
+       "line": 5
+      },
+      {
+       "path": "sympy/liealgebras/type_d.py",
+       "line": 5
+      },
+      {
+       "path": "sympy/liealgebras/type_e.py",
+       "line": 7
+      },
+      {
+       "path": "sympy/liealgebras/type_f.py",
+       "line": 7
+      },
+      {
+       "path": "sympy/liealgebras/type_g.py",
+       "line": 6
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 579,
+   "tokens_out": 414
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/strategies",
+   "sentences": [
+    {
+     "text": "Branching rules can be composed to apply sequentially to an expression, applied repeatedly until they have no effect, or executed exclusively as one rule.",
+     "citations": [
+      {
+       "path": "sympy/strategies/branch/core.py",
+       "line": 91
+      },
+      {
+       "path": "sympy/strategies/branch/core.py",
+       "line": 9
+      },
+      {
+       "path": "sympy/strategies/branch/core.py",
+       "line": 79
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additional functions allow multiplexing multiple branching rules, printing input and output expressions at each rule application, or applying rules conditionally.",
+     "citations": [
+      {
+       "path": "sympy/strategies/branch/core.py",
+       "line": 42
+      },
+      {
+       "path": "sympy/strategies/branch/core.py",
+       "line": 30
+      },
+      {
+       "path": "sympy/strategies/branch/core.py",
+       "line": 53
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 548,
+   "tokens_out": 196
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/concrete",
+   "sentences": [
+    {
+     "text": "The sympy/concrete package provides functionalities for handling unevaluated summations and products.",
+     "citations": [
+      {
+       "path": "sympy/concrete/summations.py",
+       "line": 23
+      },
+      {
+       "path": "sympy/concrete/products.py",
+       "line": 14
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes tools to compute summations of expressions with respect to specified symbols.",
+     "citations": [
+      {
+       "path": "sympy/concrete/summations.py",
+       "line": 707
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 611,
+   "tokens_out": 173
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/vector",
+   "sentences": [
+    {
+     "text": "The sympy/vector package provides functionality for handling 3-D coordinate systems and vector operations.",
+     "citations": [
+      {
+       "path": "sympy/vector/coordsysrect.py",
+       "line": 11
+      },
+      {
+       "path": "sympy/vector/functions.py",
+       "line": 8
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes tools to compute scalar potentials, check if fields are conservative or solenoidal, and orthogonalize vectors.",
+     "citations": [
+      {
+       "path": "sympy/vector/functions.py",
+       "line": 286
+      },
+      {
+       "path": "sympy/vector/functions.py",
+       "line": 218
+      },
+      {
+       "path": "sympy/vector/functions.py",
+       "line": 478
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 602,
+   "tokens_out": 239
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/calculus",
+   "sentences": [
+    {
+     "text": "The sympy/calculus package provides utilities to find the continuous domain, range, and domain of functions.",
+     "citations": [
+      {
+       "path": "sympy/calculus/util.py",
+       "line": 13
+      },
+      {
+       "path": "sympy/calculus/util.py",
+       "line": 74
+      },
+      {
+       "path": "sympy/calculus/util.py",
+       "line": 145
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It can also find singularities and determine whether functions are increasing, decreasing, or monotonic on a given interval.",
+     "citations": [
+      {
+       "path": "sympy/calculus/singularities.py",
+       "line": 7
+      },
+      {
+       "path": "sympy/calculus/singularities.py",
+       "line": 47
+      },
+      {
+       "path": "sympy/calculus/singularities.py",
+       "line": 203
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 670,
+   "tokens_out": 274
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/stats",
+   "sentences": [
+    {
+     "text": "Random symbols represent probability spaces in SymPy expressions.",
+     "citations": [
+      {
+       "path": "sympy/stats/rv.py",
+       "line": 200
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "The package provides functions to compute the probability, expectation, density, and cumulative distribution function of random expressions.",
+     "citations": [
+      {
+       "path": "sympy/stats/rv.py",
+       "line": 587
+      },
+      {
+       "path": "sympy/stats/rv.py",
+       "line": 532
+      },
+      {
+       "path": "sympy/stats/rv.py",
+       "line": 680
+      },
+      {
+       "path": "sympy/stats/rv.py",
+       "line": 725
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 656,
+   "tokens_out": 149
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "sympy/interactive",
+   "sentences": [
+    {
+     "text": "The sympy/interactive package initializes pretty-printers depending on the environment and sets up printing in both IPython and standard Python interactive sessions.",
+     "citations": [
+      {
+       "path": "sympy/interactive/printing.py",
+       "line": 238
+      },
+      {
+       "path": "sympy/interactive/printing.py",
+       "line": 36
+      },
+      {
+       "path": "sympy/interactive/printing.py",
+       "line": 15
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides functionality to initialize embedded IPython or Python sessions.",
+     "citations": [
+      {
+       "path": "sympy/interactive/session.py",
+       "line": 312
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 714,
+   "tokens_out": 207
+  },
+  {
+   "repo": "sympy/sympy",
+   "commit": "8dcb12a6cf500e8738d6729ab954a261758f49ca",
+   "package": "examples/advanced",
+   "sentences": [
+    {
+     "text": "The package examples/advanced contains modules that cover various complex topics such as curvilinear coordinate transformations, finite element methods, and quantum computing examples.",
+     "citations": [
+      {
+       "path": "examples/advanced/curvilinear_coordinates.py",
+       "line": 32
+      },
+      {
+       "path": "examples/advanced/fem.py",
+       "line": 49
+      },
+      {
+       "path": "examples/advanced/grover_example.py",
+       "line": 23
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides demonstrations for relativistic calculations, autowrap integration, and pyglet plotting.",
+     "citations": [
+      {
+       "path": "examples/advanced/relativity.py",
+       "line": 160
+      },
+      {
+       "path": "examples/advanced/autowrap_integrators.py",
+       "line": 58
+      },
+      {
+       "path": "examples/advanced/pyglet_plotting.py",
+       "line": 18
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 524,
+   "tokens_out": 196
+  }
+ ],
+ "overview": [
+  {
+   "text": "The sympy package is responsible for core symbolic mathematics functionality.",
+   "citations": [
+    {
+     "path": "sympy/__init__.py",
+     "line": 44
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The sympy/solvers package provides methods to solve various types of equations and inequalities, including solveset for returning a set as output and linsolve for solving linear equation systems.",
+   "citations": [
+    {
+     "path": "sympy/solvers/solveset.py",
+     "line": 647
+    },
+    {
+     "path": "sympy/solvers/solveset.py",
+     "line": 923
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The sympy/plotting package provides functionalities for plotting functions of a single variable, 2D parametric plots, 3D surface plots, 3D parametric line plots, and 3D parametric surface plots.",
+   "citations": [
+    {
+     "path": "sympy/plotting/plot.py",
+     "line": 1141
+    },
+    {
+     "path": "sympy/plotting/plot.py",
+     "line": 1299
+    },
+    {
+     "path": "sympy/plotting/plot.py",
+     "line": 1430
+    },
+    {
+     "path": "sympy/plotting/plot.py",
+     "line": 1526
+    },
+    {
+     "path": "sympy/plotting/plot.py",
+     "line": 1638
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The sympy/physics package provides capabilities for handling units and physical constants through classes like Unit, Constant, and UnitSystem.",
+   "citations": [
+    {
+     "path": "sympy/physics/unitsystems/units.py",
+     "line": 14
+    },
+    {
+     "path": "sympy/physics/unitsystems/units.py",
+     "line": 260
+    },
+    {
+     "path": "sympy/physics/unitsystems/units.py",
+     "line": 274
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The sympy/interactive package initializes pretty-printers depending on the environment and sets up printing in both IPython and standard Python interactive sessions.",
+   "citations": [
+    {
+     "path": "sympy/interactive/printing.py",
+     "line": 238
+    },
+    {
+     "path": "sympy/interactive/printing.py",
+     "line": 36
+    },
+    {
+     "path": "sympy/interactive/printing.py",
+     "line": 15
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 30,
+  "sentences": 57,
+  "kept": 57,
+  "dropped": 0,
+  "citations": 147,
+  "valid_citations": 147,
+  "overview": {
+   "sentences": 5,
+   "kept": 5,
+   "dropped": 0
+  }
+ }
+}

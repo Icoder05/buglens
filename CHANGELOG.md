@@ -51,7 +51,22 @@ All deviations from the PRD are recorded here, with the reason.
 - S6b uses LORO over all 12 repos with `pkg_summary_sim` = NaN for repos without summaries, and
   is reported against S6 only on the subset with summaries.
 
+### Run-time fixes (2026-11-11 … 14)
+- `training.mini_batch_size` 16 → **4**: with 16 the 6 GB GPU spilled into shared system memory
+  (15 min/step, 10 h run). GradCache makes the mini-batch a memory knob only — the effective
+  batch stays 64 and gradients are identical. Fine-tuning then took 37 min.
+- `analysis/facts.py`: a sympy file parses but overflows Python's recursion limit while walking
+  the AST; it now counts as a parse failure (FR-A3 "never crash"), with a regression test.
+- Added comparison **S4 vs S2** to `experiments.yaml` (the most direct RQ2 test).
+- Demo: opens on a flask instance, loads tabs concurrently, scales SVGs to the page.
+- `buglens errors` never overwrites an `error_analysis.md` whose categories are filled in;
+  `buglens data` never overwrites a filled `label_check.md`.
+
 ### LLM
+- **Model `gemini-3.5-flash-lite`** (Flash class, free tier). Verified 2026-11-14 with ListModels
+  and test calls: `gemini-2.5-flash` returns 404 for new keys; `gemini-3.5-flash` answered in 48 s
+  or timed out (504); `gemini-3.5-flash-lite` answers in ~1 s with valid schema JSON.
+- Client: 120 s request timeout; 504 is retried like 429/503; optional `thinking_level` (Gemini 3).
 - Cache key is `sha1(model + schema + prompt)` (schema added so a schema change cannot return a
   stale answer).
 - The leakage guard checks full gold texts **and** every added line (≥ 30 chars) of the

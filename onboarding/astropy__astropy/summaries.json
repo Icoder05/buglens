@@ -1,0 +1,967 @@
+{
+ "repo": "astropy/astropy",
+ "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/units",
+   "sentences": [
+    {
+     "text": "The astropy/units package provides abstract and named unit classes, such as UnitBase and NamedUnit, for handling units.",
+     "citations": [
+      {
+       "path": "astropy/units/core.py",
+       "line": 486
+      },
+      {
+       "path": "astropy/units/core.py",
+       "line": 1427
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes the _UnitRegistry class, which manages a registry of the enabled units.",
+     "citations": [
+      {
+       "path": "astropy/units/core.py",
+       "line": 104
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 955,
+   "tokens_out": 188
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/utils",
+   "sentences": [
+    {
+     "text": "The astropy/utils package provides utility modules containing functionality like exception classes, warning types, and miscellaneous helper tools such as mixin classes and API page finders.",
+     "citations": [
+      {
+       "path": "astropy/utils/exceptions.py",
+       "line": 9
+      },
+      {
+       "path": "astropy/utils/misc.py",
+       "line": 161
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 896,
+   "tokens_out": 124
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/io",
+   "sentences": [
+    {
+     "text": "The astropy.io package provides methods to read and write an ASCII table using the specified reader.",
+     "citations": [
+      {
+       "path": "astropy/io/ascii/core.py",
+       "line": 1070
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes a base table data reader and a base table header reader.",
+     "citations": [
+      {
+       "path": "astropy/io/ascii/core.py",
+       "line": 658
+      },
+      {
+       "path": "astropy/io/ascii/core.py",
+       "line": 506
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 1008,
+   "tokens_out": 186
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/coordinates",
+   "sentences": [
+    {
+     "text": "The astropy/coordinates package provides 3D coordinate representations and differentials.",
+     "citations": [
+      {
+       "path": "astropy/coordinates/representation.py",
+       "line": 113
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes representations for points in 3D cartesian coordinates as well as unit spherical, spherical, physics spherical, and cylindrical coordinates.",
+     "citations": [
+      {
+       "path": "astropy/coordinates/representation.py",
+       "line": 945
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 1057,
+   "tokens_out": 156
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/table",
+   "sentences": [
+    {
+     "text": "The package provides classes such as Table and QTable to represent tables of heterogeneous data.",
+     "citations": [
+      {
+       "path": "astropy/table/table.py",
+       "line": 184
+      },
+      {
+       "path": "astropy/table/table.py",
+       "line": 2735
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines column structures such as MaskedColumn for use in a Table object.",
+     "citations": [
+      {
+       "path": "astropy/table/column.py",
+       "line": 1028
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 697,
+   "tokens_out": 180
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/constants",
+   "sentences": [
+    {
+     "text": "The astropy.constants package defines the Constant class, which represents a physical or astronomical constant.",
+     "citations": [
+      {
+       "path": "astropy/constants/constant.py",
+       "line": 76
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides specialized classes such as EMConstant for electromagnetic constants and version-specific constant sets.",
+     "citations": [
+      {
+       "path": "astropy/constants/constant.py",
+       "line": 220
+      },
+      {
+       "path": "astropy/constants/codata2014.py",
+       "line": 14
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 571,
+   "tokens_out": 186
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/visualization",
+   "sentences": [
+    {
+     "text": "The astropy/visualization package provides tools for data visualization, including various intervals and stretches for scaling data.",
+     "citations": [
+      {
+       "path": "astropy/visualization/interval.py",
+       "line": 21
+      },
+      {
+       "path": "astropy/visualization/stretch.py",
+       "line": 444
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes transformation utilities and frame classes such as BaseFrame and Spine.",
+     "citations": [
+      {
+       "path": "astropy/visualization/transform.py",
+       "line": 8
+      },
+      {
+       "path": "astropy/visualization/wcsaxes/frame.py",
+       "line": 16
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 794,
+   "tokens_out": 138
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/config",
+   "sentences": [
+    {
+     "text": "The astropy/config package handles configuration items, namespaces, and directory paths such as the configuration and cache directories.",
+     "citations": [
+      {
+       "path": "astropy/config/configuration.py",
+       "line": 77
+      },
+      {
+       "path": "astropy/config/paths.py",
+       "line": 79
+      },
+      {
+       "path": "astropy/config/paths.py",
+       "line": 120
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides context managers to set temporary paths for the Astropy configuration and download cache.",
+     "citations": [
+      {
+       "path": "astropy/config/paths.py",
+       "line": 195
+      },
+      {
+       "path": "astropy/config/paths.py",
+       "line": 240
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 603,
+   "tokens_out": 243
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/modeling",
+   "sentences": [
+    {
+     "text": "The astropy.modeling package provides the base class for all models.",
+     "citations": [
+      {
+       "path": "astropy/modeling/core.py",
+       "line": 480
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes functionality to evaluate a model on an input array.",
+     "citations": [
+      {
+       "path": "astropy/modeling/core.py",
+       "line": 3021
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, users can create a model from a user-defined function.",
+     "citations": [
+      {
+       "path": "astropy/modeling/core.py",
+       "line": 2872
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 742,
+   "tokens_out": 207
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/stats",
+   "sentences": [
+    {
+     "text": "The astropy.stats package computes the Lomb-Scargle Periodogram.",
+     "citations": [
+      {
+       "path": "astropy/stats/lombscargle/core.py",
+       "line": 27
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also computes optimal segmentation of data with Scargle's Bayesian Blocks.",
+     "citations": [
+      {
+       "path": "astropy/stats/bayesian_blocks.py",
+       "line": 54
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 890,
+   "tokens_out": 99
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy",
+   "sentences": [
+    {
+     "text": "The package astropy defines configuration parameters for astropy through the Conf class.",
+     "citations": [
+      {
+       "path": "astropy/__init__.py",
+       "line": 122
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides a function to search the online Astropy documentation for a given query.",
+     "citations": [
+      {
+       "path": "astropy/__init__.py",
+       "line": 293
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 461,
+   "tokens_out": 142
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/samp",
+   "sentences": [
+    {
+     "text": "The astropy.samp package defines exceptions and errors such as SAMPWarning, SAMPHubError, SAMPClientError, and SAMPProxyError.",
+     "citations": [
+      {
+       "path": "astropy/samp/errors.py",
+       "line": 15
+      },
+      {
+       "path": "astropy/samp/errors.py",
+       "line": 21
+      },
+      {
+       "path": "astropy/samp/errors.py",
+       "line": 27
+      },
+      {
+       "path": "astropy/samp/errors.py",
+       "line": 33
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides utility components including the SAMPMsgReplierWrapper function decorator, the ServerProxyPool thread-safe pool of xmlrpc.ServerProxy objects, and internet connectivity checkers.",
+     "citations": [
+      {
+       "path": "astropy/samp/utils.py",
+       "line": 86
+      },
+      {
+       "path": "astropy/samp/utils.py",
+       "line": 70
+      },
+      {
+       "path": "astropy/samp/utils.py",
+       "line": 18
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 563,
+   "tokens_out": 274
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/nddata",
+   "sentences": [
+    {
+     "text": "The astropy.nddata package provides containers for numpy.ndarray-based datasets along with metaclasses and classes for handling uncertainties such as standard deviation and unknown uncertainty types.",
+     "citations": [
+      {
+       "path": "astropy/nddata/nddata.py",
+       "line": 19
+      },
+      {
+       "path": "astropy/nddata/nduncertainty.py",
+       "line": 30
+      },
+      {
+       "path": "astropy/nddata/nduncertainty.py",
+       "line": 314
+      },
+      {
+       "path": "astropy/nddata/nduncertainty.py",
+       "line": 361
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes utilities for creating 2D array cutout objects, extracting smaller arrays, downsampling data arrays via block reduction, and getting slices for overlapping parts of arrays.",
+     "citations": [
+      {
+       "path": "astropy/nddata/utils.py",
+       "line": 54
+      },
+      {
+       "path": "astropy/nddata/utils.py",
+       "line": 157
+      },
+      {
+       "path": "astropy/nddata/utils.py",
+       "line": 343
+      },
+      {
+       "path": "astropy/nddata/utils.py",
+       "line": 475
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 782,
+   "tokens_out": 374
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/extern",
+   "sentences": [
+    {
+     "text": "The astropy.extern package contains external dependencies and bundled modules such as ply and configobj.",
+     "citations": [
+      {
+       "path": "astropy/extern/ply/lex.py",
+       "line": 115
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It is imported by other parts of the repository including astropy.units, astropy.config, astropy.coordinates, and astropy.table.",
+     "citations": [
+      {
+       "path": "astropy/extern/ply/lex.py",
+       "line": 75
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 623,
+   "tokens_out": 113
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/time",
+   "sentences": [
+    {
+     "text": "The package astropy/time provides capabilities to represent and manipulate times and dates for astronomy.",
+     "citations": [
+      {
+       "path": "astropy/time/core.py",
+       "line": 180
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also represents the time difference between two times using the TimeDelta class.",
+     "citations": [
+      {
+       "path": "astropy/time/core.py",
+       "line": 1476
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 583,
+   "tokens_out": 148
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/wcs",
+   "sentences": [
+    {
+     "text": "WCS objects perform standard WCS transformations, and correct for various FITS header anomalies.",
+     "citations": [
+      {
+       "path": "astropy/wcs/wcs.py",
+       "line": 215
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "The package can find all the WCS transformations in the given header and validate a FITS file.",
+     "citations": [
+      {
+       "path": "astropy/wcs/wcs.py",
+       "line": 3088
+      },
+      {
+       "path": "astropy/wcs/wcs.py",
+       "line": 3179
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 657,
+   "tokens_out": 190
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/cosmology",
+   "sentences": [
+    {
+     "text": "The astropy.cosmology package provides classes describing isotropic and homogeneous cosmologies such as FLRW, LambdaCDM, and wCDM.",
+     "citations": [
+      {
+       "path": "astropy/cosmology/core.py",
+       "line": 91
+      },
+      {
+       "path": "astropy/cosmology/core.py",
+       "line": 1491
+      },
+      {
+       "path": "astropy/cosmology/core.py",
+       "line": 1823
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes various specialized models including flat and variable dark energy equation of state cosmologies.",
+     "citations": [
+      {
+       "path": "astropy/cosmology/core.py",
+       "line": 2032
+      },
+      {
+       "path": "astropy/cosmology/core.py",
+       "line": 2638
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it defines the ScienceState default cosmology to manage the default cosmology used in computations.",
+     "citations": [
+      {
+       "path": "astropy/cosmology/core.py",
+       "line": 2857
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 627,
+   "tokens_out": 334
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/convolution",
+   "sentences": [
+    {
+     "text": "The astropy/convolution package provides utilities to evaluate analytical model functions on a grid and add kernel arrays of different sizes.",
+     "citations": [
+      {
+       "path": "astropy/convolution/utils.py",
+       "line": 72
+      },
+      {
+       "path": "astropy/convolution/utils.py",
+       "line": 22
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 698,
+   "tokens_out": 115
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/logger",
+   "sentences": [
+    {
+     "text": "The astropy/logger package provides the AstropyLogger class, which is used to set up Astropy logging.",
+     "citations": [
+      {
+       "path": "astropy/logger.py",
+       "line": 139
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes configuration parameters for the logger through the Conf class and features specialized handlers like StreamHandler.",
+     "citations": [
+      {
+       "path": "astropy/logger.py",
+       "line": 47
+      },
+      {
+       "path": "astropy/logger.py",
+       "line": 516
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it provides functions to initialize and tear down the log, along with custom exceptions and filters.",
+     "citations": [
+      {
+       "path": "astropy/logger.py",
+       "line": 86
+      },
+      {
+       "path": "astropy/logger.py",
+       "line": 104
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 477,
+   "tokens_out": 275
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/_erfa",
+   "sentences": [
+    {
+     "text": "The package astropy/_erfa includes a generator module with a main function and classes representing C functions, arguments, and documentation.",
+     "citations": [
+      {
+       "path": "astropy/_erfa/erfa_generator.py",
+       "line": 422
+      },
+      {
+       "path": "astropy/_erfa/erfa_generator.py",
+       "line": 260
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it contains a setup package that provides a function to preprocess source files.",
+     "citations": [
+      {
+       "path": "astropy/_erfa/setup_package.py",
+       "line": 35
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 474,
+   "tokens_out": 196
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "examples/coordinates",
+   "sentences": [
+    {
+     "text": "The examples/coordinates package includes tools to compute transformation matrices between Galactic spherical and heliocentric Sgr coordinates.",
+     "citations": [
+      {
+       "path": "examples/coordinates/plot_sgr-coordinate-frame.py",
+       "line": 155
+      },
+      {
+       "path": "examples/coordinates/plot_sgr-coordinate-frame.py",
+       "line": 171
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides functions to transform a barycentric radial velocity to the Galactic Standard of Rest.",
+     "citations": [
+      {
+       "path": "examples/coordinates/rv-to-gsr.py",
+       "line": 70
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it defines the Sagittarius heliocentric spherical coordinate system based on an orbit.",
+     "citations": [
+      {
+       "path": "examples/coordinates/plot_sgr-coordinate-frame.py",
+       "line": 66
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 379,
+   "tokens_out": 272
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "ez_setup",
+   "sentences": [
+    {
+     "text": "The ez_setup package ensures that a specific version of setuptools is installed and handles downloading setuptools from a specified location.",
+     "citations": [
+      {
+       "path": "ez_setup.py",
+       "line": 152
+      },
+      {
+       "path": "ez_setup.py",
+       "line": 331
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides utilities to unzip files to a temporary directory and parse command line options.",
+     "citations": [
+      {
+       "path": "ez_setup.py",
+       "line": 98
+      },
+      {
+       "path": "ez_setup.py",
+       "line": 368
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 562,
+   "tokens_out": 203
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "ah_bootstrap",
+   "sentences": [
+    {
+     "text": "The ah_bootstrap package provides the use_astropy_helpers function to ensure that the astropy_helpers module is available and is importable.",
+     "citations": [
+      {
+       "path": "ah_bootstrap.py",
+       "line": 895
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also implements a _Bootstrapper class to handle bootstrapper implementation details.",
+     "citations": [
+      {
+       "path": "ah_bootstrap.py",
+       "line": 165
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 438,
+   "tokens_out": 155
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "astropy/setup_package",
+   "sentences": [
+    {
+     "text": "The astropy package includes a setup_package module that defines the get_package_data function.",
+     "citations": [
+      {
+       "path": "astropy/setup_package.py",
+       "line": 4
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 169,
+   "tokens_out": 81
+  },
+  {
+   "repo": "astropy/astropy",
+   "commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+   "package": "examples/template",
+   "sentences": [
+    {
+     "text": "The examples/template package contains a module for a dummy function.",
+     "citations": [
+      {
+       "path": "examples/template/example-template.py",
+       "line": 81
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "This dummy function ensures that docstrings are not rendered as text.",
+     "citations": [
+      {
+       "path": "examples/template/example-template.py",
+       "line": 81
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 179,
+   "tokens_out": 140
+  }
+ ],
+ "overview": [
+  {
+   "text": "The astropy repository offers foundational astronomy packages such as astropy/units for handling unit classes and astropy/constants for physical and astronomical constants.",
+   "citations": [
+    {
+     "path": "astropy/units/core.py",
+     "line": 486
+    },
+    {
+     "path": "astropy/units/core.py",
+     "line": 1427
+    },
+    {
+     "path": "astropy/constants/constant.py",
+     "line": 76
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "It provides robust data structures including astropy/table for heterogeneous datasets, astropy/coordinates for 3D coordinate representations, and astropy/time for date and time manipulation.",
+   "citations": [
+    {
+     "path": "astropy/coordinates/representation.py",
+     "line": 113
+    },
+    {
+     "path": "astropy/table/table.py",
+     "line": 184
+    },
+    {
+     "path": "astropy/table/table.py",
+     "line": 2735
+    },
+    {
+     "path": "astropy/time/core.py",
+     "line": 180
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Developers can utilize astropy/modeling for evaluating models on input arrays and astropy/stats for computing statistical tools like the Lomb-Scargle Periodogram.",
+   "citations": [
+    {
+     "path": "astropy/modeling/core.py",
+     "line": 480
+    },
+    {
+     "path": "astropy/modeling/core.py",
+     "line": 3021
+    },
+    {
+     "path": "astropy/stats/lombscargle/core.py",
+     "line": 27
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The repository also includes utility packages like astropy/config for managing configuration directories and paths, and astropy/logger for setting up logging.",
+   "citations": [
+    {
+     "path": "astropy/config/configuration.py",
+     "line": 77
+    },
+    {
+     "path": "astropy/config/paths.py",
+     "line": 79
+    },
+    {
+     "path": "astropy/config/paths.py",
+     "line": 120
+    },
+    {
+     "path": "astropy/logger.py",
+     "line": 139
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 25,
+  "sentences": 51,
+  "kept": 51,
+  "dropped": 0,
+  "citations": 83,
+  "valid_citations": 83,
+  "overview": {
+   "sentences": 4,
+   "kept": 4,
+   "dropped": 0
+  }
+ }
+}

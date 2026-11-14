@@ -1,0 +1,766 @@
+{
+ "repo": "pallets/flask",
+ "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/globals",
+   "sentences": [
+    {
+     "text": "The package provides lookup functions such as _lookup_req_object and _lookup_app_object.",
+     "citations": [
+      {
+       "path": "src/flask/globals.py",
+       "line": 30
+      },
+      {
+       "path": "src/flask/globals.py",
+       "line": 37
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes the _find_app function to locate application objects.",
+     "citations": [
+      {
+       "path": "src/flask/globals.py",
+       "line": 44
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 250,
+   "tokens_out": 173
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/wrappers",
+   "sentences": [
+    {
+     "text": "The Request class in the wrappers package serves as the request object used by default in Flask.",
+     "citations": [
+      {
+       "path": "src/flask/wrappers.py",
+       "line": 15
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "The Response class in the wrappers package provides the response object that is used by default in Flask.",
+     "citations": [
+      {
+       "path": "src/flask/wrappers.py",
+       "line": 102
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 255,
+   "tokens_out": 150
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/app",
+   "sentences": [
+    {
+     "text": "The Flask object implements a WSGI application and acts as the central object.",
+     "citations": [
+      {
+       "path": "src/flask/app.py",
+       "line": 101
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 263,
+   "tokens_out": 77
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/json",
+   "sentences": [
+    {
+     "text": "The flask/json package provides functionality to serialize objects to JSON strings or file objects, and deserialize JSON from strings or file objects.",
+     "citations": [
+      {
+       "path": "src/flask/json/__init__.py",
+       "line": 109
+      },
+      {
+       "path": "src/flask/json/__init__.py",
+       "line": 144
+      },
+      {
+       "path": "src/flask/json/__init__.py",
+       "line": 183
+      },
+      {
+       "path": "src/flask/json/__init__.py",
+       "line": 219
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes helpers to serialize data to JSON wrapped in a Flask response, as well as default encoder and decoder implementations.",
+     "citations": [
+      {
+       "path": "src/flask/json/__init__.py",
+       "line": 25
+      },
+      {
+       "path": "src/flask/json/__init__.py",
+       "line": 59
+      },
+      {
+       "path": "src/flask/json/__init__.py",
+       "line": 284
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 696,
+   "tokens_out": 318
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/debughelpers",
+   "sentences": [
+    {
+     "text": "The package debughelpers provides specialized error classes and exceptions such as DebugFilesKeyError, FormDataRoutingRedirect, and UnexpectedUnicodeError for enhanced reporting during debugging.",
+     "citations": [
+      {
+       "path": "src/flask/debughelpers.py",
+       "line": 16
+      },
+      {
+       "path": "src/flask/debughelpers.py",
+       "line": 43
+      },
+      {
+       "path": "src/flask/debughelpers.py",
+       "line": 10
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes helper functions like attach_enctype_error_multidict and explain_template_loading_attempts to assist developers in understanding failures and issues.",
+     "citations": [
+      {
+       "path": "src/flask/debughelpers.py",
+       "line": 75
+      },
+      {
+       "path": "src/flask/debughelpers.py",
+       "line": 113
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 431,
+   "tokens_out": 183
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/sessions",
+   "sentences": [
+    {
+     "text": "The flask/sessions package provides a basic interface for session implementation as well as expanded session dictionaries with session attributes.",
+     "citations": [
+      {
+       "path": "src/flask/sessions.py",
+       "line": 107
+      },
+      {
+       "path": "src/flask/sessions.py",
+       "line": 20
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes a default session interface that stores sessions in signed cookies, a base class for these signed cookie sessions, and a null session class for generating nicer error messages.",
+     "citations": [
+      {
+       "path": "src/flask/sessions.py",
+       "line": 316
+      },
+      {
+       "path": "src/flask/sessions.py",
+       "line": 48
+      },
+      {
+       "path": "src/flask/sessions.py",
+       "line": 90
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 340,
+   "tokens_out": 252
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/ctx",
+   "sentences": [
+    {
+     "text": "The request context contains all request relevant information.",
+     "citations": [
+      {
+       "path": "src/flask/ctx.py",
+       "line": 266
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "The application context binds an application object implicitly.",
+     "citations": [
+      {
+       "path": "src/flask/ctx.py",
+       "line": 219
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 436,
+   "tokens_out": 130
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/helpers",
+   "sentences": [
+    {
+     "text": "The package provides helper functions to generate URLs, send files and responses, flash messages, and stream responses with context.",
+     "citations": [
+      {
+       "path": "src/flask/helpers.py",
+       "line": 191
+      },
+      {
+       "path": "src/flask/helpers.py",
+       "line": 493
+      },
+      {
+       "path": "src/flask/helpers.py",
+       "line": 65
+      },
+      {
+       "path": "src/flask/helpers.py",
+       "line": 364
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes utilities to find package root paths, manage cached properties, and retrieve flashed messages.",
+     "citations": [
+      {
+       "path": "src/flask/helpers.py",
+       "line": 702
+      },
+      {
+       "path": "src/flask/helpers.py",
+       "line": 751
+      },
+      {
+       "path": "src/flask/helpers.py",
+       "line": 396
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 774,
+   "tokens_out": 298
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "examples/tutorial",
+   "sentences": [
+    {
+     "text": "The tutorial package creates and configures an instance of the Flask application, and connects to the application's configured database.",
+     "citations": [
+      {
+       "path": "examples/tutorial/flaskr/__init__.py",
+       "line": 6
+      },
+      {
+       "path": "examples/tutorial/flaskr/db.py",
+       "line": 9
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides functionality to register a new user, log in, and manage blog posts such as creating, updating, and deleting them.",
+     "citations": [
+      {
+       "path": "examples/tutorial/flaskr/auth.py",
+       "line": 46
+      },
+      {
+       "path": "examples/tutorial/flaskr/blog.py",
+       "line": 60
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 539,
+   "tokens_out": 227
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/blueprints",
+   "sentences": [
+    {
+     "text": "The flask/blueprints package represents a blueprint, which is a collection of routes and other items.",
+     "citations": [
+      {
+       "path": "src/flask/blueprints.py",
+       "line": 108
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides a temporary holder object for registering a blueprint with the application.",
+     "citations": [
+      {
+       "path": "src/flask/blueprints.py",
+       "line": 25
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 223,
+   "tokens_out": 148
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/cli",
+   "sentences": [
+    {
+     "text": "The flask/cli package provides tools to deal with Flask applications and run a local development server or an interactive Python shell.",
+     "citations": [
+      {
+       "path": "src/flask/cli.py",
+       "line": 363
+      },
+      {
+       "path": "src/flask/cli.py",
+       "line": 779
+      },
+      {
+       "path": "src/flask/cli.py",
+       "line": 861
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes helpers like FlaskGroup to support application groups, functions to find and load applications or dotenv files, and a command to show registered routes.",
+     "citations": [
+      {
+       "path": "src/flask/cli.py",
+       "line": 476
+      },
+      {
+       "path": "src/flask/cli.py",
+       "line": 148
+      },
+      {
+       "path": "src/flask/cli.py",
+       "line": 606
+      },
+      {
+       "path": "src/flask/cli.py",
+       "line": 912
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 576,
+   "tokens_out": 211
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/scaffold",
+   "sentences": [
+    {
+     "text": "The flask/scaffold package provides common behavior shared between Flask and blueprints via the Scaffold class.",
+     "citations": [
+      {
+       "path": "src/flask/scaffold.py",
+       "line": 59
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes helper utilities such as finding package paths, determining if a module is a package, and setting up methods.",
+     "citations": [
+      {
+       "path": "src/flask/scaffold.py",
+       "line": 37
+      },
+      {
+       "path": "src/flask/scaffold.py",
+       "line": 771
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 440,
+   "tokens_out": 184
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "examples/javascript",
+   "sentences": [
+    {
+     "text": "The javascript example package contains views such as the index function.",
+     "citations": [
+      {
+       "path": "examples/javascript/js_example/views.py",
+       "line": 8
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes an add function within the views module.",
+     "citations": [
+      {
+       "path": "examples/javascript/js_example/views.py",
+       "line": 14
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 201,
+   "tokens_out": 140
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/templating",
+   "sentences": [
+    {
+     "text": "The package provides the DispatchingJinjaLoader to look for templates in the application and all related sources.",
+     "citations": [
+      {
+       "path": "src/flask/templating.py",
+       "line": 46
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes rendering functions such as render_template and render_template_string to process templates from folders or source strings with a given context.",
+     "citations": [
+      {
+       "path": "src/flask/templating.py",
+       "line": 133
+      },
+      {
+       "path": "src/flask/templating.py",
+       "line": 154
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it offers a custom Environment and a default template context processor that injects specific variables.",
+     "citations": [
+      {
+       "path": "src/flask/templating.py",
+       "line": 33
+      },
+      {
+       "path": "src/flask/templating.py",
+       "line": 18
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 435,
+   "tokens_out": 196
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/config",
+   "sentences": [
+    {
+     "text": "The Config class works exactly like a dictionary while providing methods to populate configuration values from files.",
+     "citations": [
+      {
+       "path": "src/flask/config.py",
+       "line": 28
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, the ConfigAttribute class is designed to forward attributes directly to the configuration.",
+     "citations": [
+      {
+       "path": "src/flask/config.py",
+       "line": 9
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 200,
+   "tokens_out": 78
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/logging",
+   "sentences": [
+    {
+     "text": "The package provides functions to find the most appropriate error stream for the application and check if there is a handler in the logging chain.",
+     "citations": [
+      {
+       "path": "src/flask/logging.py",
+       "line": 13
+      },
+      {
+       "path": "src/flask/logging.py",
+       "line": 26
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functionality to get the Flask app's logger and configure it if needed.",
+     "citations": [
+      {
+       "path": "src/flask/logging.py",
+       "line": 53
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 262,
+   "tokens_out": 182
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/testing",
+   "sentences": [
+    {
+     "text": "The flask/testing package provides test helpers including FlaskClient which works like a regular Werkzeug test client with knowledge about the application.",
+     "citations": [
+      {
+       "path": "src/flask/testing.py",
+       "line": 94
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes EnvironBuilder for creating environments taking defaults from the application, and FlaskCliRunner for testing a Flask app's command line interface.",
+     "citations": [
+      {
+       "path": "src/flask/testing.py",
+       "line": 22
+      },
+      {
+       "path": "src/flask/testing.py",
+       "line": 247
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 285,
+   "tokens_out": 131
+  },
+  {
+   "repo": "pallets/flask",
+   "commit": "d8c37f43724cd9fb0870f77877b7c4c7e38a19e0",
+   "package": "flask/views",
+   "sentences": [
+    {
+     "text": "The flask/views package provides an alternative way to use view functions through the View class.",
+     "citations": [
+      {
+       "path": "src/flask/views.py",
+       "line": 12
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes MethodView, which is a class-based view that dispatches request methods to corresponding methods.",
+     "citations": [
+      {
+       "path": "src/flask/views.py",
+       "line": 132
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, MethodViewType serves as a metaclass for MethodView to determine the methods the view handles.",
+     "citations": [
+      {
+       "path": "src/flask/views.py",
+       "line": 105
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 253,
+   "tokens_out": 144
+  }
+ ],
+ "overview": [
+  {
+   "text": "The central Flask object implements a WSGI application and serves as the core of the framework.",
+   "citations": [
+    {
+     "path": "src/flask/app.py",
+     "line": 101
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The framework defaults to specific request and response classes for handling incoming data and returning outputs.",
+   "citations": [
+    {
+     "path": "src/flask/wrappers.py",
+     "line": 15
+    },
+    {
+     "path": "src/flask/wrappers.py",
+     "line": 102
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Blueprints allow developers to organize routes and other items into collections.",
+   "citations": [
+    {
+     "path": "src/flask/blueprints.py",
+     "line": 108
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The package includes dedicated tools to manage configurations, handle session states, and render templates.",
+   "citations": [
+    {
+     "path": "src/flask/sessions.py",
+     "line": 107
+    },
+    {
+     "path": "src/flask/sessions.py",
+     "line": 20
+    },
+    {
+     "path": "src/flask/templating.py",
+     "line": 133
+    },
+    {
+     "path": "src/flask/templating.py",
+     "line": 154
+    },
+    {
+     "path": "src/flask/config.py",
+     "line": 28
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Furthermore, CLI utilities enable running local development servers and managing application groups.",
+   "citations": [
+    {
+     "path": "src/flask/cli.py",
+     "line": 363
+    },
+    {
+     "path": "src/flask/cli.py",
+     "line": 779
+    },
+    {
+     "path": "src/flask/cli.py",
+     "line": 861
+    },
+    {
+     "path": "src/flask/cli.py",
+     "line": 476
+    },
+    {
+     "path": "src/flask/cli.py",
+     "line": 148
+    },
+    {
+     "path": "src/flask/cli.py",
+     "line": 606
+    },
+    {
+     "path": "src/flask/cli.py",
+     "line": 912
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 18,
+  "sentences": 37,
+  "kept": 37,
+  "dropped": 0,
+  "citations": 66,
+  "valid_citations": 66,
+  "overview": {
+   "sentences": 5,
+   "kept": 5,
+   "dropped": 0
+  }
+ }
+}

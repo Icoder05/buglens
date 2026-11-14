@@ -14,6 +14,10 @@ SWE-bench Lite **test** (300 instances). Cells: mean [bootstrap 95% CI, 1000 res
 | S4 | Dense (fine-tuned) | 300 | 0.587 [0.527, 0.643] | 0.783 [0.733, 0.827] | 0.840 [0.797, 0.880] | 0.696 [0.650, 0.738] | 0.513 [0.457, 0.573] | 0.610 [0.550, 0.663] | 0.557 [0.498, 0.611] | 0.381 [0.337, 0.427] | 0.0 | 0.004 |
 | S5 | RRF(S1, S4) | 300 | 0.593 [0.537, 0.647] | 0.810 [0.763, 0.850] | 0.853 [0.813, 0.893] | 0.708 [0.665, 0.750] | 0.547 [0.487, 0.600] | 0.623 [0.567, 0.677] | 0.579 [0.524, 0.635] | 0.405 [0.359, 0.446] | 0.0 | 0.005 |
 | S6 | S5 → LambdaRank | 300 | 0.597 [0.543, 0.650] | 0.807 [0.760, 0.850] | 0.867 [0.827, 0.903] | 0.709 [0.665, 0.749] | 0.577 [0.523, 0.630] | 0.670 [0.613, 0.723] | 0.624 [0.570, 0.675] | 0.413 [0.369, 0.455] | 0.0 | 0.41 |
+| S7 | S5 → Gemini rerank | 3 | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.667 [0.000, 1.000] | 0.667 [0.000, 1.000] | 0.667 [0.000, 1.000] | 0.690 [0.071, 1.000] | 6201.0 | 2.654 |
+| S8 | S6 → Gemini rerank | 177 | 0.723 [0.650, 0.785] | 0.853 [0.802, 0.904] | 0.876 [0.831, 0.921] | 0.796 [0.741, 0.843] | 0.667 [0.599, 0.734] | 0.672 [0.605, 0.740] | 0.644 [0.574, 0.710] | 0.586 [0.520, 0.650] | 5497.3 | 5.335 |
+
+_Partial runs (fewer than 300 instances, e.g. stopped by the free-tier quota): S7, S8. Their rows are not directly comparable._
 
 ## Paired comparisons
 
@@ -31,6 +35,19 @@ Difference A − B on common instances; paired bootstrap 95% CI and two-sided p;
 | S5 vs S3 | func_acc@10 | 300 | +0.033 [-0.003, +0.070] | 0.118 | 23 / 13, p=0.132 |
 | S6 vs S5 | file_acc@5 | 300 | +0.013 [-0.010, +0.037] | 0.366 | 9 / 5, p=0.424 |
 | S6 vs S5 | func_acc@10 | 300 | +0.047 [+0.010, +0.083] | 0.008 | 22 / 8, p=0.016 |
+| S6b vs S6 | file_acc@5 | 300 | +0.007 [-0.010, +0.023] | 0.534 | 4 / 2, p=0.688 |
+| S6b vs S6 | func_acc@10 | 300 | +0.020 [-0.007, +0.047] | 0.140 | 10 / 4, p=0.180 |
+| S6 vs S7 | file_acc@5 | 3 | -0.333 [-1.000, +0.000] | 0.572 | 0 / 1, p=1.000 |
+| S6 vs S7 | func_acc@10 | 3 | -0.333 [-1.000, +0.000] | 0.596 | 0 / 1, p=1.000 |
+
+## RQ4: onboarding summaries as a reranker feature (S6b vs S6)
+
+Subset: 300 instances from repos with package summaries (astropy/astropy, django/django, matplotlib/matplotlib, mwaskom/seaborn, pallets/flask, psf/requests, pydata/xarray, pylint-dev/pylint, pytest-dev/pytest, scikit-learn/scikit-learn, sphinx-doc/sphinx, sympy/sympy).
+
+| system | pipeline | n | file_acc@1 | file_acc@3 | file_acc@5 | file_mrr | func_acc@5 | func_acc@10 | func_recall@10 | func_mrr | mean_tokens | mean_seconds |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| S6 | S5 → LambdaRank | 300 | 0.597 [0.543, 0.650] | 0.807 [0.760, 0.850] | 0.867 [0.827, 0.903] | 0.709 [0.665, 0.749] | 0.577 [0.523, 0.630] | 0.670 [0.613, 0.723] | 0.624 [0.570, 0.675] | 0.413 [0.369, 0.455] | 0.0 | 0.41 |
+| S6b | S6 + pkg_summary_sim | 300 | 0.590 [0.537, 0.647] | 0.830 [0.787, 0.870] | 0.873 [0.833, 0.910] | 0.712 [0.669, 0.753] | 0.583 [0.527, 0.633] | 0.690 [0.637, 0.740] | 0.652 [0.601, 0.701] | 0.426 [0.384, 0.467] | 0.0 | 0.698 |
 
 ## Ablation A1: hints appended to the query
 

@@ -1,0 +1,1353 @@
+{
+ "repo": "scikit-learn/scikit-learn",
+ "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/utils",
+   "sentences": [
+    {
+     "text": "The sklearn/utils package provides container objects for datasets like Bunch, and utility functions for indexing, masking, and squaring data arrays.",
+     "citations": [
+      {
+       "path": "sklearn/utils/__init__.py",
+       "line": 31
+      },
+      {
+       "path": "sklearn/utils/__init__.py",
+       "line": 122
+      },
+      {
+       "path": "sklearn/utils/__init__.py",
+       "line": 77
+      },
+      {
+       "path": "sklearn/utils/__init__.py",
+       "line": 346
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes tools to resample and shuffle arrays or sparse matrices in a consistent way.",
+     "citations": [
+      {
+       "path": "sklearn/utils/__init__.py",
+       "line": 167
+      },
+      {
+       "path": "sklearn/utils/__init__.py",
+       "line": 277
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it offers generators for batches and slices, as well as helpers to determine the number of jobs for computations.",
+     "citations": [
+      {
+       "path": "sklearn/utils/__init__.py",
+       "line": 374
+      },
+      {
+       "path": "sklearn/utils/__init__.py",
+       "line": 399
+      },
+      {
+       "path": "sklearn/utils/__init__.py",
+       "line": 433
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 762,
+   "tokens_out": 401
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/externals",
+   "sentences": [
+    {
+     "text": "The sklearn/externals package contains twenty-three modules including six and joblib.",
+     "citations": [
+      {
+       "path": "sklearn/externals/six.py",
+       "line": 108
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides utilities such as class decorators and dictionary iterator helpers.",
+     "citations": [
+      {
+       "path": "sklearn/externals/six.py",
+       "line": 568
+      },
+      {
+       "path": "sklearn/externals/six.py",
+       "line": 429
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 764,
+   "tokens_out": 173
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/datasets",
+   "sentences": [
+    {
+     "text": "The package sklearn/datasets loads standard datasets including the iris dataset, digits dataset, and boston house-prices dataset.",
+     "citations": [
+      {
+       "path": "sklearn/datasets/base.py",
+       "line": 326
+      },
+      {
+       "path": "sklearn/datasets/base.py",
+       "line": 479
+      },
+      {
+       "path": "sklearn/datasets/base.py",
+       "line": 674
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It can also load text files with categories as subfolder names and load sample images for image manipulation.",
+     "citations": [
+      {
+       "path": "sklearn/datasets/base.py",
+       "line": 72
+      },
+      {
+       "path": "sklearn/datasets/base.py",
+       "line": 744
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 769,
+   "tokens_out": 160
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/linear_model",
+   "sentences": [
+    {
+     "text": "The sklearn/linear_model package provides linear regression, serving as a base class for linear models and offering mixins for linear classifiers.",
+     "citations": [
+      {
+       "path": "sklearn/linear_model/base.py",
+       "line": 405
+      },
+      {
+       "path": "sklearn/linear_model/base.py",
+       "line": 229
+      },
+      {
+       "path": "sklearn/linear_model/base.py",
+       "line": 272
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes auxiliary functions and mixins to center data, rescale data, and convert coefficients to and from CSR format.",
+     "citations": [
+      {
+       "path": "sklearn/linear_model/base.py",
+       "line": 108
+      },
+      {
+       "path": "sklearn/linear_model/base.py",
+       "line": 217
+      },
+      {
+       "path": "sklearn/linear_model/base.py",
+       "line": 351
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 849,
+   "tokens_out": 291
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/metrics",
+   "sentences": [
+    {
+     "text": "The sklearn/metrics package includes modules for computing pairwise metrics such as distance matrices, kernels, and similarities between arrays.",
+     "citations": [
+      {
+       "path": "sklearn/metrics/pairwise.py",
+       "line": 1141
+      },
+      {
+       "path": "sklearn/metrics/pairwise.py",
+       "line": 1323
+      },
+      {
+       "path": "sklearn/metrics/pairwise.py",
+       "line": 882
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides functions to compute minimum distances, L1 distances, paired distances, and check pairwise arrays.",
+     "citations": [
+      {
+       "path": "sklearn/metrics/pairwise.py",
+       "line": 389
+      },
+      {
+       "path": "sklearn/metrics/pairwise.py",
+       "line": 470
+      },
+      {
+       "path": "sklearn/metrics/pairwise.py",
+       "line": 667
+      },
+      {
+       "path": "sklearn/metrics/pairwise.py",
+       "line": 58
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 852,
+   "tokens_out": 301
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/preprocessing",
+   "sentences": [
+    {
+     "text": "The package provides transformers like StandardScaler, MinMaxScaler, and RobustScaler to scale and standardize features.",
+     "citations": [
+      {
+       "path": "sklearn/preprocessing/data.py",
+       "line": 469
+      },
+      {
+       "path": "sklearn/preprocessing/data.py",
+       "line": 197
+      },
+      {
+       "path": "sklearn/preprocessing/data.py",
+       "line": 950
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes tools such as OneHotEncoder and CategoricalEncoder to encode categorical features into numeric arrays or one-hot schemes.",
+     "citations": [
+      {
+       "path": "sklearn/preprocessing/data.py",
+       "line": 1874
+      },
+      {
+       "path": "sklearn/preprocessing/data.py",
+       "line": 2869
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it offers FunctionTransformer to construct a transformer from an arbitrary callable.",
+     "citations": [
+      {
+       "path": "sklearn/preprocessing/_function_transformer.py",
+       "line": 15
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 630,
+   "tokens_out": 311
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/base",
+   "sentences": [
+    {
+     "text": "The sklearn.base module provides the BaseEstimator class as a base for all estimators in scikit-learn, along with utility functions like clone to construct a new estimator with the same parameters.",
+     "citations": [
+      {
+       "path": "sklearn/base.py",
+       "line": 176
+      },
+      {
+       "path": "sklearn/base.py",
+       "line": 30
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines various mixin classes such as ClassifierMixin, RegressorMixin, ClusterMixin, BiclusterMixin, TransformerMixin, and DensityMixin for different types of estimators.",
+     "citations": [
+      {
+       "path": "sklearn/base.py",
+       "line": 306
+      },
+      {
+       "path": "sklearn/base.py",
+       "line": 339
+      },
+      {
+       "path": "sklearn/base.py",
+       "line": 377
+      },
+      {
+       "path": "sklearn/base.py",
+       "line": 400
+      },
+      {
+       "path": "sklearn/base.py",
+       "line": 476
+      },
+      {
+       "path": "sklearn/base.py",
+       "line": 509
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 546,
+   "tokens_out": 344
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/exceptions",
+   "sentences": [
+    {
+     "text": "The sklearn/exceptions package defines custom exception and warning classes used across the library, such as NotFittedError for estimators used before fitting and FitFailedWarning for errors encountered during fitting.",
+     "citations": [
+      {
+       "path": "sklearn/exceptions.py",
+       "line": 18
+      },
+      {
+       "path": "sklearn/exceptions.py",
+       "line": 99
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides various warning classes to notify users about implicit data conversions, potential issues with data dimensionality, and inefficient computations.",
+     "citations": [
+      {
+       "path": "sklearn/exceptions.py",
+       "line": 56
+      },
+      {
+       "path": "sklearn/exceptions.py",
+       "line": 74
+      },
+      {
+       "path": "sklearn/exceptions.py",
+       "line": 88
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 529,
+   "tokens_out": 245
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/svm",
+   "sentences": [
+    {
+     "text": "The sklearn/svm package provides estimators for support vector classification, regression, and unsupervised outlier detection.",
+     "citations": [
+      {
+       "path": "sklearn/svm/classes.py",
+       "line": 13
+      },
+      {
+       "path": "sklearn/svm/classes.py",
+       "line": 248
+      },
+      {
+       "path": "sklearn/svm/classes.py",
+       "line": 978
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes base classes such as BaseLibSVM and BaseSVC that serve as the backing library and abstract base classes for LibSVM-based estimators.",
+     "citations": [
+      {
+       "path": "sklearn/svm/base.py",
+       "line": 60
+      },
+      {
+       "path": "sklearn/svm/base.py",
+       "line": 473
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 609,
+   "tokens_out": 245
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/neighbors",
+   "sentences": [
+    {
+     "text": "The sklearn/neighbors package provides a base class for nearest neighbors estimators along with mixins for k-neighbors and radius-based neighbors searches.",
+     "citations": [
+      {
+       "path": "sklearn/neighbors/base.py",
+       "line": 102
+      },
+      {
+       "path": "sklearn/neighbors/base.py",
+       "line": 270
+      },
+      {
+       "path": "sklearn/neighbors/base.py",
+       "line": 502
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes unsupervised learners for implementing neighbor searches and estimators that perform approximate nearest neighbor search using LSH forest.",
+     "citations": [
+      {
+       "path": "sklearn/neighbors/unsupervised.py",
+       "line": 9
+      },
+      {
+       "path": "sklearn/neighbors/approximate.py",
+       "line": 110
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 608,
+   "tokens_out": 248
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/cluster",
+   "sentences": [
+    {
+     "text": "The sklearn/cluster package provides algorithms for K-Means clustering.",
+     "citations": [
+      {
+       "path": "sklearn/cluster/k_means_.py",
+       "line": 714
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes support for Mini-Batch K-Means clustering.",
+     "citations": [
+      {
+       "path": "sklearn/cluster/k_means_.py",
+       "line": 1223
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 971,
+   "tokens_out": 142
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/decomposition",
+   "sentences": [
+    {
+     "text": "The package provides algorithms for Non-Negative Matrix Factorization (NMF), including functions to compute NMF and perform NMF initialization.",
+     "citations": [
+      {
+       "path": "sklearn/decomposition/nmf.py",
+       "line": 1041
+      },
+      {
+       "path": "sklearn/decomposition/nmf.py",
+       "line": 820
+      },
+      {
+       "path": "sklearn/decomposition/nmf.py",
+       "line": 234
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes support for multiplicative updates and coordinate descent methods to fit non-negative matrix factorization models.",
+     "citations": [
+      {
+       "path": "sklearn/decomposition/nmf.py",
+       "line": 686
+      },
+      {
+       "path": "sklearn/decomposition/nmf.py",
+       "line": 403
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 1053,
+   "tokens_out": 252
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/model_selection",
+   "sentences": [
+    {
+     "text": "The package provides various cross-validator classes such as StratifiedKFold, GroupKFold, and TimeSeriesSplit.",
+     "citations": [
+      {
+       "path": "sklearn/model_selection/_split.py",
+       "line": 525
+      },
+      {
+       "path": "sklearn/model_selection/_split.py",
+       "line": 437
+      },
+      {
+       "path": "sklearn/model_selection/_split.py",
+       "line": 676
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes utilities like train_test_split to separate arrays or matrices into random train and test subsets.",
+     "citations": [
+      {
+       "path": "sklearn/model_selection/_split.py",
+       "line": 1920
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 629,
+   "tokens_out": 225
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "examples/linear_model",
+   "sentences": [
+    {
+     "text": "The examples/linear_model package contains modules that illustrate linear models with various methods such as polynomial interpolation.",
+     "citations": [
+      {
+       "path": "examples/linear_model/plot_polynomial_interpolation.py",
+       "line": 38
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes examples demonstrating stochastic gradient descent penalties, loss functions, and models like Bayesian ridge and ARD.",
+     "citations": [
+      {
+       "path": "examples/linear_model/plot_sgd_penalties.py",
+       "line": 27
+      },
+      {
+       "path": "examples/linear_model/plot_ard.py",
+       "line": 93
+      },
+      {
+       "path": "examples/linear_model/plot_bayesian_ridge.py",
+       "line": 91
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 939,
+   "tokens_out": 233
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/ensemble",
+   "sentences": [
+    {
+     "text": "The sklearn/ensemble package provides a base class for all ensemble classes.",
+     "citations": [
+      {
+       "path": "sklearn/ensemble/base.py",
+       "line": 60
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also contains an abstract base class for gradient boosting alongside specific implementations for classification and regression.",
+     "citations": [
+      {
+       "path": "sklearn/ensemble/gradient_boosting.py",
+       "line": 718
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 661,
+   "tokens_out": 145
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn",
+   "sentences": [
+    {
+     "text": "The package provides functions to retrieve and set global scikit-learn configuration, such as get_config and set_config.",
+     "citations": [
+      {
+       "path": "sklearn/__init__.py",
+       "line": 29
+      },
+      {
+       "path": "sklearn/__init__.py",
+       "line": 40
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes the config_context function to act as a context manager for global scikit-learn configuration.",
+     "citations": [
+      {
+       "path": "sklearn/__init__.py",
+       "line": 56
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 300,
+   "tokens_out": 179
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "examples/cluster",
+   "sentences": [
+    {
+     "text": "The examples cluster package includes various modules for demonstrating clustering algorithms.",
+     "citations": [
+      {
+       "path": "examples/cluster/plot_digits_linkage.py",
+       "line": 57
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides functions to compute scores, evaluate estimators, and recreate images.",
+     "citations": [
+      {
+       "path": "examples/cluster/plot_adjusted_for_chance_measures.py",
+       "line": 34
+      },
+      {
+       "path": "examples/cluster/plot_kmeans_digits.py",
+       "line": 59
+      },
+      {
+       "path": "examples/cluster/plot_color_quantization.py",
+       "line": 73
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 767,
+   "tokens_out": 142
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/tree",
+   "sentences": [
+    {
+     "text": "The package provides decision tree models including a base class, a decision tree classifier, and a decision tree regressor.",
+     "citations": [
+      {
+       "path": "sklearn/tree/tree.py",
+       "line": 75
+      },
+      {
+       "path": "sklearn/tree/tree.py",
+       "line": 518
+      },
+      {
+       "path": "sklearn/tree/tree.py",
+       "line": 875
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes extremely randomized tree classifiers and regressors as well as functionality to export a decision tree in DOT format.",
+     "citations": [
+      {
+       "path": "sklearn/tree/tree.py",
+       "line": 1129
+      },
+      {
+       "path": "sklearn/tree/tree.py",
+       "line": 1307
+      },
+      {
+       "path": "sklearn/tree/export.py",
+       "line": 76
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 549,
+   "tokens_out": 274
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "examples/ensemble",
+   "sentences": [
+    {
+     "text": "The examples in this package compute deviance scores and estimate parameters for gradient boosting models.",
+     "citations": [
+      {
+       "path": "examples/ensemble/plot_gradient_boosting_oob.py",
+       "line": 69
+      },
+      {
+       "path": "examples/ensemble/plot_gradient_boosting_oob.py",
+       "line": 77
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Other modules generate functions to predict and illustrate concepts like bias and variance.",
+     "citations": [
+      {
+       "path": "examples/ensemble/plot_gradient_boosting_quantile.py",
+       "line": 18
+      },
+      {
+       "path": "examples/ensemble/plot_bias_variance.py",
+       "line": 99
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 691,
+   "tokens_out": 221
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/gaussian_process",
+   "sentences": [
+    {
+     "text": "The package provides various kernels for Gaussian process models, including the base class for all kernels.",
+     "citations": [
+      {
+       "path": "sklearn/gaussian_process/kernels.py",
+       "line": 119
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes specialized kernels such as the Matern kernel, the radial-basis function kernel, and the Exp-Sine-Squared kernel.",
+     "citations": [
+      {
+       "path": "sklearn/gaussian_process/kernels.py",
+       "line": 1245
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 626,
+   "tokens_out": 162
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/covariance",
+   "sentences": [
+    {
+     "text": "The package provides estimators for tasks such as computing maximum likelihood covariance, sparse inverse covariance, and robust covariance matrices.",
+     "citations": [
+      {
+       "path": "sklearn/covariance/empirical_covariance_.py",
+       "line": 88
+      },
+      {
+       "path": "sklearn/covariance/robust_covariance.py",
+       "line": 508
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes tools for detecting outliers in Gaussian distributed datasets and estimating shrunk covariance matrices.",
+     "citations": [
+      {
+       "path": "sklearn/covariance/outlier_detection.py",
+       "line": 22
+      },
+      {
+       "path": "sklearn/covariance/shrunk_covariance_.py",
+       "line": 150
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 794,
+   "tokens_out": 217
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/mixture",
+   "sentences": [
+    {
+     "text": "The package provides Gaussian mixture models for mixture estimation.",
+     "citations": [
+      {
+       "path": "sklearn/mixture/gaussian_mixture.py",
+       "line": 435
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes utilities to estimate Gaussian parameters, evaluate log Gaussian probabilities, and compute Cholesky decompositions.",
+     "citations": [
+      {
+       "path": "sklearn/mixture/gaussian_mixture.py",
+       "line": 250
+      },
+      {
+       "path": "sklearn/mixture/gaussian_mixture.py",
+       "line": 381
+      },
+      {
+       "path": "sklearn/mixture/gaussian_mixture.py",
+       "line": 289
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 683,
+   "tokens_out": 208
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/feature_extraction",
+   "sentences": [
+    {
+     "text": "The feature_extraction package includes tools such as CountVectorizer and TfidfVectorizer to convert collections of text documents into matrices of token counts or TF-IDF features.",
+     "citations": [
+      {
+       "path": "sklearn/feature_extraction/text.py",
+       "line": 542
+      },
+      {
+       "path": "sklearn/feature_extraction/text.py",
+       "line": 1139
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides utilities like HashingVectorizer to convert text documents to matrices of token occurrences and TfidfTransformer to normalize count matrices.",
+     "citations": [
+      {
+       "path": "sklearn/feature_extraction/text.py",
+       "line": 310
+      },
+      {
+       "path": "sklearn/feature_extraction/text.py",
+       "line": 985
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 669,
+   "tokens_out": 239
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/feature_selection",
+   "sentences": [
+    {
+     "text": "The sklearn/feature_selection package provides tools for feature ranking using recursive feature elimination and cross-validation.",
+     "citations": [
+      {
+       "path": "sklearn/feature_selection/rfe.py",
+       "line": 35
+      },
+      {
+       "path": "sklearn/feature_selection/rfe.py",
+       "line": 278
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes meta-transformers for selecting features based on importance weights and univariate selectors with configurable strategies.",
+     "citations": [
+      {
+       "path": "sklearn/feature_selection/from_model.py",
+       "line": 80
+      },
+      {
+       "path": "sklearn/feature_selection/univariate_selection.py",
+       "line": 676
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, the package provides functions to estimate mutual information between features and targets.",
+     "citations": [
+      {
+       "path": "sklearn/feature_selection/mutual_info_.py",
+       "line": 196
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 776,
+   "tokens_out": 292
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/manifold",
+   "sentences": [
+    {
+     "text": "The sklearn.manifold package provides methods for manifold learning such as Isomap, Multidimensional Scaling, and Locally Linear Embedding.",
+     "citations": [
+      {
+       "path": "sklearn/manifold/isomap.py",
+       "line": 15
+      },
+      {
+       "path": "sklearn/manifold/mds.py",
+       "line": 279
+      },
+      {
+       "path": "sklearn/manifold/locally_linear.py",
+       "line": 519
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes tools for t-distributed Stochastic Neighbor Embedding and spectral embedding for non-linear dimensionality reduction.",
+     "citations": [
+      {
+       "path": "sklearn/manifold/t_sne.py",
+       "line": 443
+      },
+      {
+       "path": "sklearn/manifold/spectral_embedding_.py",
+       "line": 340
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 907,
+   "tokens_out": 172
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "examples/model_selection",
+   "sentences": [
+    {
+     "text": "The package includes utilities to generate a simple plot of the test and training learning curve.",
+     "citations": [
+      {
+       "path": "examples/model_selection/plot_learning_curve.py",
+       "line": 27
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides functionality that prints and plots the confusion matrix.",
+     "citations": [
+      {
+       "path": "examples/model_selection/plot_confusion_matrix.py",
+       "line": 52
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 561,
+   "tokens_out": 151
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "examples/svm",
+   "sentences": [
+    {
+     "text": "The examples/svm package contains modules that illustrate the use of support vector machines.",
+     "citations": [
+      {
+       "path": "examples/svm/plot_iris.py",
+       "line": 63
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes utilities for creating meshes, plotting contours and decision functions, defining custom kernels, and normalizing data.",
+     "citations": [
+      {
+       "path": "examples/svm/plot_iris.py",
+       "line": 43
+      },
+      {
+       "path": "examples/svm/plot_weighted_samples.py",
+       "line": 22
+      },
+      {
+       "path": "examples/svm/plot_custom_kernel.py",
+       "line": 23
+      },
+      {
+       "path": "examples/svm/plot_rbf_parameters.py",
+       "line": 84
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 491,
+   "tokens_out": 248
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "sklearn/__check_build",
+   "sentences": [
+    {
+     "text": "The sklearn.__check_build package contains the raise_build_error function which raises an error related to the build process.",
+     "citations": [
+      {
+       "path": "sklearn/__check_build/__init__.py",
+       "line": 16
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it includes a setup module with a configuration function to help set up the package.",
+     "citations": [
+      {
+       "path": "sklearn/__check_build/setup.py",
+       "line": 7
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 211,
+   "tokens_out": 156
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "commit": "c753b77ac49e72ebc0fe5e3c2369fe628f975017",
+   "package": "examples/decomposition",
+   "sentences": [
+    {
+     "text": "The examples in the decomposition package provide demonstrations of image denoising helpers, face decompositions, and sparse coding wavelets.",
+     "citations": [
+      {
+       "path": "examples/decomposition/plot_image_denoising.py",
+       "line": 103
+      },
+      {
+       "path": "examples/decomposition/plot_faces_decomposition.py",
+       "line": 51
+      },
+      {
+       "path": "examples/decomposition/plot_sparse_coding.py",
+       "line": 34
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "They also include functions for plotting 3D figures, ICA versus PCA samples, and computing model selection scores.",
+     "citations": [
+      {
+       "path": "examples/decomposition/plot_pca_3d.py",
+       "line": 60
+      },
+      {
+       "path": "examples/decomposition/plot_ica_vs_pca.py",
+       "line": 63
+      },
+      {
+       "path": "examples/decomposition/plot_pca_vs_fa_model_selection.py",
+       "line": 64
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 683,
+   "tokens_out": 303
+  }
+ ],
+ "overview": [
+  {
+   "text": "Scikit-learn provides foundational base classes and mixins, such as BaseEstimator and ClassifierMixin, to standardize the creation of machine learning estimators.",
+   "citations": [
+    {
+     "path": "sklearn/base.py",
+     "line": 176
+    },
+    {
+     "path": "sklearn/base.py",
+     "line": 30
+    },
+    {
+     "path": "sklearn/base.py",
+     "line": 306
+    },
+    {
+     "path": "sklearn/base.py",
+     "line": 339
+    },
+    {
+     "path": "sklearn/base.py",
+     "line": 377
+    },
+    {
+     "path": "sklearn/base.py",
+     "line": 400
+    },
+    {
+     "path": "sklearn/base.py",
+     "line": 476
+    },
+    {
+     "path": "sklearn/base.py",
+     "line": 509
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Developers can easily load standard datasets or text files using the datasets package and split data into training and testing subsets using model selection utilities.",
+   "citations": [
+    {
+     "path": "sklearn/datasets/base.py",
+     "line": 326
+    },
+    {
+     "path": "sklearn/datasets/base.py",
+     "line": 479
+    },
+    {
+     "path": "sklearn/datasets/base.py",
+     "line": 674
+    },
+    {
+     "path": "sklearn/datasets/base.py",
+     "line": 72
+    },
+    {
+     "path": "sklearn/datasets/base.py",
+     "line": 744
+    },
+    {
+     "path": "sklearn/model_selection/_split.py",
+     "line": 1920
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The library offers diverse algorithms for tasks such as linear regression, support vector classification, clustering, and decision tree modeling.",
+   "citations": [
+    {
+     "path": "sklearn/linear_model/base.py",
+     "line": 405
+    },
+    {
+     "path": "sklearn/linear_model/base.py",
+     "line": 229
+    },
+    {
+     "path": "sklearn/linear_model/base.py",
+     "line": 272
+    },
+    {
+     "path": "sklearn/svm/classes.py",
+     "line": 13
+    },
+    {
+     "path": "sklearn/svm/classes.py",
+     "line": 248
+    },
+    {
+     "path": "sklearn/svm/classes.py",
+     "line": 978
+    },
+    {
+     "path": "sklearn/cluster/k_means_.py",
+     "line": 714
+    },
+    {
+     "path": "sklearn/tree/tree.py",
+     "line": 75
+    },
+    {
+     "path": "sklearn/tree/tree.py",
+     "line": 518
+    },
+    {
+     "path": "sklearn/tree/tree.py",
+     "line": 875
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Additionally, preprocessing modules and feature extractors allow developers to scale features, encode categorical variables, and convert text documents into numerical matrices.",
+   "citations": [
+    {
+     "path": "sklearn/preprocessing/data.py",
+     "line": 469
+    },
+    {
+     "path": "sklearn/preprocessing/data.py",
+     "line": 197
+    },
+    {
+     "path": "sklearn/preprocessing/data.py",
+     "line": 950
+    },
+    {
+     "path": "sklearn/preprocessing/data.py",
+     "line": 1874
+    },
+    {
+     "path": "sklearn/preprocessing/data.py",
+     "line": 2869
+    },
+    {
+     "path": "sklearn/feature_extraction/text.py",
+     "line": 542
+    },
+    {
+     "path": "sklearn/feature_extraction/text.py",
+     "line": 1139
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Comprehensive tools for computing performance metrics and custom exception classes help ensure robust model evaluation and error handling.",
+   "citations": [
+    {
+     "path": "sklearn/metrics/pairwise.py",
+     "line": 1141
+    },
+    {
+     "path": "sklearn/metrics/pairwise.py",
+     "line": 1323
+    },
+    {
+     "path": "sklearn/metrics/pairwise.py",
+     "line": 882
+    },
+    {
+     "path": "sklearn/exceptions.py",
+     "line": 18
+    },
+    {
+     "path": "sklearn/exceptions.py",
+     "line": 99
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 29,
+  "sentences": 61,
+  "kept": 61,
+  "dropped": 0,
+  "citations": 132,
+  "valid_citations": 132,
+  "overview": {
+   "sentences": 5,
+   "kept": 5,
+   "dropped": 0
+  }
+ }
+}

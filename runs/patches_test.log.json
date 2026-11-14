@@ -1,0 +1,28 @@
+[
+ {
+  "instance_id": "astropy__astropy-12907",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 14,
+  "tokens_in": 1620,
+  "tokens_out": 143
+ },
+ {
+  "instance_id": "astropy__astropy-14182",
+  "edits": 2,
+  "problems": [
+   "astropy/io/ascii/core.py: original snippet matched 2 times"
+  ],
+  "patch_lines": 10,
+  "tokens_in": 2835,
+  "tokens_out": 321
+ },
+ {
+  "instance_id": "astropy__astropy-14365",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 12,
+  "tokens_in": 1794,
+  "tokens_out": 135
+ }
+]

@@ -63,9 +63,10 @@ rerank:                           # FR-K3
   num_leaves: 31
   min_child_samples: 20
 
-llm:                              # FR-M1 (verify the free model id in AI Studio)
-  model: gemini-2.5-flash
-  rpm: 10
+llm:                              # FR-M1 (verified 2026-11-14 with ListModels + test calls)
+  model: gemini-3.5-flash-lite    # gemini-2.5-flash: 404 for new keys; 3.5-flash: 48 s/call, 504s
+  rpm: 12
+  timeout_s: 120
   max_requests: 400
   max_issue_chars: 6000
   rerank_top: 10

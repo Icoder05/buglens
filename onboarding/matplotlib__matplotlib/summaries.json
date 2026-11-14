@@ -1,0 +1,1356 @@
+{
+ "repo": "matplotlib/matplotlib",
+ "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/_api",
+   "sentences": [
+    {
+     "text": "The matplotlib/_api package provides utility functions for checking types, shapes, and values of arguments.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/_api/__init__.py",
+       "line": 64
+      },
+      {
+       "path": "lib/matplotlib/_api/__init__.py",
+       "line": 131
+      },
+      {
+       "path": "lib/matplotlib/_api/__init__.py",
+       "line": 100
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes decorators and warning mechanisms for managing deprecations and parameter removals.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/_api/deprecation.py",
+       "line": 122
+      },
+      {
+       "path": "lib/matplotlib/_api/__init__.py",
+       "line": 244
+      },
+      {
+       "path": "lib/matplotlib/_api/deprecation.py",
+       "line": 357
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 710,
+   "tokens_out": 273
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/pyplot",
+   "sentences": [
+    {
+     "text": "The package provides functions to create a new figure, activate an existing figure, or add and retrieve axes.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/pyplot.py",
+       "line": 663
+      },
+      {
+       "path": "lib/matplotlib/pyplot.py",
+       "line": 970
+      },
+      {
+       "path": "lib/matplotlib/pyplot.py",
+       "line": 1089
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also allows users to create figures with subplots, subplot mosaics, and specific subplot layouts or grid configurations.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/pyplot.py",
+       "line": 1292
+      },
+      {
+       "path": "lib/matplotlib/pyplot.py",
+       "line": 1433
+      },
+      {
+       "path": "lib/matplotlib/pyplot.py",
+       "line": 1521
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it includes utilities to switch the Matplotlib backend and manage radial or theta gridlines.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/pyplot.py",
+       "line": 206
+      },
+      {
+       "path": "lib/matplotlib/pyplot.py",
+       "line": 1852
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 786,
+   "tokens_out": 374
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib",
+   "sentences": [
+    {
+     "text": "Matplotlib provides functionality to select the backend used for rendering and GUI integration.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/__init__.py",
+       "line": 1057
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes tools to set the current rcParams and run the test suite.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/__init__.py",
+       "line": 870
+      },
+      {
+       "path": "lib/matplotlib/__init__.py",
+       "line": 1182
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 639,
+   "tokens_out": 174
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/cbook",
+   "sentences": [
+    {
+     "text": "The matplotlib/cbook package provides helper functions and data structures for various utilities such as handling callbacks, stacks, and disjoint-set data structures.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/cbook/__init__.py",
+       "line": 119
+      },
+      {
+       "path": "lib/matplotlib/cbook/__init__.py",
+       "line": 521
+      },
+      {
+       "path": "lib/matplotlib/cbook/__init__.py",
+       "line": 741
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes tools for processing statistical data for boxplots and violin plots, normalizing keyword arguments, and managing masked or non-finite points.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/cbook/__init__.py",
+       "line": 861
+      },
+      {
+       "path": "lib/matplotlib/cbook/__init__.py",
+       "line": 1003
+      },
+      {
+       "path": "lib/matplotlib/cbook/__init__.py",
+       "line": 1367
+      },
+      {
+       "path": "lib/matplotlib/cbook/__init__.py",
+       "line": 1649
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 667,
+   "tokens_out": 239
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/artist",
+   "sentences": [
+    {
+     "text": "The Artist class serves as an abstract base class for objects that render into a FigureCanvas.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/artist.py",
+       "line": 94
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "ArtistInspector is a helper class used to inspect an Artist and return or set properties using functions like setp and getp.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/artist.py",
+       "line": 1304
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 546,
+   "tokens_out": 155
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/path",
+   "sentences": [
+    {
+     "text": "The matplotlib/path package provides the Path class, which handles a series of possibly disconnected and possibly closed line and curve segments.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/path.py",
+       "line": 23
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it offers the get_path_collection_extents function to compute extents given a sequence of Path objects, transforms, and offsets.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/path.py",
+       "line": 1044
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 299,
+   "tokens_out": 167
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/transforms",
+   "sentences": [
+    {
+     "text": "The package provides base classes for bounding boxes and transform nodes that participate in the transform tree.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/transforms.py",
+       "line": 235
+      },
+      {
+       "path": "lib/matplotlib/transforms.py",
+       "line": 81
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes mutable bounding boxes, lockable bounding boxes, and 2D affine transformations.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/transforms.py",
+       "line": 686
+      },
+      {
+       "path": "lib/matplotlib/transforms.py",
+       "line": 1121
+      },
+      {
+       "path": "lib/matplotlib/transforms.py",
+       "line": 1855
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it offers helper classes and composite or blended transforms for combining transformations.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/transforms.py",
+       "line": 1654
+      },
+      {
+       "path": "lib/matplotlib/transforms.py",
+       "line": 2301
+      },
+      {
+       "path": "lib/matplotlib/transforms.py",
+       "line": 2141
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 587,
+   "tokens_out": 362
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/docstring",
+   "sentences": [
+    {
+     "text": "The matplotlib/docstring package provides a Substitution class, which acts as a decorator to perform percentage-based substitution on an object's docstring.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/docstring.py",
+       "line": 4
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functions to copy docstrings from another source function if present.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/docstring.py",
+       "line": 90
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 323,
+   "tokens_out": 156
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/patches",
+   "sentences": [
+    {
+     "text": "The package provides patch classes which are 2D artists with a face color and an edge color.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/patches.py",
+       "line": 26
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes container classes such as BoxStyle, ConnectionStyle, and ArrowStyle that define various styles.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/patches.py",
+       "line": 2203
+      },
+      {
+       "path": "lib/matplotlib/patches.py",
+       "line": 2656
+      },
+      {
+       "path": "lib/matplotlib/patches.py",
+       "line": 3092
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 610,
+   "tokens_out": 213
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/backends",
+   "sentences": [
+    {
+     "text": "The renderer handles all the drawing primitives using a graphics.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/backends/backend_agg.py",
+       "line": 66
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "The FigureCanvas contains the figure and does event handling.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/backends/backend_wxagg.py",
+       "line": 14
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 843,
+   "tokens_out": 141
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/colors",
+   "sentences": [
+    {
+     "text": "The matplotlib.colors package provides base and concrete classes for mapping scalar data to RGBA colors, including lookup table-based colormaps.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/colors.py",
+       "line": 544
+      },
+      {
+       "path": "lib/matplotlib/colors.py",
+       "line": 840
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes normalization classes to scale data into appropriate ranges, as well as utilities for converting colors to RGBA arrays.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/colors.py",
+       "line": 1098
+      },
+      {
+       "path": "lib/matplotlib/colors.py",
+       "line": 287
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 609,
+   "tokens_out": 223
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/axes",
+   "sentences": [
+    {
+     "text": "The Axes class contains most of the figure elements.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/axes/_axes.py",
+       "line": 46
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Subplots serve as instances with Axes.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/axes/_subplots.py",
+       "line": 6
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "SecondaryAxis is a general class to hold a Secondary_X/Yaxis.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/axes/_secondary_axes.py",
+       "line": 10
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 605,
+   "tokens_out": 200
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "examples/lines_bars_and_markers",
+   "sentences": [
+    {
+     "text": "The package includes modules that draw a histogram as a stepped patch or stack histograms.",
+     "citations": [
+      {
+       "path": "examples/lines_bars_and_markers/filled_step.py",
+       "line": 18
+      },
+      {
+       "path": "examples/lines_bars_and_markers/filled_step.py",
+       "line": 79
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides functions to create hat graphs and draw gradient images based on colormaps.",
+     "citations": [
+      {
+       "path": "examples/lines_bars_and_markers/hat_graph.py",
+       "line": 14
+      },
+      {
+       "path": "examples/lines_bars_and_markers/gradient_bar.py",
+       "line": 26
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 1284,
+   "tokens_out": 160
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/style",
+   "sentences": [
+    {
+     "text": "The matplotlib/style package provides functionality to use Matplotlib style settings from a style specification and apply context managers for using style settings temporarily.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/style/core.py",
+       "line": 64
+      },
+      {
+       "path": "lib/matplotlib/style/core.py",
+       "line": 126
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also supports reading style directories, loading and updating the style library, and reloading the library.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/style/core.py",
+       "line": 183
+      },
+      {
+       "path": "lib/matplotlib/style/core.py",
+       "line": 160
+      },
+      {
+       "path": "lib/matplotlib/style/core.py",
+       "line": 216
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 516,
+   "tokens_out": 254
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "examples/images_contours_and_fields",
+   "sentences": [
+    {
+     "text": "The package examples/images_contours_and_fields provides examples including creating a heatmap from a numpy array and two lists of labels as well as annotating a heatmap.",
+     "citations": [
+      {
+       "path": "examples/images_contours_and_fields/image_annotated_heatmap.py",
+       "line": 102
+      },
+      {
+       "path": "examples/images_contours_and_fields/image_annotated_heatmap.py",
+       "line": 162
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes demonstrations of analytical functions representing experiment results and affine image transformations.",
+     "citations": [
+      {
+       "path": "examples/images_contours_and_fields/tricontour_smooth_delaunay.py",
+       "line": 35
+      },
+      {
+       "path": "examples/images_contours_and_fields/affine_image.py",
+       "line": 31
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 1224,
+   "tokens_out": 261
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "examples/text_labels_and_annotations",
+   "sentences": [
+    {
+     "text": "The examples/text_labels_and_annotations package contains modules for demonstrating text, labels, and annotations such as drawing font tables and creating arrow graphs or angle annotations.",
+     "citations": [
+      {
+       "path": "examples/text_labels_and_annotations/angle_annotation.py",
+       "line": 66
+      },
+      {
+       "path": "examples/text_labels_and_annotations/arrow_demo.py",
+       "line": 16
+      },
+      {
+       "path": "examples/text_labels_and_annotations/font_table.py",
+       "line": 52
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 1290,
+   "tokens_out": 175
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "mpl_toolkits/axisartist",
+   "sentences": [
+    {
+     "text": "The mpl_toolkits.axisartist package includes the Axes class.",
+     "citations": [
+      {
+       "path": "lib/mpl_toolkits/axisartist/axislines.py",
+       "line": 454
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides helper classes like AxisArtistHelper for defining axis behaviors.",
+     "citations": [
+      {
+       "path": "lib/mpl_toolkits/axisartist/axislines.py",
+       "line": 52
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 707,
+   "tokens_out": 154
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "examples/mplot3d",
+   "sentences": [
+    {
+     "text": "The package examples/mplot3d contains various 3D plotting examples and utility functions such as plotting strings, calculating random numbers, and constructing polygons under graphs.",
+     "citations": [
+      {
+       "path": "examples/mplot3d/pathpatch3d.py",
+       "line": 17
+      },
+      {
+       "path": "examples/mplot3d/scatter3d.py",
+       "line": 16
+      },
+      {
+       "path": "examples/mplot3d/polys3d.py",
+       "line": 20
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides functions for generating data, calculating midpoints for voxel grids, and evaluating the Lorenz attractor.",
+     "citations": [
+      {
+       "path": "examples/mplot3d/wire3d_animation_sgskip.py",
+       "line": 17
+      },
+      {
+       "path": "examples/mplot3d/voxels_rgb.py",
+       "line": 13
+      },
+      {
+       "path": "examples/mplot3d/lorenz_attractor.py",
+       "line": 21
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 1053,
+   "tokens_out": 317
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/rcsetup",
+   "sentences": [
+    {
+     "text": "The matplotlib/rcsetup package provides validation functions for properties such as colors, line styles, font types, and cyclers.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/rcsetup.py",
+       "line": 328
+      },
+      {
+       "path": "lib/matplotlib/rcsetup.py",
+       "line": 456
+      },
+      {
+       "path": "lib/matplotlib/rcsetup.py",
+       "line": 242
+      },
+      {
+       "path": "lib/matplotlib/rcsetup.py",
+       "line": 724
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes utilities like cycler creation, listify validators, and type conversion helpers to support configuration setup.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/rcsetup.py",
+       "line": 639
+      },
+      {
+       "path": "lib/matplotlib/rcsetup.py",
+       "line": 83
+      },
+      {
+       "path": "lib/matplotlib/rcsetup.py",
+       "line": 192
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 577,
+   "tokens_out": 309
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "mpl_toolkits/axes_grid1",
+   "sentences": [
+    {
+     "text": "The mpl_toolkits.axes_grid1 package provides tools such as Divider, an Axes positioning class, and AxesDivider, which is based on pre-existing axes.",
+     "citations": [
+      {
+       "path": "lib/mpl_toolkits/axes_grid1/axes_divider.py",
+       "line": 15
+      },
+      {
+       "path": "lib/mpl_toolkits/axes_grid1/axes_divider.py",
+       "line": 386
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes SubplotDivider for specifying rectangle areas using subplot geometry, as well as HBoxDivider and VBoxDivider for laying out axes horizontally or vertically.",
+     "citations": [
+      {
+       "path": "lib/mpl_toolkits/axes_grid1/axes_divider.py",
+       "line": 320
+      },
+      {
+       "path": "lib/mpl_toolkits/axes_grid1/axes_divider.py",
+       "line": 626
+      },
+      {
+       "path": "lib/mpl_toolkits/axes_grid1/axes_divider.py",
+       "line": 665
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 826,
+   "tokens_out": 234
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/ticker",
+   "sentences": [
+    {
+     "text": "The package provides formatters such as ScalarFormatter to format tick values as numbers, LogFormatter for log or symlog scales, LogitFormatter for probabilities, EngFormatter using engineering prefixes, and PercentFormatter to format numbers as percentages.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/ticker.py",
+       "line": 419
+      },
+      {
+       "path": "lib/matplotlib/ticker.py",
+       "line": 866
+      },
+      {
+       "path": "lib/matplotlib/ticker.py",
+       "line": 1161
+      },
+      {
+       "path": "lib/matplotlib/ticker.py",
+       "line": 1356
+      },
+      {
+       "path": "lib/matplotlib/ticker.py",
+       "line": 1507
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes locators like Locator to determine tick locations, LogLocator for log axes, MaxNLocator to find nice tick locations with no more than N within view limits, SymmetricalLogLocator for symmetric log axes, and LogitLocator for logit axes.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/ticker.py",
+       "line": 1620
+      },
+      {
+       "path": "lib/matplotlib/ticker.py",
+       "line": 1978
+      },
+      {
+       "path": "lib/matplotlib/ticker.py",
+       "line": 2255
+      },
+      {
+       "path": "lib/matplotlib/ticker.py",
+       "line": 2473
+      },
+      {
+       "path": "lib/matplotlib/ticker.py",
+       "line": 2631
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 553,
+   "tokens_out": 451
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "examples/misc",
+   "sentences": [
+    {
+     "text": "The examples/misc package contains demonstrations such as custom projections, bubble charts, and cursors.",
+     "citations": [
+      {
+       "path": "examples/misc/custom_projection.py",
+       "line": 29
+      },
+      {
+       "path": "examples/misc/packed_bubbles.py",
+       "line": 24
+      },
+      {
+       "path": "examples/misc/cursor_demo.py",
+       "line": 86
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides examples involving filter effects, radar plot icons, and process plotting.",
+     "citations": [
+      {
+       "path": "examples/misc/demo_agg_filter.py",
+       "line": 155
+      },
+      {
+       "path": "examples/misc/logos2.py",
+       "line": 36
+      },
+      {
+       "path": "examples/misc/multiprocess_sgskip.py",
+       "line": 30
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 809,
+   "tokens_out": 184
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "examples/subplots_axes_and_figures",
+   "sentences": [
+    {
+     "text": "The subplots_axes_and_figures package contains demonstration examples for configuring figure classes, such as WatermarkFigure which represents a figure with a text watermark.",
+     "citations": [
+      {
+       "path": "examples/subplots_axes_and_figures/custom_figure_class.py",
+       "line": 21
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides utilities and demonstrations for connecting axes and transforming scales, including functions to connect two axes for zoom effects and conversion utilities like fahrenheit2celsius.",
+     "citations": [
+      {
+       "path": "examples/subplots_axes_and_figures/axes_zoom_effect.py",
+       "line": 43
+      },
+      {
+       "path": "examples/subplots_axes_and_figures/fahrenheit_celsius_scales.py",
+       "line": 14
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 1131,
+   "tokens_out": 234
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/tri",
+   "sentences": [
+    {
+     "text": "The Triangulation class represents an unstructured triangular grid consisting of npoints points.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/tri/triangulation.py",
+       "line": 4
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "The TriFinder serves as an abstract base class for classes used to find the triangles of a grid, while TrapezoidMapTriFinder is implemented using the trapezoid method.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/tri/trifinder.py",
+       "line": 7
+      },
+      {
+       "path": "lib/matplotlib/tri/trifinder.py",
+       "line": 24
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, TriInterpolator acts as an abstract base class for classes used to interpolate on a triangular grid, with implementations like CubicTriInterpolator providing cubic interpolation.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/tri/triinterpolate.py",
+       "line": 15
+      },
+      {
+       "path": "lib/matplotlib/tri/triinterpolate.py",
+       "line": 287
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 665,
+   "tokens_out": 310
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/backend_bases",
+   "sentences": [
+    {
+     "text": "The package provides base classes for figure canvases, rendering operations, graphics contexts, and timers.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/backend_bases.py",
+       "line": 1655
+      },
+      {
+       "path": "lib/matplotlib/backend_bases.py",
+       "line": 146
+      },
+      {
+       "path": "lib/matplotlib/backend_bases.py",
+       "line": 729
+      },
+      {
+       "path": "lib/matplotlib/backend_bases.py",
+       "line": 1055
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines navigational tools, tool containers, and figure managers as backend-independent abstractions.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/backend_bases.py",
+       "line": 2854
+      },
+      {
+       "path": "lib/matplotlib/backend_bases.py",
+       "line": 3252
+      },
+      {
+       "path": "lib/matplotlib/backend_bases.py",
+       "line": 2695
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 591,
+   "tokens_out": 312
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/lines",
+   "sentences": [
+    {
+     "text": "The matplotlib/lines package defines the Line2D artist class, which represents lines that can have solid linestyles connecting all points.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/lines.py",
+       "line": 194
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides helper functionality such as managing callbacks to maintain a list of selected vertices for Line2D through the VertexSelector class.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/lines.py",
+       "line": 1448
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 499,
+   "tokens_out": 102
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "examples/axes_grid1",
+   "sentences": [
+    {
+     "text": "The examples in the axes_grid1 package demonstrate various layouts such as grids of 2x2 images.",
+     "citations": [
+      {
+       "path": "examples/axes_grid1/demo_axes_grid.py",
+       "line": 20
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "They include demonstrations with single or multiple colorbars associated with the image grids.",
+     "citations": [
+      {
+       "path": "examples/axes_grid1/demo_axes_grid.py",
+       "line": 38
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 989,
+   "tokens_out": 161
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/cm",
+   "sentences": [
+    {
+     "text": "The matplotlib/cm package provides tools to manage colormaps, including functions to get, register, and unregister them.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/cm.py",
+       "line": 163
+      },
+      {
+       "path": "lib/matplotlib/cm.py",
+       "line": 103
+      },
+      {
+       "path": "lib/matplotlib/cm.py",
+       "line": 197
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes the ScalarMappable mixin class, which is designed to map scalar data to RGBA.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/cm.py",
+       "line": 238
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 465,
+   "tokens_out": 127
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/projections",
+   "sentences": [
+    {
+     "text": "The matplotlib/projections package maps registered projection names to projection classes and retrieves projection classes by name.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/projections/__init__.py",
+       "line": 61
+      },
+      {
+       "path": "lib/matplotlib/projections/__init__.py",
+       "line": 98
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides specialized classes for polar graph projections, such as PolarAxes where input dimensions are theta and r.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/projections/polar.py",
+       "line": 762
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 599,
+   "tokens_out": 190
+  },
+  {
+   "repo": "matplotlib/matplotlib",
+   "commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+   "package": "matplotlib/scale",
+   "sentences": [
+    {
+     "text": "The matplotlib/scale package provides the base class for all scales as well as specific scale implementations such as linear, logarithmic, logit, symmetrical logarithmic, and function scales.",
+     "citations": [
+      {
+       "path": "lib/matplotlib/scale.py",
+       "line": 30
+      },
+      {
+       "path": "lib/matplotlib/scale.py",
+       "line": 90
+      },
+      {
+       "path": "lib/matplotlib/scale.py",
+       "line": 160
+      },
+      {
+       "path": "lib/matplotlib/scale.py",
+       "line": 260
+      },
+      {
+       "path": "lib/matplotlib/scale.py",
+       "line": 406
+      },
+      {
+       "path": "lib/matplotlib/scale.py",
+       "line": 504
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 516,
+   "tokens_out": 239
+  }
+ ],
+ "overview": [
+  {
+   "text": "Matplotlib provides core functionality to select rendering backends, set rcParams, and run test suites.",
+   "citations": [
+    {
+     "path": "lib/matplotlib/__init__.py",
+     "line": 1057
+    },
+    {
+     "path": "lib/matplotlib/__init__.py",
+     "line": 870
+    },
+    {
+     "path": "lib/matplotlib/__init__.py",
+     "line": 1182
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The Artist base class and specialized 2D artists handle rendering into the FigureCanvas and managing graphical properties.",
+   "citations": [
+    {
+     "path": "lib/matplotlib/artist.py",
+     "line": 94
+    },
+    {
+     "path": "lib/matplotlib/patches.py",
+     "line": 26
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The library offers comprehensive tools for managing colormaps, mapping scalar data to RGBA colors, and scaling data into appropriate ranges.",
+   "citations": [
+    {
+     "path": "lib/matplotlib/colors.py",
+     "line": 544
+    },
+    {
+     "path": "lib/matplotlib/colors.py",
+     "line": 840
+    },
+    {
+     "path": "lib/matplotlib/colors.py",
+     "line": 1098
+    },
+    {
+     "path": "lib/matplotlib/colors.py",
+     "line": 287
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Users can create and configure figures, subplots, and specialized axes layouts using pyplot and axes management utilities.",
+   "citations": [
+    {
+     "path": "lib/matplotlib/pyplot.py",
+     "line": 663
+    },
+    {
+     "path": "lib/matplotlib/pyplot.py",
+     "line": 970
+    },
+    {
+     "path": "lib/matplotlib/pyplot.py",
+     "line": 1089
+    },
+    {
+     "path": "lib/matplotlib/pyplot.py",
+     "line": 1292
+    },
+    {
+     "path": "lib/matplotlib/pyplot.py",
+     "line": 1433
+    },
+    {
+     "path": "lib/matplotlib/pyplot.py",
+     "line": 1521
+    },
+    {
+     "path": "lib/matplotlib/axes/_axes.py",
+     "line": 46
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Additional packages support paths, 2D affine transformations, bounding boxes, and customized tick formatting and locations.",
+   "citations": [
+    {
+     "path": "lib/matplotlib/path.py",
+     "line": 23
+    },
+    {
+     "path": "lib/matplotlib/transforms.py",
+     "line": 686
+    },
+    {
+     "path": "lib/matplotlib/transforms.py",
+     "line": 1121
+    },
+    {
+     "path": "lib/matplotlib/transforms.py",
+     "line": 1855
+    },
+    {
+     "path": "lib/matplotlib/ticker.py",
+     "line": 419
+    },
+    {
+     "path": "lib/matplotlib/ticker.py",
+     "line": 866
+    },
+    {
+     "path": "lib/matplotlib/ticker.py",
+     "line": 1161
+    },
+    {
+     "path": "lib/matplotlib/ticker.py",
+     "line": 1356
+    },
+    {
+     "path": "lib/matplotlib/ticker.py",
+     "line": 1507
+    },
+    {
+     "path": "lib/matplotlib/ticker.py",
+     "line": 1620
+    },
+    {
+     "path": "lib/matplotlib/ticker.py",
+     "line": 1978
+    },
+    {
+     "path": "lib/matplotlib/ticker.py",
+     "line": 2255
+    },
+    {
+     "path": "lib/matplotlib/ticker.py",
+     "line": 2473
+    },
+    {
+     "path": "lib/matplotlib/ticker.py",
+     "line": 2631
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 30,
+  "sentences": 62,
+  "kept": 62,
+  "dropped": 0,
+  "citations": 135,
+  "valid_citations": 135,
+  "overview": {
+   "sentences": 5,
+   "kept": 5,
+   "dropped": 0
+  }
+ }
+}

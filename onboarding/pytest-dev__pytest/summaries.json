@@ -1,0 +1,1092 @@
+{
+ "repo": "pytest-dev/pytest",
+ "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/_code",
+   "sentences": [
+    {
+     "text": "The package _pytest/_code provides wrappers around Python code objects, frames, and traceback entries.",
+     "citations": [
+      {
+       "path": "src/_pytest/_code/code.py",
+       "line": 33
+      },
+      {
+       "path": "src/_pytest/_code/code.py",
+       "line": 103
+      },
+      {
+       "path": "src/_pytest/_code/code.py",
+       "line": 166
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also encapsulates exception info and presents information regarding failing functions and generators.",
+     "citations": [
+      {
+       "path": "src/_pytest/_code/code.py",
+       "line": 388
+      },
+      {
+       "path": "src/_pytest/_code/code.py",
+       "line": 579
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 558,
+   "tokens_out": 241
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/config",
+   "sentences": [
+    {
+     "text": "The Config class provides access to configuration values, pluginmanager, and plugin hooks.",
+     "citations": [
+      {
+       "path": "src/_pytest/config/__init__.py",
+       "line": 633
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "The PytestPluginManager class overwrites pluggy.PluginManager to add pytest-specific functionality.",
+     "citations": [
+      {
+       "path": "src/_pytest/config/__init__.py",
+       "line": 211
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, the main function returns an exit code after performing an in-process test run.",
+     "citations": [
+      {
+       "path": "src/_pytest/config/__init__.py",
+       "line": 48
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 650,
+   "tokens_out": 221
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/compat",
+   "sentences": [
+    {
+     "text": "The _pytest/compat package provides utility functions for inspecting functions, such as obtaining argument names, real function and method objects, and default argument names.",
+     "citations": [
+      {
+       "path": "src/_pytest/compat.py",
+       "line": 115
+      },
+      {
+       "path": "src/_pytest/compat.py",
+       "line": 278
+      },
+      {
+       "path": "src/_pytest/compat.py",
+       "line": 306
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functions to check for coroutine functions, count mock patch arguments, and safely retrieve attributes.",
+     "citations": [
+      {
+       "path": "src/_pytest/compat.py",
+       "line": 81
+      },
+      {
+       "path": "src/_pytest/compat.py",
+       "line": 101
+      },
+      {
+       "path": "src/_pytest/compat.py",
+       "line": 338
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 587,
+   "tokens_out": 278
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/outcomes",
+   "sentences": [
+    {
+     "text": "The _pytest/outcomes package provides functions and exception classes to signal test outcomes such as skips, failures, and exits.",
+     "citations": [
+      {
+       "path": "src/_pytest/outcomes.py",
+       "line": 12
+      },
+      {
+       "path": "src/_pytest/outcomes.py",
+       "line": 78
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes helpers like importorskip to conditionally import modules and xfail to imperatively mark tests as expected failures.",
+     "citations": [
+      {
+       "path": "src/_pytest/outcomes.py",
+       "line": 143
+      },
+      {
+       "path": "src/_pytest/outcomes.py",
+       "line": 126
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 551,
+   "tokens_out": 220
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/warning_types",
+   "sentences": [
+    {
+     "text": "The package _pytest/warning_types defines various warning classes like PytestWarning and specific subclasses such as PytestAssertRewriteWarning, PytestCacheWarning, PytestConfigWarning, and PytestCollectionWarning.",
+     "citations": [
+      {
+       "path": "src/_pytest/warning_types.py",
+       "line": 4
+      },
+      {
+       "path": "src/_pytest/warning_types.py",
+       "line": 12
+      },
+      {
+       "path": "src/_pytest/warning_types.py",
+       "line": 20
+      },
+      {
+       "path": "src/_pytest/warning_types.py",
+       "line": 28
+      },
+      {
+       "path": "src/_pytest/warning_types.py",
+       "line": 36
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes classes like PytestDeprecationWarning, PytestExperimentalApiWarning, PytestUnhandledCoroutineWarning, and PytestUnknownMarkWarning.",
+     "citations": [
+      {
+       "path": "src/_pytest/warning_types.py",
+       "line": 44
+      },
+      {
+       "path": "src/_pytest/warning_types.py",
+       "line": 52
+      },
+      {
+       "path": "src/_pytest/warning_types.py",
+       "line": 69
+      },
+      {
+       "path": "src/_pytest/warning_types.py",
+       "line": 79
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it provides UnformattedWarning to hold warnings that need to format their message at runtime.",
+     "citations": [
+      {
+       "path": "src/_pytest/warning_types.py",
+       "line": 96
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 598,
+   "tokens_out": 466
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/mark",
+   "sentences": [
+    {
+     "text": "The _pytest/mark package provides functionality for marking and parameterizing tests.",
+     "citations": [
+      {
+       "path": "src/_pytest/mark/__init__.py",
+       "line": 20
+      },
+      {
+       "path": "src/_pytest/mark/structures.py",
+       "line": 170
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It handles command line execution and item deselection based on keywords and marks.",
+     "citations": [
+      {
+       "path": "src/_pytest/mark/__init__.py",
+       "line": 81
+      },
+      {
+       "path": "src/_pytest/mark/__init__.py",
+       "line": 101
+      },
+      {
+       "path": "src/_pytest/mark/__init__.py",
+       "line": 128
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 519,
+   "tokens_out": 238
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "doc/en",
+   "sentences": [
+    {
+     "text": "The doc/en package contains modules for documentation configuration, examples such as assertion failure demonstrations, multipython setups, and theme support.",
+     "citations": [
+      {
+       "path": "doc/en/conf.py",
+       "line": 335
+      },
+      {
+       "path": "doc/en/example/assertion/failure_demo.py",
+       "line": 25
+      },
+      {
+       "path": "doc/en/example/multipython.py",
+       "line": 25
+      },
+      {
+       "path": "doc/en/_themes/flask_theme_support.py",
+       "line": 17
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 536,
+   "tokens_out": 188
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "testing/example_scripts",
+   "sentences": [
+    {
+     "text": "The testing/example_scripts package provides example scripts and test fixtures used within the pytest repository.",
+     "citations": [
+      {
+       "path": "testing/example_scripts/tmpdir/tmpdir_fixture.py",
+       "line": 4
+      },
+      {
+       "path": "testing/example_scripts/acceptance/fixture_mock_integration.py",
+       "line": 13
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes implementations for generating test folders and verifying fixture execution order.",
+     "citations": [
+      {
+       "path": "testing/example_scripts/perf_examples/collect_stats/generate_folders.py",
+       "line": 11
+      },
+      {
+       "path": "testing/example_scripts/issue_519.py",
+       "line": 14
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 644,
+   "tokens_out": 231
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/assertion",
+   "sentences": [
+    {
+     "text": "The _pytest/assertion package provides functionality to register module names for rewriting on import and handles installing the rewrite hook.",
+     "citations": [
+      {
+       "path": "src/_pytest/assertion/__init__.py",
+       "line": 34
+      },
+      {
+       "path": "src/_pytest/assertion/__init__.py",
+       "line": 74
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also sets up the assertion plugin state and explanation hooks during test setup.",
+     "citations": [
+      {
+       "path": "src/_pytest/assertion/__init__.py",
+       "line": 65
+      },
+      {
+       "path": "src/_pytest/assertion/__init__.py",
+       "line": 104
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 556,
+   "tokens_out": 213
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "testing/python",
+   "sentences": [
+    {
+     "text": "The testing/python package contains modules for testing python-specific functionality in pytest, such as fixtures, parametrization, and approximate equality.",
+     "citations": [
+      {
+       "path": "testing/python/fixtures.py",
+       "line": 3634
+      },
+      {
+       "path": "testing/python/metafunc.py",
+       "line": 19
+      },
+      {
+       "path": "testing/python/approx.py",
+       "line": 28
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes test classes that ensure fixtures are ordered correctly based on their scopes.",
+     "citations": [
+      {
+       "path": "testing/python/fixtures.py",
+       "line": 3634
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 501,
+   "tokens_out": 213
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/_io",
+   "sentences": [
+    {
+     "text": "The package _pytest/_io contains modules related to safe representation and formatting of objects.",
+     "citations": [
+      {
+       "path": "src/_pytest/_io/saferepr.py",
+       "line": 70
+      },
+      {
+       "path": "src/_pytest/_io/saferepr.py",
+       "line": 62
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes SafeRepr, a subclass of repr.Repr that limits the resulting size of repr().",
+     "citations": [
+      {
+       "path": "src/_pytest/_io/saferepr.py",
+       "line": 24
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Functions like saferepr and safeformat provide size-limited safe repr-strings and pretty printed strings for objects.",
+     "citations": [
+      {
+       "path": "src/_pytest/_io/saferepr.py",
+       "line": 70
+      },
+      {
+       "path": "src/_pytest/_io/saferepr.py",
+       "line": 62
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 337,
+   "tokens_out": 200
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/nodes",
+   "sentences": [
+    {
+     "text": "The _pytest/nodes package defines the Node class, which serves as the base class for both Collector and Item in the test collection tree.",
+     "citations": [
+      {
+       "path": "src/_pytest/nodes.py",
+       "line": 57
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Collector instances are responsible for creating children through the collect method.",
+     "citations": [
+      {
+       "path": "src/_pytest/nodes.py",
+       "line": 309
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, the package defines Item as a basic test invocation item.",
+     "citations": [
+      {
+       "path": "src/_pytest/nodes.py",
+       "line": 382
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 554,
+   "tokens_out": 214
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/fixtures",
+   "sentences": [
+    {
+     "text": "The package manages and stores pytest fixtures definitions and information.",
+     "citations": [
+      {
+       "path": "src/_pytest/fixtures.py",
+       "line": 1078
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It handles requests for fixtures from test or fixture functions and provides containers for factory definitions.",
+     "citations": [
+      {
+       "path": "src/_pytest/fixtures.py",
+       "line": 341
+      },
+      {
+       "path": "src/_pytest/fixtures.py",
+       "line": 811
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 576,
+   "tokens_out": 170
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/python",
+   "sentences": [
+    {
+     "text": "The package includes Metafunc objects which are passed to the pytest_generate_tests hook.",
+     "citations": [
+      {
+       "path": "src/_pytest/python.py",
+       "line": 927
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides the Module class to act as a collector for test classes and functions, as well as the Class collector for test methods.",
+     "citations": [
+      {
+       "path": "src/_pytest/python.py",
+       "line": 441
+      },
+      {
+       "path": "src/_pytest/python.py",
+       "line": 717
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, a Function Item is responsible for setting up and executing.",
+     "citations": [
+      {
+       "path": "src/_pytest/python.py",
+       "line": 1373
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 536,
+   "tokens_out": 163
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/main",
+   "sentences": [
+    {
+     "text": "The package `_pytest/main` provides options and implements the skeleton command line program for running test sessions.",
+     "citations": [
+      {
+       "path": "src/_pytest/main.py",
+       "line": 36
+      },
+      {
+       "path": "src/_pytest/main.py",
+       "line": 198
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes support for managing the test collection phase and executing the default test run loop.",
+     "citations": [
+      {
+       "path": "src/_pytest/main.py",
+       "line": 265
+      },
+      {
+       "path": "src/_pytest/main.py",
+       "line": 424
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 513,
+   "tokens_out": 208
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/pathlib",
+   "sentences": [
+    {
+     "text": "The package provides helper utilities for creating and managing numbered directories, including cleanup locks and removal of old directories.",
+     "citations": [
+      {
+       "path": "src/_pytest/pathlib.py",
+       "line": 138
+      },
+      {
+       "path": "src/_pytest/pathlib.py",
+       "line": 250
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functions to create symlinks and match paths against patterns using a port from py.path.",
+     "citations": [
+      {
+       "path": "src/_pytest/pathlib.py",
+       "line": 97
+      },
+      {
+       "path": "src/_pytest/pathlib.py",
+       "line": 284
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 646,
+   "tokens_out": 215
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/warnings",
+   "sentences": [
+    {
+     "text": "The _pytest/warnings package provides a context manager that catches warnings generated in a contained execution block.",
+     "citations": [
+      {
+       "path": "src/_pytest/warnings.py",
+       "line": 64
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functionality to convert a warnings.WarningMessage to a string.",
+     "citations": [
+      {
+       "path": "src/_pytest/warnings.py",
+       "line": 105
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 488,
+   "tokens_out": 146
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/debugging",
+   "sentences": [
+    {
+     "text": "The package provides a pseudo PDB that defers to the real pdb.",
+     "citations": [
+      {
+       "path": "src/_pytest/debugging.py",
+       "line": 101
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also validates the syntax of the --pdbcls option.",
+     "citations": [
+      {
+       "path": "src/_pytest/debugging.py",
+       "line": 16
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 435,
+   "tokens_out": 138
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/freeze_support",
+   "sentences": [
+    {
+     "text": "The _pytest/freeze_support package provides functionality to return a list of module names used by pytest that should be included in frozen applications.",
+     "citations": [
+      {
+       "path": "src/_pytest/freeze_support.py",
+       "line": 10
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes a helper to iterate over the names of all modules that can be found in a given package.",
+     "citations": [
+      {
+       "path": "src/_pytest/freeze_support.py",
+       "line": 23
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 226,
+   "tokens_out": 164
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/python_api",
+   "sentences": [
+    {
+     "text": "The _pytest/python_api package provides utilities to assert that two numbers or sets of numbers are equal to each other through approximate comparisons.",
+     "citations": [
+      {
+       "path": "src/_pytest/python_api.py",
+       "line": 350
+      },
+      {
+       "path": "src/_pytest/python_api.py",
+       "line": 53
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functionality to assert that a code block or function call raises an expected exception.",
+     "citations": [
+      {
+       "path": "src/_pytest/python_api.py",
+       "line": 556
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 577,
+   "tokens_out": 192
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/recwarn",
+   "sentences": [
+    {
+     "text": "The package `_pytest/recwarn` provides tools to record and assert warnings raised during test execution.",
+     "citations": [
+      {
+       "path": "src/_pytest/recwarn.py",
+       "line": 112
+      },
+      {
+       "path": "src/_pytest/recwarn.py",
+       "line": 55
+      },
+      {
+       "path": "src/_pytest/recwarn.py",
+       "line": 20
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes context managers and helper functions such as `recwarn`, `warns`, and `deprecated_call` to manage and verify warning behaviors.",
+     "citations": [
+      {
+       "path": "src/_pytest/recwarn.py",
+       "line": 20
+      },
+      {
+       "path": "src/_pytest/recwarn.py",
+       "line": 55
+      },
+      {
+       "path": "src/_pytest/recwarn.py",
+       "line": 33
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 352,
+   "tokens_out": 280
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/runner",
+   "sentences": [
+    {
+     "text": "The _pytest/runner package manages shared state for setting up and tearing down test items or collectors and holds result or exception information from function invocations.",
+     "citations": [
+      {
+       "path": "src/_pytest/runner.py",
+       "line": 277
+      },
+      {
+       "path": "src/_pytest/runner.py",
+       "line": 201
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides functionality to run test protocols, show test items, and update variables to reflect the current test and stage.",
+     "citations": [
+      {
+       "path": "src/_pytest/runner.py",
+       "line": 82
+      },
+      {
+       "path": "src/_pytest/runner.py",
+       "line": 102
+      },
+      {
+       "path": "src/_pytest/runner.py",
+       "line": 140
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 496,
+   "tokens_out": 252
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/_argcomplete",
+   "sentences": [
+    {
+     "text": "The package _pytest/_argcomplete contains the FastFilesCompleter class, which serves as a fast file completer.",
+     "citations": [
+      {
+       "path": "src/_pytest/_argcomplete.py",
+       "line": 65
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 176,
+   "tokens_out": 55
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/helpconfig",
+   "sentences": [
+    {
+     "text": "The _pytest/helpconfig package provides functionality related to displaying help and version information in pytest.",
+     "citations": [
+      {
+       "path": "src/_pytest/helpconfig.py",
+       "line": 43
+      },
+      {
+       "path": "src/_pytest/helpconfig.py",
+       "line": 121
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It defines command-line options and parses them to manage help outputs and plugin version details.",
+     "citations": [
+      {
+       "path": "src/_pytest/helpconfig.py",
+       "line": 90
+      },
+      {
+       "path": "src/_pytest/helpconfig.py",
+       "line": 192
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 368,
+   "tokens_out": 209
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/hookspec",
+   "sentences": [
+    {
+     "text": "The _pytest.hookspec module defines hooks allowing plugins and conftest files to perform initial configuration.",
+     "citations": [
+      {
+       "path": "src/_pytest/hookspec.py",
+       "line": 71
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes hooks for registering argparse-style options and ini-style config values, as well as executing fixture setups.",
+     "citations": [
+      {
+       "path": "src/_pytest/hookspec.py",
+       "line": 38
+      },
+      {
+       "path": "src/_pytest/hookspec.py",
+       "line": 422
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 554,
+   "tokens_out": 186
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+   "package": "_pytest/nose",
+   "sentences": [
+    {
+     "text": "The _pytest/nose package provides support for running nose tests within pytest by integrating test setup and teardown functionality.",
+     "citations": [
+      {
+       "path": "src/_pytest/nose.py",
+       "line": 35
+      },
+      {
+       "path": "src/_pytest/nose.py",
+       "line": 45
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes utilities to handle test reports, check for potential nosetest items, and manage optional object calls and skip exceptions.",
+     "citations": [
+      {
+       "path": "src/_pytest/nose.py",
+       "line": 17
+      },
+      {
+       "path": "src/_pytest/nose.py",
+       "line": 26
+      },
+      {
+       "path": "src/_pytest/nose.py",
+       "line": 54
+      },
+      {
+       "path": "src/_pytest/nose.py",
+       "line": 62
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 314,
+   "tokens_out": 269
+  }
+ ],
+ "overview": [
+  {
+   "text": "The pytest repository provides comprehensive configuration management through the Config class and plugin managers.",
+   "citations": [
+    {
+     "path": "src/_pytest/config/__init__.py",
+     "line": 633
+    },
+    {
+     "path": "src/_pytest/config/__init__.py",
+     "line": 211
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "It structures test execution around nodes, collectors, and items to organize the test collection tree and run test sessions.",
+   "citations": [
+    {
+     "path": "src/_pytest/nodes.py",
+     "line": 57
+    },
+    {
+     "path": "src/_pytest/main.py",
+     "line": 265
+    },
+    {
+     "path": "src/_pytest/main.py",
+     "line": 424
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Developers can utilize built-in fixture management, parameterization, and markers to control test flow and setup.",
+   "citations": [
+    {
+     "path": "src/_pytest/mark/__init__.py",
+     "line": 20
+    },
+    {
+     "path": "src/_pytest/mark/structures.py",
+     "line": 170
+    },
+    {
+     "path": "src/_pytest/fixtures.py",
+     "line": 1078
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The framework also includes robust utilities for handling test outcomes, assertions, warnings, and debugging.",
+   "citations": [
+    {
+     "path": "src/_pytest/outcomes.py",
+     "line": 12
+    },
+    {
+     "path": "src/_pytest/outcomes.py",
+     "line": 78
+    },
+    {
+     "path": "src/_pytest/assertion/__init__.py",
+     "line": 34
+    },
+    {
+     "path": "src/_pytest/assertion/__init__.py",
+     "line": 74
+    },
+    {
+     "path": "src/_pytest/warnings.py",
+     "line": 64
+    },
+    {
+     "path": "src/_pytest/debugging.py",
+     "line": 101
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 26,
+  "sentences": 55,
+  "kept": 55,
+  "dropped": 0,
+  "citations": 106,
+  "valid_citations": 106,
+  "overview": {
+   "sentences": 4,
+   "kept": 4,
+   "dropped": 0
+  }
+ }
+}

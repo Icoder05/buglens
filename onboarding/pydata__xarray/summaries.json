@@ -1,0 +1,697 @@
+{
+ "repo": "pydata/xarray",
+ "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/core",
+   "sentences": [
+    {
+     "text": "The xarray/core package includes utility functions and classes such as Frozen, OrderedSet, and SortedKeysDict.",
+     "citations": [
+      {
+       "path": "xarray/core/utils.py",
+       "line": 372
+      },
+      {
+       "path": "xarray/core/utils.py",
+       "line": 436
+      },
+      {
+       "path": "xarray/core/utils.py",
+       "line": 403
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides helper mechanisms like dict_equiv to test the equivalence of two dict-like objects.",
+     "citations": [
+      {
+       "path": "xarray/core/utils.py",
+       "line": 314
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 999,
+   "tokens_out": 216
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/backends",
+   "sentences": [
+    {
+     "text": "The xarray/backends package contains modules for managing files and locks.",
+     "citations": [
+      {
+       "path": "xarray/backends/file_manager.py",
+       "line": 24
+      },
+      {
+       "path": "xarray/backends/locks.py",
+       "line": 133
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 672,
+   "tokens_out": 68
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/coding",
+   "sentences": [
+    {
+     "text": "The xarray/coding package includes modules related to CF calendars and dates, such as CFTimeIndex.",
+     "citations": [
+      {
+       "path": "xarray/coding/cftimeindex.py",
+       "line": 215
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides functionality to parse ISO8601 strings, create numpy arrays from strings, and handle date types.",
+     "citations": [
+      {
+       "path": "xarray/coding/cftimeindex.py",
+       "line": 90
+      },
+      {
+       "path": "xarray/coding/cftimeindex.py",
+       "line": 528
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 599,
+   "tokens_out": 193
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "asv_bench/benchmarks",
+   "sentences": [
+    {
+     "text": "The asv_bench/benchmarks package contains benchmarks for evaluating performance aspects such as reading and writing single and multiple netCDF files.",
+     "citations": [
+      {
+       "path": "asv_bench/benchmarks/dataset_io.py",
+       "line": 20
+      },
+      {
+       "path": "asv_bench/benchmarks/dataset_io.py",
+       "line": 222
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes benchmarks for various operations like rolling, reindexing, and generating random data arrays.",
+     "citations": [
+      {
+       "path": "asv_bench/benchmarks/rolling.py",
+       "line": 20
+      },
+      {
+       "path": "asv_bench/benchmarks/reindexing.py",
+       "line": 8
+      },
+      {
+       "path": "asv_bench/benchmarks/__init__.py",
+       "line": 24
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 585,
+   "tokens_out": 264
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/plot",
+   "sentences": [
+    {
+     "text": "The xarray/plot package includes utilities for handling colormaps, colorbars, and data ranges using heuristics.",
+     "citations": [
+      {
+       "path": "xarray/plot/utils.py",
+       "line": 141
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides helper functions to determine axis labels for 2D and 3D RGB plots as well as update axes parameters.",
+     "citations": [
+      {
+       "path": "xarray/plot/utils.py",
+       "line": 344
+      },
+      {
+       "path": "xarray/plot/utils.py",
+       "line": 587
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 726,
+   "tokens_out": 193
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/conventions",
+   "sentences": [
+    {
+     "text": "The xarray/conventions package is responsible for encoding and decoding datasets, datastores, and variables according to CF conventions.",
+     "citations": [
+      {
+       "path": "xarray/conventions.py",
+       "line": 513
+      },
+      {
+       "path": "xarray/conventions.py",
+       "line": 717
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides functions to process variables, handle CF-encoded information, update bounds encoding, and manage attributes.",
+     "citations": [
+      {
+       "path": "xarray/conventions.py",
+       "line": 260
+      },
+      {
+       "path": "xarray/conventions.py",
+       "line": 386
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 693,
+   "tokens_out": 217
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/util",
+   "sentences": [
+    {
+     "text": "The xarray/util package includes modules such as xarray.util.print_versions, which contains functions to retrieve system information, netCDF and HDF5 versions, and display version details.",
+     "citations": [
+      {
+       "path": "xarray/util/print_versions.py",
+       "line": 80
+      },
+      {
+       "path": "xarray/util/print_versions.py",
+       "line": 11
+      },
+      {
+       "path": "xarray/util/print_versions.py",
+       "line": 62
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 243,
+   "tokens_out": 117
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/ufuncs",
+   "sentences": [
+    {
+     "text": "The xarray/ufuncs package contains a wrapper for dispatching ufuncs called _UFuncDispatcher.",
+     "citations": [
+      {
+       "path": "xarray/ufuncs.py",
+       "line": 38
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides the internal function _create_op to handle operations.",
+     "citations": [
+      {
+       "path": "xarray/ufuncs.py",
+       "line": 81
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it includes _dispatch_priority to manage dispatch priorities for objects.",
+     "citations": [
+      {
+       "path": "xarray/ufuncs.py",
+       "line": 31
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 232,
+   "tokens_out": 213
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "doc/examples",
+   "sentences": [
+    {
+     "text": "The package doc/examples contains modules such as accessor_example and weather_data_setup.",
+     "citations": [
+      {
+       "path": "doc/examples/_code/accessor_example.py",
+       "line": 4
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes the GeoAccessor class defined in the accessor_example module.",
+     "citations": [
+      {
+       "path": "doc/examples/_code/accessor_example.py",
+       "line": 4
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 177,
+   "tokens_out": 95
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/_version",
+   "sentences": [
+    {
+     "text": "The xarray/_version package provides functions to get version information or return a default if unable to do so.",
+     "citations": [
+      {
+       "path": "xarray/_version.py",
+       "line": 507
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes utilities to obtain version details from git describe, git keywords, and the parent directory name, as well as render version pieces into requested styles.",
+     "citations": [
+      {
+       "path": "xarray/_version.py",
+       "line": 232
+      },
+      {
+       "path": "xarray/_version.py",
+       "line": 170
+      },
+      {
+       "path": "xarray/_version.py",
+       "line": 110
+      },
+      {
+       "path": "xarray/_version.py",
+       "line": 469
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 572,
+   "tokens_out": 165
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/testing",
+   "sentences": [
+    {
+     "text": "The xarray/testing package provides functions for comparing xarray objects similar to numpy testing utilities, including checking equality, identical matching, and all-close assertions.",
+     "citations": [
+      {
+       "path": "xarray/testing.py",
+       "line": 31
+      },
+      {
+       "path": "xarray/testing.py",
+       "line": 62
+      },
+      {
+       "path": "xarray/testing.py",
+       "line": 92
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also offers utilities to assert that chunksizes along chunked dimensions are equal and to validate that xarray objects satisfy their internal invariants.",
+     "citations": [
+      {
+       "path": "xarray/testing.py",
+       "line": 144
+      },
+      {
+       "path": "xarray/testing.py",
+       "line": 255
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 588,
+   "tokens_out": 250
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/tutorial",
+   "sentences": [
+    {
+     "text": "The xarray/tutorial package provides functions to open and load datasets from an online repository.",
+     "citations": [
+      {
+       "path": "xarray/tutorial.py",
+       "line": 29
+      },
+      {
+       "path": "xarray/tutorial.py",
+       "line": 100
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes utilities for computing file MD5 checksums and generating scatter example datasets.",
+     "citations": [
+      {
+       "path": "xarray/tutorial.py",
+       "line": 21
+      },
+      {
+       "path": "xarray/tutorial.py",
+       "line": 113
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 311,
+   "tokens_out": 198
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "xarray/convert",
+   "sentences": [
+    {
+     "text": "The xarray/convert package is responsible for converting xarray DataArrays into other formats such as cdms2 variables and Iris cubes, and vice versa.",
+     "citations": [
+      {
+       "path": "xarray/convert.py",
+       "line": 91
+      },
+      {
+       "path": "xarray/convert.py",
+       "line": 255
+      },
+      {
+       "path": "xarray/convert.py",
+       "line": 174
+      },
+      {
+       "path": "xarray/convert.py",
+       "line": 63
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides internal helper functions to handle attributes and metadata translations between xarray and external libraries.",
+     "citations": [
+      {
+       "path": "xarray/convert.py",
+       "line": 57
+      },
+      {
+       "path": "xarray/convert.py",
+       "line": 159
+      },
+      {
+       "path": "xarray/convert.py",
+       "line": 215
+      },
+      {
+       "path": "xarray/convert.py",
+       "line": 227
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 540,
+   "tokens_out": 325
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "ci/min_deps_check",
+   "sentences": [
+    {
+     "text": "The package `ci/min_deps_check` provides functions to parse requirements files and query the conda repository for specific packages.",
+     "citations": [
+      {
+       "path": "ci/min_deps_check.py",
+       "line": 37
+      },
+      {
+       "path": "ci/min_deps_check.py",
+       "line": 66
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It compares package versions from requirements files to available versions in conda.",
+     "citations": [
+      {
+       "path": "ci/min_deps_check.py",
+       "line": 111
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 329,
+   "tokens_out": 184
+  },
+  {
+   "repo": "pydata/xarray",
+   "commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+   "package": "versioneer",
+   "sentences": [
+    {
+     "text": "Versioneer provides functionality to get the project version from whatever source is available, get version from git describe in the root of the source tree, and get version information from git keywords.",
+     "citations": [
+      {
+       "path": "versioneer.py",
+       "line": 1443
+      },
+      {
+       "path": "versioneer.py",
+       "line": 1048
+      },
+      {
+       "path": "versioneer.py",
+       "line": 986
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functions to get the custom setuptools or distutils subclasses used by Versioneer, perform main VCS-independent setup for installing Versioneer, and execute Git-specific installation logic.",
+     "citations": [
+      {
+       "path": "versioneer.py",
+       "line": 1529
+      },
+      {
+       "path": "versioneer.py",
+       "line": 1755
+      },
+      {
+       "path": "versioneer.py",
+       "line": 1149
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, the package provides utilities to get the project root directory, call given commands, render version pieces into the requested style, and validate the contents of setup.py against Versioneer's expectations.",
+     "citations": [
+      {
+       "path": "versioneer.py",
+       "line": 298
+      },
+      {
+       "path": "versioneer.py",
+       "line": 393
+      },
+      {
+       "path": "versioneer.py",
+       "line": 1401
+      },
+      {
+       "path": "versioneer.py",
+       "line": 1840
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 542,
+   "tokens_out": 456
+  }
+ ],
+ "overview": [
+  {
+   "text": "The xarray repository includes core utilities and helper mechanisms like dict_equiv to test object equivalence.",
+   "citations": [
+    {
+     "path": "xarray/core/utils.py",
+     "line": 372
+    },
+    {
+     "path": "xarray/core/utils.py",
+     "line": 436
+    },
+    {
+     "path": "xarray/core/utils.py",
+     "line": 403
+    },
+    {
+     "path": "xarray/core/utils.py",
+     "line": 314
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "It provides functionality to encode and decode datasets according to CF conventions and handle CF-encoded information.",
+   "citations": [
+    {
+     "path": "xarray/conventions.py",
+     "line": 513
+    },
+    {
+     "path": "xarray/conventions.py",
+     "line": 717
+    },
+    {
+     "path": "xarray/conventions.py",
+     "line": 260
+    },
+    {
+     "path": "xarray/conventions.py",
+     "line": 386
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The repository contains modules related to CF calendars, dates, parsing ISO8601 strings, and handling date types.",
+   "citations": [
+    {
+     "path": "xarray/coding/cftimeindex.py",
+     "line": 215
+    },
+    {
+     "path": "xarray/coding/cftimeindex.py",
+     "line": 90
+    },
+    {
+     "path": "xarray/coding/cftimeindex.py",
+     "line": 528
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "It offers tools for converting xarray DataArrays into other formats such as cdms2 variables and Iris cubes and vice versa.",
+   "citations": [
+    {
+     "path": "xarray/convert.py",
+     "line": 91
+    },
+    {
+     "path": "xarray/convert.py",
+     "line": 255
+    },
+    {
+     "path": "xarray/convert.py",
+     "line": 174
+    },
+    {
+     "path": "xarray/convert.py",
+     "line": 63
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "Developers can also utilize testing functions for comparing xarray objects with equality, identical matching, and all-close assertions.",
+   "citations": [
+    {
+     "path": "xarray/testing.py",
+     "line": 31
+    },
+    {
+     "path": "xarray/testing.py",
+     "line": 62
+    },
+    {
+     "path": "xarray/testing.py",
+     "line": 92
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 15,
+  "sentences": 30,
+  "kept": 30,
+  "dropped": 0,
+  "citations": 64,
+  "valid_citations": 64,
+  "overview": {
+   "sentences": 5,
+   "kept": 5,
+   "dropped": 0
+  }
+ }
+}

@@ -1,0 +1,724 @@
+{
+ "repo": "django/django",
+ "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/contrib",
+   "sentences": [],
+   "tokens_in": 919,
+   "tokens_out": 40
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/db",
+   "sentences": [
+    {
+     "text": "The django/db package provides utilities and classes such as ConnectionHandler and ConnectionRouter to manage database connections.",
+     "citations": [
+      {
+       "path": "django/db/utils.py",
+       "line": 135
+      },
+      {
+       "path": "django/db/utils.py",
+       "line": 227
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes a DefaultConnectionProxy to access the default DatabaseWrapper attributes and functions to reset queries or close old connections.",
+     "citations": [
+      {
+       "path": "django/db/__init__.py",
+       "line": 26
+      },
+      {
+       "path": "django/db/__init__.py",
+       "line": 49
+      },
+      {
+       "path": "django/db/__init__.py",
+       "line": 59
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it offers backend loading capabilities and error handling wrappers for database operations.",
+     "citations": [
+      {
+       "path": "django/db/utils.py",
+       "line": 51
+      },
+      {
+       "path": "django/db/utils.py",
+       "line": 100
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 820,
+   "tokens_out": 333
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/utils",
+   "sentences": [
+    {
+     "text": "The django/utils package provides helper functions and utilities such as lazy evaluation tools and decorators.",
+     "citations": [
+      {
+       "path": "django/utils/functional.py",
+       "line": 60
+      },
+      {
+       "path": "django/utils/functional.py",
+       "line": 189
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 826,
+   "tokens_out": 68
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/core",
+   "sentences": [
+    {
+     "text": "The django/core package contains modules for handling core exceptions such as data validation errors and suspicious operations.",
+     "citations": [
+      {
+       "path": "django/core/exceptions.py",
+       "line": 94
+      },
+      {
+       "path": "django/core/exceptions.py",
+       "line": 50
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It defines specific exceptions for situations where requested objects do not exist or when multiple objects are returned unexpectedly.",
+     "citations": [
+      {
+       "path": "django/core/exceptions.py",
+       "line": 16
+      },
+      {
+       "path": "django/core/exceptions.py",
+       "line": 21
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 851,
+   "tokens_out": 206
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/conf",
+   "sentences": [
+    {
+     "text": "The django/conf package provides a lazy proxy for either global Django settings or a custom settings object.",
+     "citations": [
+      {
+       "path": "django/conf/__init__.py",
+       "line": 42
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines a settings class and a holder for user configured settings.",
+     "citations": [
+      {
+       "path": "django/conf/__init__.py",
+       "line": 130
+      },
+      {
+       "path": "django/conf/__init__.py",
+       "line": 186
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 867,
+   "tokens_out": 174
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/apps",
+   "sentences": [
+    {
+     "text": "The django/apps package includes components representing a Django application and its configuration.",
+     "citations": [
+      {
+       "path": "django/apps/config.py",
+       "line": 10
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides a registry that stores the configuration of installed applications.",
+     "citations": [
+      {
+       "path": "django/apps/registry.py",
+       "line": 13
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 244,
+   "tokens_out": 138
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/template",
+   "sentences": [
+    {
+     "text": "The template package provides tools such as Template for handling templates and Variable for resolvable template variables against a given context.",
+     "citations": [
+      {
+       "path": "django/template/base.py",
+       "line": 141
+      },
+      {
+       "path": "django/template/base.py",
+       "line": 727
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines parsing components including Parser, Lexer, and Node to process template tokens and expressions.",
+     "citations": [
+      {
+       "path": "django/template/base.py",
+       "line": 409
+      },
+      {
+       "path": "django/template/base.py",
+       "line": 333
+      },
+      {
+       "path": "django/template/base.py",
+       "line": 883
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 639,
+   "tokens_out": 138
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/dispatch",
+   "sentences": [
+    {
+     "text": "The django/dispatch package provides the Signal base class for all signals in the repository.",
+     "citations": [
+      {
+       "path": "django/dispatch/dispatcher.py",
+       "line": 19
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides a receiver decorator used for connecting receivers to signals.",
+     "citations": [
+      {
+       "path": "django/dispatch/dispatcher.py",
+       "line": 272
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 246,
+   "tokens_out": 141
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/urls",
+   "sentences": [
+    {
+     "text": "The django/urls package includes pattern resolution classes such as URLResolver and URLPattern.",
+     "citations": [
+      {
+       "path": "django/urls/resolvers.py",
+       "line": 365
+      },
+      {
+       "path": "django/urls/resolvers.py",
+       "line": 314
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides pattern matching and conversion utilities like RegexPattern andRoutePattern.",
+     "citations": [
+      {
+       "path": "django/urls/resolvers.py",
+       "line": 139
+      },
+      {
+       "path": "django/urls/resolvers.py",
+       "line": 237
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 467,
+   "tokens_out": 130
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/http",
+   "sentences": [
+    {
+     "text": "The package provides classes such as HttpRequest representing a basic HTTP request and HttpResponseBase serving as an HTTP response base class with dictionary-accessed headers.",
+     "citations": [
+      {
+       "path": "django/http/request.py",
+       "line": 38
+      },
+      {
+       "path": "django/http/response.py",
+       "line": 28
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes utilities like parse_cookie to parse a Cookie header string into a dictionary.",
+     "citations": [
+      {
+       "path": "django/http/cookie.py",
+       "line": 10
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 541,
+   "tokens_out": 184
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django",
+   "sentences": [
+    {
+     "text": "The django package provides a setup function that configures the settings.",
+     "citations": [
+      {
+       "path": "django/__init__.py",
+       "line": 8
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 200,
+   "tokens_out": 71
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/views",
+   "sentences": [
+    {
+     "text": "The django/views package includes generic base views such as a simple parent class for all views and classes to render templates or provide redirects.",
+     "citations": [
+      {
+       "path": "django/views/generic/base.py",
+       "line": 30
+      },
+      {
+       "path": "django/views/generic/base.py",
+       "line": 162
+      },
+      {
+       "path": "django/views/generic/base.py",
+       "line": 153
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides debugging utilities such as organizing exception reporting, cleansing sensitive settings, and creating technical 404 error responses.",
+     "citations": [
+      {
+       "path": "django/views/debug.py",
+       "line": 244
+      },
+      {
+       "path": "django/views/debug.py",
+       "line": 48
+      },
+      {
+       "path": "django/views/debug.py",
+       "line": 459
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 705,
+   "tokens_out": 195
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/forms",
+   "sentences": [
+    {
+     "text": "The django forms package includes widgets such as SelectDateWidget which splits date input into three select boxes.",
+     "citations": [
+      {
+       "path": "django/forms/widgets.py",
+       "line": 912
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides MultiWidget which is composed of multiple widgets.",
+     "citations": [
+      {
+       "path": "django/forms/widgets.py",
+       "line": 779
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, the package contains NullBooleanSelect intended to be used with NullBooleanField.",
+     "citations": [
+      {
+       "path": "django/forms/widgets.py",
+       "line": 693
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 505,
+   "tokens_out": 133
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/middleware",
+   "sentences": [
+    {
+     "text": "The django/middleware package includes components such as CsrfViewMiddleware which requires a present and correct csrfmiddlewaretoken for POST requests.",
+     "citations": [
+      {
+       "path": "django/middleware/csrf.py",
+       "line": 132
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides functions like get_token to return the CSRF token required for a POST form.",
+     "citations": [
+      {
+       "path": "django/middleware/csrf.py",
+       "line": 75
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it offers utility functions to rotate the CSRF token in use for a request upon login.",
+     "citations": [
+      {
+       "path": "django/middleware/csrf.py",
+       "line": 94
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 575,
+   "tokens_out": 225
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/templatetags",
+   "sentences": [
+    {
+     "text": "The package provides template tags to join paths with the static URL setting, populate template variables with static and media prefixes, and return absolute paths to static assets.",
+     "citations": [
+      {
+       "path": "django/templatetags/static.py",
+       "line": 143
+      },
+      {
+       "path": "django/templatetags/static.py",
+       "line": 57
+      },
+      {
+       "path": "django/templatetags/static.py",
+       "line": 75
+      },
+      {
+       "path": "django/templatetags/static.py",
+       "line": 162
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes functionalities to translate strings and text blocks for the current context, as well as caching template fragments for a given amount.",
+     "citations": [
+      {
+       "path": "django/templatetags/i18n.py",
+       "line": 316
+      },
+      {
+       "path": "django/templatetags/i18n.py",
+       "line": 409
+      },
+      {
+       "path": "django/templatetags/cache.py",
+       "line": 52
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 583,
+   "tokens_out": 331
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "django/shortcuts",
+   "sentences": [
+    {
+     "text": "The django/shortcuts package provides helper functions like render and redirect to return HTTP responses and redirects, as well as functions to retrieve objects or lists or raise a Http404 exception.",
+     "citations": [
+      {
+       "path": "django/shortcuts.py",
+       "line": 14
+      },
+      {
+       "path": "django/shortcuts.py",
+       "line": 23
+      },
+      {
+       "path": "django/shortcuts.py",
+       "line": 57
+      },
+      {
+       "path": "django/shortcuts.py",
+       "line": 81
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes utilities for resolving URLs and getting querysets or managers.",
+     "citations": [
+      {
+       "path": "django/shortcuts.py",
+       "line": 102
+      },
+      {
+       "path": "django/shortcuts.py",
+       "line": 44
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 419,
+   "tokens_out": 262
+  },
+  {
+   "repo": "django/django",
+   "commit": "e7fd69d051eaa67cb17f172a39b57253e9cb831a",
+   "package": "scripts/manage_translations",
+   "sentences": [
+    {
+     "text": "The scripts/manage_translations package fetches translations from Transifex, wraps long lines, and generates mo files.",
+     "citations": [
+      {
+       "path": "scripts/manage_translations.py",
+       "line": 139
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It can also output language statistics of committed translation files and update the en/LC_MESSAGES/django.po files.",
+     "citations": [
+      {
+       "path": "scripts/manage_translations.py",
+       "line": 106
+      },
+      {
+       "path": "scripts/manage_translations.py",
+       "line": 83
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 415,
+   "tokens_out": 189
+  }
+ ],
+ "overview": [
+  {
+   "text": "The django/conf package provides configuration management through a settings class and a lazy proxy for global or custom settings.",
+   "citations": [
+    {
+     "path": "django/conf/__init__.py",
+     "line": 42
+    },
+    {
+     "path": "django/conf/__init__.py",
+     "line": 130
+    },
+    {
+     "path": "django/conf/__init__.py",
+     "line": 186
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The django/db package manages database connections with utilities like ConnectionHandler and provides error handling and backend loading capabilities.",
+   "citations": [
+    {
+     "path": "django/db/utils.py",
+     "line": 135
+    },
+    {
+     "path": "django/db/utils.py",
+     "line": 227
+    },
+    {
+     "path": "django/db/utils.py",
+     "line": 51
+    },
+    {
+     "path": "django/db/utils.py",
+     "line": 100
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The django/urls package offers pattern resolution and matching utilities such as URLResolver, URLPattern, and RoutePattern.",
+   "citations": [
+    {
+     "path": "django/urls/resolvers.py",
+     "line": 365
+    },
+    {
+     "path": "django/urls/resolvers.py",
+     "line": 314
+    },
+    {
+     "path": "django/urls/resolvers.py",
+     "line": 139
+    },
+    {
+     "path": "django/urls/resolvers.py",
+     "line": 237
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The django/http package handles HTTP requests and responses, including basic request representation and header management.",
+   "citations": [
+    {
+     "path": "django/http/request.py",
+     "line": 38
+    },
+    {
+     "path": "django/http/response.py",
+     "line": 28
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The django/views package includes generic base views and debugging utilities for exception reporting and technical 404 errors.",
+   "citations": [
+    {
+     "path": "django/views/generic/base.py",
+     "line": 30
+    },
+    {
+     "path": "django/views/generic/base.py",
+     "line": 162
+    },
+    {
+     "path": "django/views/generic/base.py",
+     "line": 153
+    },
+    {
+     "path": "django/views/debug.py",
+     "line": 244
+    },
+    {
+     "path": "django/views/debug.py",
+     "line": 48
+    },
+    {
+     "path": "django/views/debug.py",
+     "line": 459
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 17,
+  "sentences": 34,
+  "kept": 33,
+  "dropped": 1,
+  "citations": 62,
+  "valid_citations": 61,
+  "overview": {
+   "sentences": 5,
+   "kept": 5,
+   "dropped": 0
+  }
+ }
+}

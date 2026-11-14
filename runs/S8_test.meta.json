@@ -1,0 +1,118 @@
+{
+  "git_commit": "850b94f7747f1c78677bdb26c4bc556506a0fad2",
+  "created_utc": "2026-11-14T07:13:57+00:00",
+  "config": {
+    "seed": 42,
+    "paths": {
+      "data": "data",
+      "repos": "data/repos",
+      "cache": "data/cache",
+      "pairs": "data/pairs",
+      "indexes": "data/indexes",
+      "models": "data/models",
+      "runs": "runs",
+      "onboarding": "onboarding",
+      "reports": "reports"
+    },
+    "data": {
+      "lite_ids": [
+        "princeton-nlp/SWE-bench_Lite",
+        "SWE-bench/SWE-bench_Lite"
+      ],
+      "full_ids": [
+        "princeton-nlp/SWE-bench",
+        "SWE-bench/SWE-bench"
+      ]
+    },
+    "exclusions": {
+      "path_patterns": [
+        "(^|/)tests?/",
+        "(^|/)test_[^/]*\\.py$",
+        "_test\\.py$",
+        "(^|/)conftest\\.py$",
+        "(^|/)docs/",
+        "^setup\\.py$"
+      ],
+      "max_file_bytes": 1000000
+    },
+    "chunking": {
+      "max_chars": 6000,
+      "window_lines": 60,
+      "window_overlap": 20
+    },
+    "retrieval": {
+      "top_n": 50,
+      "rrf_k": 60,
+      "dense_model": "nomic-ai/CodeRankEmbed",
+      "dense_model_fallback": "BAAI/bge-small-en-v1.5",
+      "use_fallback_model": false,
+      "finetuned_model": "data/models/coderankembed-ft",
+      "query_prefix": "Represent this query for searching relevant code: ",
+      "max_seq_length": 512,
+      "batch_size": 32,
+      "fp16": false
+    },
+    "training": {
+      "max_repo_clone_mb": 300,
+      "max_pairs": 3000,
+      "max_pairs_per_repo": 300,
+      "val_fraction": 0.1,
+      "epochs": 1,
+      "lr": 2e-05,
+      "warmup_ratio": 0.1,
+      "batch_size": 64,
+      "mini_batch_size": 4,
+      "fp16": false,
+      "minimal_loop_pairs": 200
+    },
+    "rerank": {
+      "n_estimators": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "min_child_samples": 20
+    },
+    "llm": {
+      "model": "gemini-3.5-flash-lite",
+      "rpm": 12,
+      "timeout_s": 120,
+      "max_requests": 400,
+      "max_issue_chars": 6000,
+      "rerank_top": 10,
+      "rerank_lines": 60,
+      "max_retries": 6
+    },
+    "analysis": {
+      "pagerank_alpha": 0.85,
+      "pkg_depth": 2,
+      "max_nodes": 15
+    },
+    "diagrams": {
+      "max_package_modules": 25,
+      "max_class_methods": 8,
+      "callflow_depth": 3,
+      "callflow_max_nodes": 20,
+      "max_label_chars": 30
+    },
+    "onboard": {
+      "repos": [
+        "pallets/flask",
+        "psf/requests",
+        "django/django"
+      ],
+      "max_summary_packages": 30,
+      "summary_top_symbols": 10,
+      "strict_citations": true,
+      "ask_top_k": 8
+    },
+    "eval": {
+      "bootstrap_resamples": 1000,
+      "ci": 0.95
+    }
+  },
+  "system": "S8",
+  "split": "test",
+  "model": "gemini-3.5-flash-lite",
+  "fallbacks": 0,
+  "complete": false,
+  "stopped_reason": "daily free-tier quota exhausted: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Q"
+}

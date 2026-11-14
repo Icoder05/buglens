@@ -1,0 +1,1157 @@
+{
+ "repo": "sphinx-doc/sphinx",
+ "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+ "model": "gemini-3.5-flash-lite",
+ "complete": true,
+ "stopped_reason": null,
+ "packages": [
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/util",
+   "sentences": [
+    {
+     "text": "The package provides logging utilities for Sphinx, such as setting up the root logger and getting wrapped loggers.",
+     "citations": [
+      {
+       "path": "sphinx/util/logging.py",
+       "line": 59
+      },
+      {
+       "path": "sphinx/util/logging.py",
+       "line": 564
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes filtering mechanisms to suppress or handle warnings and translate log records.",
+     "citations": [
+      {
+       "path": "sphinx/util/logging.py",
+       "line": 372
+      },
+      {
+       "path": "sphinx/util/logging.py",
+       "line": 467
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 774,
+   "tokens_out": 205
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/deprecation",
+   "sentences": [
+    {
+     "text": "The sphinx/deprecation package provides warning classes for deprecations targeted at specific Sphinx versions, including RemovedInSphinx40Warning and RemovedInSphinx50Warning.",
+     "citations": [
+      {
+       "path": "sphinx/deprecation.py",
+       "line": 21
+      },
+      {
+       "path": "sphinx/deprecation.py",
+       "line": 25
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes deprecated_alias and the DeprecatedDict class, which is a deprecated dictionary that issues a warning on every access.",
+     "citations": [
+      {
+       "path": "sphinx/deprecation.py",
+       "line": 32
+      },
+      {
+       "path": "sphinx/deprecation.py",
+       "line": 55
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 305,
+   "tokens_out": 218
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/search",
+   "sentences": [
+    {
+     "text": "The IndexBuilder class serves as a helper that creates a searchindex based on the doctrees.",
+     "citations": [
+      {
+       "path": "sphinx/search/__init__.py",
+       "line": 240
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "SearchLanguage acts as the base class for search natural language preprocessors.",
+     "citations": [
+      {
+       "path": "sphinx/search/__init__.py",
+       "line": 33
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "WordCollector is a special visitor that collects words for the IndexBuilder.",
+     "citations": [
+      {
+       "path": "sphinx/search/__init__.py",
+       "line": 192
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 602,
+   "tokens_out": 208
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/builders",
+   "sentences": [
+    {
+     "text": "The builder builds target formats from the reST sources.",
+     "citations": [
+      {
+       "path": "sphinx/builders/__init__.py",
+       "line": 54
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 773,
+   "tokens_out": 72
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/ext",
+   "sentences": [
+    {
+     "text": "The autodoc directive class works as a dispatcher of Documenters to autodocument single object types.",
+     "citations": [
+      {
+       "path": "sphinx/ext/autodoc/directive.py",
+       "line": 109
+      },
+      {
+       "path": "sphinx/ext/autodoc/__init__.py",
+       "line": 203
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Specialized Documenter subclasses handle classes, methods, modules, and attributes.",
+     "citations": [
+      {
+       "path": "sphinx/ext/autodoc/__init__.py",
+       "line": 1144
+      },
+      {
+       "path": "sphinx/ext/autodoc/__init__.py",
+       "line": 1413
+      },
+      {
+       "path": "sphinx/ext/autodoc/__init__.py",
+       "line": 807
+      },
+      {
+       "path": "sphinx/ext/autodoc/__init__.py",
+       "line": 1542
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 854,
+   "tokens_out": 283
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/environment",
+   "sentences": [
+    {
+     "text": "The BuildEnvironment serves as the environment in which ReST files are translated.",
+     "citations": [
+      {
+       "path": "sphinx/environment/__init__.py",
+       "line": 85
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Environment collectors gather specific data from each document.",
+     "citations": [
+      {
+       "path": "sphinx/environment/collectors/__init__.py",
+       "line": 22
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 582,
+   "tokens_out": 137
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/application",
+   "sentences": [
+    {
+     "text": "The Sphinx class serves as the main application class and extensibility interface.",
+     "citations": [
+      {
+       "path": "sphinx/application.py",
+       "line": 128
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "The TemplateBridge class defines the interface for a template bridge.",
+     "citations": [
+      {
+       "path": "sphinx/application.py",
+       "line": 1167
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 259,
+   "tokens_out": 135
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/domains",
+   "sentences": [
+    {
+     "text": "A Domain is meant to be a group of object description directives.",
+     "citations": [
+      {
+       "path": "sphinx/domains/__init__.py",
+       "line": 155
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "An Index serves as the description for a domain-specific index.",
+     "citations": [
+      {
+       "path": "sphinx/domains/__init__.py",
+       "line": 68
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "An ObjType represents the description for a type of object that a domain can handle.",
+     "citations": [
+      {
+       "path": "sphinx/domains/__init__.py",
+       "line": 33
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 577,
+   "tokens_out": 203
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/locale",
+   "sentences": [
+    {
+     "text": "The package provides helper classes like _TranslationProxy for proxy strings from gettext translations.",
+     "citations": [
+      {
+       "path": "sphinx/locale/__init__.py",
+       "line": 18
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes functionality to look for message catalogs, update locale settings, and initialize the locale for the console.",
+     "citations": [
+      {
+       "path": "sphinx/locale/__init__.py",
+       "line": 109
+      },
+      {
+       "path": "sphinx/locale/__init__.py",
+       "line": 149
+      },
+      {
+       "path": "sphinx/locale/__init__.py",
+       "line": 169
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it offers functions to get translation functions, translators, and check if a translator is registered.",
+     "citations": [
+      {
+       "path": "sphinx/locale/__init__.py",
+       "line": 200
+      },
+      {
+       "path": "sphinx/locale/__init__.py",
+       "line": 184
+      },
+      {
+       "path": "sphinx/locale/__init__.py",
+       "line": 188
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 522,
+   "tokens_out": 335
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/errors",
+   "sentences": [
+    {
+     "text": "The sphinx/errors package provides a base class for Sphinx errors as well as various specific exception types such as extension, application, and configuration errors.",
+     "citations": [
+      {
+       "path": "sphinx/errors.py",
+       "line": 15
+      },
+      {
+       "path": "sphinx/errors.py",
+       "line": 48
+      },
+      {
+       "path": "sphinx/errors.py",
+       "line": 43
+      },
+      {
+       "path": "sphinx/errors.py",
+       "line": 75
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines exceptions for parallel builds, source code analysis, and missing references or builder relative URIs.",
+     "citations": [
+      {
+       "path": "sphinx/errors.py",
+       "line": 95
+      },
+      {
+       "path": "sphinx/errors.py",
+       "line": 108
+      },
+      {
+       "path": "sphinx/errors.py",
+       "line": 118
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 456,
+   "tokens_out": 288
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/testing",
+   "sentences": [
+    {
+     "text": "The package provides a path class which behaves like a string.",
+     "citations": [
+      {
+       "path": "sphinx/testing/path.py",
+       "line": 22
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes test utility functionality such as assert_node, etree_parse, find_files, and a SphinxTestApp subclass that runs on the test root.",
+     "citations": [
+      {
+       "path": "sphinx/testing/util.py",
+       "line": 52
+      },
+      {
+       "path": "sphinx/testing/util.py",
+       "line": 90
+      },
+      {
+       "path": "sphinx/testing/util.py",
+       "line": 101
+      },
+      {
+       "path": "sphinx/testing/util.py",
+       "line": 188
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 556,
+   "tokens_out": 241
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/addnodes",
+   "sentences": [
+    {
+     "text": "The package provides various custom nodes for Sphinx, such as translatable nodes, TOC trees, and object signatures.",
+     "citations": [
+      {
+       "path": "sphinx/addnodes.py",
+       "line": 24
+      },
+      {
+       "path": "sphinx/addnodes.py",
+       "line": 59
+      },
+      {
+       "path": "sphinx/addnodes.py",
+       "line": 105
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also defines nodes for index entries, abbreviations, and cross-references that cannot be resolved immediately.",
+     "citations": [
+      {
+       "path": "sphinx/addnodes.py",
+       "line": 239
+      },
+      {
+       "path": "sphinx/addnodes.py",
+       "line": 338
+      },
+      {
+       "path": "sphinx/addnodes.py",
+       "line": 309
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "Additionally, it includes a setup function for application configuration.",
+     "citations": [
+      {
+       "path": "sphinx/addnodes.py",
+       "line": 356
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 549,
+   "tokens_out": 322
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/transforms",
+   "sentences": [
+    {
+     "text": "The package provides SphinxTransformer as a transformer for Sphinx, alongside a base class for transforms and a setup function.",
+     "citations": [
+      {
+       "path": "sphinx/transforms/__init__.py",
+       "line": 71
+      },
+      {
+       "path": "sphinx/transforms/__init__.py",
+       "line": 48
+      },
+      {
+       "path": "sphinx/transforms/__init__.py",
+       "line": 416
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes various transform implementations such as DefaultSubstitutions, MoveModuleTargets, AutoIndexUpgrader, ExtraTranslatableNodes, UnreferencedFootnotesDetector, SphinxSmartQuotes, and ManpageLink.",
+     "citations": [
+      {
+       "path": "sphinx/transforms/__init__.py",
+       "line": 101
+      },
+      {
+       "path": "sphinx/transforms/__init__.py",
+       "line": 122
+      },
+      {
+       "path": "sphinx/transforms/__init__.py",
+       "line": 216
+      },
+      {
+       "path": "sphinx/transforms/__init__.py",
+       "line": 233
+      },
+      {
+       "path": "sphinx/transforms/__init__.py",
+       "line": 252
+      },
+      {
+       "path": "sphinx/transforms/__init__.py",
+       "line": 319
+      },
+      {
+       "path": "sphinx/transforms/__init__.py",
+       "line": 386
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 605,
+   "tokens_out": 405
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/writers",
+   "sentences": [
+    {
+     "text": "The package includes custom translators and writers for various output formats such as HTML and LaTeX.",
+     "citations": [
+      {
+       "path": "sphinx/writers/html.py",
+       "line": 82
+      },
+      {
+       "path": "sphinx/writers/latex.py",
+       "line": 76
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It provides helper utilities for handling layout dimensions, tables, cell data, and formatting details like abbreviations.",
+     "citations": [
+      {
+       "path": "sphinx/writers/html.py",
+       "line": 42
+      },
+      {
+       "path": "sphinx/writers/latex.py",
+       "line": 209
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 543,
+   "tokens_out": 205
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/config",
+   "sentences": [
+    {
+     "text": "The package provides a configuration file abstraction represented by the Config class.",
+     "citations": [
+      {
+       "path": "sphinx/config.py",
+       "line": 81
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes utilities to evaluate configuration files and check configuration values for type deviations and non-ASCII characters.",
+     "citations": [
+      {
+       "path": "sphinx/config.py",
+       "line": 310
+      },
+      {
+       "path": "sphinx/config.py",
+       "line": 387
+      },
+      {
+       "path": "sphinx/config.py",
+       "line": 442
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 583,
+   "tokens_out": 195
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/pycode",
+   "sentences": [
+    {
+     "text": "The package provides utilities such as ModuleAnalyzer for analyzing Python source code.",
+     "citations": [
+      {
+       "path": "sphinx/pycode/__init__.py",
+       "line": 25
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes modules like ast and parser that parse code, unparse ASTs, and detect definitions.",
+     "citations": [
+      {
+       "path": "sphinx/pycode/ast.py",
+       "line": 47
+      },
+      {
+       "path": "sphinx/pycode/parser.py",
+       "line": 432
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 526,
+   "tokens_out": 176
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/directives",
+   "sentences": [
+    {
+     "text": "The package provides directives to describe objects like classes or functions, set default interpreted text roles, and manage default domains.",
+     "citations": [
+      {
+       "path": "sphinx/directives/__init__.py",
+       "line": 52
+      },
+      {
+       "path": "sphinx/directives/__init__.py",
+       "line": 219
+      },
+      {
+       "path": "sphinx/directives/__init__.py",
+       "line": 247
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes directives for code blocks, literal includes, table of contents structures, and conditional text inclusion.",
+     "citations": [
+      {
+       "path": "sphinx/directives/code.py",
+       "line": 108
+      },
+      {
+       "path": "sphinx/directives/code.py",
+       "line": 382
+      },
+      {
+       "path": "sphinx/directives/other.py",
+       "line": 43
+      },
+      {
+       "path": "sphinx/directives/other.py",
+       "line": 289
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 569,
+   "tokens_out": 299
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/cmd",
+   "sentences": [
+    {
+     "text": "The package provides the Sphinx build main command-line entry.",
+     "citations": [
+      {
+       "path": "sphinx/cmd/build.py",
+       "line": 202
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also supports the Sphinx build make mode entry and asking the user for quickstart values.",
+     "citations": [
+      {
+       "path": "sphinx/cmd/build.py",
+       "line": 196
+      },
+      {
+       "path": "sphinx/cmd/quickstart.py",
+       "line": 207
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 573,
+   "tokens_out": 172
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/roles",
+   "sentences": [
+    {
+     "text": "The package provides generic cross-referencing capabilities such as a generic cross-referencing role.",
+     "citations": [
+      {
+       "path": "sphinx/roles.py",
+       "line": 52
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes roles for handling PEP and RFC references that generate index entries.",
+     "citations": [
+      {
+       "path": "sphinx/roles.py",
+       "line": 198
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 574,
+   "tokens_out": 140
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/events",
+   "sentences": [
+    {
+     "text": "The sphinx/events package provides the EventManager class, which acts as the event manager for Sphinx.",
+     "citations": [
+      {
+       "path": "sphinx/events.py",
+       "line": 57
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 186,
+   "tokens_out": 79
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "doc/development",
+   "sentences": [
+    {
+     "text": "The development documentation and tutorials include custom directives and domains for describing recipes.",
+     "citations": [
+      {
+       "path": "doc/development/tutorials/examples/recipe.py",
+       "line": 13
+      },
+      {
+       "path": "doc/development/tutorials/examples/recipe.py",
+       "line": 101
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "They also provide custom indexes that create ingredient and recipe matrices, as well as todo directives and processing nodes.",
+     "citations": [
+      {
+       "path": "doc/development/tutorials/examples/recipe.py",
+       "line": 36
+      },
+      {
+       "path": "doc/development/tutorials/examples/recipe.py",
+       "line": 73
+      },
+      {
+       "path": "doc/development/tutorials/examples/todo.py",
+       "line": 30
+      },
+      {
+       "path": "doc/development/tutorials/examples/todo.py",
+       "line": 64
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 497,
+   "tokens_out": 282
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/project",
+   "sentences": [
+    {
+     "text": "The sphinx/project package defines the Project class.",
+     "citations": [
+      {
+       "path": "sphinx/project.py",
+       "line": 30
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "A project represents the source code set of a Sphinx document.",
+     "citations": [
+      {
+       "path": "sphinx/project.py",
+       "line": 30
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 174,
+   "tokens_out": 74
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/theming",
+   "sentences": [
+    {
+     "text": "The sphinx/theming package provides the Theme class, which represents a set of HTML templates and configurations.",
+     "citations": [
+      {
+       "path": "sphinx/theming.py",
+       "line": 52
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides the HTMLThemeFactory class, which acts as a factory for HTML themes.",
+     "citations": [
+      {
+       "path": "sphinx/theming.py",
+       "line": 154
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 304,
+   "tokens_out": 94
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/highlighting",
+   "sentences": [
+    {
+     "text": "The PygmentsBridge class is defined within the sphinx/highlighting.py module.",
+     "citations": [
+      {
+       "path": "sphinx/highlighting.py",
+       "line": 57
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 180,
+   "tokens_out": 77
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/extension",
+   "sentences": [
+    {
+     "text": "The package `sphinx/extension` includes the `Extension` class and the `verify_needs_extensions` function to verify that required Sphinx extensions are loaded.",
+     "citations": [
+      {
+       "path": "sphinx/extension.py",
+       "line": 25
+      },
+      {
+       "path": "sphinx/extension.py",
+       "line": 43
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also provides a setup function for the application.",
+     "citations": [
+      {
+       "path": "sphinx/extension.py",
+       "line": 62
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 237,
+   "tokens_out": 174
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/registry",
+   "sentences": [
+    {
+     "text": "The SphinxComponentRegistry class is defined in the sphinx/registry package.",
+     "citations": [
+      {
+       "path": "sphinx/registry.py",
+       "line": 53
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes a function to merge source_suffix specified by the user and added by extensions.",
+     "citations": [
+      {
+       "path": "sphinx/registry.py",
+       "line": 441
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 261,
+   "tokens_out": 139
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "doc/usage",
+   "sentences": [
+    {
+     "text": "The package doc/usage provides modules that define example classes and functions to illustrate documentation styles.",
+     "citations": [
+      {
+       "path": "doc/usage/extensions/example_numpy.py",
+       "line": 225
+      },
+      {
+       "path": "doc/usage/extensions/example_google.py",
+       "line": 180
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "These modules include examples for module-level functions, exceptions, and generators.",
+     "citations": [
+      {
+       "path": "doc/usage/extensions/example_numpy.py",
+       "line": 101
+      },
+      {
+       "path": "doc/usage/extensions/example_numpy.py",
+       "line": 191
+      },
+      {
+       "path": "doc/usage/extensions/example_numpy.py",
+       "line": 165
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 617,
+   "tokens_out": 252
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/jinja2glue",
+   "sentences": [
+    {
+     "text": "The package interfaces the rendering environment of jinja2 for use in Sphinx.",
+     "citations": [
+      {
+       "path": "sphinx/jinja2glue.py",
+       "line": 141
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It includes a FileSystemLoader subclass that is not so strict about '..' entries.",
+     "citations": [
+      {
+       "path": "sphinx/jinja2glue.py",
+       "line": 115
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 477,
+   "tokens_out": 92
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "commit": "752d3285d250bbaf673cff25e83f03f247502021",
+   "package": "sphinx/io",
+   "sentences": [
+    {
+     "text": "The package `sphinx/io` provides a base class of readers for Sphinx, along with specialized readers for standalone documents and i18n.",
+     "citations": [
+      {
+       "path": "sphinx/io.py",
+       "line": 49
+      },
+      {
+       "path": "sphinx/io.py",
+       "line": 111
+      },
+      {
+       "path": "sphinx/io.py",
+       "line": 139
+      }
+     ],
+     "valid": true
+    },
+    {
+     "text": "It also includes a function to parse a document and convert it to a doctree, as well as a dummy writer module and file input utility.",
+     "citations": [
+      {
+       "path": "sphinx/io.py",
+       "line": 181
+      },
+      {
+       "path": "sphinx/io.py",
+       "line": 160
+      },
+      {
+       "path": "sphinx/io.py",
+       "line": 174
+      }
+     ],
+     "valid": true
+    }
+   ],
+   "tokens_in": 434,
+   "tokens_out": 273
+  }
+ ],
+ "overview": [
+  {
+   "text": "The Sphinx class serves as the main application class and extensibility interface.",
+   "citations": [
+    {
+     "path": "sphinx/application.py",
+     "line": 128
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The builder builds target formats from the reST sources.",
+   "citations": [
+    {
+     "path": "sphinx/builders/__init__.py",
+     "line": 54
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The BuildEnvironment serves as the environment in which ReST files are translated, and environment collectors gather specific data from each document.",
+   "citations": [
+    {
+     "path": "sphinx/environment/__init__.py",
+     "line": 85
+    },
+    {
+     "path": "sphinx/environment/collectors/__init__.py",
+     "line": 22
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "A Domain is meant to be a group of object description directives, while an Index serves as the description for a domain-specific index.",
+   "citations": [
+    {
+     "path": "sphinx/domains/__init__.py",
+     "line": 155
+    },
+    {
+     "path": "sphinx/domains/__init__.py",
+     "line": 68
+    }
+   ],
+   "valid": true
+  },
+  {
+   "text": "The package provides custom translators and writers for various output formats such as HTML and LaTeX.",
+   "citations": [
+    {
+     "path": "sphinx/writers/html.py",
+     "line": 82
+    },
+    {
+     "path": "sphinx/writers/latex.py",
+     "line": 76
+    }
+   ],
+   "valid": true
+  }
+ ],
+ "stats": {
+  "packages": 29,
+  "sentences": 59,
+  "kept": 59,
+  "dropped": 0,
+  "citations": 114,
+  "valid_citations": 114,
+  "overview": {
+   "sentences": 5,
+   "kept": 5,
+   "dropped": 0
+  }
+ }
+}

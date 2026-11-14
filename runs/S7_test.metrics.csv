@@ -1,0 +1,4 @@
+instance_id,file_acc@1,file_acc@3,file_acc@5,file_mrr,func_acc@5,func_acc@10,func_recall@10,func_mrr,tokens,seconds
+astropy__astropy-12907,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,5451,3.2900757000024896
+astropy__astropy-14182,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.07142857142857142,6735,1.8187801000021864
+astropy__astropy-14365,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,6417,2.8519567000039387

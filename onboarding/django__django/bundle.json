@@ -52,8 +52,8 @@
   "unresolved_calls": 13565,
   "entry_points": 5,
   "diagram_faithfulness_pct": 100.0,
-  "sentences_kept": 0,
-  "sentences_dropped": 0,
-  "summaries_complete": false
+  "sentences_kept": 33,
+  "sentences_dropped": 1,
+  "summaries_complete": true
  }
 }

@@ -81,12 +81,15 @@ class GoldGuard:
                 guard.added_lines[iid] = lines
         return guard
 
-    def check(self, prompt: str, instance_id: str | None = None) -> None:
+    def check(self, prompt: str, instance_id: str | None = None,
+              base_code: str = "") -> None:
+        """`base_code` = code from `base_commit` shown in the prompt. A gold added line that
+        already exists verbatim in that code (e.g. a repeated `if hasattr(...)`) is not leakage."""
         for text in self.full_texts:
             if text in prompt:
                 raise LeakageError("prompt contains gold patch/test text")
         for line in self.added_lines.get(instance_id or "", []):
-            if line in prompt:
+            if line in prompt and line not in base_code:
                 raise LeakageError(f"prompt contains a gold-patch line of {instance_id}")
 
 
@@ -126,11 +129,16 @@ class LLMClient:
             key = load_api_key()
             if not key:
                 raise RuntimeError("GEMINI_API_KEY not set (environment or .env)")
-            self._client = genai.Client(api_key=key)
+            timeout_ms = int(self.cfg.llm.get("timeout_s", 120) * 1000)
+            self._client = genai.Client(api_key=key,
+                                        http_options=types.HttpOptions(timeout=timeout_ms))
         config = {"response_mime_type": "application/json", "response_json_schema": schema,
                   "temperature": 0.0}
         budget = self.cfg.llm.get("thinking_budget")
-        if budget is not None:
+        level = self.cfg.llm.get("thinking_level")  # Gemini 3.x: "minimal" | "low" | ...
+        if level:
+            config["thinking_config"] = types.ThinkingConfig(thinking_level=level)
+        elif budget is not None:
             config["thinking_config"] = types.ThinkingConfig(thinking_budget=int(budget))
         resp = self._client.models.generate_content(
             model=model, contents=prompt, config=types.GenerateContentConfig(**config))
@@ -158,7 +166,7 @@ class LLMClient:
                 msg = str(e)
                 if code == 429 and ("PerDay" in msg or "per day" in msg.lower()):
                     raise QuotaExhausted(f"daily free-tier quota exhausted: {msg[:300]}") from e
-                if code in (429, 500, 503) and attempt < self.cfg.llm.max_retries:
+                if code in (429, 500, 503, 504) and attempt < self.cfg.llm.max_retries:
                     sleep = delay * (2 ** attempt) * (0.5 + random.random())
                     console.print(f"[yellow]LLM {code}; retry in {sleep:.0f}s[/yellow]")
                     time.sleep(min(sleep, 120))
@@ -167,10 +175,10 @@ class LLMClient:
         raise RuntimeError("unreachable")
 
     # ------------------------------------------------------------- public
-    def generate_json(self, prompt: str, schema: dict, instance_id: str | None = None
-                      ) -> tuple[dict | None, Usage]:
+    def generate_json(self, prompt: str, schema: dict, instance_id: str | None = None,
+                      base_code: str = "") -> tuple[dict | None, Usage]:
         """Return (parsed JSON or None if unparsable, usage). Cached on disk."""
-        self.guard.check(prompt, instance_id)
+        self.guard.check(prompt, instance_id, base_code)
         key = sha1(self.model + "\n" + json.dumps(schema, sort_keys=True) + "\n" + prompt)
         path = self.cache_dir / f"{key}.json"
         t0 = time.perf_counter()
