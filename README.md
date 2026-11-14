@@ -5,7 +5,9 @@
 > **Finding.** A fine-tuned code encoder fused with BM25 and reranked by a 21-feature LambdaRank model
 > (**S6**) puts the file that needs fixing in its top 5 for **86.7%** [82.7, 90.3] of the 300
 > SWE-bench Lite issues, and the exact function in its top 10 for **67.0%** [61.3, 72.3] — with
-> **zero LLM tokens** and ~0.4 s per issue on a laptop GPU.
+> **zero LLM tokens** and ~0.4 s per issue on a laptop GPU. Adding a free-tier Gemini reranker on
+> top (**S8**, ~6k tokens/issue) makes the *first* answer right far more often: file Acc@1
+> 0.597 → **0.760** (p < 0.001), function MRR 0.413 → 0.596.
 
 | System | Pipeline | File Acc@1 | File Acc@5 | Func Acc@10 | Func MRR | LLM tokens / issue |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -16,7 +18,8 @@
 | S5 | RRF(S1, S4) | 0.593 | 0.853 | 0.623 | 0.405 | 0 |
 | **S6** | **S5 → LambdaRank** | **0.597** | **0.867** | **0.670** | **0.413** | **0** |
 | S6b | S6 + onboarding-summary feature | 0.590 | 0.873 | 0.690 | 0.426 | 0 |
-| S7 / S8 | Gemini 3.5 Flash-Lite reranks top 10 | _in progress (free daily quota)_ | | | | |
+| S7 | S5 → Gemini 3.5 Flash-Lite rerank (top 10) | 0.757 | 0.853 | 0.623 | 0.571 | 5,168 |
+| **S8** | **S6 → Gemini 3.5 Flash-Lite rerank (top 10)** | **0.760** | **0.870** | **0.670** | **0.596** | 6,002 |
 
 95% bootstrap CIs, paired tests and all metrics: [reports/results.md](reports/results.md).
 
@@ -46,8 +49,10 @@ the box; red double outline = the package of the real fix):
   Acc@5); over dense alone only at function level (+3.0 pts Acc@10, not significant).*
 - **RQ2** Does contrastive fine-tuning on SWE-bench-train help on unseen repos? — *Yes: S4 vs S2
   +4.7 pts file Acc@5 (p = 0.03); S5 vs S3 +6.3 pts (p = 0.002).*
-- **RQ3** Does a LambdaRank reranker close the gap to an LLM reranker? — *S6 adds +4.7 pts function
-  Acc@10 over S5 (p = 0.008) at 0 tokens; the LLM comparison (S7) is pending a Gemini key.*
+- **RQ3** Does a LambdaRank reranker close the gap to an LLM reranker? — *Partly. At the top-5 /
+  top-10 level, yes: S6 matches or beats S7 (file Acc@5 0.867 vs 0.853; function Acc@10 0.670 vs
+  0.623, p = 0.008) with 0 tokens instead of ~5,200. At rank 1, no: the LLM is far better (file
+  Acc@1 0.757 vs 0.597, p < 0.001). They are complementary — S8 = S6 → LLM is best at rank 1 and on MRR.*
 - **RQ4** Do onboarding package summaries help localization as a feature (S6b vs S6)? — *A small,
   consistent but not significant gain: +2.0 pts function Acc@10 (p = 0.14), +0.7 pts file Acc@5,
   with summaries for all 12 test repos.*

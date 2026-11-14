@@ -21,3 +21,4 @@ comparisons:
   - [S6, S5]
   - [S6b, S6]
   - [S6, S7]
+  - [S8, S6]   # added: does LLM reranking on top of LambdaRank help?

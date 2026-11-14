@@ -81,12 +81,16 @@ def make_report(cfg: Config, split: str = "test") -> str:
     md = ["# BugLens results", "",
           f"SWE-bench Lite **{split}** ({n_total} instances). Cells: mean [bootstrap 95% CI, "
           f"{cfg.eval.bootstrap_resamples} resamples, seed {cfg.seed}].", ""]
-    best = max(full, key=lambda s: frames[s]["file_acc@5"].mean()) if full else None
-    if best:
+    score = lambda s: (frames[s]["file_acc@5"].mean(), frames[s]["file_acc@1"].mean())  # noqa: E731
+    cheap = [s for s in full if frames[s]["tokens"].mean() == 0]
+    for label, pool in (("zero-token", cheap), ("overall", full)):
+        if not pool:
+            continue
+        best = max(pool, key=score)
         b = frames[best]
-        md += [f"**Finding.** The best system on all {n_total} instances is **{best}** "
-               f"({DESCRIPTIONS.get(best, best)}): file Acc@5 {_cell(b['file_acc@5'], cfg)}, "
-               f"function Acc@10 {_cell(b['func_acc@10'], cfg)}, at "
+        md += [f"**Best {label} system: {best}** ({DESCRIPTIONS.get(best, best)}) — file Acc@1 "
+               f"{_cell(b['file_acc@1'], cfg)}, file Acc@5 {_cell(b['file_acc@5'], cfg)}, "
+               f"function Acc@10 {_cell(b['func_acc@10'], cfg)}, "
                f"{b['tokens'].mean():.0f} LLM tokens per issue.", ""]
     md += ["## Main results", "", md_table(main_rows, cols), ""]
     if partial:
@@ -102,7 +106,8 @@ def make_report(cfg: Config, split: str = "test") -> str:
         if a_sys not in frames or b_sys not in frames:
             continue
         common = frames[a_sys].index.intersection(frames[b_sys].index)
-        for m in ("file_acc@5", "func_acc@10"):
+        # @1 shows top-of-list gains; LLM reranking of the top 10 cannot change func_acc@10.
+        for m in ("file_acc@1", "file_acc@5", "func_acc@10"):
             fa, fb = frames[a_sys].loc[common, m], frames[b_sys].loc[common, m]
             pb = paired_bootstrap(fa, fb, cfg.eval.bootstrap_resamples, cfg.seed, cfg.eval.ci)
             mc = mcnemar(fa, fb)

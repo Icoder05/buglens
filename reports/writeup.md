@@ -86,7 +86,13 @@ McNemar tests for the planned comparisons. Hardware: one consumer GPU (GTX 1660 
 | S4 Dense-FT | 0.587 | 0.840 [0.797, 0.880] | 0.610 [0.550, 0.663] | 0.381 |
 | S5 RRF(S1,S4) | 0.593 | 0.853 [0.813, 0.893] | 0.623 [0.567, 0.677] | 0.405 |
 | **S6 LambdaRank** | **0.597** | **0.867 [0.827, 0.903]** | **0.670 [0.613, 0.723]** | **0.413** |
+| S6b (+ summaries) | 0.590 | 0.873 [0.833, 0.910] | 0.690 [0.637, 0.740] | 0.426 |
+| S7 S5→LLM | 0.757 | 0.853 [0.813, 0.893] | 0.623 [0.567, 0.677] | 0.571 |
+| **S8 S6→LLM** | **0.760** | **0.870 [0.830, 0.907]** | **0.670 [0.613, 0.723]** | **0.596** |
 | A1 (S5 + hints) | 0.643 | 0.890 [0.853, 0.927] | 0.697 [0.643, 0.750] | 0.468 |
+
+LLM = Gemini 3.5 Flash-Lite (free tier), mean 5,168 (S7) / 6,002 (S8) tokens per issue; all other
+systems use 0 tokens.
 
 **RQ1 (hybrid).** Dense retrieval alone already beats BM25 on files (+8.3 pts Acc@5, McNemar
 p = 0.001). Fusing BM25 into the off-the-shelf encoder (S3 vs S2) leaves file accuracy unchanged
@@ -102,7 +108,20 @@ p = 0.032, McNemar p = 0.038) and +5.0 pts function Acc@10 (p = 0.06); in the hy
 McNemar 22 vs 8 instances) and +1.3 pts file Acc@5 (n.s.), at ~0.4 s and zero tokens per issue.
 Feature importance is dominated by fused-rank evidence, then chunk length, the fine-tuned rank and
 import-graph PageRank; explicit issue mentions contribute little once retrieval scores are present.
-The LLM-reranker comparison (S7, S8) requires a Gemini key and is pending.
+Against the LLM reranker the picture is split by rank. At the top-5/top-10 level LambdaRank closes
+the gap and more: S6 vs S7 file Acc@5 +1.3 pts (n.s.) and function Acc@10 +4.7 pts (p = 0.008), at
+0 vs ~5,200 tokens per issue. At rank 1 it does not: S7 is +16.0 pts file Acc@1 (0.757 vs 0.597,
+McNemar 56 vs 8, p < 0.001) and +15.8 pts function MRR. Because the LLM only reorders the top 10,
+the two are complementary: S8 (S6 → LLM) keeps S6's recall and adds the LLM's precision — file Acc@1
+0.760, function Acc@5 0.657 (+8.0 pts over S6, p < 0.001), function MRR 0.596 — the best system at
+rank 1 and on MRR (S6b remains best on function Acc@10), for about 6,000 tokens per issue on a free
+tier.
+
+**Stretch (M10): patch generation.** For the first 30 test instances, Gemini proposed exact
+search/replace edits inside S8's top-3 functions; 27 produced a valid unified diff (3 edits did
+not match the code exactly). Resolution rates require the official SWE-bench Docker harness
+(`make harness`), which is prepared but was not run here (it needs Docker-socket access and tens of
+GB of images).
 
 **RQ4 (onboarding summaries as a feature).** Package summaries were generated with Gemini 3.5
 Flash-Lite for all 12 test repositories at each repo's earliest test commit (no future code).

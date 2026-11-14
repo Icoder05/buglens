@@ -62,7 +62,7 @@ patches:
 	uv run buglens llm --system S8 --split test
 	uv run buglens patch --system S8 --limit 30
 
-# Official SWE-bench Docker harness. NOT run automatically: needs Docker on Linux/macOS
-# (on Windows run it inside WSL2), pulls tens of GB of images and takes hours.
+# Official SWE-bench Docker harness (runs in a Linux container via the Docker socket).
+# NOT run automatically: pulls tens of GB of images and takes hours.
 harness:
-	uv run --with swebench python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Lite --split test --predictions_path runs/patches_test.jsonl --max_workers 2 --run_id buglens
+	powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run_harness.ps1

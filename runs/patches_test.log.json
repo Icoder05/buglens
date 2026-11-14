@@ -24,5 +24,228 @@
   "patch_lines": 12,
   "tokens_in": 1794,
   "tokens_out": 135
+ },
+ {
+  "instance_id": "astropy__astropy-14995",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 27,
+  "tokens_in": 3048,
+  "tokens_out": 438
+ },
+ {
+  "instance_id": "astropy__astropy-6938",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 12,
+  "tokens_in": 1928,
+  "tokens_out": 191
+ },
+ {
+  "instance_id": "astropy__astropy-7746",
+  "edits": 2,
+  "problems": [],
+  "patch_lines": 22,
+  "tokens_in": 1786,
+  "tokens_out": 622
+ },
+ {
+  "instance_id": "django__django-10914",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 12,
+  "tokens_in": 2638,
+  "tokens_out": 267
+ },
+ {
+  "instance_id": "django__django-10924",
+  "edits": 3,
+  "problems": [
+   "django/db/models/fields/__init__.py: original snippet matched 0 times"
+  ],
+  "patch_lines": 14,
+  "tokens_in": 1048,
+  "tokens_out": 694
+ },
+ {
+  "instance_id": "django__django-11001",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 13,
+  "tokens_in": 3861,
+  "tokens_out": 244
+ },
+ {
+  "instance_id": "django__django-11019",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 35,
+  "tokens_in": 2393,
+  "tokens_out": 553
+ },
+ {
+  "instance_id": "django__django-11039",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 14,
+  "tokens_in": 914,
+  "tokens_out": 163
+ },
+ {
+  "instance_id": "django__django-11049",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 12,
+  "tokens_in": 1156,
+  "tokens_out": 238
+ },
+ {
+  "instance_id": "django__django-11099",
+  "edits": 2,
+  "problems": [
+   "django/contrib/auth/validators.py: original snippet matched 0 times",
+   "django/contrib/auth/validators.py: original snippet matched 0 times"
+  ],
+  "patch_lines": 0,
+  "tokens_in": 2178,
+  "tokens_out": 4200
+ },
+ {
+  "instance_id": "django__django-11133",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 12,
+  "tokens_in": 582,
+  "tokens_out": 142
+ },
+ {
+  "instance_id": "django__django-11179",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 11,
+  "tokens_in": 1227,
+  "tokens_out": 343
+ },
+ {
+  "instance_id": "django__django-11283",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 20,
+  "tokens_in": 1793,
+  "tokens_out": 203
+ },
+ {
+  "instance_id": "django__django-11422",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 15,
+  "tokens_in": 1171,
+  "tokens_out": 512
+ },
+ {
+  "instance_id": "django__django-11564",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 16,
+  "tokens_in": 885,
+  "tokens_out": 298
+ },
+ {
+  "instance_id": "django__django-11583",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 16,
+  "tokens_in": 4374,
+  "tokens_out": 329
+ },
+ {
+  "instance_id": "django__django-11620",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 12,
+  "tokens_in": 2775,
+  "tokens_out": 169
+ },
+ {
+  "instance_id": "django__django-11630",
+  "edits": 0,
+  "problems": [],
+  "patch_lines": 0,
+  "tokens_in": 1381,
+  "tokens_out": 120
+ },
+ {
+  "instance_id": "django__django-11742",
+  "edits": 1,
+  "problems": [
+   "django/db/models/fields/__init__.py: original snippet matched 9 times"
+  ],
+  "patch_lines": 0,
+  "tokens_in": 843,
+  "tokens_out": 260
+ },
+ {
+  "instance_id": "django__django-11797",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 21,
+  "tokens_in": 2172,
+  "tokens_out": 311
+ },
+ {
+  "instance_id": "django__django-11815",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 18,
+  "tokens_in": 1580,
+  "tokens_out": 316
+ },
+ {
+  "instance_id": "django__django-11848",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 21,
+  "tokens_in": 2390,
+  "tokens_out": 256
+ },
+ {
+  "instance_id": "django__django-11905",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 13,
+  "tokens_in": 1172,
+  "tokens_out": 175
+ },
+ {
+  "instance_id": "django__django-11910",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 12,
+  "tokens_in": 2457,
+  "tokens_out": 397
+ },
+ {
+  "instance_id": "django__django-11964",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 18,
+  "tokens_in": 1165,
+  "tokens_out": 242
+ },
+ {
+  "instance_id": "django__django-11999",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 13,
+  "tokens_in": 880,
+  "tokens_out": 257
+ },
+ {
+  "instance_id": "django__django-12113",
+  "edits": 1,
+  "problems": [],
+  "patch_lines": 12,
+  "tokens_in": 2854,
+  "tokens_out": 424
  }
 ]
