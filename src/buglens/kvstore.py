@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import threading
 import zlib
 from pathlib import Path
 
@@ -19,22 +20,25 @@ class KVStore:
         self.path = Path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self.table = table
-        self.conn = sqlite3.connect(self.path, timeout=60)
+        # shared across the demo's worker threads; access is serialized by a lock
+        self.conn = sqlite3.connect(self.path, timeout=60, check_same_thread=False)
+        self.lock = threading.Lock()
         self.conn.execute("PRAGMA journal_mode=WAL")
         self.conn.execute(f"CREATE TABLE IF NOT EXISTS {table} (key TEXT PRIMARY KEY, val BLOB)")
 
     def get_many(self, keys: list[str]) -> dict[str, object]:
         out: dict[str, object] = {}
-        for i in range(0, len(keys), 500):
-            batch = keys[i:i + 500]
-            q = f"SELECT key, val FROM {self.table} WHERE key IN ({','.join('?' * len(batch))})"
-            for k, v in self.conn.execute(q, batch):
-                out[k] = json.loads(zlib.decompress(v))
+        with self.lock:
+            for i in range(0, len(keys), 500):
+                batch = keys[i:i + 500]
+                q = f"SELECT key, val FROM {self.table} WHERE key IN ({','.join('?' * len(batch))})"
+                for k, v in self.conn.execute(q, batch):
+                    out[k] = json.loads(zlib.decompress(v))
         return out
 
     def put_many(self, items: dict[str, object]) -> None:
         rows = [(k, zlib.compress(json.dumps(v).encode())) for k, v in items.items()]
-        with self.conn:
+        with self.lock, self.conn:
             self.conn.executemany(
                 f"INSERT OR REPLACE INTO {self.table} (key, val) VALUES (?, ?)", rows)
 

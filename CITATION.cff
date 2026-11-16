@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use BugLens or its results, please cite it as below."
+title: "BugLens: Bug localization on SWE-bench Lite with retrieval, learning-to-rank and LLM reranking, plus static-analysis codebase onboarding"
+authors:
+  - alias: Icoder05
+type: software
+version: 1.0.0
+date-released: 2026-11-16
+repository-code: "https://github.com/Icoder05/buglens"
+license: MIT
+keywords:
+  - bug localization
+  - SWE-bench
+  - information retrieval
+  - learning to rank
+  - large language models
+  - static analysis

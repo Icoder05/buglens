@@ -1,158 +1,215 @@
 # BugLens
 
-**Bug localization on SWE-bench Lite + static-analysis codebase onboarding, built on one shared index.**
+**Finding where to fix a bug from its issue description, and helping newcomers understand a codebase.**
 
-> **Finding.** A fine-tuned code encoder fused with BM25 and reranked by a 21-feature LambdaRank model
-> (**S6**) puts the file that needs fixing in its top 5 for **86.7%** [82.7, 90.3] of the 300
-> SWE-bench Lite issues, and the exact function in its top 10 for **67.0%** [61.3, 72.3] — with
-> **zero LLM tokens** and ~0.4 s per issue on a laptop GPU. Adding a free-tier Gemini reranker on
-> top (**S8**, ~6k tokens/issue) makes the *first* answer right far more often: file Acc@1
-> 0.597 → **0.760** (p < 0.001), function MRR 0.413 → 0.596.
+[![CI](https://github.com/Icoder05/buglens/actions/workflows/ci.yml/badge.svg)](https://github.com/Icoder05/buglens/actions/workflows/ci.yml)
+![Python 3.11](https://img.shields.io/badge/python-3.11-blue)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Research report](https://img.shields.io/badge/report-PDF-red)](reports/research/BugLens_Research_Report.pdf)
 
-| System | Pipeline | File Acc@1 | File Acc@5 | Func Acc@10 | Func MRR | LLM tokens / issue |
-| --- | --- | --- | --- | --- | --- | --- |
-| S1 | BM25 | 0.470 | 0.710 | 0.527 | 0.311 | 0 |
-| S2 | Dense (CodeRankEmbed) | 0.513 | 0.793 | 0.560 | 0.327 | 0 |
-| S3 | RRF(S1, S2) | 0.527 | 0.790 | 0.590 | 0.368 | 0 |
-| S4 | Dense (fine-tuned) | 0.587 | 0.840 | 0.610 | 0.381 | 0 |
-| S5 | RRF(S1, S4) | 0.593 | 0.853 | 0.623 | 0.405 | 0 |
-| **S6** | **S5 → LambdaRank** | **0.597** | **0.867** | **0.670** | **0.413** | **0** |
-| S6b | S6 + onboarding-summary feature | 0.590 | 0.873 | 0.690 | 0.426 | 0 |
-| S7 | S5 → Gemini 3.5 Flash-Lite rerank (top 10) | 0.757 | 0.853 | 0.623 | 0.571 | 5,168 |
-| **S8** | **S6 → Gemini 3.5 Flash-Lite rerank (top 10)** | **0.760** | **0.870** | **0.670** | **0.596** | 6,002 |
+> **In one sentence:** on 300 real GitHub issues from 12 Python projects (SWE-bench Lite), BugLens'
+> best pipeline without an AI model puts a correct file in its top 5 suggestions for **86.7%** of
+> issues, and adding a free-tier Gemini reranker makes the **first** suggestion correct for **76.0%**
+> (up from 59.7%) — measured with confidence intervals, repeated runs and paired statistical tests.
 
-95% bootstrap CIs, paired tests and all metrics: [reports/results.md](reports/results.md).
+| 📄 [Research report (PDF)](reports/research/BugLens_Research_Report.pdf) | 📊 [Analysis workbook (Excel)](reports/research/BugLens_Research_Analysis.xlsx) | 📈 [All results](reports/results.md) | 🧭 [Plain-language concepts](docs/CONCEPTS.md) | ▶️ [How to run](docs/HOW_TO_RUN.md) |
+| --- | --- | --- | --- | --- |
 
-![Accuracy vs tokens](reports/figures/acc_vs_tokens.png)
-
-**Localize meets Onboard.** The architecture block diagram of `pallets/flask`, built purely from
-static analysis, with S6's top-5 predictions for issue
-[flask-4045](https://github.com/pallets/flask/issues/4045) overlaid (yellow = predicted, ranks in
-the box; red double outline = the package of the real fix):
-
-![Highlighted architecture diagram](reports/figures/highlight_flask-4045.svg)
+![Localize tab: ranked functions with the real fix marked, and its source code](docs/images/localize_tab.png)
 
 ---
 
-## Two modes, one index
+## Contents
 
-1. **Localize** — given a GitHub issue and a Python repo at the buggy commit, rank the files and
-   functions most likely to need the fix (systems S1–S8, evaluated on SWE-bench Lite).
-2. **Onboard** — for a newcomer: an architecture block diagram, drill-downs (package → modules,
-   module → classes, entry point → call flow), a cited onboarding guide and an "ask the codebase" box.
-   Diagrams are **never drawn by an LLM**: every node and edge is re-verified against the static
-   analysis graphs (100% on all 90 generated diagrams). LLM-written sentences must cite `path:line`,
-   enforced by a validator.
+1. [The problem](#the-problem)
+2. [What BugLens does](#what-buglens-does)
+3. [Results](#results)
+4. [How it works](#how-it-works)
+5. [Research questions and answers](#research-questions-and-answers)
+6. [Run it yourself](#run-it-yourself)
+7. [Project structure](#project-structure)
+8. [Reproducibility](#reproducibility)
+9. [Limitations](#limitations)
+10. [Future work](#future-work)
+11. [Tech stack, references and license](#tech-stack-references-and-license)
 
-### Research questions
-- **RQ1** Does hybrid retrieval (BM25 + dense) beat either alone? — *Over BM25 yes (+8.0 pts file
-  Acc@5); over dense alone only at function level (+3.0 pts Acc@10, not significant).*
-- **RQ2** Does contrastive fine-tuning on SWE-bench-train help on unseen repos? — *Yes: S4 vs S2
-  +4.7 pts file Acc@5 (p = 0.03); S5 vs S3 +6.3 pts (p = 0.002).*
-- **RQ3** Does a LambdaRank reranker close the gap to an LLM reranker? — *Partly. At the top-5 /
-  top-10 level, yes: S6 matches or beats S7 (file Acc@5 0.867 vs 0.853; function Acc@10 0.670 vs
-  0.623, p = 0.008) with 0 tokens instead of ~5,200. At rank 1, no: the LLM is far better (file
-  Acc@1 0.757 vs 0.597, p < 0.001). They are complementary — S8 = S6 → LLM is best at rank 1 and on MRR.*
-- **RQ4** Do onboarding package summaries help localization as a feature (S6b vs S6)? — *A small,
-  consistent but not significant gain: +2.0 pts function Acc@10 (p = 0.14), +0.7 pts file Acc@5,
-  with summaries for all 12 test repos.*
+## The problem
 
-### Method (in 10 bullets)
-1. Repos are read straight from git objects at each `base_commit` (no checkouts); content-hash caches.
-2. `ast` chunking: one chunk per function / method / class + one module chunk (windows if unparsable).
-3. Gold labels: patch removed lines / insertion points → innermost chunk at `base_commit`.
-4. **S1** BM25 with a code-aware tokenizer (camelCase / snake_case split + full identifiers).
-5. **S2** CodeRankEmbed bi-encoder + FAISS exact inner product; SQLite embedding cache.
-6. **S3/S5** Reciprocal Rank Fusion (k = 60) of BM25 and dense rankings.
-7. **S4** CodeRankEmbed fine-tuned with cached MNRL (GradCache, batch 64) on 3,000 issue → gold
-   function triples with BM25 hard negatives from 18 SWE-bench-*train* repos (disjoint from test).
-8. **S6** LightGBM LambdaRank over S5's top 50 with 21 features (scores/ranks, issue mentions,
-   tracebacks, chunk size/kind, import-graph PageRank), leave-one-repo-out over the 12 test repos.
-9. **Onboard** facts → import / inheritance / call graphs → verified diagrams (Graphviz SVG + Mermaid).
-10. Grounded summaries: the LLM sees only signatures/docstrings of top symbols; strict citation validator.
+When a bug is reported, the first job is **localization**: deciding which of thousands of files and
+functions must change. It is slow for experienced developers and much harder for newcomers who do not
+yet know the code. Modern systems often hand this to large language models (LLMs) or agents, which
+are capable but costly and not fully repeatable. This project measures **how far cheaper, reproducible
+methods can go, where an LLM adds value, and what that value costs** — and builds tools that help a
+newcomer understand an unfamiliar repository.
+
+## What BugLens does
+
+**1. Localize** — given a GitHub issue and the repository at the commit where the bug existed, rank
+the files and functions most likely to need the fix. Nine systems are compared, from keyword search
+to an LLM reranker.
+
+**2. Onboard** — for a newcomer: an architecture diagram, drill-down diagrams, a cited onboarding
+guide and an "ask the codebase" box that answers with `file:line` references.
+
+The two modes share one index, and they meet in one view: the predicted bug locations are highlighted
+on the architecture diagram (yellow = predicted, red outline = where the real fix was).
+
+![Architecture diagram of flask with the predicted packages highlighted](reports/figures/highlight_flask-4045.svg)
+
+| Ask the codebase (answer cites real code lines) | Generated onboarding guide (every sentence is cited) |
+| --- | --- |
+| ![Ask the codebase](docs/images/ask_the_codebase.png) | ![Onboarding guide](docs/images/onboarding_guide.png) |
+
+## Results
+
+SWE-bench Lite test set, 300 issues. Brackets: 95% bootstrap confidence interval.
+
+| System | What it does | File Acc@1 | File Acc@5 | Function Acc@10 | LLM tokens / issue |
+| --- | --- | --- | --- | --- | --- |
+| S1 | Keyword search (BM25) | 47.0% | 71.0% [66–76] | 52.7% | 0 |
+| S2 | Neural code search (CodeRankEmbed) | 51.3% | 79.3% [74–84] | 56.0% | 0 |
+| S3 | S1 + S2 combined (rank fusion) | 52.7% | 79.0% [74–84] | 59.0% | 0 |
+| S4 | Neural search, fine-tuned on 16 other repos | 58.7% | 84.0% [80–88] | 61.0% | 0 |
+| S5 | S1 + S4 combined | 59.3% | 85.3% [81–89] | 62.3% | 0 |
+| **S6** | **S5 + learned reranker (LambdaRank)** | 59.7% | **86.7%** [83–90] | 67.0% | **0** |
+| S6b | S6 + onboarding summaries as a feature | 59.0% | 87.3% [83–91] | **69.0%** | 0 |
+| S7 | S5 + Gemini reranks the top 10 | 75.7% | 85.3% [81–89] | 62.3% | 5,168 |
+| **S8** | **S6 + Gemini reranks the top 10** | **76.0%** | **87.0%** [83–91] | 67.0% | 6,002 |
+
+*Acc@k = share of issues where a correct file/function is among the first k suggestions.
+S7/S8 only reorder the top 10, so their Acc@10 equals that of their input.*
+
+<p align="center">
+  <img src="reports/research/figures/fig02_main_results_ci.png" width="88%" alt="Main results with confidence intervals">
+</p>
+
+**What the numbers say (under the tested conditions):**
+
+- Cheap components carry most of the top-5 accuracy: 71.0% → 86.7% with **zero LLM calls**.
+- The LLM mainly improves the **first** answer (+16 points file Acc@1, p < 0.001) at ~5–6k tokens and
+  ~5 s per issue; it does not improve the top-10 list.
+- Running the LLM step three times on the same 50 issues gave the same first answer for 86% of them,
+  so single-run LLM numbers vary by about ±2 points.
+- In 15 of 20 analysed failures the issue describes a symptom while the fix is in a different, often
+  lower-level, module.
+
+Full analysis: [research report](reports/research/BugLens_Research_Report.pdf) (34 pages, 17 figures,
+19 tables) and [results.md](reports/results.md).
+
+## How it works
 
 ```mermaid
 flowchart LR
-  I["Issue text"] --> B["BM25 (S1)"]
-  I --> D["Dense encoder (S2 / fine-tuned S4)"]
-  R["Repo @ base_commit"] --> C["AST chunks"] --> B & D
-  B --> F["RRF fusion (S3 / S5)"]
+  I["GitHub issue"] --> B["BM25 keyword search (S1)"]
+  I --> D["Neural code search (S2 / fine-tuned S4)"]
+  R["Repository at the buggy commit"] --> C["Code split into functions / classes"] --> B & D
+  B --> F["Rank fusion (S3 / S5)"]
   D --> F
-  F --> L["LambdaRank (S6, S6b)"]
-  G["Import graph PageRank"] --> L
-  L --> X["Gemini rerank top-10 (S8)"]
-  F --> Y["Gemini rerank top-10 (S7)"]
-  L --> O["Ranked files + functions"]
+  F -->|top 50| L["Learned reranker (S6, S6b)"]
+  G["Import-graph centrality"] --> L
+  L -->|top 10| X["Gemini reranker (S8)"]
+  F -->|top 10| Y["Gemini reranker (S7)"]
+  L --> O["Ranked files and functions"]
+  X --> O
 ```
 
-```mermaid
-flowchart LR
-  R["Repo @ commit"] --> A["ast facts: imports, classes, calls"]
-  A --> G["Graphs: import, inheritance, call + PageRank"]
-  G --> V["Diagram specs"] --> K{"verify_diagram = 100%?"}
-  K -->|yes| S["SVG + Mermaid"]
-  G --> P["Top symbols per package"] --> M["Gemini summary (JSON + citations)"]
-  M --> C["Citation validator"] --> Gd["Onboarding guide"]
-  S --> Gd
-  Q["Question"] --> H["Hybrid retriever (S5)"] --> Ans["Cited answer + neighbourhood diagram"]
-```
+1. Each repository is read straight from git at the issue's commit and split into code chunks along the
+   Python syntax tree.
+2. The correct answers (gold labels) are derived automatically from the real fixing patch.
+3. Retrieval ranks chunks with keyword search (BM25) and a neural code encoder; the encoder was
+   fine-tuned on 3,000 issue → fix examples from 18 repositories that are **disjoint** from the test set.
+4. A LambdaRank model re-orders the top 50 using 21 signals; an LLM can reorder the top 10.
+5. For onboarding, static analysis builds import, inheritance and call graphs; every diagram element is
+   re-verified against these graphs (100% on all 90 diagrams), and every LLM-written sentence must cite a
+   real line it was shown.
 
-## Quick start
+More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · terms explained: [docs/CONCEPTS.md](docs/CONCEPTS.md).
 
-Requirements: Windows/Linux/macOS, [uv](https://docs.astral.sh/uv/), git, Graphviz (`dot`).
-An NVIDIA GPU helps for encoding/fine-tuning but the demo runs on CPU.
+## Research questions and answers
+
+| | Question | Answer (95% CI) | Verdict |
+| --- | --- | --- | --- |
+| RQ1 | Does combining keyword and neural search beat either alone? | Beats keyword search (+8.0 pts file Acc@5); vs neural search alone −0.3 pts file / +3.0 pts function, both CIs include 0 | Partly |
+| RQ2 | Does fine-tuning on other repositories help on unseen ones? | +4.7 pts file Acc@5 [+0.7, +8.7]; in the fused system +6.3 pts [+3.0, +10.0] | Supported |
+| RQ3 | Does a learned reranker close the gap to an LLM reranker? | Yes for top-5/10 (S6 ≥ S7 at 0 tokens); no for the first answer (LLM +16 pts) | Split by rank |
+| RQ4 | Do onboarding summaries help ranking as a feature? | +2.0 pts function Acc@10 [−0.7, +4.7] | Not established |
+
+Onboarding evaluation: 90 diagrams 100% verified · 107 of 108 summary sentences kept by the citation
+validator · 25 of 29 summaries rated correct, 4 partly, 0 wrong · "ask the codebase" retrieves a right
+file in the top 5 for 14 of 15 test questions.
+
+## Run it yourself
 
 ```bash
-make setup        # uv sync (Python 3.11 venv, pinned versions)
-make test         # unit tests
-make reproduce    # every number above from cached artifacts (< 10 min once data/ is built)
-make onboard      # diagrams + guides for flask, requests, django, then onboarding eval
-make demo         # Gradio app at http://127.0.0.1:7860 (Localize + Onboard tabs)
+git clone https://github.com/Icoder05/buglens.git
+cd buglens
+make setup        # install (uv, Python 3.11, pinned versions)
+make test         # 70 unit tests
+make demo         # web app at http://127.0.0.1:7860
 ```
 
-From scratch (hours: clones ~5 GB of repos, encodes ~180k chunks, fine-tunes):
-`make experiments` (or run `scripts/resume_pipeline.ps1`, which is resumable).
-For the LLM systems put `GEMINI_API_KEY=...` (free key from https://aistudio.google.com/apikey)
-in `.env`, then `uv run buglens llm --system S7`, `make onboard`, `uv run buglens rerank --system S6b`.
+Rebuilding the experiments needs the ~7 GB experiment data (cloned repositories, caches, fine-tuned
+model), which is created by `make experiments` and is not stored in git. Step-by-step instructions,
+all commands and troubleshooting: **[docs/HOW_TO_RUN.md](docs/HOW_TO_RUN.md)**.
 
-The Kaggle notebook [`notebooks/kaggle_finetune.ipynb`](notebooks/kaggle_finetune.ipynb) runs the
-same fine-tuning on a free T4/P100.
+## Project structure
 
-## Onboarding evaluation
+```text
+buglens/
+├── src/buglens/        Python package (every module starts with a docstring explaining its concept)
+│   ├── data/           SWE-bench loading, git access at any commit, gold labels
+│   ├── chunking/       split code into function / class / module chunks
+│   ├── retrieval/      BM25, neural encoder, rank fusion
+│   ├── training/       fine-tuning data and scripts
+│   ├── rerank/         LambdaRank features and training
+│   ├── analysis/       static analysis: imports, classes, calls, PageRank
+│   ├── onboard/        diagrams, cited summaries, guide, ask-the-codebase
+│   ├── llm/            Gemini client, LLM reranker, patch generation
+│   ├── eval/           metrics, statistics, reports
+│   └── demo/           Gradio web app
+├── configs/            all settings and the experiment plan
+├── tests/              70 unit tests
+├── runs/               per-issue rankings of every system (the evidence behind every number)
+├── reports/            results, error analysis, research report + workbook  → see reports/README.md
+├── onboarding/         generated guides and diagrams for flask, requests, django
+├── docs/               how to run, architecture, concepts, screenshots
+├── notebooks/          Kaggle notebook for fine-tuning on a free cloud GPU
+└── scripts/            resumable pipelines and report builders
+```
 
-| Repo | Diagrams | Elements verified | Ask-the-codebase QA Acc@5 |
-| --- | --- | --- | --- |
-| pallets/flask | 32 | 100% | 15 hand-written questions over flask + requests: **0.933** (14/15) |
-| psf/requests | 27 | 100% | |
-| django/django | 31 | 100% | |
+## Reproducibility
 
-All 62 Mermaid files render with the official Mermaid CLI. **Citation validity:** 107 of 108 LLM
-summary sentences for the three demo repos survived the strict validator (every kept citation
-points inside a symbol the model was shown). **Summary ratings** (29 package summaries, one rater):
-86% correct, 14% partly, 0% wrong — see [reports/onboarding_eval.md](reports/onboarding_eval.md).
-Generated guides: [flask](onboarding/pallets__flask/guide.md),
-[requests](onboarding/psf__requests/guide.md), [django](onboarding/django__django/guide.md).
+- **Pinned environment** (`uv.lock`), fixed random seeds, configuration in `configs/`.
+- **Every run stores its git commit and configuration**; every pipeline step is logged with timestamps.
+- **Content-addressed caches** for chunks, embeddings and LLM answers: `make reproduce` rebuilds all results
+  in about 9 minutes with **0** API calls, giving identical rankings and metrics.
+- **No test leakage:** fine-tuning repositories are disjoint from test repositories (asserted in code), and
+  every LLM prompt is checked against the gold patches before it is sent.
+- Deviations from the original plan are listed in [CHANGELOG.md](CHANGELOG.md).
 
 ## Limitations
-- SWE-bench Lite is mostly single-file bugs; multi-file localization is under-tested.
-- Python only; static call graphs are approximate (dynamic dispatch, decorators stay unresolved).
-- Summaries are rated by a single rater; free-tier model versions change over time.
-- Possible pre-training contamination: these popular repos may be in the encoders'/LLM's training data.
-- No user study — no claims about onboarding speed.
+
+- One benchmark (SWE-bench Lite), Python only; two repositories (django, sympy) provide 64% of issues.
+- Mostly single-file fixes; static call graphs are approximate.
+- One run per system; variability was estimated with targeted repeated runs, not by repeating every system.
+- One LLM version (free tier) on specific dates; hosted LLM outputs are not perfectly repeatable.
+- Encoders and the LLM may have seen these public repositories during pre-training.
+- 30 generated patches were not executed against tests, so no repair rate is claimed.
+- No user study: onboarding results show faithfulness and grounding, not that people learn faster.
 
 ## Future work
-LoRA-tuned LLM reranker · RL policy for repository navigation · execution feedback ·
-multi-file bugs (full SWE-bench) · a user study on onboarding time. Error analysis
-([reports/error_analysis.md](reports/error_analysis.md)) shows 15/20 misses are "symptom ≠ fix site",
-so expanding candidates along import/call edges is the next experiment.
 
-## Project layout
-`src/buglens/` — `data/` (SWE-bench, git cache, labels) · `chunking/` · `analysis/` (facts, graphs,
-packages, entry points) · `retrieval/` · `training/` · `rerank/` · `llm/` · `onboard/` · `eval/` ·
-`demo/`. Every module starts with a docstring explaining the concept it implements.
-Deviations from the PRD are listed in [CHANGELOG.md](CHANGELOG.md); the write-up is
-[reports/writeup.md](reports/writeup.md).
+Follow import and call relations from the top candidates (the main failure pattern) · repeat all systems
+over several seeds and LLM runs · multi-file bugs and the full SWE-bench · run the generated patches with the
+official test harness (`make harness`) · a user study on onboarding.
 
-## Citations
-- C. E. Jimenez et al. *SWE-bench: Can Language Models Resolve Real-World GitHub Issues?* ICLR 2024.
-- T. Suresh et al. *CoRNStack: High-Quality Contrastive Data for Better Code Ranking* (CodeRankEmbed), 2024.
+## Tech stack, references and license
+
+Python 3.11 · uv · PyTorch · sentence-transformers · FAISS · bm25s · LightGBM · NetworkX · Graphviz ·
+Gradio · Google Gemini API · pandas / SciPy / matplotlib · pytest · ruff.
+
+- C. E. Jimenez et al., *SWE-bench: Can Language Models Resolve Real-World GitHub Issues?*, ICLR 2024.
+- T. Suresh et al., *CoRNStack: High-Quality Contrastive Data for Better Code Retrieval and Reranking* (CodeRankEmbed), 2024.
+- Full reference list in the [research report](reports/research/BugLens_Research_Report.pdf).
+
+Released under the [MIT License](LICENSE). To cite this project, see [CITATION.cff](CITATION.cff).

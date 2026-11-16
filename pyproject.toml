@@ -3,6 +3,9 @@ name = "buglens"
 version = "0.1.0"
 description = "Bug localization on SWE-bench Lite + static-analysis codebase onboarding, built on one shared index."
 readme = "README.md"
+license = "MIT"
+authors = [{ name = "Icoder05" }]
+keywords = ["bug localization", "SWE-bench", "information retrieval", "learning to rank", "LLM", "static analysis"]
 requires-python = ">=3.11,<3.12"
 dependencies = [
     "datasets==5.1.0",
@@ -30,6 +33,10 @@ dependencies = [
     "gradio==6.30.0",
     "einops==0.8.1",
 ]
+
+[project.urls]
+Repository = "https://github.com/Icoder05/buglens"
+Report = "https://github.com/Icoder05/buglens/blob/main/reports/research/BugLens_Research_Report.pdf"
 
 [project.scripts]
 buglens = "buglens.cli:app"

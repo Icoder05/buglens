@@ -92,6 +92,9 @@ onboard:
   strict_citations: true          # FR-S3
   ask_top_k: 8                    # FR-Q1
 
+demo:
+  ask_daily_limit: 50             # max Gemini-written answers per day on a public demo
+
 eval:
   bootstrap_resamples: 1000
   ci: 0.95

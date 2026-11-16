@@ -251,11 +251,14 @@ def onboard_eval(config: ConfigOpt = DEFAULT_CFG):
 
 
 @app.command()
-def demo(config: ConfigOpt = DEFAULT_CFG):
+def demo(
+    share: Annotated[bool, typer.Option(help="Also create a temporary public link.")] = False,
+    config: ConfigOpt = DEFAULT_CFG,
+):
     """Launch the Gradio demo (Localize + Onboard tabs)."""
     from buglens.demo.app import main
 
-    main()
+    main(share=share)
 
 
 if __name__ == "__main__":

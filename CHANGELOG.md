@@ -2,6 +2,24 @@
 
 All deviations from the PRD are recorded here, with the reason.
 
+## 1.0.0 — Portfolio release (2026-11-16)
+
+- **Research report** (`reports/research/`): 34-page Word/PDF report covering literature review,
+  design of experiments, statistical validity, repeated testing, uncertainty, data management,
+  results, reproducibility and limitations; companion Excel workbook (14 sheets, 767 formulas,
+  dashboard). Built by `make research`.
+- **New experiments for the report:** Gemini reranker repeated 3× on 50 issues; LambdaRank with 5
+  random seeds; RRF-constant and candidate-depth sensitivity; repeated latency measurements.
+  Added comparison S8 vs S6.
+- **Bug fix:** the demo serves requests from several worker threads, but the SQLite caches allowed
+  only their creating thread ("paste an issue" and "Ask" could fail). Connections are now shared
+  across threads behind a lock; regression tests added.
+- **Demo:** daily cap on Gemini-written answers (`demo.ask_daily_limit`, default 50) so a public
+  link cannot exhaust the API quota; `buglens demo --share` for a temporary public link.
+- **Repository:** MIT license, CITATION.cff, CI workflow (lint + tests), `docs/` (how to run,
+  architecture, plain-language concepts, screenshots), README rewritten, index pages for
+  `reports/` and `onboarding/`.
+
 ## M1–M10 (2026-10-21)
 
 ### Environment / dependencies

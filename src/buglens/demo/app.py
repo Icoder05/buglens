@@ -13,7 +13,9 @@ from __future__ import annotations
 import json
 import os
 import re
+import threading
 import time
+from datetime import date
 
 import gradio as gr
 import numpy as np
@@ -28,6 +30,33 @@ _BASE_ENCODERS: dict[str, object] = {}
 
 
 # ------------------------------------------------------------------ helpers
+_QUOTA_LOCK = threading.Lock()
+
+
+def take_llm_quota(cfg: Config) -> bool:
+    """Allow at most `demo.ask_daily_limit` Gemini-written answers per calendar day.
+
+    A public link must not let visitors drain the owner's free API quota; the counter
+    is kept in data/cache/ask_usage.json and resets each day.
+    """
+    limit = int(cfg.get("demo", {}).get("ask_daily_limit", 50))
+    path = cfg.path("cache") / "ask_usage.json"
+    today = date.today().isoformat()
+    with _QUOTA_LOCK:
+        try:
+            usage = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            usage = {}
+        if usage.get("date") != today:
+            usage = {"date": today, "count": 0}
+        if usage["count"] >= limit:
+            return False
+        usage["count"] += 1
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(usage), encoding="utf-8")
+        return True
+
+
 def svg_html(svg: str) -> str:
     if not svg:
         return "<p><em>No diagram.</em></p>"
@@ -235,7 +264,11 @@ def build_app(cfg: Config | None = None) -> gr.Blocks:
             raise gr.Error("Pick a repo and type a question.")
         from buglens.onboard.ask import ask, get_encoder
 
-        ans = ask(cfg, repo, question, encoder=get_encoder(cfg, DEVICE))
+        use_llm = take_llm_quota(cfg)
+        ans = ask(cfg, repo, question[:500], use_llm=use_llm, encoder=get_encoder(cfg, DEVICE))
+        if not use_llm:
+            ans.note = ("Daily limit for AI-written answers reached; showing retrieval results "
+                        "only. Try again tomorrow.")
         return ans.markdown(), svg_html(ans.neighbourhood_svg)
 
     with gr.Blocks(title="BugLens") as app:
@@ -297,11 +330,12 @@ def build_app(cfg: Config | None = None) -> gr.Blocks:
     return app
 
 
-def main() -> None:
+def main(share: bool = False) -> None:
+    """Launch locally; with share=True Gradio also creates a temporary public link."""
     from buglens.onboard.diagrams import ensure_dot
 
     ensure_dot()
-    build_app().launch()
+    build_app().launch(share=share)
 
 
 if __name__ == "__main__":

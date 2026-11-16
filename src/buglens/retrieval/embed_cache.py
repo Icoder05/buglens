@@ -10,6 +10,7 @@ measurable effect on cosine ranking) and only cache misses are sent to the GPU.
 from __future__ import annotations
 
 import sqlite3
+import threading
 from pathlib import Path
 
 import numpy as np
@@ -24,7 +25,10 @@ def cache_key(model_id: str, text: str) -> str:
 class EmbeddingCache:
     def __init__(self, path: str | Path):
         Path(path).parent.mkdir(parents=True, exist_ok=True)
-        self.conn = sqlite3.connect(str(path), timeout=60)
+        # The demo serves requests from several worker threads: allow cross-thread use
+        # of one connection and serialize access with a lock.
+        self.conn = sqlite3.connect(str(path), timeout=60, check_same_thread=False)
+        self.lock = threading.Lock()
         self.conn.execute("PRAGMA journal_mode=WAL")
         self.conn.execute("CREATE TABLE IF NOT EXISTS emb (key TEXT PRIMARY KEY, vec BLOB)")
         self.hits = 0
@@ -32,16 +36,17 @@ class EmbeddingCache:
 
     def get_many(self, keys: list[str]) -> dict[str, np.ndarray]:
         out: dict[str, np.ndarray] = {}
-        for i in range(0, len(keys), 900):
-            batch = keys[i:i + 900]
-            q = f"SELECT key, vec FROM emb WHERE key IN ({','.join('?' * len(batch))})"
-            for k, v in self.conn.execute(q, batch):
-                out[k] = np.frombuffer(v, dtype=np.float16)
+        with self.lock:
+            for i in range(0, len(keys), 900):
+                batch = keys[i:i + 900]
+                q = f"SELECT key, vec FROM emb WHERE key IN ({','.join('?' * len(batch))})"
+                for k, v in self.conn.execute(q, batch):
+                    out[k] = np.frombuffer(v, dtype=np.float16)
         return out
 
     def put_many(self, items: dict[str, np.ndarray]) -> None:
         rows = [(k, np.asarray(v, dtype=np.float16).tobytes()) for k, v in items.items()]
-        with self.conn:
+        with self.lock, self.conn:
             self.conn.executemany("INSERT OR REPLACE INTO emb (key, vec) VALUES (?, ?)", rows)
 
     @property
