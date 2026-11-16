@@ -1,5 +1,9 @@
 # BugLens: Hybrid Retrieval, Learning to Rank and Static-Analysis Onboarding for Bug Localization
 
+> This is the short paper-style summary. The full research report, with the experiment design,
+> statistical analysis, repeated-run experiments and all figures, is
+> [research/BugLens_Research_Report.pdf](research/BugLens_Research_Report.pdf).
+
 ## 1. Introduction
 
 When a GitHub issue arrives, a maintainer's first task is *localization*: which files and functions
