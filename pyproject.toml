@@ -68,3 +68,7 @@ extend-exclude = ["tests/fixtures"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# report builders hold long table rows and figure text
+"scripts/research/*" = ["E501"]

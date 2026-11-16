@@ -1,0 +1,19 @@
+digraph G {
+  rankdir=TB; nodesep=0.3; ranksep=0.3; fontname="Arial";
+  node [shape=box, style="rounded,filled", fillcolor="#eef3f9", color="#0072B2", fontname="Arial", fontsize=11];
+  edge [color="#555555", arrowsize=0.6, fontname="Arial", fontsize=8];
+  issue [label="GitHub issue\n(text)", fillcolor="white"];
+  repo  [label="Repository at\nbase_commit", fillcolor="white"];
+  chunks [label="AST chunks\n(functions, classes,\nmodule code)"];
+  bm25 [label="BM25\n(S1)"];
+  dense [label="Dense encoder\noff-the-shelf (S2)\nfine-tuned (S4)"];
+  rrf [label="Reciprocal Rank\nFusion (S3, S5)"];
+  ltr [label="LambdaRank\nreranker (S6, S6b)"];
+  graph1 [label="Import graph\nPageRank", fillcolor="#f3f3f3", color="#888888"];
+  summ [label="Package summaries\n(onboarding, S6b)", fillcolor="#f3f3f3", color="#888888"];
+  llm [label="Gemini rerank\nof top 10 (S7, S8)", fillcolor="#fdf0e6", color="#D55E00"];
+  out [label="Ranked files\nand functions", fillcolor="white"];
+  repo -> chunks; chunks -> bm25; chunks -> dense; issue -> bm25; issue -> dense;
+  bm25 -> rrf; dense -> rrf; rrf -> ltr [label="top 50"]; graph1 -> ltr; summ -> ltr;
+  ltr -> llm [label="top 10"]; rrf -> llm [style=dashed]; ltr -> out; llm -> out;
+}

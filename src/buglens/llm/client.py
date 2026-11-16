@@ -176,10 +176,15 @@ class LLMClient:
 
     # ------------------------------------------------------------- public
     def generate_json(self, prompt: str, schema: dict, instance_id: str | None = None,
-                      base_code: str = "") -> tuple[dict | None, Usage]:
-        """Return (parsed JSON or None if unparsable, usage). Cached on disk."""
+                      base_code: str = "", repeat: int = 0) -> tuple[dict | None, Usage]:
+        """Return (parsed JSON or None if unparsable, usage). Cached on disk.
+
+        `repeat` > 0 makes an independent repeated call of the same prompt (its own cache
+        entry), used to measure run-to-run variability; the prompt itself is unchanged.
+        """
         self.guard.check(prompt, instance_id, base_code)
-        key = sha1(self.model + "\n" + json.dumps(schema, sort_keys=True) + "\n" + prompt)
+        tag = f"\nrepeat={repeat}" if repeat else ""
+        key = sha1(self.model + "\n" + json.dumps(schema, sort_keys=True) + "\n" + prompt + tag)
         path = self.cache_dir / f"{key}.json"
         t0 = time.perf_counter()
         if path.exists():

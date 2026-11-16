@@ -15,3 +15,6 @@ data/
 # Gradio
 .gradio/
 flagged/
+
+# report builder deps
+scripts/research/node_modules/

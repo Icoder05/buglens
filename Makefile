@@ -57,6 +57,16 @@ onboard:
 demo:
 	uv run buglens demo
 
+# ---- research report + workbook (needs Microsoft Word/Excel for TOC refresh, recalculation, PDF) ----
+research:
+	uv run python scripts/research/collect.py
+	uv run python scripts/research/figures.py
+	uv run python scripts/research/report_numbers.py
+	uv run --with openpyxl==3.1.5 python scripts/research/build_workbook.py
+	powershell -NoProfile -ExecutionPolicy Bypass -File scripts/research/excel_recalc.ps1 -Path reports/research/BugLens_Research_Analysis.xlsx
+	cd scripts/research && npm install --no-audit --no-fund && node build_report.js
+	powershell -NoProfile -ExecutionPolicy Bypass -File scripts/research/word_export.ps1 -Path reports/research/BugLens_Research_Report.docx
+
 # ---- stretch M10 ----
 patches:
 	uv run buglens llm --system S8 --split test
