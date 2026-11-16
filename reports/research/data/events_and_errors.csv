@@ -1,0 +1,9 @@
+date,component,event,cause,resolution
+2026-10-21,Dense encoder,"CodeRankEmbed failed to load (missing einops, then removed transformers API)",Dependency + library version change,Added einops; compatibility shim
+2026-10-21,Dense encoder,fp16 encoding 4.3x slower than fp32 on GTX 1660,No tensor cores on GTX 16xx,fp32 locally; fp16 kept for Kaggle T4
+2026-10-25,Fine-tuning,~15 min per step; run killed at step 31/41,Mini-batch 16 exceeded 6 GB VRAM (spill to shared memory),Mini-batch 4 (same gradients)
+2026-11-11,Static analysis,RecursionError on a deeply nested sympy file,AST deeper than Python recursion limit,Counted as parse failure + regression test
+2026-11-14,LLM client,gemini-2.5-flash returned 404,Model retired for new API keys,Switched to gemini-3.5-flash-lite
+2026-11-14,LLM leakage guard,False positive on django__django-13220,Gold added line already existed in base-commit code,Guard ignores lines present in shown base code
+2026-11-14,LLM client,429 RESOURCE_EXHAUSTED after ~500 requests,Free-tier daily quota,Stopped cleanly; resumed after reset from cache
+2026-11-14,LLM reranker,1 invalid ranking each in S7 and S8 (of 300),Model returned ids not in the candidate list twice,Fallback to input order (logged)

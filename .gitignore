@@ -6,8 +6,9 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 
-# Large or regenerable artifacts (never commit data/)
-data/
+# Large or regenerable artifacts (never commit the top-level data/ folder).
+# Anchored with "/" so the source package src/buglens/data/ is NOT ignored.
+/data/
 
 # Notebook checkpoints
 .ipynb_checkpoints/

@@ -1,0 +1,6 @@
+category,count
+Root cause in shared lower-level module,8
+Fix in a different component,7
+"Right package, wrong module",2
+Noisy issue text,2
+Lexical confusion,1

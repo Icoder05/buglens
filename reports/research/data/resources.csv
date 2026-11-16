@@ -1,0 +1,13 @@
+resource,value,unit,source
+Cloned repositories (bare),4501.2,MB,measured on disk 2026-11-16
+Chunk cache (SQLite),701.2,MB,measured on disk 2026-11-16
+Embedding cache (SQLite),763.9,MB,measured on disk 2026-11-16
+Per-instance score vectors,64.8,MB,measured on disk 2026-11-16
+BM25 indexes,939.6,MB,measured on disk 2026-11-16
+Fine-tuned model,522.4,MB,measured on disk 2026-11-16
+GPU,GTX 1660 SUPER 6 GB,,nvidia-smi
+"Fine-tune peak GPU memory, mini-batch 4",3.65,GB,"torch.cuda.max_memory_allocated, benchmark 2026-11-11"
+"Fine-tune peak GPU memory, mini-batch 8",6.15,GB,same benchmark (exceeds 6 GB VRAM -> spills to system RAM)
+"Fine-tune step time, mini-batch 4",55.0,s/step,"same benchmark, 64 triples per step"
+"Fine-tune step time, mini-batch 16 (first attempt)",~900,s/step,"data/pipeline.log progress bar, 2026-10-25"
+Encoding throughput fp32 vs fp16 (256 docs x 512 tok),10.5 s vs 45.2 s,,benchmark 2026-10-21

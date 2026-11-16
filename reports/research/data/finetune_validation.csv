@@ -1,0 +1,6 @@
+metric,before,after
+accuracy@1,0.2308,0.2378
+accuracy@10,0.5385,0.5991
+accuracy@5,0.4779,0.5035
+mrr@10,0.3281,0.3509
+ndcg@10,0.3788,0.4102
